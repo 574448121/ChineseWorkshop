@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:table", "y": 180 },
+        "facing=east":  { "model": "chineseworkshop:table", "y": 270 },
+        "facing=south": { "model": "chineseworkshop:table" },
+        "facing=west":  { "model": "chineseworkshop:table", "y": 90 }
+    }
+}

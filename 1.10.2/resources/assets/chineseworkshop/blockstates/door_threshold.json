@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:door_threshold", "y": 180 },
+        "facing=east":  { "model": "chineseworkshop:door_threshold", "y": 270 },
+        "facing=south": { "model": "chineseworkshop:door_threshold" },
+        "facing=west":  { "model": "chineseworkshop:door_threshold", "y": 90 }
+    }
+}
