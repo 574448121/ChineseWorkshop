@@ -22,7 +22,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
 
 /**
- * 门槛类
+ * 路面类
  */
 public class BlockCWRoad extends Block{
 

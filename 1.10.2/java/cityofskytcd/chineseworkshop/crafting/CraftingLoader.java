@@ -50,7 +50,7 @@ public class CraftingLoader
     	                });
     	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.candle,6), new Object[]
     	        {
-    	                "  #", " **","*  ",'#', Blocks.TORCH,'*',Blocks.STONE
+    	                "  #", " **","*  ",'#', Blocks.TORCH,'*',Items.IRON_INGOT
     	                });
     	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteLanterns,2), new Object[]
     	        {
@@ -196,6 +196,12 @@ public class CraftingLoader
     	        {
     	                "#  ","## ","###",'#',BlockLoader.andesitePavement
     	                });
+    	//ÏðÄ¾Ç½
+    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.oakWall,9), new Object[]
+    	        {
+    	                "###","###","###",'#',new ItemStack(Blocks.PLANKS,1,0)
+    	                });
+    	
     	/*ÎÝ¶¥*/
     	//ºÚÍßÎÝ¶¥°ë×©
     	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofSlab,6), new Object[]
