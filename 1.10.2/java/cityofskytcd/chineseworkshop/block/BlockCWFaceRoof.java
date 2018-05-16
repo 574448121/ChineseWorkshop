@@ -2,6 +2,7 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
+import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -17,13 +18,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
 
 /**
- * ≥ØœÚŒ›∂•¿‡
+ * ÊúùÂêëÂ±ãÈ°∂Á±ª
  */
- 
-public class BlockCWFaceRoof extends Block{
+
+public class BlockCWFaceRoof extends Block {
 
 	public BlockCWFaceRoof(String name, Material materialIn, float hardness, SoundType type) {
 		super(materialIn);
@@ -31,59 +31,53 @@ public class BlockCWFaceRoof extends Block{
 		this.setUnlocalizedName(name);
 		this.setSoundType(type);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        this.setCreativeTab(CreativeTabsLoader.tabCWF);
+		this.setCreativeTab(CreativeTabsLoader.tabCWF);
 	}
 
-	public boolean isOpaqueCube(IBlockState state)
-	{
-	    return false;
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
 	}
-	
-	public boolean isFullCube(IBlockState state)
-    {
-        return false;
-    }
-	
-	@Override
-    protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, FACING);
-    }
-	
-	@Override
-    public IBlockState getStateFromMeta(int meta)
-    {
-        EnumFacing facing = EnumFacing.getHorizontal(meta);
-        return this.getDefaultState().withProperty(FACING, facing);
-    }
 
-    @Override
-    public int getMetaFromState(IBlockState state)
-    {
-        int facing = state.getValue(FACING).getHorizontalIndex();
-        return facing;
-    }
-    
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
-    {
-        list.add(new ItemStack(itemIn, 1, 0));
-    }
-    
-    @Override
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
-            int meta, EntityLivingBase placer)
-    {
-        IBlockState origin = super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
-        return origin.withProperty(FACING, placer.getHorizontalFacing().getOpposite());
-    }
-    
-    @Override
-    public int damageDropped(IBlockState state)
-    {
-        return 0;
-    }
-	
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, FACING);
+	}
+
+	@Override
+	public IBlockState getStateFromMeta(int meta) {
+		EnumFacing facing = EnumFacing.getHorizontal(meta);
+		return this.getDefaultState().withProperty(FACING, facing);
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		int facing = state.getValue(FACING).getHorizontalIndex();
+		return facing;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+		list.add(new ItemStack(itemIn, 1, 0));
+	}
+
+	@Override
+	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
+			int meta, EntityLivingBase placer) {
+		IBlockState origin = super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
+		return origin.withProperty(FACING, placer.getHorizontalFacing().getOpposite());
+	}
+
+	@Override
+	public int damageDropped(IBlockState state) {
+		return 0;
+	}
+
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 }

@@ -5,10 +5,8 @@ import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMap;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,231 +15,247 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockLoader
-{
-	/*∑ΩøÈ*/
-	//∫⁄◊©«Ω
-	public static Block blackBrickWall = new BlockCW("blackbrickwall",Material.ROCK, 1.5F,SoundType.STONE);
-	//∞≤…Ω—“¬∑√Ê
-	public static Block andesitePavement = new BlockCWFace("andesitepavement",Material.ROCK, 1.5F,SoundType.STONE);
-	//∫Ï÷˘
-	public static Block redPillars = new BlockCWPillars("redpillars",1.0F,SoundType.WOOD);
-	//¬Ã÷˘
-	public static Block darkGreenPillars = new BlockCWPillars("darkgreenpillars",1.0F,SoundType.WOOD);
-	//∞◊ª“«Ω
-	public static Block whiteGrayWalls = new BlockCW("whitegraywalls",Material.ROCK, 1.5F,SoundType.STONE);
+public class BlockLoader {
+	/* ÊñπÂùó */
+	// ÈªëÁ†ñÂ¢ô
+	public static Block blackBrickWall = new BlockCW("blackbrickwall", Material.ROCK, 1.5F, SoundType.STONE);
+	// ÂÆâÂ±±Â≤©Ë∑ØÈù¢
+	public static Block andesitePavement = new BlockCWFace("andesitepavement", Material.ROCK, 1.5F, SoundType.STONE);
+	// Á∫¢Êü±
+	public static Block redPillars = new BlockCWPillars("redpillars", 1.0F, SoundType.WOOD);
+	// ÁªøÊü±
+	public static Block darkGreenPillars = new BlockCWPillars("darkgreenpillars", 1.0F, SoundType.WOOD);
+	// ÁôΩÁÅ∞Â¢ô
+	public static Block whiteGrayWalls = new BlockCW("whitegraywalls", Material.ROCK, 1.5F, SoundType.STONE);
 
-	
-	/*µ∆*/
-	// Øµ∆À˛
-	public static Block stoneTowerLamp = new BlockCWLight("stonetowerlamp",Material.ROCK, 1.0F,SoundType.STONE,1.0f);
-	//µ∆¡˝
-	public static Block theLantern = new BlockCWTheLantern("thelantern",Material.WOOD, 0.5F,SoundType.WOOD,1.0f);
-	//¿Ø÷Ú
-	public static Block candle = new BlockCWCandle("candle",Material.WOOD,1.0F);
-	//∞◊µ∆¡˝
-	public static Block whiteLanterns = new BlockCWTheLantern("whitelanterns",Material.WOOD, 0.5F,SoundType.WOOD,1.0f);
-	
-	
-	/*◊∞ Œ*/
-	//∂∑ñÌ
-	public static Block bracketSet = new BlockCWBracketSet("bracketset",Material.WOOD, 0.5F, SoundType.WOOD);
-	//√≈∂’
-    public static Block menDun = new  BlockCWMenDun("mendun",Material.ROCK, 1.5F, SoundType.STONE);
-    //√≈º˜
-    public static Block doorThreshold = new BlockCWDoorThreshold("doorthreshold",Material.ROCK, 1.0F, SoundType.STONE);
-    //µÒ Œ
-    public static Block carving = new BlockCWFaceDecorative("carving",Material.WOOD, 0.5F, SoundType.WOOD);    
-    // ˜Ã≥
-    public static Block treeAltar = new BlockCWFaceDecorative("treealtar",Material.ROCK, 1.5F,SoundType.STONE);
-    //∞Âµ 
-    public static Block bench = new BlockCWFaceDecorative("bench",Material.WOOD, 0.5F, SoundType.WOOD);
-    //◊¿◊”
-    public static Block table = new BlockCWFaceDecorative("table",Material.WOOD, 0.5F, SoundType.WOOD);
-    //∞◊ª“«ΩΩ◊Ã›
-  	public static Block whiteGrayWallsStairs = new BlockCWStairs("whitegraywallsstairs",blackBrickWall.getDefaultState(), 1.5F,SoundType.STONE);
-	//÷Ω¥∞
-	public static Block paperWindow = new BlockCWGlassPane("paperwindow",Material.WOOD,true, 0.5F,SoundType.WOOD);
-	//…¡≥§—“’§¿∏
-	public static Block dioriteFence = new BlockCWFence("dioritefence",Material.ROCK, MapColor.STONE, 1.5F,SoundType.STONE);
-	//–°∫⁄◊©«Ω
-	public static Block smallBlackBrickWall = new BlockCWSmallWall("smallblackbrickwall",Material.ROCK, MapColor.STONE, 1.5F,SoundType.STONE);
-	//–°∞◊ª“«Ω
-	public static Block smallWhiteGrayWalls = new BlockCWSmallWall("smallwhitegraywalls",Material.ROCK, MapColor.STONE, 1.5F,SoundType.STONE);
-	//œƒæ÷– Ω’§¿∏
-	public static Block oakChineseFence = new BlockCWFence("oakchinesefence",Material.ROCK, MapColor.WOOD, 1.5F,SoundType.WOOD);
-	//∞≤…Ω—“’§¿∏
-	public static Block andesiteFence = new BlockCWWall("andesitefence",blackBrickWall, 1.5F,SoundType.STONE);
-	//π“¬‰
-  	public static Block implicate = new BlockCWGlassPane("implicate",Material.WOOD,true, 1.0F,SoundType.WOOD);
-  	//∞≤…Ω—“¬∑√ÊΩ◊Ã›
-  	public static Block andesitePavementStairs = new BlockCWStairs("andesitepavementstairs",blackBrickWall.getDefaultState(), 1.5F,SoundType.STONE); 	
-    //œƒæ«Ω
-  	public static Block oakWall = new BlockCWSmallWall("oakwall",Material.WOOD, MapColor.WOOD, 1.5F,SoundType.WOOD);
-  	
-  	public static Block cwDoor = new BlockCWDoor("cwdoor",Material.WOOD, 1.5F,SoundType.WOOD);
-    /*Œ›∂•*/
-    //∫⁄ÕﬂŒ›∂•
-  	public static Block blackTileRoof = new BlockCWRoof("blacktileroof",Material.ROCK, 1.5F,SoundType.STONE);  
-  	//∫⁄ÕﬂŒ›ºπ
-    public static Block blackTileRidgeRoof = new BlockCWFaceRoof("blacktileridgeroof",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›ºπtop
-    public static Block blackTileRidgeRoofTop = new BlockCWFaceRoof("blacktileridgerooftop",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›ºπ◊™Ω«
-    public static Block blackTileRidgeRoofL = new BlockCWFaceRoof("blacktileridgeroofl",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›ºπ±ﬂ‘µ
-    public static Block blackTileRidgeRoofEdge = new BlockCWFaceRoof("blacktileridgeroofedge",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›ºπT
-    public static Block blackTileRidgeRoofT = new BlockCWFaceRoof("blacktileridgerooft",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›ºπX
-    public static Block blackTileRidgeRoofX = new BlockCWFaceRoof("blacktileridgeroofx",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›ºπ∑…È‹
-    public static Block blackTileRidgeRoofJ = new BlockCWFaceRoof("blacktileridgeroofj",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›∂•∑…È‹
-    public static Block blackTileRoofj = new BlockCWFaceRoof("blacktileroofj",Material.ROCK, 1.5F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›∂•∞Î◊©
-  	public static Block blackTileRoofSlab = new BlockCWRoofSlab("blacktileroofslab",Material.ROCK, 1.5F,SoundType.STONE);
-  	//∫⁄ÕﬂŒ›∂•∞Î◊©top
-  	public static Block blackTileRoofSlabTop = new BlockCWRoof("blacktileroofslabtop",Material.ROCK, 1.5F,SoundType.STONE);
-  	
-  	
-    /*±°«Ω*/
-  	//±°∞◊ª“«Ω
-    public static Block thinWhiteGrayWalls = new BlockCWFaceThinWalls("thinwhitegraywalls",Material.ROCK, 1.0F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›∂•±ﬂ‘µ”“
-    public static Block blackTileRoofEdgeY = new BlockCWFaceThinWalls("blacktileroofedgey",Material.ROCK, 1.0F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›∂•±ﬂ‘µ◊Û
-    public static Block blackTileRoofEdgeZ = new BlockCWFaceThinWalls("blacktileroofedgez",Material.ROCK, 1.0F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›∂•±ﬂ‘µ”“∑…È‹
-    public static Block blackTileRoofEdgeYJ = new BlockCWFaceThinWalls("blacktileroofedgeyj",Material.ROCK, 1.0F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›∂•±ﬂ‘µ◊Û∑…È‹
-    public static Block blackTileRoofEdgeZJ = new BlockCWFaceThinWalls("blacktileroofedgezj",Material.ROCK, 1.0F, SoundType.STONE);
-    //∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ◊Û
-  	public static Block blackTileRoofEdgeSlabZ = new BlockCWFaceThinWallsSlab("blacktileroofedgeslabz",Material.ROCK, 1.0F,SoundType.STONE);
-  	//∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ◊Ûtop
-  	public static Block blackTileRoofEdgeSlabTopZ = new BlockCWFaceThinWalls("blacktileroofedgeslabtopz",Material.ROCK, 1.0F,SoundType.STONE);
-  	//∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ”“
-  	public static Block blackTileRoofEdgeSlabY = new BlockCWFaceThinWallsSlab("blacktileroofedgeslaby",Material.ROCK, 1.0F,SoundType.STONE);
-  	//∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ”“top
-  	public static Block blackTileRoofEdgeSlabTopY = new BlockCWFaceThinWalls("blacktileroofedgeslabtopy",Material.ROCK, 1.0F,SoundType.STONE);
-  	
-  	
-    public BlockLoader(FMLPreInitializationEvent event)
-    {
-        register(stoneTowerLamp, "stone_tower_lamp");
-        register(blackBrickWall, "black_brick_wall");
-        register(bracketSet,"bracket_set");
-        register(redPillars,"red_pillars");
-        register(darkGreenPillars,"dark_green_pillars");
-        register(blackTileRoof,"black_tile_roof");
-        register(whiteGrayWalls,"white_gray_walls");
-        register(theLantern,"the_lantern");
-        register(candle,"candle");
-        register(menDun,"men_dun");
-        register(doorThreshold,"door_threshold");
-        register(carving,"carving");
-        register(blackTileRidgeRoof,"black_tile_ridge_roof");
-        register(blackTileRidgeRoofL,"black_tile_ridge_roof_l");
-        register(blackTileRidgeRoofEdge,"black_tile_ridge_roof_edge");
-        register(blackTileRidgeRoofT,"black_tile_ridge_roof_t");
-        register(blackTileRidgeRoofX,"black_tile_ridge_roof_x");
-        register(blackTileRidgeRoofJ,"black_tile_ridge_roof_j");
-        register(blackTileRoofj,"black_tile_roof_j");
-        register(thinWhiteGrayWalls,"thin_white_gray_walls");
-        register(blackTileRoofEdgeY,"black_tile_roof_edge_y");
-        register(blackTileRoofEdgeZ,"black_tile_roof_edge_z");
-        register(blackTileRoofEdgeYJ,"black_tile_roof_edge_yj");
-        register(blackTileRoofEdgeZJ,"black_tile_roof_edge_zj");
-        register(whiteLanterns,"white_lanterns");
-        register(treeAltar,"tree_altar");
-        register(bench,"bench");
-        register(table,"table");
-        register(andesitePavement, "andesite_pavement");
-        register(whiteGrayWallsStairs, "white_gray_walls_stairs");
-        register(blackTileRoofSlab, "black_tile_roof_slab");
-        register(blackTileRoofSlabTop, "black_tile_roof_slab_top");
-        register(blackTileRoofEdgeSlabZ, "black_tile_roof_edge_slab_z");
-        register(blackTileRoofEdgeSlabTopZ, "black_tile_roof_edge_slab_top_z");
-        register(blackTileRoofEdgeSlabY, "black_tile_roof_edge_slab_y");
-        register(blackTileRoofEdgeSlabTopY, "black_tile_roof_edge_slab_top_y");       
-        register(paperWindow, "paper_window");
-        register(dioriteFence, "diorite_fence");
-        register(smallBlackBrickWall, "small_black_brick_wall");     
-        register(smallWhiteGrayWalls, "small_white_gray_walls");
-        register(oakChineseFence, "oak_chinese_fence");
-        register(andesiteFence, "andesite_fence");
-        register(implicate, "implicate");
-        register(andesitePavementStairs, "andesite_pavement_stairs");
-        register(blackTileRidgeRoofTop, "black_tile_ridge_roof_top");
-        register(oakWall, "oak_wall");
-        register(cwDoor, "cw_doors");
+	/* ÁÅØ */
+	// Áü≥ÁÅØÂ°î
+	public static Block stoneTowerLamp = new BlockCWLight("stonetowerlamp", Material.ROCK, 1.0F, SoundType.STONE, 1.0f);
+	// ÁÅØÁ¨º
+	public static Block theLantern = new BlockCWTheLantern("thelantern", Material.WOOD, 0.5F, SoundType.WOOD, 1.0f);
+	// Ëú°ÁÉõ
+	public static Block candle = new BlockCWCandle("candle", Material.WOOD, 1.0F);
+	// ÁôΩÁÅØÁ¨º
+	public static Block whiteLanterns = new BlockCWTheLantern("whitelanterns", Material.WOOD, 0.5F, SoundType.WOOD,
+			1.0f);
 
-    }
+	/* Ë£ÖÈ•∞ */
+	// ÊñóÊ†±
+	public static Block bracketSet = new BlockCWBracketSet("bracketset", Material.WOOD, 0.5F, SoundType.WOOD);
+	// Èó®Â¢©
+	public static Block menDun = new BlockCWMenDun("mendun", Material.ROCK, 1.5F, SoundType.STONE);
+	// Èó®Êßõ
+	public static Block doorThreshold = new BlockCWDoorThreshold("doorthreshold", Material.ROCK, 1.0F, SoundType.STONE);
+	// ÈõïÈ•∞
+	public static Block carving = new BlockCWFaceDecorative("carving", Material.WOOD, 0.5F, SoundType.WOOD);
+	// Ê†ëÂùõ
+	public static Block treeAltar = new BlockCWFaceDecorative("treealtar", Material.ROCK, 1.5F, SoundType.STONE);
+	// ÊùøÂá≥
+	public static Block bench = new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F, SoundType.WOOD);
+	// Ê°åÂ≠ê
+	public static Block table = new BlockCWFaceDecorative("table", Material.WOOD, 0.5F, SoundType.WOOD);
+	// ÁôΩÁÅ∞Â¢ôÈò∂Ê¢Ø
+	public static Block whiteGrayWallsStairs = new BlockCWStairs("whitegraywallsstairs",
+			blackBrickWall.getDefaultState(), 1.5F, SoundType.STONE);
+	// Á∫∏Á™ó
+	public static Block paperWindow = new BlockCWGlassPane("paperwindow", Material.WOOD, true, 0.5F, SoundType.WOOD);
+	// Èó™ÈïøÂ≤©Ê†ÖÊ†è
+	public static Block dioriteFence = new BlockCWFence("dioritefence", Material.ROCK, MapColor.STONE, 1.5F,
+			SoundType.STONE);
+	// Â∞èÈªëÁ†ñÂ¢ô
+	public static Block smallBlackBrickWall = new BlockCWSmallWall("smallblackbrickwall", Material.ROCK, MapColor.STONE,
+			1.5F, SoundType.STONE);
+	// Â∞èÁôΩÁÅ∞Â¢ô
+	public static Block smallWhiteGrayWalls = new BlockCWSmallWall("smallwhitegraywalls", Material.ROCK, MapColor.STONE,
+			1.5F, SoundType.STONE);
+	// Ê©°Êú®‰∏≠ÂºèÊ†ÖÊ†è
+	public static Block oakChineseFence = new BlockCWFence("oakchinesefence", Material.ROCK, MapColor.WOOD, 1.5F,
+			SoundType.WOOD);
+	// ÂÆâÂ±±Â≤©Ê†ÖÊ†è
+	public static Block andesiteFence = new BlockCWWall("andesitefence", blackBrickWall, 1.5F, SoundType.STONE);
+	// ÊåÇËêΩ
+	public static Block implicate = new BlockCWGlassPane("implicate", Material.WOOD, true, 1.0F, SoundType.WOOD);
+	// ÂÆâÂ±±Â≤©Ë∑ØÈù¢Èò∂Ê¢Ø
+	public static Block andesitePavementStairs = new BlockCWStairs("andesitepavementstairs",
+			blackBrickWall.getDefaultState(), 1.5F, SoundType.STONE);
+	// Ê©°Êú®Â¢ô
+	public static Block oakWall = new BlockCWSmallWall("oakwall", Material.WOOD, MapColor.WOOD, 1.5F, SoundType.WOOD);
 
-    @SideOnly(Side.CLIENT)
-    public static void registerRenders()
-    {
-        registerRender(stoneTowerLamp);
-        registerRender(blackBrickWall);
-        registerRender(bracketSet);
-        registerRender(redPillars);
-        registerRender(darkGreenPillars);
-        registerRender(blackTileRoof);
-        registerRender(whiteGrayWalls);
-        registerRender(theLantern);
-        registerRender(candle);
-        registerRender(menDun);
-        registerRender(doorThreshold);
-        registerRender(carving); 
-        registerRender(blackTileRidgeRoof); 
-        registerRender(blackTileRidgeRoofL); 
-        registerRender(blackTileRidgeRoofEdge); 
-        registerRender(blackTileRidgeRoofT); 
-        registerRender(blackTileRidgeRoofX); 
-        registerRender(blackTileRidgeRoofJ); 
-        registerRender(blackTileRoofj); 
-        registerRender(thinWhiteGrayWalls); 
-        registerRender(blackTileRoofEdgeY); 
-        registerRender(blackTileRoofEdgeZ); 
-        registerRender(blackTileRoofEdgeYJ); 
-        registerRender(blackTileRoofEdgeZJ); 
-        registerRender(whiteLanterns); 
-        registerRender(treeAltar); 
-        registerRender(bench); 
-        registerRender(table); 
-        registerRender(andesitePavement); 
-        registerRender(whiteGrayWallsStairs); 
-        registerRender(blackTileRoofSlab); 
-        registerRender(blackTileRoofSlabTop); 
-        registerRender(blackTileRoofEdgeSlabZ); 
-        registerRender(blackTileRoofEdgeSlabTopZ); 
-        registerRender(blackTileRoofEdgeSlabY); 
-        registerRender(blackTileRoofEdgeSlabTopY);
-        registerRender(paperWindow);
-        registerRender(dioriteFence);
-        registerRender(smallBlackBrickWall);
-        registerRender(smallWhiteGrayWalls); 
-        registerRender(oakChineseFence); 
-        registerRender(andesiteFence); 
-        registerRender(implicate);
-        registerRender(andesitePavementStairs);
-        registerRender(blackTileRidgeRoofTop);
-        registerRender(oakWall);
-        registerRender(cwDoor);
-        
-    }
-    
-    private static void register(Block block, String name)
-    {
-        GameRegistry.registerBlock(block, name);
-    }
-    
-    @SideOnly(Side.CLIENT)
-    private static void registerRender(Block block)
-    {
-        Item item = Item.getItemFromBlock(block);
-        String name = GameData.getBlockRegistry().getNameForObject(block).toString();
-        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(name, "inventory"));
-        ModelLoader.setCustomStateMapper(cwDoor, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-    }
+	public static Block cwDoor = new BlockCWDoor("cwdoor", Material.WOOD, 1.5F, SoundType.WOOD);
+	/* Â±ãÈ°∂ */
+	// ÈªëÁì¶Â±ãÈ°∂
+	public static Block blackTileRoof = new BlockCWRoof("blacktileroof", Material.ROCK, 1.5F, SoundType.STONE);
+	// ÈªëÁì¶Â±ãËÑä
+	public static Block blackTileRidgeRoof = new BlockCWFaceRoof("blacktileridgeroof", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãËÑätop
+	public static Block blackTileRidgeRoofTop = new BlockCWFaceRoof("blacktileridgerooftop", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãËÑäËΩ¨Ëßí
+	public static Block blackTileRidgeRoofL = new BlockCWFaceRoof("blacktileridgeroofl", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãËÑäËæπÁºò
+	public static Block blackTileRidgeRoofEdge = new BlockCWFaceRoof("blacktileridgeroofedge", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãËÑäT
+	public static Block blackTileRidgeRoofT = new BlockCWFaceRoof("blacktileridgerooft", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãËÑäX
+	public static Block blackTileRidgeRoofX = new BlockCWFaceRoof("blacktileridgeroofx", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãËÑäÈ£ûÊ™ê
+	public static Block blackTileRidgeRoofJ = new BlockCWFaceRoof("blacktileridgeroofj", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂È£ûÊ™ê
+	public static Block blackTileRoofj = new BlockCWFaceRoof("blacktileroofj", Material.ROCK, 1.5F, SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñ
+	public static Block blackTileRoofSlab = new BlockCWRoofSlab("blacktileroofslab", Material.ROCK, 1.5F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñtop
+	public static Block blackTileRoofSlabTop = new BlockCWRoof("blacktileroofslabtop", Material.ROCK, 1.5F,
+			SoundType.STONE);
+
+	/* ËñÑÂ¢ô */
+	// ËñÑÁôΩÁÅ∞Â¢ô
+	public static Block thinWhiteGrayWalls = new BlockCWFaceThinWalls("thinwhitegraywalls", Material.ROCK, 1.0F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ËæπÁºòÂè≥
+	public static Block blackTileRoofEdgeY = new BlockCWFaceThinWalls("blacktileroofedgey", Material.ROCK, 1.0F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ËæπÁºòÂ∑¶
+	public static Block blackTileRoofEdgeZ = new BlockCWFaceThinWalls("blacktileroofedgez", Material.ROCK, 1.0F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ËæπÁºòÂè≥È£ûÊ™ê
+	public static Block blackTileRoofEdgeYJ = new BlockCWFaceThinWalls("blacktileroofedgeyj", Material.ROCK, 1.0F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ËæπÁºòÂ∑¶È£ûÊ™ê
+	public static Block blackTileRoofEdgeZJ = new BlockCWFaceThinWalls("blacktileroofedgezj", Material.ROCK, 1.0F,
+			SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂ∑¶
+	public static Block blackTileRoofEdgeSlabZ = new BlockCWFaceThinWallsSlab("blacktileroofedgeslabz", Material.ROCK,
+			1.0F, SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂ∑¶top
+	public static Block blackTileRoofEdgeSlabTopZ = new BlockCWFaceThinWalls("blacktileroofedgeslabtopz", Material.ROCK,
+			1.0F, SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂè≥
+	public static Block blackTileRoofEdgeSlabY = new BlockCWFaceThinWallsSlab("blacktileroofedgeslaby", Material.ROCK,
+			1.0F, SoundType.STONE);
+	// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂè≥top
+	public static Block blackTileRoofEdgeSlabTopY = new BlockCWFaceThinWalls("blacktileroofedgeslabtopy", Material.ROCK,
+			1.0F, SoundType.STONE);
+
+	public BlockLoader(FMLPreInitializationEvent event) {
+		register(stoneTowerLamp, "stone_tower_lamp");
+		register(blackBrickWall, "black_brick_wall");
+		register(bracketSet, "bracket_set");
+		register(redPillars, "red_pillars");
+		register(darkGreenPillars, "dark_green_pillars");
+		register(blackTileRoof, "black_tile_roof");
+		register(whiteGrayWalls, "white_gray_walls");
+		register(theLantern, "the_lantern");
+		register(candle, "candle");
+		register(menDun, "men_dun");
+		register(doorThreshold, "door_threshold");
+		register(carving, "carving");
+		register(blackTileRidgeRoof, "black_tile_ridge_roof");
+		register(blackTileRidgeRoofL, "black_tile_ridge_roof_l");
+		register(blackTileRidgeRoofEdge, "black_tile_ridge_roof_edge");
+		register(blackTileRidgeRoofT, "black_tile_ridge_roof_t");
+		register(blackTileRidgeRoofX, "black_tile_ridge_roof_x");
+		register(blackTileRidgeRoofJ, "black_tile_ridge_roof_j");
+		register(blackTileRoofj, "black_tile_roof_j");
+		register(thinWhiteGrayWalls, "thin_white_gray_walls");
+		register(blackTileRoofEdgeY, "black_tile_roof_edge_y");
+		register(blackTileRoofEdgeZ, "black_tile_roof_edge_z");
+		register(blackTileRoofEdgeYJ, "black_tile_roof_edge_yj");
+		register(blackTileRoofEdgeZJ, "black_tile_roof_edge_zj");
+		register(whiteLanterns, "white_lanterns");
+		register(treeAltar, "tree_altar");
+		register(bench, "bench");
+		register(table, "table");
+		register(andesitePavement, "andesite_pavement");
+		register(whiteGrayWallsStairs, "white_gray_walls_stairs");
+		register(blackTileRoofSlab, "black_tile_roof_slab");
+		register(blackTileRoofSlabTop, "black_tile_roof_slab_top");
+		register(blackTileRoofEdgeSlabZ, "black_tile_roof_edge_slab_z");
+		register(blackTileRoofEdgeSlabTopZ, "black_tile_roof_edge_slab_top_z");
+		register(blackTileRoofEdgeSlabY, "black_tile_roof_edge_slab_y");
+		register(blackTileRoofEdgeSlabTopY, "black_tile_roof_edge_slab_top_y");
+		register(paperWindow, "paper_window");
+		register(dioriteFence, "diorite_fence");
+		register(smallBlackBrickWall, "small_black_brick_wall");
+		register(smallWhiteGrayWalls, "small_white_gray_walls");
+		register(oakChineseFence, "oak_chinese_fence");
+		register(andesiteFence, "andesite_fence");
+		register(implicate, "implicate");
+		register(andesitePavementStairs, "andesite_pavement_stairs");
+		register(blackTileRidgeRoofTop, "black_tile_ridge_roof_top");
+		register(oakWall, "oak_wall");
+		register(cwDoor, "cw_doors");
+
+	}
+
+	@SideOnly(Side.CLIENT)
+	public static void registerRenders() {
+		registerRender(stoneTowerLamp);
+		registerRender(blackBrickWall);
+		registerRender(bracketSet);
+		registerRender(redPillars);
+		registerRender(darkGreenPillars);
+		registerRender(blackTileRoof);
+		registerRender(whiteGrayWalls);
+		registerRender(theLantern);
+		registerRender(candle);
+		registerRender(menDun);
+		registerRender(doorThreshold);
+		registerRender(carving);
+		registerRender(blackTileRidgeRoof);
+		registerRender(blackTileRidgeRoofL);
+		registerRender(blackTileRidgeRoofEdge);
+		registerRender(blackTileRidgeRoofT);
+		registerRender(blackTileRidgeRoofX);
+		registerRender(blackTileRidgeRoofJ);
+		registerRender(blackTileRoofj);
+		registerRender(thinWhiteGrayWalls);
+		registerRender(blackTileRoofEdgeY);
+		registerRender(blackTileRoofEdgeZ);
+		registerRender(blackTileRoofEdgeYJ);
+		registerRender(blackTileRoofEdgeZJ);
+		registerRender(whiteLanterns);
+		registerRender(treeAltar);
+		registerRender(bench);
+		registerRender(table);
+		registerRender(andesitePavement);
+		registerRender(whiteGrayWallsStairs);
+		registerRender(blackTileRoofSlab);
+		registerRender(blackTileRoofSlabTop);
+		registerRender(blackTileRoofEdgeSlabZ);
+		registerRender(blackTileRoofEdgeSlabTopZ);
+		registerRender(blackTileRoofEdgeSlabY);
+		registerRender(blackTileRoofEdgeSlabTopY);
+		registerRender(paperWindow);
+		registerRender(dioriteFence);
+		registerRender(smallBlackBrickWall);
+		registerRender(smallWhiteGrayWalls);
+		registerRender(oakChineseFence);
+		registerRender(andesiteFence);
+		registerRender(implicate);
+		registerRender(andesitePavementStairs);
+		registerRender(blackTileRidgeRoofTop);
+		registerRender(oakWall);
+		registerRender(cwDoor);
+
+	}
+
+	private static void register(Block block, String name) {
+		GameRegistry.registerBlock(block, name);
+	}
+
+	@SideOnly(Side.CLIENT)
+	private static void registerRender(Block block) {
+		Item item = Item.getItemFromBlock(block);
+		String name = GameData.getBlockRegistry().getNameForObject(block).toString();
+		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(name, "inventory"));
+		ModelLoader.setCustomStateMapper(cwDoor, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+	}
 }

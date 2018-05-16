@@ -7,248 +7,145 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class CraftingLoader
-{
-    public CraftingLoader()
-    {
-        registerRecipe();
-        registerSmelting();
-        registerFuel();
-    }
+public class CraftingLoader {
+	public CraftingLoader() {
+		registerRecipe();
+		registerSmelting();
+		registerFuel();
+	}
 
-    private static void registerRecipe()
-    {
-    	/*∑ΩøÈ*/
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackBrickWall), new Object[]
-    	        {
-    	                "##", "##", '#', ItemLoader.blackBrick
-    	                });
-    	GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.redPillars,2), new Object[]
-    	        {
-    	                Items.CLAY_BALL,Blocks.LOG,new ItemStack(Items.DYE,1,1),Items.CLAY_BALL
-    	                });
-    	GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.darkGreenPillars,2), new Object[]
-    	        {
-    	        		Items.CLAY_BALL,Blocks.LOG,new ItemStack(Items.DYE,1,2),Items.CLAY_BALL
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteGrayWalls,4), new Object[]
-    	        {
-    	                "**", "*#",'#', Blocks.SAND,'*',Items.QUARTZ
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteGrayWalls,2), new Object[]
-    	        {
-    	                "**", "*#",'#', Blocks.SAND,'*',new ItemStack(Items.DYE,1,15)
-    	                });
-    	/*µ∆*/
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.stoneTowerLamp,3), new Object[]
-    	        {
-    	                " * ", "*@*","#!#",'#', Blocks.STONE,'*',Blocks.STONEBRICK,'@',Blocks.REDSTONE_LAMP,'!',Blocks.REDSTONE_TORCH
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.theLantern,6), new Object[]
-    	        {
-    	                "#*#", "#!#","#*#",'#', new ItemStack(Blocks.WOOL,1,14),'*',new ItemStack(Blocks.WOOL,1,4),'!',Blocks.TORCH
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.candle,6), new Object[]
-    	        {
-    	                "  #", " **","*  ",'#', Blocks.TORCH,'*',Items.IRON_INGOT
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteLanterns,2), new Object[]
-    	        {
-    	                "***", "#!#","***",'#', Items.STICK,'*',Items.PAPER,'!',Blocks.TORCH
-    	                });
-    	/*≤ƒ¡œ*/
-    	GameRegistry.addShapedRecipe(new ItemStack(ItemLoader.blackClay,8), new Object[]
-    	        {
-    	        	"###", "#*#","###",'#',Items.CLAY_BALL,'*',Items.DYE
-    	        		});
-    	/*◊∞ Œ*/
+	private static void registerRecipe() {
+		/* ÊñπÂùó */
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackBrickWall),
+				new Object[] { "##", "##", '#', ItemLoader.blackBrick });
+		GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.redPillars, 2),
+				new Object[] { Items.CLAY_BALL, Blocks.LOG, new ItemStack(Items.DYE, 1, 1), Items.CLAY_BALL });
+		GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.darkGreenPillars, 2),
+				new Object[] { Items.CLAY_BALL, Blocks.LOG, new ItemStack(Items.DYE, 1, 2), Items.CLAY_BALL });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteGrayWalls, 4),
+				new Object[] { "**", "*#", '#', Blocks.SAND, '*', Items.QUARTZ });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteGrayWalls, 2),
+				new Object[] { "**", "*#", '#', Blocks.SAND, '*', new ItemStack(Items.DYE, 1, 15) });
+		/* ÁÅØ */
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.stoneTowerLamp, 3), new Object[] { " * ", "*@*", "#!#",
+				'#', Blocks.STONE, '*', Blocks.STONEBRICK, '@', Blocks.REDSTONE_LAMP, '!', Blocks.REDSTONE_TORCH });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.theLantern, 6), new Object[] { "#*#", "#!#", "#*#", '#',
+				new ItemStack(Blocks.WOOL, 1, 14), '*', new ItemStack(Blocks.WOOL, 1, 4), '!', Blocks.TORCH });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.candle, 6),
+				new Object[] { "  #", " **", "*  ", '#', Blocks.TORCH, '*', Items.IRON_INGOT });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteLanterns, 2),
+				new Object[] { "***", "#!#", "***", '#', Items.STICK, '*', Items.PAPER, '!', Blocks.TORCH });
+		/* ÊùêÊñô */
+		GameRegistry.addShapedRecipe(new ItemStack(ItemLoader.blackClay, 8),
+				new Object[] { "###", "#*#", "###", '#', Items.CLAY_BALL, '*', Items.DYE });
+		/* Ë£ÖÈ•∞ */
 
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.bracketSet), new Object[]
-    	        {
-    	                "###", "###"," # ",'#', Items.STICK
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoof,16), new Object[]
-    	        {
-    	                "  #", " ##","###",'#', ItemLoader.blackBrick
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoof,16), new Object[]
-    	        {
-    	                "#  ", "## ","###",'#', ItemLoader.blackBrick
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.carving,3), new Object[]
-    	        {
-    	                "###", "###",'#', Items.STICK
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.menDun,4), new Object[]
-    	        {
-    	                " **", " **","###",'#', new ItemStack(Blocks.STONE_SLAB,1,0),'*',Blocks.STONEBRICK
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.doorThreshold,3), new Object[]
-    	        {
-    	                "###",'#',new ItemStack(Blocks.STONE_SLAB,1,0)
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoof,16), new Object[]
-    	        {
-    	                "###","###",'#',ItemLoader.blackBrick
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofL,5), new Object[]
-    	        {
-    	                "#  ","#  ","###",'#',BlockLoader.blackTileRidgeRoof
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofEdge,3), new Object[]
-    	        {
-    	                "#","#","#",'#',BlockLoader.blackTileRidgeRoof
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofT,4), new Object[]
-    	        {
-    	                "###"," # ",'#',BlockLoader.blackTileRidgeRoof
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofX,5), new Object[]
-    	        {
-    	                "# #"," # ","# #",'#',BlockLoader.blackTileRidgeRoof
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofJ,3), new Object[]
-    	        {
-    	                "#  "," # ","  #",'#',BlockLoader.blackTileRidgeRoof
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofj,3), new Object[]
-    	        {
-    	                "#  "," # ","  #",'#',BlockLoader.blackTileRoof
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.thinWhiteGrayWalls,18), new Object[]
-    	        {
-    	                "#","#","#",'#',BlockLoader.whiteGrayWalls
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeZ,6), new Object[]
-    	        {
-    	                " #","#*",'#',BlockLoader.whiteGrayWalls,'*',BlockLoader.blackTileRoof
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeY,6), new Object[]
-    	        {
-    	                "# ","*#",'*',BlockLoader.whiteGrayWalls,'#',BlockLoader.blackTileRoof
-    	                });
-    	GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeYJ,1), new Object[]
-    	        {
-    	                ItemLoader.blackBrick,BlockLoader.blackTileRoofEdgeY
-    	                });
-    	GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeZJ,1), new Object[]
-    	        {
-    	                ItemLoader.blackBrick,BlockLoader.blackTileRoofEdgeZ
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.treeAltar,2), new Object[]
-    	        {
-    	                "*#*",'#',Blocks.LOG,'*',BlockLoader.blackBrickWall
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.bench,1), new Object[]
-    	        {
-    	                "###","***","* *",'#',Blocks.WOODEN_SLAB,'*',Items.STICK
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.table,4), new Object[]
-    	        {
-    	                "###","* *","* *",'#',Blocks.WOODEN_SLAB,'*',Blocks.PLANKS
-    	                });
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.andesitePavement,2), new Object[]
-    	        {
-    	                "#*", "*#",'#', new ItemStack(Blocks.STONE,1,6),'*',ItemLoader.blackBrick
-    	                });
-    	//∞◊ª“«ΩΩ◊Ã›
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteGrayWallsStairs,6), new Object[]
-    	        {
-    	                "#  ","## ","###",'#',BlockLoader.whiteGrayWalls
-    	                });
-    	//÷Ω¥∞
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.paperWindow,4), new Object[]
-    	        {
-    	                "#*#","#*#",'#',Items.STICK,'*',Items.PAPER
-    	                });
-    	//…¡≥§—“’§¿∏
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.dioriteFence,6), new Object[]
-    	        {
-    	                "###","###",'#',new ItemStack(Blocks.STONE,1,3)
-    	                });
-    	//–°∫⁄◊©«Ω
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.smallBlackBrickWall,6), new Object[]
-    	        {
-    	                "###","###",'#',BlockLoader.blackBrickWall
-    	                });
-    	//–°∞◊ª“«Ω
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.smallWhiteGrayWalls,6), new Object[]
-    	        {
-    	                "###","###",'#',BlockLoader.whiteGrayWalls
-    	                });
-    	//œƒæ÷– Ω’§¿∏
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.oakChineseFence,10), new Object[]
-    	        {
-    	                "#*#","#*#",'#',new ItemStack(Blocks.LOG,1,0),'*',new ItemStack(Blocks.PLANKS,1,0)
-    	                });
-    	//∞≤…Ω—“’§¿∏
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.andesiteFence,6), new Object[]
-    	        {
-    	                "###","###",'#',new ItemStack(Blocks.STONE,1,5)
-    	                });
-    	//π“¬‰
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.implicate,10), new Object[]
-    	        {
-    	                "#*#","#*#",'*',new ItemStack(Blocks.LOG,1,0),'#',Items.STICK
-    	                });
-    	//∞≤…Ω—“¬∑√Ê¬•Ã›
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.andesitePavementStairs,6), new Object[]
-    	        {
-    	                "#  ","## ","###",'#',BlockLoader.andesitePavement
-    	                });
-    	//œƒæ«Ω
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.oakWall,9), new Object[]
-    	        {
-    	                "###","###","###",'#',new ItemStack(Blocks.PLANKS,1,0)
-    	                });
-    	
-    	/*Œ›∂•*/
-    	//∫⁄ÕﬂŒ›∂•∞Î◊©
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofSlab,6), new Object[]
-    	        {
-    	                "###",'#',BlockLoader.blackTileRoof
-    	                });
-    	//∫⁄ÕﬂŒ›∂•∞Î◊©top
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofSlabTop,12), new Object[]
-    	        {
-    	                "###","###",'#',BlockLoader.blackTileRoof
-    	                });
-    	//∫⁄ÕﬂŒ›ºπtop
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofTop,3), new Object[]
-    	        {
-    	                "###",'#',BlockLoader.blackTileRidgeRoof
-    	                });
-    	/*±°«Ω*/
-    	//∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ◊Û
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabZ,4), new Object[]
-    	        {
-    	                "##",'#',BlockLoader.blackTileRoofEdgeZ
-    	                });
-    	//∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ◊ÛTOP
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabTopZ,6), new Object[]
-    	        {
-    	        		"###",'#',BlockLoader.blackTileRoofEdgeZ
-    	                });
-    	//∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ”“
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabY,4), new Object[]
-    	        {
-    	                "##",'#',BlockLoader.blackTileRoofEdgeY
-    	                });
-    	//∫⁄ÕﬂŒ›∂•∞Î◊©±ﬂ‘µ”“TOP
-    	GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabTopY,6), new Object[]
-    	        {
-    	        		"###",'#',BlockLoader.blackTileRoofEdgeY
-    	                });
-    }	
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.bracketSet),
+				new Object[] { "###", "###", " # ", '#', Items.STICK });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoof, 16),
+				new Object[] { "  #", " ##", "###", '#', ItemLoader.blackBrick });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoof, 16),
+				new Object[] { "#  ", "## ", "###", '#', ItemLoader.blackBrick });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.carving, 3),
+				new Object[] { "###", "###", '#', Items.STICK });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.menDun, 4), new Object[] { " **", " **", "###", '#',
+				new ItemStack(Blocks.STONE_SLAB, 1, 0), '*', Blocks.STONEBRICK });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.doorThreshold, 3),
+				new Object[] { "###", '#', new ItemStack(Blocks.STONE_SLAB, 1, 0) });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoof, 16),
+				new Object[] { "###", "###", '#', ItemLoader.blackBrick });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofL, 5),
+				new Object[] { "#  ", "#  ", "###", '#', BlockLoader.blackTileRidgeRoof });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofEdge, 3),
+				new Object[] { "#", "#", "#", '#', BlockLoader.blackTileRidgeRoof });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofT, 4),
+				new Object[] { "###", " # ", '#', BlockLoader.blackTileRidgeRoof });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofX, 5),
+				new Object[] { "# #", " # ", "# #", '#', BlockLoader.blackTileRidgeRoof });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofJ, 3),
+				new Object[] { "#  ", " # ", "  #", '#', BlockLoader.blackTileRidgeRoof });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofj, 3),
+				new Object[] { "#  ", " # ", "  #", '#', BlockLoader.blackTileRoof });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.thinWhiteGrayWalls, 18),
+				new Object[] { "#", "#", "#", '#', BlockLoader.whiteGrayWalls });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeZ, 6),
+				new Object[] { " #", "#*", '#', BlockLoader.whiteGrayWalls, '*', BlockLoader.blackTileRoof });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeY, 6),
+				new Object[] { "# ", "*#", '*', BlockLoader.whiteGrayWalls, '#', BlockLoader.blackTileRoof });
+		GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeYJ, 1),
+				new Object[] { ItemLoader.blackBrick, BlockLoader.blackTileRoofEdgeY });
+		GameRegistry.addShapelessRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeZJ, 1),
+				new Object[] { ItemLoader.blackBrick, BlockLoader.blackTileRoofEdgeZ });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.treeAltar, 2),
+				new Object[] { "*#*", '#', Blocks.LOG, '*', BlockLoader.blackBrickWall });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.bench, 1),
+				new Object[] { "###", "***", "* *", '#', Blocks.WOODEN_SLAB, '*', Items.STICK });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.table, 4),
+				new Object[] { "###", "* *", "* *", '#', Blocks.WOODEN_SLAB, '*', Blocks.PLANKS });
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.andesitePavement, 2),
+				new Object[] { "#*", "*#", '#', new ItemStack(Blocks.STONE, 1, 6), '*', ItemLoader.blackBrick });
+		// ÁôΩÁÅ∞Â¢ôÈò∂Ê¢Ø
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.whiteGrayWallsStairs, 6),
+				new Object[] { "#  ", "## ", "###", '#', BlockLoader.whiteGrayWalls });
+		// Á∫∏Á™ó
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.paperWindow, 4),
+				new Object[] { "#*#", "#*#", '#', Items.STICK, '*', Items.PAPER });
+		// Èó™ÈïøÂ≤©Ê†ÖÊ†è
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.dioriteFence, 6),
+				new Object[] { "###", "###", '#', new ItemStack(Blocks.STONE, 1, 3) });
+		// Â∞èÈªëÁ†ñÂ¢ô
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.smallBlackBrickWall, 6),
+				new Object[] { "###", "###", '#', BlockLoader.blackBrickWall });
+		// Â∞èÁôΩÁÅ∞Â¢ô
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.smallWhiteGrayWalls, 6),
+				new Object[] { "###", "###", '#', BlockLoader.whiteGrayWalls });
+		// Ê©°Êú®‰∏≠ÂºèÊ†ÖÊ†è
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.oakChineseFence, 10), new Object[] { "#*#", "#*#", '#',
+				new ItemStack(Blocks.LOG, 1, 0), '*', new ItemStack(Blocks.PLANKS, 1, 0) });
+		// ÂÆâÂ±±Â≤©Ê†ÖÊ†è
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.andesiteFence, 6),
+				new Object[] { "###", "###", '#', new ItemStack(Blocks.STONE, 1, 5) });
+		// ÊåÇËêΩ
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.implicate, 10),
+				new Object[] { "#*#", "#*#", '*', new ItemStack(Blocks.LOG, 1, 0), '#', Items.STICK });
+		// ÂÆâÂ±±Â≤©Ë∑ØÈù¢Ê•ºÊ¢Ø
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.andesitePavementStairs, 6),
+				new Object[] { "#  ", "## ", "###", '#', BlockLoader.andesitePavement });
+		// Ê©°Êú®Â¢ô
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.oakWall, 9),
+				new Object[] { "###", "###", "###", '#', new ItemStack(Blocks.PLANKS, 1, 0) });
 
-    private static void registerSmelting()
-    {
-    	/*◊∞ Œ*/
-    	GameRegistry.addSmelting(ItemLoader.blackClay, new ItemStack(ItemLoader.blackBrick), 0.5F);
-    }
+		/* Â±ãÈ°∂ */
+		// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñ
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofSlab, 6),
+				new Object[] { "###", '#', BlockLoader.blackTileRoof });
+		// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñtop
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofSlabTop, 12),
+				new Object[] { "###", "###", '#', BlockLoader.blackTileRoof });
+		// ÈªëÁì¶Â±ãËÑätop
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRidgeRoofTop, 3),
+				new Object[] { "###", '#', BlockLoader.blackTileRidgeRoof });
+		/* ËñÑÂ¢ô */
+		// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂ∑¶
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabZ, 4),
+				new Object[] { "##", '#', BlockLoader.blackTileRoofEdgeZ });
+		// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂ∑¶TOP
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabTopZ, 6),
+				new Object[] { "###", '#', BlockLoader.blackTileRoofEdgeZ });
+		// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂè≥
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabY, 4),
+				new Object[] { "##", '#', BlockLoader.blackTileRoofEdgeY });
+		// ÈªëÁì¶Â±ãÈ°∂ÂçäÁ†ñËæπÁºòÂè≥TOP
+		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.blackTileRoofEdgeSlabTopY, 6),
+				new Object[] { "###", '#', BlockLoader.blackTileRoofEdgeY });
+	}
 
-    private static void registerFuel()
-    {
+	private static void registerSmelting() {
+		/* Ë£ÖÈ•∞ */
+		GameRegistry.addSmelting(ItemLoader.blackClay, new ItemStack(ItemLoader.blackBrick), 0.5F);
+	}
 
-    }
+	private static void registerFuel() {
+
+	}
 }

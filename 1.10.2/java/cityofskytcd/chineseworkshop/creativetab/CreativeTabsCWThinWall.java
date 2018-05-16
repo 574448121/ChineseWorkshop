@@ -1,22 +1,16 @@
 package cityofskytcd.chineseworkshop.creativetab;
 
 import cityofskytcd.chineseworkshop.block.BlockLoader;
-import cityofskytcd.chineseworkshop.item.ItemLoader;
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 
-public class CreativeTabsCWThinWall extends CreativeTabs
-{
-    public CreativeTabsCWThinWall()
-    {
-        super("chineseworkshopthinwall");
-    }
+public class CreativeTabsCWThinWall extends CreativeTabs {
+	public CreativeTabsCWThinWall() {
+		super("chineseworkshopthinwall");
+	}
 
-    @Override
-    public Item getTabIconItem()
-    {
-    	return Item.getItemFromBlock(BlockLoader.thinWhiteGrayWalls);
-    }
+	@Override
+	public Item getTabIconItem() {
+		return Item.getItemFromBlock(BlockLoader.thinWhiteGrayWalls);
+	}
 }

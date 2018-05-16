@@ -2,9 +2,9 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
+import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
-import net.minecraft.block.BlockStairs;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -23,138 +23,130 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
 
 /**
- * ÎÝ¶¥Àà
+ * å±‹é¡¶ç±»
  */
 
-public class BlockCWRoof extends Block{
+public class BlockCWRoof extends Block {
 	public BlockCWRoof(String name, Material materialIn, float hardness, SoundType type) {
 		super(materialIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE, BlockCWRoof.EnumShape.STRAIGHT));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE,
+				BlockCWRoof.EnumShape.STRAIGHT));
 		this.setHardness(hardness);
 		this.setUnlocalizedName(name);
 		this.setSoundType(type);
 		this.setCreativeTab(CreativeTabsLoader.tabCWF);
 	}
-	
-	public boolean isOpaqueCube(IBlockState state)
-	{
-	    return false;
+
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
 	}
-	
-	public boolean isFullCube(IBlockState state)
-    {
-        return false;
-    }
-	
+
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List list) {
-	    list.add(new ItemStack(itemIn, 1, 0));
+		list.add(new ItemStack(itemIn, 1, 0));
 	}
-	
-	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
-    {
-        IBlockState iblockstate = super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
-        iblockstate = iblockstate.withProperty(FACING, placer.getHorizontalFacing()).withProperty(SHAPE, BlockCWRoof.EnumShape.STRAIGHT);
-        return iblockstate;
-    }
-	
-	protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, new IProperty[] {FACING, SHAPE});
-    }
-	
-	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
-    {
-        return state.withProperty(SHAPE, getStairsShape(state, worldIn, pos));
-    }
 
-    private static BlockCWRoof.EnumShape getStairsShape(IBlockState p_185706_0_, IBlockAccess p_185706_1_, BlockPos p_185706_2_)
-    {
-        EnumFacing enumfacing = (EnumFacing)p_185706_0_.getValue(FACING);
-        IBlockState iblockstate = p_185706_1_.getBlockState(p_185706_2_.offset(enumfacing));
+	@Override
+	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
+			int meta, EntityLivingBase placer) {
+		IBlockState iblockstate = super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
+		iblockstate = iblockstate.withProperty(FACING, placer.getHorizontalFacing()).withProperty(SHAPE,
+				BlockCWRoof.EnumShape.STRAIGHT);
+		return iblockstate;
+	}
 
-        if (isBlockStairs(iblockstate))
-        {
-            EnumFacing enumfacing1 = (EnumFacing)iblockstate.getValue(FACING);
+	@Override
+	protected BlockStateContainer createBlockState() {
+		return new BlockStateContainer(this, new IProperty[] { FACING, SHAPE });
+	}
 
-            if (enumfacing1.getAxis() != ((EnumFacing)p_185706_0_.getValue(FACING)).getAxis())
-            {
-                if (enumfacing1 == enumfacing.rotateYCCW())
-                {
-                    return BlockCWRoof.EnumShape.OUTER_LEFT;
-                }
+	@Override
+	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
+		return state.withProperty(SHAPE, getStairsShape(state, worldIn, pos));
+	}
 
-                return BlockCWRoof.EnumShape.OUTER_RIGHT;
-            }
-        }
+	private static BlockCWRoof.EnumShape getStairsShape(IBlockState p_185706_0_, IBlockAccess p_185706_1_,
+			BlockPos p_185706_2_) {
+		EnumFacing enumfacing = p_185706_0_.getValue(FACING);
+		IBlockState iblockstate = p_185706_1_.getBlockState(p_185706_2_.offset(enumfacing));
 
-        IBlockState iblockstate1 = p_185706_1_.getBlockState(p_185706_2_.offset(enumfacing.getOpposite()));
+		if (isBlockStairs(iblockstate)) {
+			EnumFacing enumfacing1 = iblockstate.getValue(FACING);
 
-        if (isBlockStairs(iblockstate1))
-        {
-            EnumFacing enumfacing2 = (EnumFacing)iblockstate1.getValue(FACING);
+			if (enumfacing1.getAxis() != p_185706_0_.getValue(FACING).getAxis()) {
+				if (enumfacing1 == enumfacing.rotateYCCW()) {
+					return BlockCWRoof.EnumShape.OUTER_LEFT;
+				}
 
-            if (enumfacing2.getAxis() != ((EnumFacing)p_185706_0_.getValue(FACING)).getAxis())
-            {
-                if (enumfacing2 == enumfacing.rotateYCCW())
-                {
-                    return BlockCWRoof.EnumShape.INNER_LEFT;
-                }
+				return BlockCWRoof.EnumShape.OUTER_RIGHT;
+			}
+		}
 
-                return BlockCWRoof.EnumShape.INNER_RIGHT;
-            }
-        }
+		IBlockState iblockstate1 = p_185706_1_.getBlockState(p_185706_2_.offset(enumfacing.getOpposite()));
 
-        return BlockCWRoof.EnumShape.STRAIGHT;
-    }
-    
-    public static boolean isBlockStairs(IBlockState state)
-    {
-        return state.getBlock() instanceof BlockCWRoof;
-    }
-    
-    public IBlockState getStateFromMeta(int meta)
-    {
-        IBlockState iblockstate = this.getDefaultState().withProperty(FACING, EnumFacing.getFront(5 - (meta & 3)));
-        return iblockstate;
-    }
+		if (isBlockStairs(iblockstate1)) {
+			EnumFacing enumfacing2 = iblockstate1.getValue(FACING);
 
-    public int getMetaFromState(IBlockState state)
-    {
-        int i = 0;
-        i = i | 5 - ((EnumFacing)state.getValue(FACING)).getIndex();
-        return i;
-    }
-    public static enum EnumShape implements IStringSerializable
-    {
-        STRAIGHT("straight"),
-        INNER_LEFT("inner_left"),
-        INNER_RIGHT("inner_right"),
-        OUTER_LEFT("outer_left"),
-        OUTER_RIGHT("outer_right");
+			if (enumfacing2.getAxis() != p_185706_0_.getValue(FACING).getAxis()) {
+				if (enumfacing2 == enumfacing.rotateYCCW()) {
+					return BlockCWRoof.EnumShape.INNER_LEFT;
+				}
 
-        private final String name;
+				return BlockCWRoof.EnumShape.INNER_RIGHT;
+			}
+		}
 
-        private EnumShape(String name)
-        {
-            this.name = name;
-        }
+		return BlockCWRoof.EnumShape.STRAIGHT;
+	}
 
-        public String toString()
-        {
-            return this.name;
-        }
+	public static boolean isBlockStairs(IBlockState state) {
+		return state.getBlock() instanceof BlockCWRoof;
+	}
 
-        public String getName()
-        {
-            return this.name;
-        }
-    }
-    
-    public static final PropertyDirection FACING = BlockHorizontal.FACING;
-    public static final PropertyEnum<BlockCWRoof.EnumShape> SHAPE = PropertyEnum.<BlockCWRoof.EnumShape>create("shape", BlockCWRoof.EnumShape.class);
+	@Override
+	public IBlockState getStateFromMeta(int meta) {
+		IBlockState iblockstate = this.getDefaultState().withProperty(FACING, EnumFacing.getFront(5 - (meta & 3)));
+		return iblockstate;
+	}
+
+	@Override
+	public int getMetaFromState(IBlockState state) {
+		int i = 0;
+		i = i | 5 - state.getValue(FACING).getIndex();
+		return i;
+	}
+
+	public static enum EnumShape implements IStringSerializable {
+		STRAIGHT("straight"), INNER_LEFT("inner_left"), INNER_RIGHT("inner_right"), OUTER_LEFT(
+				"outer_left"), OUTER_RIGHT("outer_right");
+
+		private final String name;
+
+		private EnumShape(String name) {
+			this.name = name;
+		}
+
+		@Override
+		public String toString() {
+			return this.name;
+		}
+
+		@Override
+		public String getName() {
+			return this.name;
+		}
+	}
+
+	public static final PropertyDirection FACING = BlockHorizontal.FACING;
+	public static final PropertyEnum<BlockCWRoof.EnumShape> SHAPE = PropertyEnum.<BlockCWRoof.EnumShape>create("shape",
+			BlockCWRoof.EnumShape.class);
 }

@@ -5,14 +5,13 @@ import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 
 /**
- * ’§¿∏¿‡
+ * Ê†ÖÊ†èÁ±ª
  */
 
-public class BlockCWFence extends BlockFence{
-	public BlockCWFence(String name, Material materialIn , MapColor blockMapColor ,float hardness,SoundType type) {
+public class BlockCWFence extends BlockFence {
+	public BlockCWFence(String name, Material materialIn, MapColor blockMapColor, float hardness, SoundType type) {
 		super(materialIn, blockMapColor);
 		this.setHardness(hardness);
 		this.setUnlocalizedName(name);

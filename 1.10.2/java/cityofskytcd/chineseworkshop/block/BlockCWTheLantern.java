@@ -12,10 +12,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 /**
- * µ∆¡˝¿‡
+ * ÁÅØÁ¨ºÁ±ª
  */
-public class BlockCWTheLantern extends Block{
-	public BlockCWTheLantern(String name, Material materialIn, float hardness,SoundType type,float lightLevel) {
+public class BlockCWTheLantern extends Block {
+	public BlockCWTheLantern(String name, Material materialIn, float hardness, SoundType type, float lightLevel) {
 		super(materialIn);
 		this.setHardness(hardness);
 		this.setUnlocalizedName(name);
@@ -23,19 +23,20 @@ public class BlockCWTheLantern extends Block{
 		this.setLightLevel(lightLevel);
 		this.setCreativeTab(CreativeTabsLoader.tabCWL);
 	}
-	
-	public boolean isOpaqueCube(IBlockState state)
-	{
-	    return false;
+
+	@Override
+	public boolean isOpaqueCube(IBlockState state) {
+		return false;
 	}
-	
-	public boolean isFullCube(IBlockState state)
-    {
-        return false;
-    }
-    @Nullable
-    public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos)
-    {
-        return NULL_AABB;
-    }
+
+	@Override
+	public boolean isFullCube(IBlockState state) {
+		return false;
+	}
+
+	@Override
+	@Nullable
+	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
+		return NULL_AABB;
+	}
 }
