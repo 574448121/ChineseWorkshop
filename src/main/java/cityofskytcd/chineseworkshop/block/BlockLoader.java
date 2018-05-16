@@ -80,8 +80,9 @@ public class BlockLoader {
 			blackBrickWall.getDefaultState(), 1.5F, SoundType.STONE);
 	// 橡木墙
 	public static Block oakWall = new BlockCWSmallWall("oakwall", Material.WOOD, MapColor.WOOD, 1.5F, SoundType.WOOD);
-
+	// 中式木门
 	public static Block cwDoor = new BlockCWDoor("cwdoor", Material.WOOD, 1.5F, SoundType.WOOD);
+	
 	/* 屋顶 */
 	// 黑瓦屋顶
 	public static Block blackTileRoof = new BlockCWRoof("blacktileroof", Material.ROCK, 1.5F, SoundType.STONE);
@@ -192,7 +193,6 @@ public class BlockLoader {
 		register(blackTileRidgeRoofTop, "black_tile_ridge_roof_top");
 		register(oakWall, "oak_wall");
 		register(cwDoor, "cw_doors");
-
 	}
 
 	@SideOnly(Side.CLIENT)
