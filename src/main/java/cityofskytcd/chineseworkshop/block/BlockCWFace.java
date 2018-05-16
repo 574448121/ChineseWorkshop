@@ -2,9 +2,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -23,15 +20,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 朝向类
  */
 
-public class BlockCWFace extends Block {
+public class BlockCWFace extends BlockCW {
 
-	public BlockCWFace(String name, Material materialIn, float hardness, SoundType type) {
-		super(materialIn);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		this.setCreativeTab(CreativeTabsLoader.tabCWB);
+	public BlockCWFace(String name, Material materialIn, float hardness) {
+		super(name, materialIn, hardness);
+		setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
 
 	@Override

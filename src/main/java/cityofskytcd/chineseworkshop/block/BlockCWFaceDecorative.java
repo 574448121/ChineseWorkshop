@@ -2,9 +2,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -23,25 +20,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 朝向装饰类
  */
 
-public class BlockCWFaceDecorative extends Block {
+public class BlockCWFaceDecorative extends BlockCWT {
 
-	public BlockCWFaceDecorative(String name, Material materialIn, float hardness, SoundType type) {
-		super(materialIn);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		this.setCreativeTab(CreativeTabsLoader.tabCWD);
-	}
-
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-
-	@Override
-	public boolean isFullCube(IBlockState state) {
-		return false;
+	public BlockCWFaceDecorative(String name, Material materialIn, float hardness) {
+		super(name, materialIn, hardness);
+		setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 	}
 
 	@Override
@@ -57,8 +40,7 @@ public class BlockCWFaceDecorative extends Block {
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		int facing = state.getValue(FACING).getHorizontalIndex();
-		return facing;
+		return state.getValue(FACING).getHorizontalIndex();
 	}
 
 	@Override

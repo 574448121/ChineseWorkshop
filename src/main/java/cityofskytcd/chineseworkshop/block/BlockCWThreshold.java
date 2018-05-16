@@ -2,9 +2,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -24,15 +21,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * 门槛类
  */
-public class BlockCWDoorThreshold extends Block {
+public class BlockCWThreshold extends BlockCWT {
 
-	public BlockCWDoorThreshold(String name, Material materialIn, float hardness, SoundType type) {
-		super(materialIn);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
+	public BlockCWThreshold(String name, Material materialIn, float hardness) {
+		super(name, materialIn, hardness);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		this.setCreativeTab(CreativeTabsLoader.tabCWD);
 	}
 
 	@Override
@@ -40,14 +33,6 @@ public class BlockCWDoorThreshold extends Block {
 		return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
 	}
 
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-
-	/*
-	 * public boolean isFullCube(IBlockState state) { return false; }
-	 */
 	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, FACING);
@@ -61,8 +46,7 @@ public class BlockCWDoorThreshold extends Block {
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		int facing = state.getValue(FACING).getHorizontalIndex();
-		return facing;
+		return state.getValue(FACING).getHorizontalIndex();
 	}
 
 	@Override

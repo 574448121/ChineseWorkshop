@@ -1,17 +1,15 @@
 package cityofskytcd.chineseworkshop.block;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
+import cityofskytcd.chineseworkshop.CWCreativeTabs;
+import cityofskytcd.chineseworkshop.util.BlockUtil;
 import net.minecraft.block.BlockStairs;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.state.IBlockState;
 
 public class BlockCWStairs extends BlockStairs {
 
-	protected BlockCWStairs(String name, IBlockState modelState, float hardness, SoundType type) {
-		super(modelState);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setCreativeTab(CreativeTabsLoader.tabCWD);
+	protected BlockCWStairs(String id, IBlockState state, float hardness) {
+		super(state);
+		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
+		setSoundType(BlockUtil.getDefaultSound(state.getMaterial()));
 	}
 }

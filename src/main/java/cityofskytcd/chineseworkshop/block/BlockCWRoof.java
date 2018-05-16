@@ -2,10 +2,7 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
@@ -28,25 +25,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 屋顶类
  */
 
-public class BlockCWRoof extends Block {
-	public BlockCWRoof(String name, Material materialIn, float hardness, SoundType type) {
-		super(materialIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE,
+public class BlockCWRoof extends BlockCWT {
+	public BlockCWRoof(String name, Material materialIn, float hardness) {
+		super(name, materialIn, hardness);
+		setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE,
 				BlockCWRoof.EnumShape.STRAIGHT));
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setCreativeTab(CreativeTabsLoader.tabCWF);
-	}
-
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-
-	@Override
-	public boolean isFullCube(IBlockState state) {
-		return false;
 	}
 
 	@Override

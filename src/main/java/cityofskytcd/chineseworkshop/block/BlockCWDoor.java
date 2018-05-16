@@ -2,40 +2,35 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.Random;
 
-import cityofskytcd.chineseworkshop.item.ItemLoader;
+import cityofskytcd.chineseworkshop.CWCreativeTabs;
+import cityofskytcd.chineseworkshop.item.CWItems;
+import cityofskytcd.chineseworkshop.util.BlockUtil;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockCWDoor extends BlockDoor {
-	protected BlockCWDoor(String name, Material materialIn, float hardness, SoundType type) {
+	protected BlockCWDoor(String id, Material materialIn, float hardness) {
 		super(materialIn);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
+		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
+		setSoundType(BlockUtil.getDefaultSound(materialIn));
 	}
 	
 	private Item getItem() {
-		if (this == BlockLoader.cwDoor)
+		if (this == CWBlocks.DOOR)
         {
-            return ItemLoader.cwDoor;
+            return CWItems.DOOR;
         }
-        else if (this == BlockLoader.cwHighDoor)
+        else if (this == CWBlocks.HIGH_DOOR)
         {
-            return ItemLoader.cwHighDoor;
+            return CWItems.HIGH_DOOR;
         }
-        else
-        {
-            return null;
-        }
+        return null;
 	}
 
 	@Override

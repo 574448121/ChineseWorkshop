@@ -4,9 +4,6 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.BlockFence;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -21,13 +18,9 @@ import net.minecraft.world.World;
  * 小墙类
  */
 
-public class BlockCWSmallWall extends BlockFence {
-	public BlockCWSmallWall(String name, Material materialIn, MapColor blockMapColor, float hardness, SoundType type) {
-		super(materialIn, blockMapColor);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setCreativeTab(CreativeTabsLoader.tabCWD);
+public class BlockCWSmallWall extends BlockCWFence {
+	public BlockCWSmallWall(String name, Material materialIn, MapColor blockMapColor, float hardness) {
+		super(name, materialIn, blockMapColor, hardness);
 
 	}
 
