@@ -1,0 +1,176 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "white_lanterns": "chineseworkshop:blocks/white_lanterns",
+        "particle": "chineseworkshop:blocks/white_lanterns"
+    },
+	"display": {
+        "gui": {	
+            "rotation": [ 30, 225, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0],
+            "scale":[ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.5, 0.5, 0.5 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 45, 0 ],
+            "translation": [ 0, 2.5, 0],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 225, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+},
+    "elements": [
+        {
+            "from": [3,2,3],
+            "to": [13,14,13],
+            "faces": {
+                "up": {
+                    "uv": [1,5,2,6],
+                    "texture": "#white_lanterns"
+                },
+                "down": {
+                    "uv": [5,5,6,6],
+                    "texture": "#white_lanterns"
+                },
+                "west": {
+                    "uv": [0,0,16,16],
+                    "texture": "#white_lanterns"
+                },
+                "east": {
+                    "uv": [0,0,16,16],
+                    "texture": "#white_lanterns"
+                },
+                "north": {
+                    "uv": [0,0,16,16],
+                    "texture": "#white_lanterns"
+                },
+                "south": {
+                    "uv": [0,0,16,16],
+                    "texture": "#white_lanterns"
+                }
+            }
+        },
+        {
+            "from": [5,1,5],
+            "to": [11,2,11],
+            "faces": {
+                "down": {
+                    "uv": [3,8,4,9],
+                    "texture": "#white_lanterns"
+                },
+                "west": {
+                    "uv": [10,14,11,15],
+                    "texture": "#white_lanterns"
+                },
+                "east": {
+                    "uv": [10,14,11,15],
+                    "texture": "#white_lanterns"
+                },
+                "north": {
+                    "uv": [10,14,11,15],
+                    "texture": "#white_lanterns"
+                },
+                "south": {
+                    "uv": [4,15,5,16],
+                    "texture": "#white_lanterns"
+                }
+            }
+        },
+        {
+            "from": [5,14,5],
+            "to": [11,15,11],
+            "faces": {
+                "up": {
+                    "uv": [5,10,6,11],
+                    "texture": "#white_lanterns"
+                },
+                "west": {
+                    "uv": [6,10,7,11],
+                    "texture": "#white_lanterns"
+                },
+                "east": {
+                    "uv": [8,10,9,11],
+                    "texture": "#white_lanterns"
+                },
+                "north": {
+                    "uv": [6,9,7,10],
+                    "texture": "#white_lanterns"
+                },
+                "south": {
+                    "uv": [4,9,5,11],
+                    "texture": "#white_lanterns"
+                }
+            }
+        },
+        {
+            "from": [7,-1,7],
+            "to": [9,1,9],
+            "faces": {
+                "down": {
+                    "uv": [7,11,9,13],
+                    "texture": "#white_lanterns"
+                },
+                "west": {
+                    "uv": [7,11,9,13],
+                    "texture": "#white_lanterns"
+                },
+                "east": {
+                    "uv": [6,11,8,13],
+                    "texture": "#white_lanterns"
+                },
+                "north": {
+                    "uv": [7,11,9,13],
+                    "texture": "#white_lanterns"
+                },
+                "south": {
+                    "uv": [6,11,8,13],
+                    "texture": "#white_lanterns"
+                }
+            }
+        },
+        {
+            "from": [7,15,7],
+            "to": [9,16,9],
+            "faces": {
+                "up": {
+                    "uv": [6,3,7,5],
+                    "texture": "#white_lanterns"
+                },
+                "west": {
+                    "uv": [9,11,10,13],
+                    "texture": "#white_lanterns"
+                },
+                "east": {
+                    "uv": [5,11,6,13],
+                    "texture": "#white_lanterns"
+                },
+                "north": {
+                    "uv": [6,11,7,13],
+                    "texture": "#white_lanterns"
+                },
+                "south": {
+                    "uv": [7,11,8,13],
+                    "texture": "#white_lanterns"
+                }
+            }
+        }
+    ]
+}

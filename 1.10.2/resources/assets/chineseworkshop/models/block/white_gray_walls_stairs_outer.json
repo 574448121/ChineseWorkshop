@@ -1,0 +1,7 @@
+{
+    "parent": "chineseworkshop:block/stairs_outer",
+    "textures": {
+        "particle": "chineseworkshop:blocks/white_gray_walls",
+		"white_gray_walls": "chineseworkshop:blocks/white_gray_walls"
+    }
+}

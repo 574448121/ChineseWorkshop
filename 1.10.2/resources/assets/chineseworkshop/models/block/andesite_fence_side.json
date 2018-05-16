@@ -1,0 +1,33 @@
+{
+"__comment": "Designed by Flashtt with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
+"textures": {
+    "particle": "chineseworkshop:blocks/andesite",
+    "texture": "chineseworkshop:blocks/andesite"
+},
+"elements": [ 
+{
+    "from": [ 6.5, 12, 0 ],
+    "to": [ 9.5, 16, 8 ],
+    "faces": {
+        "down":  { "uv": [ 6, 0, 10, 7 ], "texture": "#texture" },
+        "up":    { "uv": [ 6, 0, 10, 7 ], "texture": "#texture" },
+        "north": { "uv": [ 6, 0, 10, 5 ], "texture": "#texture" },
+        "south": { "uv": [ 6, 0, 10, 5 ], "texture": "#texture" },
+        "west":  { "uv": [ 0, 0, 7, 5 ], "texture": "#texture" },
+        "east":  { "uv": [ 0, 0, 7, 5 ], "texture": "#texture" }
+    }
+},
+{
+    "from": [ 6.5, 0, 0 ],
+    "to": [ 9.5, 12, 2 ],
+    "faces": {
+        "down":  { "uv": [ 0, 0, 4, 3 ], "texture": "#texture" },
+        "up":    { "uv": [ 0, 0, 4, 3 ], "texture": "#texture" },
+        "north": { "uv": [ 0, 0, 4, 13 ], "texture": "#texture" },
+        "south": { "uv": [ 0, 0, 4, 13 ], "texture": "#texture" },
+        "west":  { "uv": [ 0, 0, 3, 13 ], "texture": "#texture" },
+        "east":  { "uv": [ 0, 0, 3, 13 ], "texture": "#texture" }
+    }
+}
+]
+}

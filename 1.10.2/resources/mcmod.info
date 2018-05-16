@@ -1,0 +1,16 @@
+[
+{
+  "modid": "chineseworkshop",
+  "name": "ChineseWorkshop",
+  "description": "ChineseWorkshop. since then bid farewell to hand residue.",
+  "version": "1.1.0.0",
+  "mcversion": "",
+  "url": "https://minecraft.curseforge.com/projects/chineseworkshop",
+  "updateUrl": "",
+  "authorList": ["CityOfSkyTCD"],
+  "credits": "",
+  "logoFile": "logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

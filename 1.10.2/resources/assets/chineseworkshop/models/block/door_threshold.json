@@ -1,0 +1,63 @@
+{
+"textures": {
+    "particle": "chineseworkshop:blocks/door_threshold",
+    "DoorThreshold": "chineseworkshop:blocks/door_threshold"
+},
+	"display": {
+        "gui": {	
+            "rotation": [ 30, 225, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0],
+            "scale":[ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.5, 0.5, 0.5 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 45, 0 ],
+            "translation": [ 0, 2.5, 0],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 225, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+},
+"elements": [ 
+{
+    "from": [ 0, 0, 3 ],
+    "to": [ 16, 5, 12 ],
+    "faces": {
+        "down":  { "uv": [ 7, 8, 8, 9 ], "texture": "#DoorThreshold" },
+        "north": { "uv": [ 0, 8, 16, 11.5 ], "texture": "#DoorThreshold" },
+        "south": { "uv": [ 0, 8, 16, 11.5 ], "texture": "#DoorThreshold" },
+        "west":  { "uv": [ 7, 8, 16, 11.5 ], "texture": "#DoorThreshold" },
+        "east":  { "uv": [ 7, 8, 16, 11.5 ], "texture": "#DoorThreshold" }
+    }
+},
+{
+    "from": [ 0, 5, 2 ],
+    "to": [ 16, 7.5, 13 ],
+    "faces": {
+        "down":  { "uv": [ 0, 0, 0, 0 ], "texture": "#DoorThreshold" },
+        "up":    { "uv": [ 1, 0, 15, 8 ], "texture": "#DoorThreshold" },
+        "north": { "uv": [ 0, 0, 16, 2.5 ], "texture": "#DoorThreshold" },
+        "south": { "uv": [ 0, 7, 16, 9.5 ], "texture": "#DoorThreshold" },
+        "west":  { "uv": [ 2, 0, 13, 2.5 ], "texture": "#DoorThreshold" },
+        "east":  { "uv": [ 2, 0, 12.5, 2.5 ], "texture": "#DoorThreshold" }
+    }
+}
+]
+}

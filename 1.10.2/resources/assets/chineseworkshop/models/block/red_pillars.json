@@ -1,0 +1,168 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "RedPillars": "chineseworkshop:blocks/red_pillars",
+        "particle": "chineseworkshop:blocks/red_pillars"
+    },
+	 "display": {
+        "gui": {
+            "rotation": [ 30, 225, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0],
+            "scale":[ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.5, 0.5, 0.5 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 45, 0 ],
+            "translation": [ 0, 2.5, 0],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 225, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+},
+    "elements": [
+        {
+            "from": [0,0,0],
+            "to": [16,16,16],
+            "faces": {
+                "up": {
+                    "uv": [15,15,16,16],
+                    "texture": "#RedPillars"
+                },
+                "down": {
+                    "uv": [15,15,16,16],
+                    "texture": "#RedPillars"
+                },
+                "west": {
+                    "texture": "#RedPillars"
+                },
+                "east": {
+                    "texture": "#RedPillars"
+                },
+                "north": {
+                    "texture": "#RedPillars"
+                },
+                "south": {
+                    "texture": "#RedPillars"
+                }
+            }
+        },
+        {
+            "from": [1,0,-1],
+            "to": [15,16,0],
+            "faces": {
+                "up": {
+                    "uv": [15,0,16,1],
+                    "texture": "#RedPillars"
+                },
+                "down": {
+                    "uv": [15,6,16,7],
+                    "texture": "#RedPillars"
+                },
+                "west": {
+                    "uv": [7,0,8,16],
+                    "texture": "#RedPillars"
+                },
+                "east": {
+                    "uv": [8,0,9,16],
+                    "texture": "#RedPillars"
+                },
+                "north": {
+                    "texture": "#RedPillars"
+                }
+            }
+        },
+        {
+            "from": [-1,0,1],
+            "to": [0,16,15],
+            "faces": {
+                "up": {
+                    "uv": [6,0,7,14],
+                    "texture": "#RedPillars"
+                },
+                "down": {
+                    "uv": [8,1,9,15],
+                    "texture": "#RedPillars"
+                },
+                "west": {
+                    "texture": "#RedPillars"
+                },
+                "north": {
+                    "uv": [8,0,9,16],
+                    "texture": "#RedPillars"
+                },
+                "south": {
+                    "uv": [8,0,9,16],
+                    "texture": "#RedPillars"
+                }
+            }
+        },
+        {
+            "from": [16,0,1],
+            "to": [17,16,15],
+            "faces": {
+                "up": {
+                    "uv": [14,1,15,15],
+                    "texture": "#RedPillars"
+                },
+                "down": {
+                    "uv": [15,1,16,15],
+                    "texture": "#RedPillars"
+                },
+                "east": {
+                    "texture": "#RedPillars"
+                },
+                "north": {
+                    "uv": [15,0,16,16],
+                    "texture": "#RedPillars"
+                },
+                "south": {
+                    "uv": [14,0,15,16],
+                    "texture": "#RedPillars"
+                }
+            }
+        },
+        {
+            "from": [1,0,16],
+            "to": [15,16,17],
+            "faces": {
+                "up": {
+                    "uv": [14,15,15,16],
+                    "texture": "#RedPillars"
+                },
+                "down": {
+                    "uv": [14,15,15,16],
+                    "texture": "#RedPillars"
+                },
+                "west": {
+                    "uv": [15,0,16,16],
+                    "texture": "#RedPillars"
+                },
+                "east": {
+                    "uv": [14,0,15,16],
+                    "texture": "#RedPillars"
+                },
+                "south": {
+                    "texture": "#RedPillars"
+                }
+            }
+        }
+    ]
+}

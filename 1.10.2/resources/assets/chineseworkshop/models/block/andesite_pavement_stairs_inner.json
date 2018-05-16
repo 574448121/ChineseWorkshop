@@ -1,0 +1,7 @@
+{
+    "parent": "chineseworkshop:block/stairs_inner",
+    "textures": {
+        "particle": "chineseworkshop:blocks/andesite_pavement",
+		"block": "chineseworkshop:blocks/andesite_pavement"
+    }
+}

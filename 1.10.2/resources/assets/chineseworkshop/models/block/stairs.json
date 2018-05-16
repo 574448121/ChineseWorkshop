@@ -1,0 +1,64 @@
+{
+"textures": {
+    "particle": "chineseworkshop:blocks/white_gray_walls",
+    "block": "chineseworkshop:blocks/white_gray_walls"
+},
+"display": {
+        "gui": {	
+            "rotation": [ 30, 130, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0],
+            "scale":[ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 0, 0],
+            "scale":[ 0.5, 0.5, 0.5 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 45, 0 ],
+            "translation": [ 0, 2.5, 0],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 225, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.40, 0.40, 0.40 ]
+        }
+},
+"elements": [ 
+{
+    "from": [ 8, 8, 0 ],
+    "to": [ 16, 16, 16 ],
+    "faces": {
+        "down":  { "uv": [ 0, 0, 8, 16 ], "texture": "#block" },
+        "up":    { "uv": [ 8, 0, 16, 16 ], "texture": "#block" },
+        "north": { "uv": [ 0, 0, 8.5, 8 ], "texture": "#block" },
+        "south": { "uv": [ 7.5, 0, 16, 8 ], "texture": "#block" },
+        "west":  { "uv": [ 0, 0, 16, 8 ], "texture": "#block" },
+        "east":  { "uv": [ 0, 0, 16, 8 ], "texture": "#block" }
+    }
+},
+{
+    "from": [ 0, 0, 0 ],
+    "to": [ 16, 8, 16 ],
+    "faces": {
+        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#block" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#block" },
+        "north": { "uv": [ 0, 8, 16, 16 ], "texture": "#block" },
+        "south": { "uv": [ 0, 8, 16, 16 ], "texture": "#block" },
+        "west":  { "uv": [ 0, 8, 16, 16 ], "texture": "#block" },
+        "east":  { "uv": [ 0, 8, 16, 16 ], "texture": "#block" }
+    }
+}
+]
+}
