@@ -30,6 +30,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  */
 
 public class BlockCWRoofSlab extends Block {
+	private static final AxisAlignedBB AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
+
 	public BlockCWRoofSlab(String name, Material materialIn, float hardness, SoundType type) {
 		super(materialIn);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE,
@@ -42,7 +44,7 @@ public class BlockCWRoofSlab extends Block {
 
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
+		return AABB;
 	}
 
 	@Override
