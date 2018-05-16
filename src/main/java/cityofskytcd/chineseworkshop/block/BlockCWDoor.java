@@ -16,7 +16,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 public class BlockCWDoor extends BlockDoor {
-
 	protected BlockCWDoor(String name, Material materialIn, float hardness, SoundType type) {
 		super(materialIn);
 		this.setHardness(hardness);
