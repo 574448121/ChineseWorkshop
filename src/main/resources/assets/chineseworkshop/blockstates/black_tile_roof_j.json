@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:black_tile_roof_j" },
+        "facing=east":  { "model": "chineseworkshop:black_tile_roof_j", "y": 90 },
+        "facing=south": { "model": "chineseworkshop:black_tile_roof_j", "y": 180 },
+        "facing=west":  { "model": "chineseworkshop:black_tile_roof_j", "y": 270 }
+    }
+}

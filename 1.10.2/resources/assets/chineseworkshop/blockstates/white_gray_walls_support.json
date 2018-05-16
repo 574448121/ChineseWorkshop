@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "chineseworkshop:white_gray_walls_support", "y": 180 },
-        "facing=east":  { "model": "chineseworkshop:white_gray_walls_support", "y": 270 },
-        "facing=south": { "model": "chineseworkshop:white_gray_walls_support" },
-        "facing=west":  { "model": "chineseworkshop:white_gray_walls_support", "y": 90 }
-    }
-}

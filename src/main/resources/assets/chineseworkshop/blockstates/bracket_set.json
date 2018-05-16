@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:bracket_set" },
+        "facing=east":  { "model": "chineseworkshop:bracket_set", "y": 90 },
+        "facing=south": { "model": "chineseworkshop:bracket_set", "y": 180 },
+        "facing=west":  { "model": "chineseworkshop:bracket_set", "y": 270 }
+    }
+}

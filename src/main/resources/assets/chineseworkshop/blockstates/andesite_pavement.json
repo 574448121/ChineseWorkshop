@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:andesite_pavement", "y": 180 },
+        "facing=east":  { "model": "chineseworkshop:andesite_pavement", "y": 270 },
+        "facing=south": { "model": "chineseworkshop:andesite_pavement" },
+        "facing=west":  { "model": "chineseworkshop:andesite_pavement", "y": 90 }
+    }
+}

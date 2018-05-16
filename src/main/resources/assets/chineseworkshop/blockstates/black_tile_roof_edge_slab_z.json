@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:black_tile_roof_edge_slab_z", "y": 270 },
+        "facing=east":  { "model": "chineseworkshop:black_tile_roof_edge_slab_z" },
+        "facing=south": { "model": "chineseworkshop:black_tile_roof_edge_slab_z", "y": 90 },
+        "facing=west":  { "model": "chineseworkshop:black_tile_roof_edge_slab_z", "y": 180 }
+    }
+}
