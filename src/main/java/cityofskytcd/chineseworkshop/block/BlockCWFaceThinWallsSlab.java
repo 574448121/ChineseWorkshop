@@ -25,6 +25,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 朝向薄墙半砖类
  */
 public class BlockCWFaceThinWallsSlab extends Block {
+	private static final AxisAlignedBB AABB_EAST = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.1875D, 0.5D, 1.0D);
+	private static final AxisAlignedBB AABB_WEST = new AxisAlignedBB(0.8125D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
+	private static final AxisAlignedBB AABB_SOUTH = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 0.1875D);
+	private static final AxisAlignedBB AABB_NORTH = new AxisAlignedBB(0.0D, 0.0D, 0.8125D, 1.0D, 0.5D, 1.0D);
 
 	public BlockCWFaceThinWallsSlab(String name, Material materialIn, float hardness, SoundType type) {
 		super(materialIn);
@@ -49,13 +53,14 @@ public class BlockCWFaceThinWallsSlab extends Block {
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		switch (state.getValue(FACING)) {
 		case EAST:
-			return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.1875D, 0.5D, 1.0D);
+			return AABB_EAST;
 		case WEST:
-			return new AxisAlignedBB(0.8125D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
+			return AABB_WEST;
 		case SOUTH:
-			return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 0.1875D);
+			return AABB_SOUTH;
+		case NORTH:
 		default:
-			return new AxisAlignedBB(0.0D, 0.0D, 0.8125D, 1.0D, 0.5D, 1.0D);
+			return AABB_NORTH;
 		}
 	}
 

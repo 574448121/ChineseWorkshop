@@ -36,10 +36,10 @@ public class BlockCWBracketSet extends Block {
 		this.setCreativeTab(CreativeTabsLoader.tabCWD);
 	}
 
-	protected static final AxisAlignedBB BS_NORTH_AABB = new AxisAlignedBB(1.0D, 1.0D, 1.0D, 0.0D, 0.0D, 0.7D);
-	protected static final AxisAlignedBB BS_SOUTH_AABB = new AxisAlignedBB(1.0D, 1.0D, 0.3D, 0.0D, 0.0D, 0.0D);
-	protected static final AxisAlignedBB BS_WEST_AABB = new AxisAlignedBB(1.0D, 1.0D, 1.0D, 0.7D, 0.0D, 0.0D);
-	protected static final AxisAlignedBB BS_EAST_AABB = new AxisAlignedBB(0.3D, 1.0D, 1.0D, 0.0D, 0.0D, 0.0D);
+	private static final AxisAlignedBB BS_NORTH_AABB = new AxisAlignedBB(1.0D, 1.0D, 1.0D, 0.0D, 0.0D, 0.7D);
+	private static final AxisAlignedBB BS_SOUTH_AABB = new AxisAlignedBB(1.0D, 1.0D, 0.3D, 0.0D, 0.0D, 0.0D);
+	private static final AxisAlignedBB BS_WEST_AABB = new AxisAlignedBB(1.0D, 1.0D, 1.0D, 0.7D, 0.0D, 0.0D);
+	private static final AxisAlignedBB BS_EAST_AABB = new AxisAlignedBB(0.3D, 1.0D, 1.0D, 0.0D, 0.0D, 0.0D);
 
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
