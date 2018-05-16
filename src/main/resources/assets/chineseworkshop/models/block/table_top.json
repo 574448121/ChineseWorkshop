@@ -1,0 +1,21 @@
+{
+"textures": {
+    "particle": "chineseworkshop:blocks/wood",
+    "table": "chineseworkshop:blocks/table",
+    "wood": "chineseworkshop:blocks/wood"
+},
+"elements": [ 
+{
+    "from": [ 0, 14, 0 ],
+    "to": [ 16, 16, 16 ],
+    "faces": {
+        "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#table" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#table" },
+        "north": { "uv": [ 0, 4, 16, 7 ], "texture": "#wood" },
+        "south": { "uv": [ 0, 0, 16, 3 ], "texture": "#wood" },
+        "west":  { "uv": [ 0, 0, 16, 3 ], "texture": "#wood" },
+        "east":  { "uv": [ 0, 0, 16, 3 ], "texture": "#wood" }
+    }
+}
+]
+}

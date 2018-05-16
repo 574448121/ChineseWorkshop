@@ -1,0 +1,125 @@
+{
+	"textures": {
+		"particle": "chineseworkshop:blocks/wood",
+		"table": "chineseworkshop:blocks/table",
+		"wood": "chineseworkshop:blocks/wood"
+	},
+	"elements": [{
+			"from": [11, 0, 11],
+			"to": [13, 14, 13],
+			"faces": {
+				"down": {
+					"uv": [11, 11, 12, 12],
+					"texture": "#wood"
+				},
+				"north": {
+					"uv": [0, 11, 16, 16],
+					"rotation": 90,
+					"texture": "#wood"
+				},
+				"south": {
+					"uv": [0, 3, 16, 8],
+					"rotation": 90,
+					"texture": "#wood"
+				},
+				"west": {
+					"uv": [0, 11, 16, 16],
+					"rotation": 90,
+					"texture": "#wood"
+				},
+				"east": {
+					"uv": [0, 7, 16, 12],
+					"texture": "#wood"
+				}
+			}
+		},
+		{
+			"from": [0, 12, 12],
+			"to": [11, 14, 13],
+			"faces": {
+				"down": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"north": {
+					"uv": [0, 4, 16, 8],
+					"texture": "#wood"
+				},
+				"south": {
+					"uv": [0, 4, 16, 8],
+					"texture": "#wood"
+				},
+				"west": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				}
+			}
+		},
+		{
+			"from": [12, 12, 0],
+			"to": [13, 14, 11],
+			"faces": {
+				"down": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"north": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"west": {
+					"uv": [0, 4, 16, 8],
+					"texture": "#wood"
+				},
+				"east": {
+					"uv": [0, 4, 16, 8],
+					"texture": "#wood"
+				}
+			}
+		},
+		{
+			"from": [9, 10, 12],
+			"to": [11, 12, 13],
+			"faces": {
+				"down": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"north": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"south": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"west": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				}
+			}
+		},
+		{
+			"from": [12, 10, 9],
+			"to": [13, 12, 11],
+			"faces": {
+				"down": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"north": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"west": {
+					"uv": [0, 0, 0, 0],
+					"texture": "#wood"
+				},
+				"east": {
+					"uv": [6, 8, 8, 10],
+					"texture": "#wood"
+				}
+			}
+		}
+	]
+}

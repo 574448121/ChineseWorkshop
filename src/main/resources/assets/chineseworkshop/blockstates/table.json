@@ -1,8 +1,41 @@
 {
+    "forge_marker": 1,
+    "defaults": {
+        "model": "chineseworkshop:table_top",
+        "uvlock": false
+    },
     "variants": {
-        "facing=north": { "model": "chineseworkshop:table", "y": 180 },
-        "facing=east":  { "model": "chineseworkshop:table", "y": 270 },
-        "facing=south": { "model": "chineseworkshop:table" },
-        "facing=west":  { "model": "chineseworkshop:table", "y": 90 }
+        "nw": {
+            "true": {
+                "submodel": {
+                    "leg1": { "model": "chineseworkshop:table_leg1", "y": 180 }
+                }
+            },
+            "false": {}
+        },
+        "ne": {
+            "true": {
+                "submodel": {
+                    "leg2": { "model": "chineseworkshop:table_leg2", "y": 270 }
+                }
+            },
+            "false": {}
+        },
+        "se": {
+            "true": {
+                "submodel": {
+                    "leg3": { "model": "chineseworkshop:table_leg3", "y": 0 }
+                }
+            },
+            "false": {}
+        },
+        "sw": {
+            "true": {
+                "submodel": {
+                    "leg4": { "model": "chineseworkshop:table_leg4", "y": 90 }
+                }
+            },
+            "false": {}
+        }
     }
 }

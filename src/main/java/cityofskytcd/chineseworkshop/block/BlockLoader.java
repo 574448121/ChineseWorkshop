@@ -53,7 +53,7 @@ public class BlockLoader {
 	// 板凳
 	public static Block bench = new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F, SoundType.WOOD);
 	// 桌子
-	public static Block table = new BlockCWFaceDecorative("table", Material.WOOD, 0.5F, SoundType.WOOD);
+	public static Block table = new BlockCWTable();
 	// 白灰墙阶梯
 	public static Block whiteGrayWallsStairs = new BlockCWStairs("whitegraywallsstairs",
 			blackBrickWall.getDefaultState(), 1.5F, SoundType.STONE);
