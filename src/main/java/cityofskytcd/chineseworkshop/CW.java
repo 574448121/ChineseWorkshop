@@ -1,5 +1,7 @@
 package cityofskytcd.chineseworkshop;
 
+import org.apache.logging.log4j.Logger;
+
 import cityofskytcd.chineseworkshop.common.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -18,11 +20,14 @@ public class CW {
 	@Instance(CW.MODID)
 	public static CW instance;
 
+	public static Logger logger;
+
 	@SidedProxy(clientSide = "cityofskytcd.chineseworkshop.client.ClientProxy", serverSide = "cityofskytcd.chineseworkshop.common.CommonProxy")
 	public static CommonProxy proxy;
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		logger = event.getModLog();
 		proxy.preInit(event);
 	}
 
