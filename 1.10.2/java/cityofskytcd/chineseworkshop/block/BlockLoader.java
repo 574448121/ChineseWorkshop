@@ -1,11 +1,13 @@
 package cityofskytcd.chineseworkshop.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -77,7 +79,7 @@ public class BlockLoader
     //ÏðÄ¾Ç½
   	public static Block oakWall = new BlockCWSmallWall("oakwall",Material.WOOD, MapColor.WOOD, 1.5F,SoundType.WOOD);
   	
-  	public static Block doors = new BlockCWDoor("doors",Material.WOOD, 1.5F,SoundType.WOOD);
+  	public static Block cwDoor = new BlockCWDoor("cwdoor",Material.WOOD, 1.5F,SoundType.WOOD);
     /*ÎÝ¶¥*/
     //ºÚÍßÎÝ¶¥
   	public static Block blackTileRoof = new BlockCWRoof("blacktileroof",Material.ROCK, 1.5F,SoundType.STONE);  
@@ -172,7 +174,7 @@ public class BlockLoader
         register(andesitePavementStairs, "andesite_pavement_stairs");
         register(blackTileRidgeRoofTop, "black_tile_ridge_roof_top");
         register(oakWall, "oak_wall");
-        register(doors, "doors");
+        register(cwDoor, "cw_doors");
 
     }
 
@@ -225,7 +227,7 @@ public class BlockLoader
         registerRender(andesitePavementStairs);
         registerRender(blackTileRidgeRoofTop);
         registerRender(oakWall);
-        registerRender(doors);
+        registerRender(cwDoor);
         
     }
     
@@ -240,5 +242,6 @@ public class BlockLoader
         Item item = Item.getItemFromBlock(block);
         String name = GameData.getBlockRegistry().getNameForObject(block).toString();
         ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(name, "inventory"));
+        ModelLoader.setCustomStateMapper(cwDoor, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
     }
 }
