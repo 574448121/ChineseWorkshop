@@ -18,14 +18,14 @@ public class ItemLoader {
 	
 	/* 门 */
 	public static Item cwDoor = new ItemCWDoor("cwdoor", BlockLoader.cwDoor);
-	//public static Item cwLargeDoor = new ItemCWDoor("cwlargedoor", BlockLoader.cwLargeDoor);
+	public static Item cwHighDoor = new ItemCWDoor("cwhighdoor", BlockLoader.cwHighDoor);
 	
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(logo, "logo");
 		register(blackClay, "black_clay");
 		register(blackBrick, "black_brick");
 		register(cwDoor, "doors");
-		//register(cwLargeDoor, "large_door");
+		register(cwHighDoor, "high_door");
 	}
 
 	public static void registerRenders() {
@@ -33,7 +33,7 @@ public class ItemLoader {
 		registerRender(blackClay);
 		registerRender(blackBrick);
 		registerRender(cwDoor);
-		//registerRender(cwLargeDoor);
+		registerRender(cwHighDoor);
 	}
 
 	private static void register(Item item, String name) {

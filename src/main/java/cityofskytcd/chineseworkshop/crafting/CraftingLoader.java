@@ -115,8 +115,8 @@ public class CraftingLoader {
 		GameRegistry.addShapedRecipe(new ItemStack(BlockLoader.oakWall, 9),
 				new Object[] { "###", "###", "###", '#', new ItemStack(Blocks.PLANKS, 1, 0) });
 		// 中式木门
-		GameRegistry.addShapelessRecipe(new ItemStack(ItemLoader.cwDoor, 1),
-				new Object[] {Items.SPRUCE_DOOR,Blocks.PLANKS});
+		GameRegistry.addShapedRecipe(new ItemStack(ItemLoader.cwDoor, 1),
+				new Object[] { "#*", '#', Items.SPRUCE_DOOR, '*', Blocks.PLANKS });
 
 		/* 屋顶 */
 		// 黑瓦屋顶半砖

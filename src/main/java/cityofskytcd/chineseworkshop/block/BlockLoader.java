@@ -53,7 +53,7 @@ public class BlockLoader {
 	// 板凳
 	public static Block bench = new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F, SoundType.WOOD);
 	// 桌子
-	public static Block table = new BlockCWTable();
+	public static Block table = new BlockCWTable("table", Material.WOOD, 1.0F, SoundType.WOOD);
 	// 白灰墙阶梯
 	public static Block whiteGrayWallsStairs = new BlockCWStairs("whitegraywallsstairs",
 			blackBrickWall.getDefaultState(), 1.5F, SoundType.STONE);
@@ -82,6 +82,10 @@ public class BlockLoader {
 	public static Block oakWall = new BlockCWSmallWall("oakwall", Material.WOOD, MapColor.WOOD, 1.5F, SoundType.WOOD);
 	// 中式木门
 	public static Block cwDoor = new BlockCWDoor("cwdoor", Material.WOOD, 1.5F, SoundType.WOOD);
+	
+	public static Block cwHighDoor = new BlockCWDoor("cwhighdoor", Material.WOOD, 1.5F, SoundType.WOOD);
+	
+	public static Block upperDoorFrame = new BlockCWUpperDoorFrame("upperdoorframe", Material.WOOD, MapColor.WOOD, 1.5F,SoundType.WOOD);
 	
 	/* 屋顶 */
 	// 黑瓦屋顶
@@ -193,6 +197,8 @@ public class BlockLoader {
 		register(blackTileRidgeRoofTop, "black_tile_ridge_roof_top");
 		register(oakWall, "oak_wall");
 		register(cwDoor, "cw_doors");
+		register(cwHighDoor, "cw_high_door");
+		register(upperDoorFrame, "upper_door_frame");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -244,6 +250,8 @@ public class BlockLoader {
 		registerRender(blackTileRidgeRoofTop);
 		registerRender(oakWall);
 		registerRender(cwDoor);
+		registerRender(cwHighDoor);
+		registerRender(upperDoorFrame);
 
 	}
 
@@ -257,5 +265,6 @@ public class BlockLoader {
 		String name = GameData.getBlockRegistry().getNameForObject(block).toString();
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(name, "inventory"));
 		ModelLoader.setCustomStateMapper(cwDoor, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+		ModelLoader.setCustomStateMapper(cwHighDoor, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
 	}
 }

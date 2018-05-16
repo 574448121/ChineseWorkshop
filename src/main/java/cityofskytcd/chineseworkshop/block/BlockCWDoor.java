@@ -17,40 +17,26 @@ import net.minecraft.world.World;
 
 public class BlockCWDoor extends BlockDoor {
 
-	protected static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.1875D);
-	protected static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.8125D, 1.0D, 1.0D, 1.0D);
-	protected static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.8125D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
-	protected static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.1875D, 1.0D, 1.0D);
-
 	protected BlockCWDoor(String name, Material materialIn, float hardness, SoundType type) {
 		super(materialIn);
 		this.setHardness(hardness);
 		this.setUnlocalizedName(name);
 		this.setSoundType(type);
 	}
-
-	@Override
-	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-		state = state.getActualState(source, pos);
-		EnumFacing enumfacing = state.getValue(FACING);
-		boolean flag = !state.getValue(OPEN).booleanValue();
-		boolean flag1 = state.getValue(HINGE) == BlockDoor.EnumHingePosition.RIGHT;
-
-		switch (enumfacing) {
-		case EAST:
-		default:
-			return flag ? EAST_AABB : (flag1 ? NORTH_AABB : SOUTH_AABB);
-		case SOUTH:
-			return flag ? SOUTH_AABB : (flag1 ? EAST_AABB : WEST_AABB);
-		case WEST:
-			return flag ? WEST_AABB : (flag1 ? SOUTH_AABB : NORTH_AABB);
-		case NORTH:
-			return flag ? NORTH_AABB : (flag1 ? WEST_AABB : EAST_AABB);
-		}
-	}
-
+	
 	private Item getItem() {
-		return ItemLoader.cwDoor;
+		if (this == BlockLoader.cwDoor)
+        {
+            return ItemLoader.cwDoor;
+        }
+        else if (this == BlockLoader.cwHighDoor)
+        {
+            return ItemLoader.cwHighDoor;
+        }
+        else
+        {
+            return null;
+        }
 	}
 
 	@Override

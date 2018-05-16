@@ -1,0 +1,56 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "doors_upper": "chineseworkshop:blocks/doors_upper",
+        "particle": "chineseworkshop:blocks/doors_upper"
+    },
+    "elements": [
+        {
+            "from": [11,0,0],
+            "to": [13,15,16],
+            "faces": {
+                "west": {
+                    "uv": [16,1,0,16],
+                    "texture": "#doors_upper"
+                },
+                "east": {
+                    "texture": "#doors_upper"
+                },
+                "north": {
+                    "uv": [14,1,16,16],
+                    "texture": "#doors_upper"
+                },
+                "south": {
+                    "uv": [0,1,2,16],
+                    "texture": "#doors_upper"
+                }
+            }
+        },
+        {
+            "from": [11,15,0],
+            "to": [13,24,16],
+            "faces": {
+                "up": {
+                    "texture": "#doors_upper"
+                },
+                "west": {
+                    "uv": [16,2,0,11],
+                    "texture": "#doors_upper"
+                },
+                "east": {
+                    "uv": [0,2,16,11],
+                    "texture": "#doors_upper"
+                },
+                "north": {
+                    "uv": [14,2,16,11],
+                    "texture": "#doors_upper"
+                },
+                "south": {
+                    "uv": [0,0,2,9],
+                    "texture": "#doors_upper"
+                }
+            }
+        }
+    ]
+}

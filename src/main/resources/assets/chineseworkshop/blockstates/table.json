@@ -16,7 +16,7 @@
         "ne": {
             "true": {
                 "submodel": {
-                    "leg2": { "model": "chineseworkshop:table_leg2", "y": 270 }
+                    "leg2": { "model": "chineseworkshop:table_leg1", "y": 270 }
                 }
             },
             "false": {}
@@ -24,7 +24,7 @@
         "se": {
             "true": {
                 "submodel": {
-                    "leg3": { "model": "chineseworkshop:table_leg3", "y": 0 }
+                    "leg3": { "model": "chineseworkshop:table_leg1", "y": 0 }
                 }
             },
             "false": {}
@@ -32,7 +32,7 @@
         "sw": {
             "true": {
                 "submodel": {
-                    "leg4": { "model": "chineseworkshop:table_leg4", "y": 90 }
+                    "leg4": { "model": "chineseworkshop:table_leg1", "y": 90 }
                 }
             },
             "false": {}

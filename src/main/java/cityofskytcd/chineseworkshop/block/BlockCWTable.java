@@ -19,13 +19,12 @@ public class BlockCWTable extends Block {
 	public static final PropertyBool SE = PropertyBool.create("se");
 	public static final PropertyBool SW = PropertyBool.create("sw");
 
-	public BlockCWTable() {
-		super(Material.WOOD);
-		// setRegistryName(CW.MODID, "table");
-		setUnlocalizedName(CW.MODID + ".table");
-		setHardness(0.5F);
-		setSoundType(SoundType.WOOD);
-		setCreativeTab(CreativeTabsLoader.tabCWB);
+	public BlockCWTable(String name, Material materialIn, float hardness, SoundType type) {
+		super(materialIn);
+		this.setHardness(hardness);
+		this.setUnlocalizedName(name);
+		this.setSoundType(type);
+		this.setCreativeTab(CreativeTabsLoader.tabCWD);
 	}
 
 	@Override
