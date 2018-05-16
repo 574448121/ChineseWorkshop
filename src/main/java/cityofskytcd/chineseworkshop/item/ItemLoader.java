@@ -13,17 +13,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class ItemLoader {
 	/* 材料 */
 	public static Item logo = new ItemLogo();
-	public static Item cwDoor = new ItemCWDoor("cwdoor", BlockLoader.cwDoor);
-	public static Item largeDoor = new ItemCWDoor("largedoor", BlockLoader.cwDoor);
 	public static Item blackClay = new ItemCWMaterials("blackclay");
 	public static Item blackBrick = new ItemCWMaterials("blackbrick");
-
+	
+	/* 门 */
+	public static Item cwDoor = new ItemCWDoor("cwdoor", BlockLoader.cwDoor);
+	//public static Item cwLargeDoor = new ItemCWDoor("cwlargedoor", BlockLoader.cwLargeDoor);
+	
 	public ItemLoader(FMLPreInitializationEvent event) {
 		register(logo, "logo");
 		register(blackClay, "black_clay");
 		register(blackBrick, "black_brick");
 		register(cwDoor, "doors");
-//		register(largeDoor, "doors");
+		//register(cwLargeDoor, "large_door");
 	}
 
 	public static void registerRenders() {
@@ -31,7 +33,7 @@ public class ItemLoader {
 		registerRender(blackClay);
 		registerRender(blackBrick);
 		registerRender(cwDoor);
-//		registerRender(largeDoor);
+		//registerRender(cwLargeDoor);
 	}
 
 	private static void register(Item item, String name) {
