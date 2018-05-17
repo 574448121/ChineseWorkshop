@@ -34,7 +34,7 @@ public class ItemRegistry {
 				// new ItemCWBlock(CWBlocks.DOOR),
 				// new ItemCWBlock(CWBlocks.HIGH_DOOR),
 				new ItemCWBlock(CWBlocks.UPPER_DOOR_FRAME), new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF),
-				new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF), new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_Top),
+				new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF), new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP),
 				new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_L), new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE),
 				new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_T), new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_X),
 				new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J), new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_J),
@@ -88,7 +88,7 @@ public class ItemRegistry {
 		ModelUtil.mapItemModel(CWItems.UPPER_DOOR_FRAME);
 		ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF);
 		ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF);
-		ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_Top);
+		ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_TOP);
 		ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_L);
 		ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE);
 		ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_T);

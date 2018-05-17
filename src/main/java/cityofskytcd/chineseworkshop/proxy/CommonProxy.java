@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
 	@OverridingMethodsMustInvokeSuper
 	public void preInit(FMLPreInitializationEvent event) {
-		new CraftingLoader();
+		CraftingLoader.register();
 	}
 
 	@OverridingMethodsMustInvokeSuper
