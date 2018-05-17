@@ -1,8 +1,5 @@
 {
-    "__createdwith": "opl's Model Creator",
-    "ambientocclusion": false,
     "textures": {
-        "RedPillars": "chineseworkshop:blocks/dark_green_pillars",
         "particle": "chineseworkshop:blocks/dark_green_pillars"
     },
 	 "display": {
@@ -44,23 +41,23 @@
             "faces": {
                 "up": {
                     "uv": [15,15,16,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [15,15,16,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "west": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "north": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "south": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 }
             }
         },
@@ -70,22 +67,22 @@
             "faces": {
                 "up": {
                     "uv": [15,0,16,1],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [15,6,16,7],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [7,0,8,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [8,0,9,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "north": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 }
             }
         },
@@ -95,22 +92,22 @@
             "faces": {
                 "up": {
                     "uv": [6,0,7,14],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [8,1,9,15],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "west": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [8,0,9,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [8,0,9,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 }
             }
         },
@@ -120,22 +117,22 @@
             "faces": {
                 "up": {
                     "uv": [14,1,15,15],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [15,1,16,15],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [15,0,16,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [14,0,15,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 }
             }
         },
@@ -145,22 +142,22 @@
             "faces": {
                 "up": {
                     "uv": [14,15,15,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [14,15,15,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [15,0,16,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [14,0,15,16],
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 },
                 "south": {
-                    "texture": "#RedPillars"
+                    "texture": "#particle"
                 }
             }
         }

@@ -1,6 +1,4 @@
 {
-    "__createdwith": "opl's Model Creator",
-    "ambientocclusion": false,
     "textures": {
         "RoofTiless": "chineseworkshop:blocks/men_dun",
         "particle": "chineseworkshop:blocks/men_dun"

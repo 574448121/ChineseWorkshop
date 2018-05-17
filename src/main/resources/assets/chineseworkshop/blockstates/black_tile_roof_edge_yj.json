@@ -1,8 +1,20 @@
 {
-    "variants": {
-        "facing=north": { "model": "chineseworkshop:black_tile_roof_edge_yj", "y": 270 },
-        "facing=east":  { "model": "chineseworkshop:black_tile_roof_edge_yj" },
-        "facing=south": { "model": "chineseworkshop:black_tile_roof_edge_yj", "y": 90 },
-        "facing=west":  { "model": "chineseworkshop:black_tile_roof_edge_yj", "y": 180 }
+  "forge_marker": 1,
+  "defaults": {
+    "model": "chineseworkshop:black_tile_roof_edge_yj"
+  },
+  "variants": {
+    "facing": {
+      "north": {
+        "y": 270
+      },
+      "east": {},
+      "south": {
+        "y": 90
+      },
+      "west": {
+        "y": 180
+      }
     }
+  }
 }

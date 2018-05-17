@@ -1,10 +1,10 @@
 {
 "textures": {
-    "particle": "chineseworkshop:blocks/wood",
+    "particle": "minecraft:blocks/planks_oak",
     "table": "chineseworkshop:blocks/table",
-    "wood": "chineseworkshop:blocks/wood"
+    "wood": "minecraft:blocks/planks_oak"
 },
-"elements": [ 
+"elements": [
 {
     "from": [ 0, 14, 0 ],
     "to": [ 16, 16, 16 ],

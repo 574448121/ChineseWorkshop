@@ -1,6 +1,3 @@
 {
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "chineseworkshop:blocks/paper_window"
-    }
+    "parent": "chineseworkshop:block/paper_window"
 }

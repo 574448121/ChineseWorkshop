@@ -1,6 +1,4 @@
 {
-    "__createdwith": "opl's Model Creator",
-    "ambientocclusion": false,
     "textures": {
         "doors_upper": "chineseworkshop:blocks/doors_upper",
         "particle": "chineseworkshop:blocks/doors_upper"

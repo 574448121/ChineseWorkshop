@@ -1,6 +1,4 @@
 {
-    "__createdwith": "opl's Model Creator",
-    "ambientocclusion": false,
     "textures": {
         "RedPillars": "chineseworkshop:blocks/red_pillars",
         "particle": "chineseworkshop:blocks/red_pillars"

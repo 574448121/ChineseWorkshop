@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:block/block",
     "textures": {
-        "particle": "chineseworkshop:blocks/wood"
+        "particle": "minecraft:blocks/planks_oak"
     },
     "elements": [
         {

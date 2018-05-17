@@ -1,32 +1,30 @@
 {
-"__comment": "Designed by Flashtt with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "chineseworkshop:blocks/refined_diorite",
-    "texture": "chineseworkshop:blocks/refined_diorite"
+    "particle": "chineseworkshop:blocks/refined_diorite"
 },
-"elements": [ 
+"elements": [
 {
     "from": [ 7, 12, 0 ],
     "to": [ 9, 14, 6 ],
     "faces": {
-        "down":  { "uv": [ 7, 8, 5, 2 ], "texture": "#texture" },
-        "up":    { "uv": [ 7, 3, 9, 9 ], "texture": "#texture" },
-        "north": { "uv": [ 7, 2, 9, 4 ], "texture": "#texture" },
-        "south": { "uv": [ 5, 5, 7, 7 ], "texture": "#texture" },
-        "west":  { "uv": [ 2, 2, 8, 4 ], "texture": "#texture" },
-        "east":  { "uv": [ 6, 6, 12, 8 ], "texture": "#texture" }
+        "down":  { "uv": [ 7, 8, 5, 2 ], "texture": "#particle" },
+        "up":    { "uv": [ 7, 3, 9, 9 ], "texture": "#particle" },
+        "north": { "uv": [ 7, 2, 9, 4 ], "texture": "#particle" },
+        "south": { "uv": [ 5, 5, 7, 7 ], "texture": "#particle" },
+        "west":  { "uv": [ 2, 2, 8, 4 ], "texture": "#particle" },
+        "east":  { "uv": [ 6, 6, 12, 8 ], "texture": "#particle" }
     }
 },
 {
     "from": [ 7, 3, 0 ],
     "to": [ 9, 10, 6 ],
     "faces": {
-        "down":  { "uv": [ 8.5, 7, 6.5, 1 ], "texture": "#texture" },
-        "up":    { "uv": [ 7, 1, 9, 7 ], "texture": "#texture" },
-        "north": { "uv": [ 7, 6, 9, 13 ], "texture": "#texture" },
-        "south": { "uv": [ 7, 6, 9, 13 ], "texture": "#texture" },
-        "west":  { "uv": [ 8, 6, 14, 13 ], "texture": "#texture" },
-        "east":  { "uv": [ 2, 5, 8, 12 ], "texture": "#texture" }
+        "down":  { "uv": [ 8.5, 7, 6.5, 1 ], "texture": "#particle" },
+        "up":    { "uv": [ 7, 1, 9, 7 ], "texture": "#particle" },
+        "north": { "uv": [ 7, 6, 9, 13 ], "texture": "#particle" },
+        "south": { "uv": [ 7, 6, 9, 13 ], "texture": "#particle" },
+        "west":  { "uv": [ 8, 6, 14, 13 ], "texture": "#particle" },
+        "east":  { "uv": [ 2, 5, 8, 12 ], "texture": "#particle" }
     }
 }
 ]

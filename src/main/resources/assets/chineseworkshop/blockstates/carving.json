@@ -1,8 +1,20 @@
 {
-    "variants": {
-        "facing=north": { "model": "chineseworkshop:carving" },
-        "facing=east":  { "model": "chineseworkshop:carving", "y": 90 },
-        "facing=south": { "model": "chineseworkshop:carving", "y": 180 },
-        "facing=west":  { "model": "chineseworkshop:carving", "y": 270 }
+  "forge_marker": 1,
+  "defaults": {
+    "model": "chineseworkshop:carving"
+  },
+  "variants": {
+    "facing": {
+      "north": {},
+      "east": {
+        "y": 90
+      },
+      "south": {
+        "y": 180
+      },
+      "west": {
+        "y": 270
+      }
     }
+  }
 }

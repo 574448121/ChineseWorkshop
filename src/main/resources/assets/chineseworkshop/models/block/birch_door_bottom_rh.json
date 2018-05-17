@@ -1,7 +1,7 @@
 {
-    "parent": "chineseworkshop:blocks/wood",
+    "parent": "minecraft:block/block",
     "textures": {
-        "bottom": "chineseworkshop:blocks/wood",
-        "top": "chineseworkshop:blocks/wood"
+        "bottom": "minecraft:blocks/planks_oak",
+        "top": "minecraft:blocks/planks_oak"
     }
 }

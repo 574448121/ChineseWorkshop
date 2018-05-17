@@ -1,54 +1,19 @@
 {
-    "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
-        "0": "chineseworkshop:blocks/fu"
 		"particle": "chineseworkshop:blocks/fu"
     },
-	"display": {
-        "gui": {	
-            "rotation": [ 30, 225, 0 ],
-            "translation": [ 0, 0, 0],
-            "scale":[ 0.625, 0.625, 0.625 ]
-        },
-        "ground": {
-            "rotation": [ 0, 0, 0 ],
-            "translation": [ 0, 3, 0],
-            "scale":[ 0.25, 0.25, 0.25 ]
-        },
-        "fixed": {
-            "rotation": [ 0, 0, 0 ],
-            "translation": [ 0, 0, 0],
-            "scale":[ 0.5, 0.5, 0.5 ]
-        },
-        "thirdperson_righthand": {
-            "rotation": [ 75, 45, 0 ],
-            "translation": [ 0, 2.5, 0],
-            "scale": [ 0.375, 0.375, 0.375 ]
-        },
-        "firstperson_righthand": {
-            "rotation": [ 0, 45, 0 ],
-            "translation": [ 0, 0, 0 ],
-            "scale": [ 0.40, 0.40, 0.40 ]
-        },
-        "firstperson_lefthand": {
-            "rotation": [ 0, 225, 0 ],
-            "translation": [ 0, 0, 0 ],
-            "scale": [ 0.40, 0.40, 0.40 ]
-        }
-},
     "elements": [
         {
-            "name": "Cube",
-            "from": [ 2.0, 2.0, 0.0 ], 
-            "to": [ 12.0, 12.0, 1.0 ], 
+            "from": [ 2.0, 2.0, 0.0 ],
+            "to": [ 12.0, 12.0, 1.0 ],
             "rotation": { "origin": [ 8.0, 8.0, 8.0 ], "axis": "z", "angle": 45.0 },
             "faces": {
-                "north": { "texture": "#0", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-                "east": { "texture": "#0", "uv": [ 0.0, 0.0, 1.0, 10.0 ] },
-                "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 270 },
-                "west": { "texture": "#0", "uv": [ 0.0, 0.0, 1.0, 15.0 ] },
-                "up": { "texture": "#0", "uv": [ 0.0, 0.0, 10.0, 1.0 ] },
-                "down": { "texture": "#0", "uv": [ 0.0, 0.0, 10.0, 1.0 ] }
+                "north": { "texture": "#particle", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+                "east": { "texture": "#particle", "uv": [ 0.0, 0.0, 1.0, 10.0 ] },
+                "south": { "texture": "#particle", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 270 },
+                "west": { "texture": "#particle", "uv": [ 0.0, 0.0, 1.0, 15.0 ] },
+                "up": { "texture": "#particle", "uv": [ 0.0, 0.0, 10.0, 1.0 ] },
+                "down": { "texture": "#particle", "uv": [ 0.0, 0.0, 10.0, 1.0 ] }
             }
         }
     ]

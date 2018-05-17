@@ -1,8 +1,8 @@
 {
 "__comment": "Designed by Flashtt with BDcraft Cubik PRO 0.95 Beta - http://bdcraft.net",
 "textures": {
-    "particle": "chineseworkshop:blocks/wood",
-    "texture": "chineseworkshop:blocks/wood"
+    "particle": "minecraft:blocks/planks_oak",
+    "texture": "minecraft:blocks/planks_oak"
 },
 "display": {
         "gui": {
@@ -36,7 +36,7 @@
             "scale": [ 0.40, 0.40, 0.40 ]
         }
 },
-"elements": [ 
+"elements": [
 {
     "from": [ 7.5, 8, 7.5 ],
     "to": [ 8.5, 9, 8.5 ],

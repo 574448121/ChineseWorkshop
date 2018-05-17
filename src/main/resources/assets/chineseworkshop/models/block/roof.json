@@ -1,6 +1,4 @@
 {
-    "__createdwith": "opl's Model Creator",
-    "ambientocclusion": false,
     "textures": {
         "particle": "chineseworkshop:blocks/black_tile_roof",
         "block": "chineseworkshop:blocks/black_tile_roof"
