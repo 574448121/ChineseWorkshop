@@ -126,7 +126,7 @@ public class CWItems {
 	public static final Item BLACK_TILE_RIDGE_ROOF = null;
 	// 黑瓦屋脊top
 	@GameRegistry.ObjectHolder("black_tile_ridge_roof_top")
-	public static final Item BLACK_TILE_RIDGE_ROOF_Top = null;
+	public static final Item BLACK_TILE_RIDGE_ROOF_TOP = null;
 	// 黑瓦屋脊转角
 	@GameRegistry.ObjectHolder("black_tile_ridge_roof_l")
 	public static final Item BLACK_TILE_RIDGE_ROOF_L = null;

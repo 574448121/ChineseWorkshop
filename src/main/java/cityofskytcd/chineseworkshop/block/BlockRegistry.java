@@ -2,7 +2,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.statemap.StateMap;
@@ -35,13 +34,13 @@ public class BlockRegistry {
 				new BlockCWFaceDecorative("tree_altar", Material.ROCK, 1.5F),
 				new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F), new BlockCWTable("table", Material.WOOD, 1.0F),
 				new BlockCWStairs("white_gray_walls_stairs", CWBlocks.BLACK_BRICK_WALL.getDefaultState(), 1.5F),
-				new BlockCWGlassPane("paper_window", Material.WOOD, true, 0.5F, SoundType.WOOD),
+				new BlockCWGlassPane("paper_window", Material.WOOD, true, 0.5F),
 				new BlockCWFence("diorite_fence", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWSmallWall("small_black_brick_wall", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWSmallWall("small_white_gray_walls", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWFence("wooden_chinese_fence", Material.WOOD, MapColor.WOOD, 1.5F),
 				new BlockCWWall("andesite_fence", CWBlocks.BLACK_BRICK_WALL, 1.5F),
-				new BlockCWGlassPane("implicate", Material.WOOD, true, 1.0F, SoundType.WOOD),
+				new BlockCWGlassPane("implicate", Material.WOOD, true, 1.0F),
 				new BlockCWStairs("andesite_pavement_stairs", CWBlocks.BLACK_BRICK_WALL.getDefaultState(), 1.5F),
 				new BlockCWSmallWall("wooden_wall", Material.WOOD, MapColor.WOOD, 1.5F),
 				new BlockCWDoor("door", Material.WOOD, 1.5F), new BlockCWDoor("high_door", Material.WOOD, 1.5F),
