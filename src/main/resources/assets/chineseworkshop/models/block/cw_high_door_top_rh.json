@@ -42,9 +42,11 @@
                     "texture": "#doors_upper"
                 },
                 "north": {
+                    "uv": [0,2,2,11],
                     "texture": "#doors_upper"
                 },
                 "south": {
+                    "uv": [0,2,2,11],
                     "texture": "#doors_upper"
                 }
             }
