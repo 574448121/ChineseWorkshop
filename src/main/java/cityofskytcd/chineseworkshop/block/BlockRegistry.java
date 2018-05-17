@@ -5,6 +5,7 @@ import net.minecraft.block.BlockDoor;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.statemap.StateMap;
+import net.minecraft.init.Blocks;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -33,17 +34,18 @@ public class BlockRegistry {
 				new BlockCWFaceDecorative("carving", Material.WOOD, 0.5F),
 				new BlockCWFaceDecorative("tree_altar", Material.ROCK, 1.5F),
 				new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F), new BlockCWTable("table", Material.WOOD, 1.0F),
-				new BlockCWStairs("white_gray_walls_stairs", CWBlocks.BLACK_BRICK_WALL.getDefaultState(), 1.5F),
+				new BlockCWStairs("white_gray_walls_stairs", Blocks.STONE.getDefaultState(), 1.5F),
 				new BlockCWGlassPane("paper_window", Material.WOOD, true, 0.5F),
 				new BlockCWFence("diorite_fence", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWSmallWall("small_black_brick_wall", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWSmallWall("small_white_gray_walls", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWFence("oak_chinese_fence", Material.WOOD, MapColor.WOOD, 1.5F),
-				new BlockCWWall("andesite_fence", CWBlocks.BLACK_BRICK_WALL, 1.5F),
+				new BlockCWWall("andesite_fence", Blocks.STONE, 1.5F),
 				new BlockCWGlassPane("implicate", Material.WOOD, true, 1.0F),
-				new BlockCWStairs("andesite_pavement_stairs", CWBlocks.BLACK_BRICK_WALL.getDefaultState(), 1.5F),
+				new BlockCWStairs("andesite_pavement_stairs", Blocks.STONE.getDefaultState(), 1.5F),
 				new BlockCWSmallWall("oak_wall", Material.WOOD, MapColor.WOOD, 1.5F),
-				new BlockCWDoor("cw_door", Material.WOOD, 1.5F), new BlockCWDoor("cw_high_door", Material.WOOD, 1.5F),
+				new BlockCWDoor("door", Material.WOOD, 1.5F),
+				new BlockCWDoor("high_door", Material.WOOD, 1.5F),
 				new BlockCWUpperDoorFrame("upper_door_frame", Material.WOOD, MapColor.WOOD, 1.5F),
 				new BlockCWRoof("black_tile_roof", Material.ROCK, 1.5F),
 				new BlockCWFaceRoof("black_tile_ridge_roof", Material.ROCK, 1.5F),
@@ -70,7 +72,7 @@ public class BlockRegistry {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public static void onModelRegister(ModelRegistryEvent event) {
-		ModelLoader.setCustomStateMapper(CWBlocks.CW_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-		ModelLoader.setCustomStateMapper(CWBlocks.CW_HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+		ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+		ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
 	}
 }

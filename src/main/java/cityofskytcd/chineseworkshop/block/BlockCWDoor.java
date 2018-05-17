@@ -5,9 +5,12 @@ import java.util.Random;
 import cityofskytcd.chineseworkshop.CWCreativeTabs;
 import cityofskytcd.chineseworkshop.item.CWItems;
 import cityofskytcd.chineseworkshop.util.BlockUtil;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockDoor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
@@ -21,12 +24,53 @@ public class BlockCWDoor extends BlockDoor {
 	}
 
 	private Item getItem() {
-		if (this == CWBlocks.CW_DOOR) {
+		if (this == CWBlocks.DOOR) {
 			return CWItems.DOOR;
-		} else if (this == CWBlocks.CW_HIGH_DOOR) {
+		} else if (this == CWBlocks.HIGH_DOOR) {
 			return CWItems.HIGH_DOOR;
 		}
 		return null;
+	}
+
+	@Override
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
+		return pos.getY() >= worldIn.getHeight() - 1 ? false
+				: Blocks.STONE.canPlaceBlockAt(worldIn, pos) && Blocks.STONE.canPlaceBlockAt(worldIn, pos.up());
+	}
+
+	@Override
+	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
+		if (state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER || state.getBlock() == CWBlocks.DOOR) {
+			super.neighborChanged(state, worldIn, pos, blockIn);
+		} else {
+			boolean flag1 = false;
+			BlockPos blockpos1 = pos.up();
+			IBlockState iblockstate1 = worldIn.getBlockState(blockpos1);
+
+			if (iblockstate1.getBlock() != this) {
+				worldIn.setBlockToAir(pos);
+				flag1 = true;
+			}
+
+			if (flag1) {
+				if (!worldIn.isRemote) {
+					this.dropBlockAsItem(worldIn, pos, state, 0);
+				}
+			} else {
+				boolean flag = worldIn.isBlockPowered(pos) || worldIn.isBlockPowered(blockpos1);
+
+				if (blockIn != this && (flag || blockIn.getDefaultState().canProvidePower())
+						&& flag != iblockstate1.getValue(POWERED).booleanValue()) {
+					worldIn.setBlockState(blockpos1, iblockstate1.withProperty(POWERED, Boolean.valueOf(flag)), 2);
+
+					if (flag != state.getValue(OPEN).booleanValue()) {
+						worldIn.setBlockState(pos, state.withProperty(OPEN, Boolean.valueOf(flag)), 2);
+						worldIn.markBlockRangeForRenderUpdate(pos, pos);
+						worldIn.playEvent((EntityPlayer) null, flag ? 1006 : 1023, pos, 0);
+					}
+				}
+			}
+		}
 	}
 
 	@Override

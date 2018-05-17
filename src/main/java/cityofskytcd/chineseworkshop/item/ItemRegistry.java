@@ -16,7 +16,7 @@ public class ItemRegistry {
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(new ItemCWLogo("logo"), new ItemCW("black_clay"), new ItemCW("black_brick"),
-				new ItemCWDoor("door", CWBlocks.CW_DOOR), new ItemCWDoor("high_door", CWBlocks.CW_HIGH_DOOR),
+				new ItemCWDoor("door", CWBlocks.DOOR), new ItemCWDoor("high_door", CWBlocks.HIGH_DOOR),
 				//
 				new ItemCWBlock(CWBlocks.BLACK_BRICK_WALL), new ItemCWBlock(CWBlocks.ANDESITE_PAVEMENT),
 				new ItemCWBlock(CWBlocks.RED_PILLARS), new ItemCWBlock(CWBlocks.DARK_GREEN_PILLARS),

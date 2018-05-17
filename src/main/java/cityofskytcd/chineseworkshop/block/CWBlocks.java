@@ -91,11 +91,11 @@ public class CWBlocks {
 	@GameRegistry.ObjectHolder("oak_wall")
 	public static final Block OAK_WALL = Blocks.AIR;
 	// 中式木门
-	@GameRegistry.ObjectHolder("cw_door")
-	public static final Block CW_DOOR = Blocks.AIR;
+	@GameRegistry.ObjectHolder("door")
+	public static final Block DOOR = Blocks.AIR;
 
-	@GameRegistry.ObjectHolder("cw_high_door")
-	public static final Block CW_HIGH_DOOR = Blocks.AIR;
+	@GameRegistry.ObjectHolder("high_door")
+	public static final Block HIGH_DOOR = Blocks.AIR;
 
 	@GameRegistry.ObjectHolder("upper_door_frame")
 	public static final Block UPPER_DOOR_FRAME = Blocks.AIR;
