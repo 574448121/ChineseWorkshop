@@ -4,8 +4,6 @@ import org.apache.logging.log4j.Logger;
 
 import cityofskytcd.chineseworkshop.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -17,26 +15,34 @@ public class CW {
 	public static final String NAME = "ChineseWorkshop";
 	public static final String VERSION = "1.1.0.2";
 
-	@Instance(CW.MODID)
-	public static CW instance;
+	private static final CW INSTANCE = new CW();
+
+	@Mod.InstanceFactory
+    public static CW getInstance()
+    {
+        return INSTANCE;
+    }
 
 	public static Logger logger;
+	public static void log(Object o) {
+		logger.info(o);
+	}
 
 	@SidedProxy(clientSide = "cityofskytcd.chineseworkshop.proxy.ClientProxy", serverSide = "cityofskytcd.chineseworkshop.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
-	@EventHandler
+	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
 		proxy.preInit(event);
 	}
 
-	@EventHandler
+	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.init(event);
 	}
 
-	@EventHandler
+	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		proxy.postInit(event);
 	}

@@ -46,8 +46,8 @@ public class CWBlocks {
 	@GameRegistry.ObjectHolder("men_dun")
 	public static final Block MEN_DUN = Blocks.AIR;
 	// 门槛
-	@GameRegistry.ObjectHolder("door_threhold")
-	public static final Block DOOR_THREHOLD = Blocks.AIR;
+	@GameRegistry.ObjectHolder("threshold")
+	public static final Block THRESHOLD = Blocks.AIR;
 	// 雕饰
 	@GameRegistry.ObjectHolder("carving")
 	public static final Block CARVING = Blocks.AIR;
@@ -61,8 +61,8 @@ public class CWBlocks {
 	@GameRegistry.ObjectHolder("table")
 	public static final Block TABLE = Blocks.AIR;
 	// 白灰墙阶梯
-	@GameRegistry.ObjectHolder("white_gary_walls_stairs")
-	public static final Block WHITE_GARY_WALLS_STAIRS = Blocks.AIR;
+	@GameRegistry.ObjectHolder("white_gray_walls_stairs")
+	public static final Block WHITE_GRAY_WALLS_STAIRS = Blocks.AIR;
 	// 纸窗
 	@GameRegistry.ObjectHolder("paper_window")
 	public static final Block PAPER_WINDOW = Blocks.AIR;

@@ -1,6 +1,7 @@
 package cityofskytcd.chineseworkshop.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDoor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -8,10 +9,12 @@ import net.minecraft.client.renderer.block.statemap.StateMap;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+@Mod.EventBusSubscriber()
 public class BlockRegistry {
 
 	@SubscribeEvent
@@ -28,7 +31,7 @@ public class BlockRegistry {
 				new BlockCWLantern("white_lantern", Material.CLOTH, 0.5F, 1.0f),
 				new BlockCWBracketSet("bracket_set", Material.WOOD, 0.5F),
 				new BlockCWMenDun("men_dun", Material.ROCK, 1.5F),
-				new BlockCWThreshold("door_threshold", Material.ROCK, 1.0F),
+				new BlockCWThreshold("threshold", Material.ROCK, 1.0F),
 				new BlockCWFaceDecorative("carving", Material.WOOD, 0.5F),
 				new BlockCWFaceDecorative("tree_altar", Material.ROCK, 1.5F),
 				new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F),
@@ -72,7 +75,7 @@ public class BlockRegistry {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public static void onModelRegister(ModelRegistryEvent event) {
-		ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockCWDoor.POWERED).build());
-		ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockCWDoor.POWERED).build());
+		ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+		ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
 	}
 }

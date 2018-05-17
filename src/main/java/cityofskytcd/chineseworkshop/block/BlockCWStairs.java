@@ -9,7 +9,7 @@ public class BlockCWStairs extends BlockStairs {
 
 	protected BlockCWStairs(String id, IBlockState state, float hardness) {
 		super(state);
-		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
+		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.BUILDING_BLOCKS);
 		setSoundType(BlockUtil.getDefaultSound(state.getMaterial()));
 	}
 }

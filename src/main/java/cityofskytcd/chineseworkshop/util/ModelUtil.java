@@ -20,6 +20,7 @@ public final class ModelUtil {
 	}
 
 	public static void mapItemModel(Item item) {
+		System.out.println(item.getRegistryName().toString());
 		ModelLoader.setCustomModelResourceLocation(item, 0,
 				new ModelResourceLocation(item.getRegistryName().toString(), "inventory"));
 	}

@@ -63,8 +63,8 @@ public class CWItems {
 	@GameRegistry.ObjectHolder("men_dun")
 	public static final Item MEN_DUN = null;
 	// 门槛
-	@GameRegistry.ObjectHolder("door_threhold")
-	public static final Item DOOR_THREHOLD = null;
+	@GameRegistry.ObjectHolder("threshold")
+	public static final Item THRESHOLD = null;
 	// 雕饰
 	@GameRegistry.ObjectHolder("carving")
 	public static final Item CARVING = null;
@@ -78,8 +78,8 @@ public class CWItems {
 	@GameRegistry.ObjectHolder("table")
 	public static final Item TABLE = null;
 	// 白灰墙阶梯
-	@GameRegistry.ObjectHolder("white_gary_walls_stairs")
-	public static final Item WHITE_GARY_WALLS_STAIRS = null;
+	@GameRegistry.ObjectHolder("white_gray_walls_stairs")
+	public static final Item WHITE_GRAY_WALLS_STAIRS = null;
 	// 纸窗
 	@GameRegistry.ObjectHolder("paper_window")
 	public static final Item PAPER_WINDOW = null;
