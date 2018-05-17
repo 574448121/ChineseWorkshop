@@ -101,7 +101,7 @@ public class CraftingLoader {
 		GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.SMALL_WHITE_GRAY_WALLS, 6),
 				new Object[] { "###", "###", '#', CWBlocks.WHITE_GRAY_WALLS });
 		// 橡木中式栅栏
-		GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.WOODEN_CHINESE_FENCE, 10), new Object[] { "#*#", "#*#", '#',
+		GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.OAK_CHINESE_FENCE, 10), new Object[] { "#*#", "#*#", '#',
 				new ItemStack(Blocks.LOG, 1, 0), '*', new ItemStack(Blocks.PLANKS, 1, 0) });
 		// 安山岩栅栏
 		GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.ANDESITE_FENCE, 6),
@@ -113,7 +113,7 @@ public class CraftingLoader {
 		GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.ANDESITE_PAVEMENT_STAIRS, 6),
 				new Object[] { "#  ", "## ", "###", '#', CWBlocks.ANDESITE_PAVEMENT });
 		// 橡木墙
-		GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.WOODEN_WALL, 9),
+		GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.OAK_WALL, 9),
 				new Object[] { "###", "###", "###", '#', new ItemStack(Blocks.PLANKS, 1, 0) });
 		// 中式木门
 		GameRegistry.addShapedRecipe(new ItemStack(CWItems.DOOR, 1),
