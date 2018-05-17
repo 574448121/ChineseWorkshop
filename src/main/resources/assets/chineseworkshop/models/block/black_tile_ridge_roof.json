@@ -1,12 +1,10 @@
 {
-    "__createdwith": "opl's Model Creator",
-    "ambientocclusion": false,
     "textures": {
         "black_tile_roof": "chineseworkshop:blocks/black_tile_roof",
         "particle": "chineseworkshop:blocks/black_tile_roof"
     },
 	"display": {
-        "gui": {	
+        "gui": {
             "rotation": [ 30, 225, 0 ],
             "translation": [ 0, 0, 0],
             "scale":[ 0.625, 0.625, 0.625 ]

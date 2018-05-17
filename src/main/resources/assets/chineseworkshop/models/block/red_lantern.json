@@ -1,42 +1,8 @@
 {
-    "__createdwith": "opl's Model Creator",
-    "ambientocclusion": false,
+    "parent": "minecraft:block/block",
     "textures": {
-        "TheLantern": "chineseworkshop:blocks/the_lantern",
-        "particle": "chineseworkshop:blocks/the_lantern"
+        "particle": "chineseworkshop:blocks/red_lantern"
     },
-	"display": {
-        "gui": {
-            "rotation": [ 30, 225, 0 ],
-            "translation": [ 0, 0, 0],
-            "scale":[ 0.625, 0.625, 0.625 ]
-        },
-        "ground": {
-            "rotation": [ 0, 0, 0 ],
-            "translation": [ 0, 3, 0],
-            "scale":[ 0.25, 0.25, 0.25 ]
-        },
-        "fixed": {
-            "rotation": [ 0, 0, 0 ],
-            "translation": [ 0, 0, 0],
-            "scale":[ 0.5, 0.5, 0.5 ]
-        },
-        "thirdperson_righthand": {
-            "rotation": [ 75, 45, 0 ],
-            "translation": [ 0, 2.5, 0],
-            "scale": [ 0.375, 0.375, 0.375 ]
-        },
-        "firstperson_righthand": {
-            "rotation": [ 0, 45, 0 ],
-            "translation": [ 0, 0, 0 ],
-            "scale": [ 0.40, 0.40, 0.40 ]
-        },
-        "firstperson_lefthand": {
-            "rotation": [ 0, 225, 0 ],
-            "translation": [ 0, 0, 0 ],
-            "scale": [ 0.40, 0.40, 0.40 ]
-        }
-},
     "elements": [
         {
             "from": [2,2,2],
@@ -44,27 +10,27 @@
             "faces": {
                 "up": {
                     "uv": [2,0,11,8],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [2,0,11,8],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [2,0,13,8],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [2,0,13,8],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [2,0,13,8],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [1,0,12,8],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 }
             }
         },
@@ -74,19 +40,19 @@
             "faces": {
                 "down": {
                     "uv": [3,8,11,16],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "west": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "north": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "south": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 }
             }
         },
@@ -96,23 +62,23 @@
             "faces": {
                 "up": {
                     "uv": [5,10,9,14],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [6,10,10,11],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [5,10,9,11],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [6,9,10,10],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [4,9,8,10],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 }
             }
         },
@@ -122,19 +88,19 @@
             "faces": {
                 "up": {
                     "uv": [4,0,12,8],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "west": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "north": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "south": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 }
             }
         },
@@ -144,23 +110,23 @@
             "faces": {
                 "down": {
                     "uv": [7,10,9,12],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [7,13,9,15],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [7,14,9,16],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [7,13,9,15],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [6,14,8,16],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 }
             }
         },
@@ -170,23 +136,23 @@
             "faces": {
                 "up": {
                     "uv": [8,8,9,11],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [8,8,9,11],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [5,9,6,12],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [7,8,8,11],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [7,10,8,13],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 }
             }
         },
@@ -195,23 +161,23 @@
             "to": [9,16,9],
             "faces": {
                 "up": {
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [9,9,10,12],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [9,9,10,12],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [11,11,12,14],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [9,10,10,13],
-                    "texture": "#TheLantern"
+                    "texture": "#particle"
                 }
             }
         }
