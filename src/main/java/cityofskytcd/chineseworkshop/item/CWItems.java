@@ -93,8 +93,8 @@ public class CWItems {
 	@GameRegistry.ObjectHolder("small_white_gray_walls")
 	public static final Item SMALL_WHITE_GRAY_WALLS = null;
 	// 橡木中式栅栏
-	@GameRegistry.ObjectHolder("wooden_chinese_fence")
-	public static final Item WOODEN_CHINESE_FENCE = null;
+	@GameRegistry.ObjectHolder("oak_chinese_fence")
+	public static final Item OAK_CHINESE_FENCE = null;
 	// 安山岩栅栏
 	@GameRegistry.ObjectHolder("andesite_fence")
 	public static final Item ANDESITE_FENCE = null;
@@ -105,8 +105,8 @@ public class CWItems {
 	@GameRegistry.ObjectHolder("andesite_pavement_stairs")
 	public static final Item ANDESITE_PAVEMENT_STAIRS = null;
 	// 橡木墙
-	@GameRegistry.ObjectHolder("wooden_wall")
-	public static final Item WOODEN_WALL = null;
+	@GameRegistry.ObjectHolder("oak_wall")
+	public static final Item OAK_WALL = null;
 	// 中式木门
 	// @GameRegistry.ObjectHolder("door")
 	// public static final Item DOOR = null;

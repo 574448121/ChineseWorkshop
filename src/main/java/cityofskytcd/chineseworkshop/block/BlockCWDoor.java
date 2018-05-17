@@ -21,9 +21,9 @@ public class BlockCWDoor extends BlockDoor {
 	}
 
 	private Item getItem() {
-		if (this == CWBlocks.DOOR) {
+		if (this == CWBlocks.CW_DOOR) {
 			return CWItems.DOOR;
-		} else if (this == CWBlocks.HIGH_DOOR) {
+		} else if (this == CWBlocks.CW_HIGH_DOOR) {
 			return CWItems.HIGH_DOOR;
 		}
 		return null;

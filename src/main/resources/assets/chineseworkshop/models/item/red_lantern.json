@@ -1,5 +1,5 @@
 {
-    "parent": "chineseworkshop:block/the_lantern",
+    "parent": "chineseworkshop:block/red_lantern",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
