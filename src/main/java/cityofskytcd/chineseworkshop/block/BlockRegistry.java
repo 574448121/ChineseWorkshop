@@ -38,12 +38,12 @@ public class BlockRegistry {
 				new BlockCWFence("diorite_fence", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWSmallWall("small_black_brick_wall", Material.ROCK, MapColor.STONE, 1.5F),
 				new BlockCWSmallWall("small_white_gray_walls", Material.ROCK, MapColor.STONE, 1.5F),
-				new BlockCWFence("wooden_chinese_fence", Material.WOOD, MapColor.WOOD, 1.5F),
+				new BlockCWFence("oak_chinese_fence", Material.WOOD, MapColor.WOOD, 1.5F),
 				new BlockCWWall("andesite_fence", CWBlocks.BLACK_BRICK_WALL, 1.5F),
 				new BlockCWGlassPane("implicate", Material.WOOD, true, 1.0F),
 				new BlockCWStairs("andesite_pavement_stairs", CWBlocks.BLACK_BRICK_WALL.getDefaultState(), 1.5F),
-				new BlockCWSmallWall("wooden_wall", Material.WOOD, MapColor.WOOD, 1.5F),
-				new BlockCWDoor("door", Material.WOOD, 1.5F), new BlockCWDoor("high_door", Material.WOOD, 1.5F),
+				new BlockCWSmallWall("oak_wall", Material.WOOD, MapColor.WOOD, 1.5F),
+				new BlockCWDoor("cw_door", Material.WOOD, 1.5F), new BlockCWDoor("cw_high_door", Material.WOOD, 1.5F),
 				new BlockCWUpperDoorFrame("upper_door_frame", Material.WOOD, MapColor.WOOD, 1.5F),
 				new BlockCWRoof("black_tile_roof", Material.ROCK, 1.5F),
 				new BlockCWFaceRoof("black_tile_ridge_roof", Material.ROCK, 1.5F),
@@ -70,7 +70,7 @@ public class BlockRegistry {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public static void onModelRegister(ModelRegistryEvent event) {
-		ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-		ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+		ModelLoader.setCustomStateMapper(CWBlocks.CW_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+		ModelLoader.setCustomStateMapper(CWBlocks.CW_HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
 	}
 }

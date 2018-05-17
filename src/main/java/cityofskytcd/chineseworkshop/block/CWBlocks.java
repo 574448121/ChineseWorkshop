@@ -76,8 +76,8 @@ public class CWBlocks {
 	@GameRegistry.ObjectHolder("small_white_gray_walls")
 	public static final Block SMALL_WHITE_GRAY_WALLS = Blocks.AIR;
 	// 橡木中式栅栏
-	@GameRegistry.ObjectHolder("wooden_chinese_fence")
-	public static final Block WOODEN_CHINESE_FENCE = Blocks.AIR;
+	@GameRegistry.ObjectHolder("oak_chinese_fence")
+	public static final Block OAK_CHINESE_FENCE = Blocks.AIR;
 	// 安山岩栅栏
 	@GameRegistry.ObjectHolder("andesite_fence")
 	public static final Block ANDESITE_FENCE = Blocks.AIR;
@@ -88,14 +88,14 @@ public class CWBlocks {
 	@GameRegistry.ObjectHolder("andesite_pavement_stairs")
 	public static final Block ANDESITE_PAVEMENT_STAIRS = Blocks.AIR;
 	// 橡木墙
-	@GameRegistry.ObjectHolder("wooden_wall")
-	public static final Block WOODEN_WALL = Blocks.AIR;
+	@GameRegistry.ObjectHolder("oak_wall")
+	public static final Block OAK_WALL = Blocks.AIR;
 	// 中式木门
-	@GameRegistry.ObjectHolder("door")
-	public static final Block DOOR = Blocks.AIR;
+	@GameRegistry.ObjectHolder("cw_door")
+	public static final Block CW_DOOR = Blocks.AIR;
 
-	@GameRegistry.ObjectHolder("high_door")
-	public static final Block HIGH_DOOR = Blocks.AIR;
+	@GameRegistry.ObjectHolder("cw_high_door")
+	public static final Block CW_HIGH_DOOR = Blocks.AIR;
 
 	@GameRegistry.ObjectHolder("upper_door_frame")
 	public static final Block UPPER_DOOR_FRAME = Blocks.AIR;

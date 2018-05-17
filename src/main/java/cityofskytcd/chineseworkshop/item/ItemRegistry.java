@@ -16,7 +16,7 @@ public class ItemRegistry {
 	@SubscribeEvent
 	public static void onItemRegister(RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(new ItemCWLogo("logo"), new ItemCW("black_clay"), new ItemCW("black_brick"),
-				new ItemCWDoor("door", CWBlocks.DOOR), new ItemCWDoor("high_door", CWBlocks.HIGH_DOOR),
+				new ItemCWDoor("door", CWBlocks.CW_DOOR), new ItemCWDoor("high_door", CWBlocks.CW_HIGH_DOOR),
 				//
 				new ItemCWBlock(CWBlocks.BLACK_BRICK_WALL), new ItemCWBlock(CWBlocks.ANDESITE_PAVEMENT),
 				new ItemCWBlock(CWBlocks.RED_PILLARS), new ItemCWBlock(CWBlocks.DARK_GREEN_PILLARS),
@@ -28,9 +28,9 @@ public class ItemRegistry {
 				new ItemCWBlock(CWBlocks.BENCH), new ItemCWBlock(CWBlocks.TABLE),
 				new ItemCWBlock(CWBlocks.WHITE_GRAY_WALLS_STAIRS), new ItemCWBlock(CWBlocks.PAPER_WINDOW),
 				new ItemCWBlock(CWBlocks.DIORITE_FENCE), new ItemCWBlock(CWBlocks.SMALL_BLACK_BRICK_WALL),
-				new ItemCWBlock(CWBlocks.SMALL_WHITE_GRAY_WALLS), new ItemCWBlock(CWBlocks.WOODEN_CHINESE_FENCE),
+				new ItemCWBlock(CWBlocks.SMALL_WHITE_GRAY_WALLS), new ItemCWBlock(CWBlocks.OAK_CHINESE_FENCE),
 				new ItemCWBlock(CWBlocks.ANDESITE_FENCE), new ItemCWBlock(CWBlocks.IMPLICATE),
-				new ItemCWBlock(CWBlocks.ANDESITE_PAVEMENT_STAIRS), new ItemCWBlock(CWBlocks.WOODEN_WALL),
+				new ItemCWBlock(CWBlocks.ANDESITE_PAVEMENT_STAIRS), new ItemCWBlock(CWBlocks.OAK_WALL),
 				// new ItemCWBlock(CWBlocks.DOOR),
 				// new ItemCWBlock(CWBlocks.HIGH_DOOR),
 				new ItemCWBlock(CWBlocks.UPPER_DOOR_FRAME), new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF),
@@ -78,11 +78,11 @@ public class ItemRegistry {
 		ModelUtil.mapItemModel(CWItems.DIORITE_FENCE);
 		ModelUtil.mapItemModel(CWItems.SMALL_BLACK_BRICK_WALL);
 		ModelUtil.mapItemModel(CWItems.SMALL_WHITE_GRAY_WALLS);
-		ModelUtil.mapItemModel(CWItems.WOODEN_CHINESE_FENCE);
+		ModelUtil.mapItemModel(CWItems.OAK_CHINESE_FENCE);
 		ModelUtil.mapItemModel(CWItems.ANDESITE_FENCE);
 		ModelUtil.mapItemModel(CWItems.IMPLICATE);
 		ModelUtil.mapItemModel(CWItems.ANDESITE_PAVEMENT_STAIRS);
-		ModelUtil.mapItemModel(CWItems.WOODEN_WALL);
+		ModelUtil.mapItemModel(CWItems.OAK_WALL);
 		// ModelUtil.mapItemModel(CWItems.DOOR);
 		// ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
 		ModelUtil.mapItemModel(CWItems.UPPER_DOOR_FRAME);
