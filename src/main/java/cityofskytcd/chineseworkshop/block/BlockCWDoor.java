@@ -19,17 +19,14 @@ public class BlockCWDoor extends BlockDoor {
 		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
 		setSoundType(BlockUtil.getDefaultSound(materialIn));
 	}
-	
+
 	private Item getItem() {
-		if (this == CWBlocks.DOOR)
-        {
-            return CWItems.DOOR;
-        }
-        else if (this == CWBlocks.HIGH_DOOR)
-        {
-            return CWItems.HIGH_DOOR;
-        }
-        return null;
+		if (this == CWBlocks.DOOR) {
+			return CWItems.DOOR;
+		} else if (this == CWBlocks.HIGH_DOOR) {
+			return CWItems.HIGH_DOOR;
+		}
+		return null;
 	}
 
 	@Override

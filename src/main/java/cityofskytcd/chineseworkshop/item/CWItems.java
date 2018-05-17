@@ -23,7 +23,7 @@ public class CWItems {
 
 	@GameRegistry.ObjectHolder("high_door")
 	public static final Item HIGH_DOOR = null;
-	
+
 	/* 方块 */
 	// 黑砖墙
 	@GameRegistry.ObjectHolder("black_brick_wall")
@@ -108,11 +108,11 @@ public class CWItems {
 	@GameRegistry.ObjectHolder("wooden_wall")
 	public static final Item WOODEN_WALL = null;
 	// 中式木门
-//	@GameRegistry.ObjectHolder("door")
-//	public static final Item DOOR = null;
-//
-//	@GameRegistry.ObjectHolder("high_door")
-//	public static final Item HIGH_DOOR = null;
+	// @GameRegistry.ObjectHolder("door")
+	// public static final Item DOOR = null;
+	//
+	// @GameRegistry.ObjectHolder("high_door")
+	// public static final Item HIGH_DOOR = null;
 
 	@GameRegistry.ObjectHolder("upper_door_frame")
 	public static final Item UPPER_DOOR_FRAME = null;

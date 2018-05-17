@@ -19,8 +19,7 @@ public class BlockRegistry {
 
 	@SubscribeEvent
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
-		event.getRegistry().registerAll(
-				new BlockCW("black_brick_wall", Material.ROCK, 1.5F),
+		event.getRegistry().registerAll(new BlockCW("black_brick_wall", Material.ROCK, 1.5F),
 				new BlockCWFace("andesite_pavement", Material.ROCK, 1.5F),
 				new BlockCWRotatedPillar("red_pillars", Material.CLOTH, 1.0F),
 				new BlockCWRotatedPillar("dark_green_pillars", Material.WOOD, 1.0F),
@@ -34,8 +33,7 @@ public class BlockRegistry {
 				new BlockCWThreshold("threshold", Material.ROCK, 1.0F),
 				new BlockCWFaceDecorative("carving", Material.WOOD, 0.5F),
 				new BlockCWFaceDecorative("tree_altar", Material.ROCK, 1.5F),
-				new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F),
-				new BlockCWTable("table", Material.WOOD, 1.0F),
+				new BlockCWFaceDecorative("bench", Material.WOOD, 0.5F), new BlockCWTable("table", Material.WOOD, 1.0F),
 				new BlockCWStairs("white_gray_walls_stairs", CWBlocks.BLACK_BRICK_WALL.getDefaultState(), 1.5F),
 				new BlockCWGlassPane("paper_window", Material.WOOD, true, 0.5F, SoundType.WOOD),
 				new BlockCWFence("diorite_fence", Material.ROCK, MapColor.STONE, 1.5F),
@@ -46,8 +44,7 @@ public class BlockRegistry {
 				new BlockCWGlassPane("implicate", Material.WOOD, true, 1.0F, SoundType.WOOD),
 				new BlockCWStairs("andesite_pavement_stairs", CWBlocks.BLACK_BRICK_WALL.getDefaultState(), 1.5F),
 				new BlockCWSmallWall("wooden_wall", Material.WOOD, MapColor.WOOD, 1.5F),
-				new BlockCWDoor("door", Material.WOOD, 1.5F),
-				new BlockCWDoor("high_door", Material.WOOD, 1.5F),
+				new BlockCWDoor("door", Material.WOOD, 1.5F), new BlockCWDoor("high_door", Material.WOOD, 1.5F),
 				new BlockCWUpperDoorFrame("upper_door_frame", Material.WOOD, MapColor.WOOD, 1.5F),
 				new BlockCWRoof("black_tile_roof", Material.ROCK, 1.5F),
 				new BlockCWFaceRoof("black_tile_ridge_roof", Material.ROCK, 1.5F),
@@ -68,8 +65,7 @@ public class BlockRegistry {
 				new BlockCWFaceThinWallsSlab("black_tile_roof_edge_slab_z", Material.ROCK, 1.0F),
 				new BlockCWFaceThinWalls("black_tile_roof_edge_slab_top_z", Material.ROCK, 1.0F),
 				new BlockCWFaceThinWallsSlab("black_tile_roof_edge_slab_y", Material.ROCK, 1.0F),
-				new BlockCWFaceThinWalls("black_tile_roof_edge_slab_top_y", Material.ROCK, 1.0F)
-		);
+				new BlockCWFaceThinWalls("black_tile_roof_edge_slab_top_y", Material.ROCK, 1.0F));
 	}
 
 	@SubscribeEvent

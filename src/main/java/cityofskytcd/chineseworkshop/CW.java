@@ -18,12 +18,12 @@ public class CW {
 	private static final CW INSTANCE = new CW();
 
 	@Mod.InstanceFactory
-    public static CW getInstance()
-    {
-        return INSTANCE;
-    }
+	public static CW getInstance() {
+		return INSTANCE;
+	}
 
 	public static Logger logger;
+
 	public static void log(Object o) {
 		logger.info(o);
 	}
