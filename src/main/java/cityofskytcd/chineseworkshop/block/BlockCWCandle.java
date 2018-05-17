@@ -6,7 +6,6 @@ import javax.annotation.Nullable;
 
 import com.google.common.base.Predicate;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -30,7 +29,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 蜡烛类
  */
 
-public class BlockCWCandle extends Block {
+public class BlockCWCandle extends BlockCWT {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", new Predicate<EnumFacing>() {
 		@Override
 		public boolean apply(@Nullable EnumFacing p_apply_1_) {
@@ -39,12 +38,10 @@ public class BlockCWCandle extends Block {
 	});
 
 	protected BlockCWCandle(String name, Material materialIn, float lightLevel) {
-		super(materialIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
-		this.setTickRandomly(true);
-		this.setUnlocalizedName(name);
-		this.setLightLevel(lightLevel);
-		this.setCreativeTab(CreativeTabsLoader.tabCWL);
+		super(name, materialIn, 0F);
+		setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.UP));
+		setTickRandomly(true);
+		setLightLevel(lightLevel);
 	}
 
 	protected static final AxisAlignedBB STANDING_AABB = new AxisAlignedBB(0.3D, 0.0D, 0.3D, 0.7D, 0.7D, 0.7D);
@@ -77,20 +74,6 @@ public class BlockCWCandle extends Block {
 	@Nullable
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
 		return NULL_AABB;
-	}
-
-	/**
-	 * Used to determine ambient occlusion and culling when rebuilding chunks for
-	 * render
-	 */
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-
-	@Override
-	public boolean isFullCube(IBlockState state) {
-		return false;
 	}
 
 	private boolean canPlaceOn(World worldIn, BlockPos pos) {

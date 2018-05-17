@@ -2,9 +2,7 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
+import cityofskytcd.chineseworkshop.CWCreativeTabs;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
@@ -25,15 +23,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 斗栱类
  */
 
-public class BlockCWBracketSet extends Block {
+public class BlockCWBracketSet extends BlockCWT {
 
-	public BlockCWBracketSet(String name, Material materialIn, float hardness, SoundType type) {
-		super(materialIn);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
+	public BlockCWBracketSet(String name, Material materialIn, float hardness) {
+		super(name, materialIn, hardness, CWCreativeTabs.DECORATIONS);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		this.setCreativeTab(CreativeTabsLoader.tabCWD);
 	}
 
 	private static final AxisAlignedBB BS_NORTH_AABB = new AxisAlignedBB(1.0D, 1.0D, 1.0D, 0.0D, 0.0D, 0.7D);
@@ -55,16 +49,6 @@ public class BlockCWBracketSet extends Block {
 		default:
 			return null;
 		}
-	}
-
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-
-	@Override
-	public boolean isFullCube(IBlockState state) {
-		return false;
 	}
 
 	@Override

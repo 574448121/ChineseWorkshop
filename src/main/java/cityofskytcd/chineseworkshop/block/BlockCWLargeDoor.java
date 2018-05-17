@@ -2,9 +2,10 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.Random;
 
-import cityofskytcd.chineseworkshop.item.ItemLoader;
+import cityofskytcd.chineseworkshop.CWCreativeTabs;
+import cityofskytcd.chineseworkshop.item.CWItems;
+import cityofskytcd.chineseworkshop.util.BlockUtil;
 import net.minecraft.block.BlockDoor;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -21,11 +22,10 @@ public class BlockCWLargeDoor extends BlockDoor {
 	private static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.8125D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
 	private static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.1875D, 1.0D, 1.0D);
 
-	protected BlockCWLargeDoor(String name, Material materialIn, float hardness, SoundType type) {
+	protected BlockCWLargeDoor(String id, Material materialIn, float hardness) {
 		super(materialIn);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
+		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
+		setSoundType(BlockUtil.getDefaultSound(materialIn));
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class BlockCWLargeDoor extends BlockDoor {
 	}
 
 	private Item getItem() {
-		return ItemLoader.cwDoor;
+		return CWItems.HIGH_DOOR;
 	}
 
 	@Override

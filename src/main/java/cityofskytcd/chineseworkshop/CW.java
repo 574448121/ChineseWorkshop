@@ -2,7 +2,7 @@ package cityofskytcd.chineseworkshop;
 
 import org.apache.logging.log4j.Logger;
 
-import cityofskytcd.chineseworkshop.common.CommonProxy;
+import cityofskytcd.chineseworkshop.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -22,7 +22,7 @@ public class CW {
 
 	public static Logger logger;
 
-	@SidedProxy(clientSide = "cityofskytcd.chineseworkshop.client.ClientProxy", serverSide = "cityofskytcd.chineseworkshop.common.CommonProxy")
+	@SidedProxy(clientSide = "cityofskytcd.chineseworkshop.proxy.ClientProxy", serverSide = "cityofskytcd.chineseworkshop.proxy.CommonProxy")
 	public static CommonProxy proxy;
 
 	@EventHandler

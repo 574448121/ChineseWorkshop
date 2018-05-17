@@ -2,8 +2,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -29,32 +27,18 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 屋顶半砖类
  */
 
-public class BlockCWRoofSlab extends Block {
+public class BlockCWRoofSlab extends BlockCWT {
 	private static final AxisAlignedBB AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
 
-	public BlockCWRoofSlab(String name, Material materialIn, float hardness, SoundType type) {
-		super(materialIn);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE,
+	public BlockCWRoofSlab(String name, Material materialIn, float hardness) {
+		super(name, materialIn, hardness);
+		setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE,
 				BlockCWRoofSlab.EnumShape.STRAIGHT));
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setCreativeTab(CreativeTabsLoader.tabCWF);
 	}
 
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		return AABB;
-	}
-
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-
-	@Override
-	public boolean isFullCube(IBlockState state) {
-		return false;
 	}
 
 	@Override

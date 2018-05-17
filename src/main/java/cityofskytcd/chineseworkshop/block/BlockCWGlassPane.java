@@ -1,6 +1,7 @@
 package cityofskytcd.chineseworkshop.block;
 
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
+import cityofskytcd.chineseworkshop.CWCreativeTabs;
+import cityofskytcd.chineseworkshop.util.BlockUtil;
 import net.minecraft.block.BlockPane;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -11,13 +12,10 @@ import net.minecraft.util.BlockRenderLayer;
  */
 
 public class BlockCWGlassPane extends BlockPane {
-	public BlockCWGlassPane(String name, Material materialIn, boolean canDrop, float hardness, SoundType type) {
+	public BlockCWGlassPane(String id, Material materialIn, boolean canDrop, float hardness, SoundType type) {
 		super(materialIn, canDrop);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setCreativeTab(CreativeTabsLoader.tabCWD);
-
+		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
+		setSoundType(BlockUtil.getDefaultSound(materialIn));
 	}
 
 	@Override

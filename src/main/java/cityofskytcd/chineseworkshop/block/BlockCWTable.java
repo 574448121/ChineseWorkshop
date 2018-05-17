@@ -1,9 +1,5 @@
 package cityofskytcd.chineseworkshop.block;
 
-import cityofskytcd.chineseworkshop.CW;
-import cityofskytcd.chineseworkshop.creativetab.CreativeTabsLoader;
-import net.minecraft.block.Block;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.state.BlockStateContainer;
@@ -12,19 +8,15 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockCWTable extends Block {
+public class BlockCWTable extends BlockCWT {
 
 	public static final PropertyBool NW = PropertyBool.create("nw");
 	public static final PropertyBool NE = PropertyBool.create("ne");
 	public static final PropertyBool SE = PropertyBool.create("se");
 	public static final PropertyBool SW = PropertyBool.create("sw");
 
-	public BlockCWTable(String name, Material materialIn, float hardness, SoundType type) {
-		super(materialIn);
-		this.setHardness(hardness);
-		this.setUnlocalizedName(name);
-		this.setSoundType(type);
-		this.setCreativeTab(CreativeTabsLoader.tabCWD);
+	public BlockCWTable(String name, Material materialIn, float hardness) {
+		super(name, materialIn, hardness);
 	}
 
 	@Override
