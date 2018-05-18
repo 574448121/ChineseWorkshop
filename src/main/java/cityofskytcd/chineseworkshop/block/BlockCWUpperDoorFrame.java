@@ -33,7 +33,23 @@ public class BlockCWUpperDoorFrame extends BlockCWFence
         super(name, materialIn, blockMapColor, hardness);
     }
 
-    protected static final AxisAlignedBB[] BOUNDING_BOXES = new AxisAlignedBB[] { new AxisAlignedBB(0.125D, 0.5D, 0.125D, 0.875D, 1.0D, 0.875D), new AxisAlignedBB(0.125D, 0.5D, 0.125D, 0.875D, 1.0D, 1.0D), new AxisAlignedBB(0.0D, 0.5D, 0.125D, 0.875D, 1.0D, 0.875D), new AxisAlignedBB(0.0D, 0.5D, 0.125D, 0.875D, 1.0D, 1.0D), new AxisAlignedBB(0.125D, 0.5D, 0.0D, 0.875D, 1.0D, 0.875D), new AxisAlignedBB(0.125D, 0.5D, 0.0D, 0.875D, 1.0D, 1.0D), new AxisAlignedBB(0.0D, 0.5D, 0.0D, 0.875D, 1.0D, 0.875D), new AxisAlignedBB(0.0D, 0.5D, 0.0D, 0.875D, 1.0D, 1.0D), new AxisAlignedBB(0.125D, 0.5D, 0.125D, 1.0D, 1.0D, 0.875D), new AxisAlignedBB(0.125D, 0.5D, 0.125D, 1.0D, 1.0D, 1.0D), new AxisAlignedBB(0.0D, 0.5D, 0.125D, 1.0D, 1.0D, 0.875D), new AxisAlignedBB(0.0D, 0.5D, 0.125D, 1.0D, 1.0D, 1.0D), new AxisAlignedBB(0.125D, 0.5D, 0.0D, 1.0D, 1.0D, 0.875D), new AxisAlignedBB(0.125D, 0.5D, 0.0D, 1.0D, 1.0D, 1.0D), new AxisAlignedBB(0.0D, 0.5D, 0.0D, 1.0D, 1.0D, 0.875D), new AxisAlignedBB(0.0D, 0.5D, 0.0D, 1.0D, 1.0D, 1.0D) };
+    protected static final AxisAlignedBB[] BOUNDING_BOXES = new AxisAlignedBB[] {
+            new AxisAlignedBB(0.125D, 0.5D, 0.125D, 0.875D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.125D, 0.5D, 0.125D, 0.875D, 1.0D, 1.0D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.125D, 0.875D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.125D, 0.875D, 1.0D, 1.0D),
+            new AxisAlignedBB(0.125D, 0.5D, 0.0D, 0.875D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.125D, 0.5D, 0.0D, 0.875D, 1.0D, 1.0D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.0D, 0.875D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.0D, 0.875D, 1.0D, 1.0D),
+            new AxisAlignedBB(0.125D, 0.5D, 0.125D, 1.0D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.125D, 0.5D, 0.125D, 1.0D, 1.0D, 1.0D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.125D, 1.0D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.125D, 1.0D, 1.0D, 1.0D),
+            new AxisAlignedBB(0.125D, 0.5D, 0.0D, 1.0D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.125D, 0.5D, 0.0D, 1.0D, 1.0D, 1.0D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.0D, 1.0D, 1.0D, 0.875D),
+            new AxisAlignedBB(0.0D, 0.5D, 0.0D, 1.0D, 1.0D, 1.0D) };
     public static final AxisAlignedBB PILLAR_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 1.0D, 0.75D);
     public static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.25D, 0.0D, 0.25D, 0.75D, 1.0D, 1.0D);
     public static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.25D, 0.75D, 1.0D, 0.75D);

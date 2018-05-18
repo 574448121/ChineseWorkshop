@@ -49,8 +49,8 @@ public class BlockCWDoor extends BlockDoor
     @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos)
     {
-        return pos.getY() >= worldIn.getHeight() - 1 ? false : Blocks.STONE.canPlaceBlockAt(worldIn, pos)
-                && Blocks.STONE.canPlaceBlockAt(worldIn, pos.up());
+        return pos.getY() >= worldIn.getHeight() - 1 ? false
+                : Blocks.STONE.canPlaceBlockAt(worldIn, pos) && Blocks.STONE.canPlaceBlockAt(worldIn, pos.up());
     }
 
     @Override

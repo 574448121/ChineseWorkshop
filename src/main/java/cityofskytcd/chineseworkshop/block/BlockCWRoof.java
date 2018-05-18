@@ -130,8 +130,11 @@ public class BlockCWRoof extends BlockCWT
 
     public static enum EnumShape implements IStringSerializable
     {
-        STRAIGHT("straight"), INNER_LEFT("inner_left"), INNER_RIGHT("inner_right"), OUTER_LEFT(
-                "outer_left"), OUTER_RIGHT("outer_right");
+        STRAIGHT("straight"),
+        INNER_LEFT("inner_left"),
+        INNER_RIGHT("inner_right"),
+        OUTER_LEFT("outer_left"),
+        OUTER_RIGHT("outer_right");
 
         private final String name;
 
