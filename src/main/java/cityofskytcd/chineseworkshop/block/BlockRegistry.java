@@ -21,7 +21,7 @@ public class BlockRegistry {
 	public static void onBlockRegister(RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(new BlockCW("black_brick_wall", Material.ROCK, 1.5F),
 				new BlockCWFace("andesite_pavement", Material.ROCK, 1.5F),
-				new BlockCWRotatedPillar("red_pillars", Material.CLOTH, 1.0F),
+				new BlockCWRotatedPillar("red_pillars", Material.WOOD, 1.0F),
 				new BlockCWRotatedPillar("dark_green_pillars", Material.WOOD, 1.0F),
 				new BlockCW("white_gray_walls", Material.ROCK, 1.5F),
 				new BlockCWLight("stone_tower_lamp", Material.ROCK, 1.0F, 1.0f),
