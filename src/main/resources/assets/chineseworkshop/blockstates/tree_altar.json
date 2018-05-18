@@ -1,8 +1,5 @@
 {
     "variants": {
-        "facing=north": { "model": "chineseworkshop:tree_altar" },
-        "facing=east":  { "model": "chineseworkshop:tree_altar", "y": 90 },
-        "facing=south": { "model": "chineseworkshop:tree_altar", "y": 180 },
-        "facing=west":  { "model": "chineseworkshop:tree_altar", "y": 270 }
+        "normal": { "model": "chineseworkshop:tree_altar" }
     }
 }

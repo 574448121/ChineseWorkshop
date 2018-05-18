@@ -32,7 +32,7 @@ public class BlockCWThreshold extends BlockCWT {
 	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
 		return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
 	}
-	
+
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
@@ -41,7 +41,7 @@ public class BlockCWThreshold extends BlockCWT {
 	/*
 	 * public boolean isFullCube(IBlockState state) { return false; }
 	 */
-	
+
 	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, FACING);
