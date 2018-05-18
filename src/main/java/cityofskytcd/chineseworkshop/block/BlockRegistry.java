@@ -32,7 +32,7 @@ public class BlockRegistry {
 				new BlockCWMenDun("men_dun", Material.ROCK, 1.5F),
 				new BlockCWThreshold("threshold", Material.ROCK, 1.0F),
 				new BlockCWFaceDecorative("carving", Material.WOOD, 0.5F),
-				new BlockCWT("tree_altar", Material.ROCK, 1.5F), new BlockCWBench("bench", Material.WOOD, 0.5F),
+				new BlockCWTreeAltar("tree_altar", Material.ROCK, 1.5F), new BlockCWBench("bench", Material.WOOD, 0.5F),
 				new BlockCWTable("table", Material.WOOD, 1.0F),
 				new BlockCWStairs("white_gray_walls_stairs", Blocks.STONE.getDefaultState(), 1.5F),
 				new BlockCWPane("paper_window", Material.WOOD, true, 0.5F),
