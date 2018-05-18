@@ -18,8 +18,8 @@ import net.minecraft.world.World;
  * 小墙类
  */
 
-public class BlockCWSmallWall extends BlockCWFence {
-	public BlockCWSmallWall(String name, Material materialIn, MapColor blockMapColor, float hardness) {
+public class BlockCWSmallFence extends BlockCWFence {
+	public BlockCWSmallFence(String name, Material materialIn, MapColor blockMapColor, float hardness) {
 		super(name, materialIn, blockMapColor, hardness);
 
 	}
