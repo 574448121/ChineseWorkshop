@@ -9,6 +9,7 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -35,8 +36,9 @@ public class BlockCWFence extends BlockFence {
 
 	@Override
 	public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
-		Block block = worldIn.getBlockState(pos).getBlock();
-		return block == this || block instanceof BlockFenceGate;
+		IBlockState iblockstate = worldIn.getBlockState(pos);
+        Block block = iblockstate.getBlock();
+        return block == Blocks.BARRIER ? false : ((!(block == this) || iblockstate.getMaterial() != this.blockMaterial) && !(block instanceof BlockFenceGate) ? (iblockstate.getMaterial().isOpaque() && iblockstate.isFullCube() ? iblockstate.getMaterial() != Material.GOURD : false) : true);
 	}
 
 }
