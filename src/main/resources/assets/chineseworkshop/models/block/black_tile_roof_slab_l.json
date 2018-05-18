@@ -1,7 +1,6 @@
 {
     "textures": {
-        "particle": "chineseworkshop:blocks/black_tile_roof",
-        "black_tile_roof": "chineseworkshop:blocks/black_tile_roof"
+        "particle": "chineseworkshop:blocks/black_tile_roof"
     },
     "elements": [
         {
@@ -9,15 +8,15 @@
             "to": [14,6,11],
             "faces": {
                 "up": {
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [3,2,12,8],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -26,15 +25,15 @@
             "to": [14,4,8],
             "faces": {
                 "up": {
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [2,3,13,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -43,15 +42,15 @@
             "to": [14,2,4],
             "faces": {
                 "up": {
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [0,4,12,6],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -61,27 +60,27 @@
             "faces": {
                 "up": {
                     "uv": [7,7,13,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [2,11,4,14],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [0,0,2,3],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -91,23 +90,23 @@
             "faces": {
                 "up": {
                     "uv": [7,9,11,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [3,0,5,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [4,9,8,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -117,23 +116,23 @@
             "faces": {
                 "up": {
                     "uv": [7,7,11,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [7,0,9,5],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [4,8,8,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -143,23 +142,23 @@
             "faces": {
                 "up": {
                     "uv": [7,9,11,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [6,2,8,5],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [12,1,16,6],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -169,27 +168,27 @@
             "faces": {
                 "up": {
                     "uv": [7,7,15,15],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [0,0,2,16],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [5,0,9,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -199,27 +198,27 @@
             "faces": {
                 "up": {
                     "uv": [7,7,13,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [0,0,2,16],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [3,0,7,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -229,27 +228,27 @@
             "faces": {
                 "up": {
                     "uv": [7,7,13,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [6,0,9,5],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [5,0,9,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -259,15 +258,15 @@
             "faces": {
                 "up": {
                     "uv": [9,7,13,12],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [7,8,11,15],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0.0,0.0,1.0,1.0],
@@ -275,11 +274,11 @@
                 },
                 "north": {
                     "uv": [5,2,9,6],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -289,15 +288,15 @@
             "faces": {
                 "up": {
                     "uv": [7,7,13,11],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [7,8,11,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0.0,0.0,1.0,1.0],
@@ -305,11 +304,11 @@
                 },
                 "north": {
                     "uv": [4,2,8,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -319,15 +318,15 @@
             "faces": {
                 "up": {
                     "uv": [9,7,13,11],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [7,8,11,13],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0.0,0.0,1.0,1.0],
@@ -335,11 +334,11 @@
                 },
                 "north": {
                     "uv": [4,2,8,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         },
@@ -349,15 +348,15 @@
             "faces": {
                 "up": {
                     "uv": [4,0,6,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [3,0,12,6],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "texture": "#particle"
@@ -370,15 +369,15 @@
             "faces": {
                 "up": {
                     "uv": [3,0,5,7],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [1,2,14,4],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [0.0,4.0,12.0,6.0],
@@ -392,19 +391,19 @@
             "faces": {
                 "up": {
                     "uv": [3,0,5,6],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "down": {
                     "uv": [0,0,1,1],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [2,2,13,6],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [3,0,7,6],
-                    "texture": "#black_tile_roof"
+                    "texture": "#particle"
                 }
             }
         }

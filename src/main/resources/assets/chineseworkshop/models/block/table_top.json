@@ -1,8 +1,7 @@
 {
 "textures": {
     "particle": "minecraft:blocks/planks_oak",
-    "table": "chineseworkshop:blocks/table",
-    "wood": "minecraft:blocks/planks_oak"
+    "table": "chineseworkshop:blocks/table"
 },
 "elements": [
 {
@@ -11,10 +10,10 @@
     "faces": {
         "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#table" },
         "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#table" },
-        "north": { "uv": [ 0, 4, 16, 7 ], "texture": "#wood" },
-        "south": { "uv": [ 0, 0, 16, 3 ], "texture": "#wood" },
-        "west":  { "uv": [ 0, 0, 16, 3 ], "texture": "#wood" },
-        "east":  { "uv": [ 0, 0, 16, 3 ], "texture": "#wood" }
+        "north": { "uv": [ 0, 4, 16, 7 ], "texture": "#particle" },
+        "south": { "uv": [ 0, 0, 16, 3 ], "texture": "#particle" },
+        "west":  { "uv": [ 0, 0, 16, 3 ], "texture": "#particle" },
+        "east":  { "uv": [ 0, 0, 16, 3 ], "texture": "#particle" }
     }
 }
 ]

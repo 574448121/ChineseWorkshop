@@ -1,6 +1,5 @@
 {
     "textures": {
-        "doors_upper": "chineseworkshop:blocks/doors_upper",
         "particle": "chineseworkshop:blocks/doors_upper"
     },
     "elements": [
@@ -10,21 +9,21 @@
             "faces": {
                 "up": {
                     "uv": [0.0,0.0,2.0,16.0],
-                    "texture": "#doors_upper"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [0.0,0.0,16.0,16.0],
-                    "texture": "#doors_upper"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [0.0,0.0,16.0,16.0],
-                    "texture": "#doors_upper"
+                    "texture": "#particle"
                 },
                 "north": {
-                    "texture": "#doors_upper"
+                    "texture": "#particle"
                 },
                 "south": {
-                    "texture": "#doors_upper"
+                    "texture": "#particle"
                 }
             }
         }

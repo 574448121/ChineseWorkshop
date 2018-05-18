@@ -1,6 +1,6 @@
 {
     "textures": {
-        "particle": "minecraft:blocks/planks_oak"
+        "side": "minecraft:blocks/planks_oak"
     },
     "elements": [
         {
@@ -9,26 +9,26 @@
             "faces": {
                 "up": {
                     "uv": [4,4,11,7],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 },
                 "down": {
                     "uv": [9,6.5,7,0],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "west": {
                     "uv": [6,1,12.5,2],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "east": {
                     "uv": [2.5,10,9,11],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "north": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "south": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 }
             }
         },
@@ -38,26 +38,26 @@
             "faces": {
                 "up": {
                     "uv": [5,8,12,11],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 },
                 "down": {
                     "uv": [9,6.5,7,0],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "west": {
                     "uv": [2,4,8,5],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "east": {
                     "uv": [4,0,10.5,1],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "north": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "south": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 }
             }
         },
@@ -66,24 +66,24 @@
             "to": [9,3,6.5],
             "faces": {
                 "up": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "down": {
                     "uv": [9,6.5,7,0],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "west": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "east": {
                     "uv": [9.5,13,16,14],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "north": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "south": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 }
             }
         },
@@ -92,28 +92,28 @@
             "to": [8.5,10.5,5.5],
             "faces": {
                 "up": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "down": {
                     "uv": [8.5,5.5,7.5,3.5],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "west": {
                     "uv": [7,3,16,6],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 },
                 "east": {
                     "uv": [0,5,10,8],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 },
                 "north": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "south": {
                     "uv": [0,5.5,10,7],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 }
             }
@@ -123,29 +123,29 @@
             "to": [8.5,10.5,2.5],
             "faces": {
                 "up": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "down": {
                     "uv": [8.5,2.5,7.5,0.5],
-                    "texture": "#particle"
+                    "texture": "#side"
                 },
                 "west": {
                     "uv": [0,3,9,6],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 },
                 "east": {
                     "uv": [1,1,10,4],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 },
                 "north": {
                     "uv": [4,4.5,15,6],
-                    "texture": "#particle",
+                    "texture": "#side",
                     "rotation": 90
                 },
                 "south": {
-                    "texture": "#particle"
+                    "texture": "#side"
                 }
             }
         }

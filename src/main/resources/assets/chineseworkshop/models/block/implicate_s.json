@@ -1,7 +1,8 @@
 {
+"parent": "minecraft:block/block",
 "textures": {
     "particle": "minecraft:blocks/planks_oak",
-    "log_oak": "chineseworkshop:blocks/log_oak"
+    "log": "minecraft:blocks/log_oak"
 },
 "elements": [
 {
@@ -140,12 +141,12 @@
     "from": [ 6.5, 6.5, 0 ],
     "to": [ 9.5, 16, 1.5 ],
     "faces": {
-        "down":  { "uv": [ 9.5, 2, 6.5, 0 ], "texture": "#log_oak" },
-        "up":    { "uv": [ 6.5, 0, 9.5, 2 ], "texture": "#log_oak" },
-        "north": { "uv": [ 6.5, 0, 9.5, 12 ], "texture": "#log_oak" },
-        "south": { "uv": [ 6.5, 0, 9.5, 12 ], "texture": "#log_oak" },
-        "west":  { "uv": [ 0, 0, 2, 12 ], "texture": "#log_oak" },
-        "east":  { "uv": [ 14, 0, 16, 12 ], "texture": "#log_oak" }
+        "down":  { "uv": [ 9.5, 2, 6.5, 0 ], "texture": "#log" },
+        "up":    { "uv": [ 6.5, 0, 9.5, 2 ], "texture": "#log" },
+        "north": { "uv": [ 6.5, 0, 9.5, 12 ], "texture": "#log" },
+        "south": { "uv": [ 6.5, 0, 9.5, 12 ], "texture": "#log" },
+        "west":  { "uv": [ 0, 0, 2, 12 ], "texture": "#log" },
+        "east":  { "uv": [ 14, 0, 16, 12 ], "texture": "#log" }
     }
 },
 {
@@ -164,24 +165,24 @@
     "from": [ 6.5, 3.5, 0 ],
     "to": [ 9.5, 6, 1.5 ],
     "faces": {
-        "down":  { "uv": [ 9.5, 2, 6.5, 0 ], "texture": "#log_oak" },
-        "up":    { "uv": [ 6.5, 0, 9.5, 2 ], "texture": "#log_oak" },
-        "north": { "uv": [ 6.5, 12.5, 9.5, 15.5 ], "texture": "#log_oak" },
-        "south": { "uv": [ 6.5, 12.5, 9.5, 15.5 ], "texture": "#log_oak" },
-        "west":  { "uv": [ 0, 12.5, 2, 15.5 ], "texture": "#log_oak" },
-        "east":  { "uv": [ 14, 12.5, 16, 15.5 ], "texture": "#log_oak" }
+        "down":  { "uv": [ 9.5, 2, 6.5, 0 ], "texture": "#log" },
+        "up":    { "uv": [ 6.5, 0, 9.5, 2 ], "texture": "#log" },
+        "north": { "uv": [ 6.5, 12.5, 9.5, 15.5 ], "texture": "#log" },
+        "south": { "uv": [ 6.5, 12.5, 9.5, 15.5 ], "texture": "#log" },
+        "west":  { "uv": [ 0, 12.5, 2, 15.5 ], "texture": "#log" },
+        "east":  { "uv": [ 14, 12.5, 16, 15.5 ], "texture": "#log" }
     }
 },
 {
     "from": [ 6.5, 3.5, 14.5 ],
     "to": [ 9.5, 6, 16 ],
     "faces": {
-        "down":  { "uv": [ 9.5, 16, 6.5, 14.5 ], "texture": "#log_oak" },
-        "up":    { "uv": [ 6.5, 14.5, 9.5, 16 ], "texture": "#log_oak" },
-        "north": { "uv": [ 6.5, 10, 9.5, 12.5 ], "texture": "#log_oak" },
-        "south": { "uv": [ 6.5, 10, 9.5, 12.5 ], "texture": "#log_oak" },
-        "west":  { "uv": [ 14.5, 10, 16, 12.5 ], "texture": "#log_oak" },
-        "east":  { "uv": [ 0, 10, 1.5, 12.5 ], "texture": "#log_oak" }
+        "down":  { "uv": [ 9.5, 16, 6.5, 14.5 ], "texture": "#log" },
+        "up":    { "uv": [ 6.5, 14.5, 9.5, 16 ], "texture": "#log" },
+        "north": { "uv": [ 6.5, 10, 9.5, 12.5 ], "texture": "#log" },
+        "south": { "uv": [ 6.5, 10, 9.5, 12.5 ], "texture": "#log" },
+        "west":  { "uv": [ 14.5, 10, 16, 12.5 ], "texture": "#log" },
+        "east":  { "uv": [ 0, 10, 1.5, 12.5 ], "texture": "#log" }
     }
 },
 {
@@ -200,12 +201,12 @@
     "from": [ 6.5, 6.5, 14.5 ],
     "to": [ 9.5, 16, 16 ],
     "faces": {
-        "down":  { "uv": [ 9.5, 16, 6.5, 14.5 ], "texture": "#log_oak" },
-        "up":    { "uv": [ 6.5, 14.5, 9.5, 16 ], "texture": "#log_oak" },
-        "north": { "uv": [ 6.5, 0, 9.5, 9.5 ], "texture": "#log_oak" },
-        "south": { "uv": [ 6.5, 0, 9.5, 9.5 ], "texture": "#log_oak" },
-        "west":  { "uv": [ 14.5, 0, 16, 9.5 ], "texture": "#log_oak" },
-        "east":  { "uv": [ 0, 0, 1.5, 9.5 ], "texture": "#log_oak" }
+        "down":  { "uv": [ 9.5, 16, 6.5, 14.5 ], "texture": "#log" },
+        "up":    { "uv": [ 6.5, 14.5, 9.5, 16 ], "texture": "#log" },
+        "north": { "uv": [ 6.5, 0, 9.5, 9.5 ], "texture": "#log" },
+        "south": { "uv": [ 6.5, 0, 9.5, 9.5 ], "texture": "#log" },
+        "west":  { "uv": [ 14.5, 0, 16, 9.5 ], "texture": "#log" },
+        "east":  { "uv": [ 0, 0, 1.5, 9.5 ], "texture": "#log" }
     }
 },
 {

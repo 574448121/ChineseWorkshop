@@ -1,7 +1,6 @@
 {
 	"parent": "chineseworkshop:block/wall",
 	"textures": {
-		"particle": "chineseworkshop:blocks/oak_wall",
-		"texture": "chineseworkshop:blocks/oak_wall"
+		"particle": "chineseworkshop:blocks/oak_wall"
     }
 }

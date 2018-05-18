@@ -1,6 +1,5 @@
 {
     "textures": {
-        "doors_lower": "chineseworkshop:blocks/doors_lower",
         "particle": "chineseworkshop:blocks/doors_lower"
     },
     "elements": [
@@ -10,14 +9,14 @@
             "faces": {
                 "west": {
                     "uv": [1,0,16,16],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [16,0,1,16],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "south": {
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 }
             }
         },
@@ -27,19 +26,19 @@
             "faces": {
                 "down": {
                     "uv": [0,0,2,16],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [1,6,16,14],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [16,6,1,14],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "south": {
                     "uv": [7,6,9,14],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 }
             }
         },
@@ -49,14 +48,14 @@
             "faces": {
                 "west": {
                     "uv": [1,0,10,16],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [10,0,1,16],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "north": {
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 }
             }
         },
@@ -65,19 +64,19 @@
             "to": [6,0,9],
             "faces": {
                 "down": {
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "west": {
                     "uv": [1,6,10,14],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "east": {
                     "uv": [10,6,1,14],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 },
                 "north": {
                     "uv": [4,0,6,8],
-                    "texture": "#doors_lower"
+                    "texture": "#particle"
                 }
             }
         }

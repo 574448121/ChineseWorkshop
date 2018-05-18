@@ -1,19 +1,18 @@
 {
 "textures": {
-    "particle": "chineseworkshop:blocks/blocks/doors_lower",
-    "doors_lower": "chineseworkshop:blocks/blocks/doors_lower"
+    "particle": "chineseworkshop:blocks/blocks/doors_lower"
 },
-"elements": [ 
+"elements": [
 {
     "from": [ 7, -8, 0 ],
     "to": [ 9, 16, 16 ],
     "faces": {
-        "down":  { "uv": [ 7, 16, 6, 0 ], "texture": "#doors_lower", "cullface": "down" },
-        "up":    { "uv": [ 9, 0, 10, 16 ], "texture": "#doors_lower", "cullface": "up" },
-        "north": { "uv": [ 3, 0, 4, 16 ], "texture": "#doors_lower", "cullface": "north" },
-        "south": { "uv": [ 6, 0, 7, 16 ], "texture": "#doors_lower", "cullface": "south" },
-        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#doors_lower", "cullface": "west" },
-        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#doors_lower", "cullface": "east" }
+        "down":  { "uv": [ 7, 16, 6, 0 ], "texture": "#particle", "cullface": "down" },
+        "up":    { "uv": [ 9, 0, 10, 16 ], "texture": "#particle", "cullface": "up" },
+        "north": { "uv": [ 3, 0, 4, 16 ], "texture": "#particle", "cullface": "north" },
+        "south": { "uv": [ 6, 0, 7, 16 ], "texture": "#particle", "cullface": "south" },
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#particle", "cullface": "west" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#particle", "cullface": "east" }
     }
 }
 ]
