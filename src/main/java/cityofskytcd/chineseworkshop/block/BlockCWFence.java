@@ -38,7 +38,7 @@ public class BlockCWFence extends BlockFence {
 	public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
 		IBlockState iblockstate = worldIn.getBlockState(pos);
         Block block = iblockstate.getBlock();
-        return block == Blocks.BARRIER ? false : ((!(block == this) || iblockstate.getMaterial() != this.blockMaterial) && !(block instanceof BlockFenceGate) ? (iblockstate.getMaterial().isOpaque() && iblockstate.isFullCube() ? iblockstate.getMaterial() != Material.GOURD : false) : true);
+        return block == Blocks.BARRIER ? false : (!(block == this || block instanceof BlockFenceGate) ? (iblockstate.getMaterial().isOpaque() && iblockstate.isFullCube() ? iblockstate.getMaterial() != Material.GOURD : false) : true);
 	}
 
 }
