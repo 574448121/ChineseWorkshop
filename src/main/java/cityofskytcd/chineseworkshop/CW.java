@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = CW.MODID, name = CW.NAME, version = CW.VERSION, acceptedMinecraftVersions = "1.10.2")
+@Mod(modid = CW.MODID, name = CW.NAME, version = CW.VERSION, acceptedMinecraftVersions = "1.12.2")
 public class CW
 {
     public static final String MODID = "chineseworkshop";

@@ -54,11 +54,11 @@ public class BlockCWDoor extends BlockDoor
     }
 
     @Override
-    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn)
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
     {
         if (state.getValue(HALF) == BlockDoor.EnumDoorHalf.UPPER)
         {
-            super.neighborChanged(state, worldIn, pos, blockIn);
+            super.neighborChanged(state, worldIn, pos, blockIn, fromPos);
         }
         else
         {

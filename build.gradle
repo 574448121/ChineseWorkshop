@@ -7,7 +7,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
 
@@ -18,7 +18,7 @@ version = "${version_major}.${version_minor}.${version_patch}"
 group = "cityofskytcd.chineseworkshop"
 archivesBaseName = "ChineseWorkshop"
 
-sourceCompatibility = targetCompatibility = '1.6'
+sourceCompatibility = targetCompatibility = '1.8'
 
 repositories {
     maven {

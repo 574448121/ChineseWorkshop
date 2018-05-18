@@ -39,13 +39,13 @@ public class BlockCWFence extends BlockFence
     }
 
     @Override
-    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
         return false;
     }
 
     @Override
-    public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos)
+    public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos, EnumFacing facing)
     {
         IBlockState iblockstate = worldIn.getBlockState(pos);
         Block block = iblockstate.getBlock();

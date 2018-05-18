@@ -29,7 +29,7 @@ public interface ISeat
         public Seat(World world, Vec3d pos)
         {
             this(world);
-            setPosition(pos.xCoord, pos.yCoord + 0.001, pos.zCoord);
+            setPosition(pos.x, pos.y + 0.001, pos.z);
         }
 
         public Seat(World par1World)

@@ -42,9 +42,9 @@ public class EventHandler
         Vec3d vec = new Vec3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
         double maxDist = 2;
-        if ((vec.xCoord - player.posX) * (vec.xCoord - player.posX)
-                + (vec.yCoord - player.posY) * (vec.yCoord - player.posY)
-                + (vec.zCoord - player.posZ) * (vec.zCoord - player.posZ) > maxDist * maxDist)
+        if ((vec.x - player.posX) * (vec.x - player.posX)
+                + (vec.y - player.posY) * (vec.y - player.posY)
+                + (vec.z - player.posZ) * (vec.z - player.posZ) > maxDist * maxDist)
             return;
 
         IBlockState state = world.getBlockState(pos);
@@ -62,7 +62,7 @@ public class EventHandler
             {
                 Vec3d v = ((ISeat) state.getBlock()).getSeat(state);
                 Seat seat = new Seat(world, v.addVector(pos.getX(), pos.getY(), pos.getZ()));
-                world.spawnEntityInWorld(seat);
+                world.spawnEntity(seat);
                 event.getEntityPlayer().startRiding(seat);
             }
         }

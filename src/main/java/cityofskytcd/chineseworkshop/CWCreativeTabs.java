@@ -12,6 +12,7 @@ import cityofskytcd.chineseworkshop.block.CWBlocks;
 import cityofskytcd.chineseworkshop.item.CWItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class CWCreativeTabs
 {
@@ -19,27 +20,27 @@ public class CWCreativeTabs
     public static final CreativeTabs BUILDING_BLOCKS = new CreativeTabs(CW.MODID + ".building_blocks")
     {
         @Override
-        public Item getTabIconItem()
+        public ItemStack getTabIconItem()
         {
-            return CWItems.LOGO;
+            return new ItemStack(CWItems.LOGO);
         }
     };
 
     public static final CreativeTabs DECORATIONS = new CreativeTabs(CW.MODID + ".decorations")
     {
         @Override
-        public Item getTabIconItem()
+        public ItemStack getTabIconItem()
         {
-            return Item.getItemFromBlock(CWBlocks.BRACKET_SET);
+            return new ItemStack(CWBlocks.BRACKET_SET);
         }
     };
 
     public static final CreativeTabs ITEMS = new CreativeTabs(CW.MODID + ".items")
     {
         @Override
-        public Item getTabIconItem()
+        public ItemStack getTabIconItem()
         {
-            return CWItems.BLACK_BRICK;
+            return new ItemStack(CWItems.BLACK_BRICK);
         }
     };
 }
