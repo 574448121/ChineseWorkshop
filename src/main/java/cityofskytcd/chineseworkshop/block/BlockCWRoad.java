@@ -1,3 +1,11 @@
+/**
+ * This file is part of Chinese Workshop
+ * (https://github.com/574448121/ChineseWorkshop)
+ * 
+ * Chinese Workshop is an Open-Source project under MIT License
+ * (https://opensource.org/licenses/MIT)
+ */
+
 package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
@@ -19,47 +27,54 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * 路面类
  */
-public class BlockCWRoad extends BlockCWT {
+public class BlockCWRoad extends BlockCWT
+{
 
-	public BlockCWRoad(String name, Material materialIn, float hardness) {
-		super(name, materialIn, hardness);
-		setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-	}
+    public BlockCWRoad(String name, Material materialIn, float hardness)
+    {
+        super(name, materialIn, hardness);
+        setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+    }
 
-	@Override
-	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, FACING);
-	}
+    @Override
+    protected BlockStateContainer createBlockState()
+    {
+        return new BlockStateContainer(this, FACING);
+    }
 
-	@Override
-	public IBlockState getStateFromMeta(int meta) {
-		EnumFacing facing = EnumFacing.getHorizontal(meta);
-		return this.getDefaultState().withProperty(FACING, facing);
-	}
+    @Override
+    public IBlockState getStateFromMeta(int meta)
+    {
+        EnumFacing facing = EnumFacing.getHorizontal(meta);
+        return this.getDefaultState().withProperty(FACING, facing);
+    }
 
-	@Override
-	public int getMetaFromState(IBlockState state) {
-		int facing = state.getValue(FACING).getHorizontalIndex();
-		return facing;
-	}
+    @Override
+    public int getMetaFromState(IBlockState state)
+    {
+        int facing = state.getValue(FACING).getHorizontalIndex();
+        return facing;
+    }
 
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
-		list.add(new ItemStack(itemIn, 1, 0));
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
+    {
+        list.add(new ItemStack(itemIn, 1, 0));
+    }
 
-	@Override
-	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ,
-			int meta, EntityLivingBase placer) {
-		IBlockState origin = super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
-		return origin.withProperty(FACING, placer.getHorizontalFacing().getOpposite());
-	}
+    @Override
+    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
+    {
+        IBlockState origin = super.onBlockPlaced(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
+        return origin.withProperty(FACING, placer.getHorizontalFacing().getOpposite());
+    }
 
-	@Override
-	public int damageDropped(IBlockState state) {
-		return 0;
-	}
+    @Override
+    public int damageDropped(IBlockState state)
+    {
+        return 0;
+    }
 
-	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+    public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 }

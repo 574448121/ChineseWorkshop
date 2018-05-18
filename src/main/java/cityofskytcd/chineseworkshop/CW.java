@@ -1,3 +1,11 @@
+/**
+ * This file is part of Chinese Workshop
+ * (https://github.com/574448121/ChineseWorkshop)
+ * 
+ * Chinese Workshop is an Open-Source project under MIT License
+ * (https://opensource.org/licenses/MIT)
+ */
+
 package cityofskytcd.chineseworkshop;
 
 import org.apache.logging.log4j.Logger;
@@ -10,40 +18,46 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = CW.MODID, name = CW.NAME, version = CW.VERSION, acceptedMinecraftVersions = "1.10.2")
-public class CW {
-	public static final String MODID = "chineseworkshop";
-	public static final String NAME = "ChineseWorkshop";
-	public static final String VERSION = "1.1.0.2";
+public class CW
+{
+    public static final String MODID = "chineseworkshop";
+    public static final String NAME = "ChineseWorkshop";
+    public static final String VERSION = "1.1.0.2";
 
-	private static final CW INSTANCE = new CW();
+    private static final CW INSTANCE = new CW();
 
-	@Mod.InstanceFactory
-	public static CW getInstance() {
-		return INSTANCE;
-	}
+    @Mod.InstanceFactory
+    public static CW getInstance()
+    {
+        return INSTANCE;
+    }
 
-	public static Logger logger;
+    public static Logger logger;
 
-	public static void log(Object o) {
-		logger.info(o);
-	}
+    public static void log(Object o)
+    {
+        logger.info(o);
+    }
 
-	@SidedProxy(clientSide = "cityofskytcd.chineseworkshop.proxy.ClientProxy", serverSide = "cityofskytcd.chineseworkshop.proxy.CommonProxy")
-	public static CommonProxy proxy;
+    @SidedProxy(clientSide = "cityofskytcd.chineseworkshop.proxy.ClientProxy", serverSide = "cityofskytcd.chineseworkshop.proxy.CommonProxy")
+    public static CommonProxy proxy;
 
-	@Mod.EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		logger = event.getModLog();
-		proxy.preInit(event);
-	}
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+        logger = event.getModLog();
+        proxy.preInit(event);
+    }
 
-	@Mod.EventHandler
-	public void init(FMLInitializationEvent event) {
-		proxy.init(event);
-	}
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+        proxy.init(event);
+    }
 
-	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-		proxy.postInit(event);
-	}
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent event)
+    {
+        proxy.postInit(event);
+    }
 }

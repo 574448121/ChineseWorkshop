@@ -1,3 +1,11 @@
+/**
+ * This file is part of Chinese Workshop
+ * (https://github.com/574448121/ChineseWorkshop)
+ * 
+ * Chinese Workshop is an Open-Source project under MIT License
+ * (https://opensource.org/licenses/MIT)
+ */
+
 package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
@@ -19,21 +27,26 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 墙类
  */
 
-public class BlockCWWall extends BlockWall {
+public class BlockCWWall extends BlockWall
+{
 
-	public BlockCWWall(String id, Block modelBlock, float hardness) {
-		super(modelBlock);
-		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
-		setSoundType(BlockUtil.getDefaultSound(modelBlock.getMaterial(modelBlock.getDefaultState())));
-	}
+    public BlockCWWall(String id, Block modelBlock, float hardness)
+    {
+        super(modelBlock);
+        BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
+        setSoundType(BlockUtil.getDefaultSound(modelBlock.getMaterial(modelBlock.getDefaultState())));
+    }
 
-	@Override
-	public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos) {
-		return true;
-	}
+    @Override
+    public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos)
+    {
+        return true;
+    }
 
-	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
-		list.add(new ItemStack(itemIn));
-	}
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list)
+    {
+        list.add(new ItemStack(itemIn));
+    }
 }

@@ -1,3 +1,11 @@
+/**
+ * This file is part of Chinese Workshop
+ * (https://github.com/574448121/ChineseWorkshop)
+ * 
+ * Chinese Workshop is an Open-Source project under MIT License
+ * (https://opensource.org/licenses/MIT)
+ */
+
 package cityofskytcd.chineseworkshop.block;
 
 import cityofskytcd.chineseworkshop.CWCreativeTabs;
@@ -21,24 +29,29 @@ import net.minecraft.world.World;
  * 栅栏类
  */
 
-public class BlockCWFence extends BlockFence {
-	public BlockCWFence(String id, Material materialIn, MapColor blockMapColor, float hardness) {
-		super(materialIn, blockMapColor);
-		BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
-		setSoundType(BlockUtil.getDefaultSound(materialIn));
-	}
+public class BlockCWFence extends BlockFence
+{
+    public BlockCWFence(String id, Material materialIn, MapColor blockMapColor, float hardness)
+    {
+        super(materialIn, blockMapColor);
+        BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
+        setSoundType(BlockUtil.getDefaultSound(materialIn));
+    }
 
-	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn,
-			EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		return false;
-	}
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ)
+    {
+        return false;
+    }
 
-	@Override
-	public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos) {
-		IBlockState iblockstate = worldIn.getBlockState(pos);
+    @Override
+    public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos)
+    {
+        IBlockState iblockstate = worldIn.getBlockState(pos);
         Block block = iblockstate.getBlock();
-        return block == Blocks.BARRIER ? false : (!(block == this || block instanceof BlockFenceGate) ? (iblockstate.getMaterial().isOpaque() && iblockstate.isFullCube() ? iblockstate.getMaterial() != Material.GOURD : false) : true);
-	}
+        return block == Blocks.BARRIER ? false : (!(block == this
+                || block instanceof BlockFenceGate) ? (iblockstate.getMaterial().isOpaque()
+                        && iblockstate.isFullCube() ? iblockstate.getMaterial() != Material.GOURD : false) : true);
+    }
 
 }
