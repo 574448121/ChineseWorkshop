@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "chineseworkshop:bench" },
-        "facing=east":  { "model": "chineseworkshop:bench", "y": 90 },
-        "facing=south": { "model": "chineseworkshop:bench", "y": 180 },
-        "facing=west":  { "model": "chineseworkshop:bench", "y": 270 }
-    }
-}

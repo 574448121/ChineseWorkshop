@@ -1,7 +1,0 @@
-{
-    "parent": "chineseworkshop:block/roof_inner",
-    "textures": {
-        "particle": "chineseworkshop:blocks/black_tile_roof",
-		"block": "chineseworkshop:blocks/black_tile_roof"
-    }
-}

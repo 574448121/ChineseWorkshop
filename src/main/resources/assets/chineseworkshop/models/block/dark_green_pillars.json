@@ -1,0 +1,134 @@
+{
+    "parent": "minecraft:block/block",
+    "textures": {
+        "particle": "chineseworkshop:blocks/dark_green_pillars"
+    },
+    "elements": [
+        {
+            "from": [0,-0.008,0],
+            "to": [16,15.998,16],
+            "faces": {
+                "up": {
+                    "uv": [15,15,16,16],
+                    "texture": "#particle"
+                },
+                "down": {
+                    "uv": [15,15,16,16],
+                    "texture": "#particle"
+                },
+                "west": {
+                    "texture": "#particle"
+                },
+                "east": {
+                    "texture": "#particle"
+                },
+                "north": {
+                    "texture": "#particle"
+                },
+                "south": {
+                    "texture": "#particle"
+                }
+            }
+        },
+        {
+            "from": [1,-0.008,-1],
+            "to": [15,15.998,0],
+            "faces": {
+                "up": {
+                    "uv": [15,0,16,1],
+                    "texture": "#particle"
+                },
+                "down": {
+                    "uv": [15,6,16,7],
+                    "texture": "#particle"
+                },
+                "west": {
+                    "uv": [7,0,8,16],
+                    "texture": "#particle"
+                },
+                "east": {
+                    "uv": [8,0,9,16],
+                    "texture": "#particle"
+                },
+                "north": {
+                    "texture": "#particle"
+                }
+            }
+        },
+        {
+            "from": [-1,-0.008,1],
+            "to": [0,15.998,15],
+            "faces": {
+                "up": {
+                    "uv": [6,0,7,14],
+                    "texture": "#particle"
+                },
+                "down": {
+                    "uv": [8,1,9,15],
+                    "texture": "#particle"
+                },
+                "west": {
+                    "texture": "#particle"
+                },
+                "north": {
+                    "uv": [8,0,9,16],
+                    "texture": "#particle"
+                },
+                "south": {
+                    "uv": [8,0,9,16],
+                    "texture": "#particle"
+                }
+            }
+        },
+        {
+            "from": [16,-0.008,1],
+            "to": [17,15.998,15],
+            "faces": {
+                "up": {
+                    "uv": [14,1,15,15],
+                    "texture": "#particle"
+                },
+                "down": {
+                    "uv": [15,1,16,15],
+                    "texture": "#particle"
+                },
+                "east": {
+                    "texture": "#particle"
+                },
+                "north": {
+                    "uv": [15,0,16,16],
+                    "texture": "#particle"
+                },
+                "south": {
+                    "uv": [14,0,15,16],
+                    "texture": "#particle"
+                }
+            }
+        },
+        {
+            "from": [1,-0.008,16],
+            "to": [15,15.998,17],
+            "faces": {
+                "up": {
+                    "uv": [14,15,15,16],
+                    "texture": "#particle"
+                },
+                "down": {
+                    "uv": [14,15,15,16],
+                    "texture": "#particle"
+                },
+                "west": {
+                    "uv": [15,0,16,16],
+                    "texture": "#particle"
+                },
+                "east": {
+                    "uv": [14,0,15,16],
+                    "texture": "#particle"
+                },
+                "south": {
+                    "texture": "#particle"
+                }
+            }
+        }
+    ]
+}

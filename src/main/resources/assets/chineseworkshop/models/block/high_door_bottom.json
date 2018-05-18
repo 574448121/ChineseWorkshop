@@ -1,0 +1,54 @@
+{
+    "textures": {
+        "particle": "chineseworkshop:blocks/doors_lower"
+    },
+    "elements": [
+        {
+            "from": [3,0,0],
+            "to": [5,16,16],
+            "faces": {
+                "west": {
+                    "texture": "#particle"
+                },
+                "east": {
+                    "uv": [16,0,0,16],
+                    "texture": "#particle"
+                },
+                "north": {
+                    "uv": [7,0,9,16],
+                    "texture": "#particle"
+                },
+                "south": {
+                    "uv": [4,0,6,16],
+                    "texture": "#particle"
+                }
+            }
+        },
+        {
+            "from": [3,-8,0],
+            "to": [5,0,16],
+            "faces": {
+                "down": {
+                    "uv": [0,0,2,16],
+                    "texture": "#particle"
+                },
+                "west": {
+                    "uv": [0,6,16,14],
+                    "texture": "#particle"
+                },
+                "east": {
+                    "uv": [16,6,0,14],
+                    "texture": "#particle"
+                },
+                "north": {
+                    "uv": [7,6,9,14],
+                    "texture": "#particle"
+                },
+                "south": {
+                    "uv": [7,6,9,14],
+                    "texture": "#particle"
+                }
+            }
+        }
+    ]
+}

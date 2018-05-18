@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:spring_festival_couplets_01a" },
+        "facing=east":  { "model": "chineseworkshop:spring_festival_couplets_01a", "y": 90 },
+        "facing=south": { "model": "chineseworkshop:spring_festival_couplets_01a", "y": 180 },
+        "facing=west":  { "model": "chineseworkshop:spring_festival_couplets_01a", "y": 270 }
+    }
+}

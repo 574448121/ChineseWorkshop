@@ -1,0 +1,31 @@
+{
+"textures": {
+    "particle": "chineseworkshop:blocks/andesite"
+},
+"elements": [
+{
+    "from": [ 6.5, 12, 0 ],
+    "to": [ 9.5, 16, 8 ],
+    "faces": {
+        "down":  { "uv": [ 6, 0, 10, 7 ], "texture": "#particle" },
+        "up":    { "uv": [ 6, 0, 10, 7 ], "texture": "#particle" },
+        "north": { "uv": [ 6, 0, 10, 5 ], "texture": "#particle" },
+        "south": { "uv": [ 6, 0, 10, 5 ], "texture": "#particle" },
+        "west":  { "uv": [ 0, 0, 7, 5 ], "texture": "#particle" },
+        "east":  { "uv": [ 0, 0, 7, 5 ], "texture": "#particle" }
+    }
+},
+{
+    "from": [ 6.5, 0, 0 ],
+    "to": [ 9.5, 12, 2 ],
+    "faces": {
+        "down":  { "uv": [ 0, 0, 4, 3 ], "texture": "#particle" },
+        "up":    { "uv": [ 0, 0, 4, 3 ], "texture": "#particle" },
+        "north": { "uv": [ 0, 0, 4, 13 ], "texture": "#particle" },
+        "south": { "uv": [ 0, 0, 4, 13 ], "texture": "#particle" },
+        "west":  { "uv": [ 0, 0, 3, 13 ], "texture": "#particle" },
+        "east":  { "uv": [ 0, 0, 3, 13 ], "texture": "#particle" }
+    }
+}
+]
+}

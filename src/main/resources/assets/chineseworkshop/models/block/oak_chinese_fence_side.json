@@ -1,0 +1,153 @@
+{
+    "textures": {
+        "side": "minecraft:blocks/planks_oak"
+    },
+    "elements": [
+        {
+            "from": [7,13,0],
+            "to": [9,14,6.5],
+            "faces": {
+                "up": {
+                    "uv": [4,4,11,7],
+                    "texture": "#side",
+                    "rotation": 90
+                },
+                "down": {
+                    "uv": [9,6.5,7,0],
+                    "texture": "#side"
+                },
+                "west": {
+                    "uv": [6,1,12.5,2],
+                    "texture": "#side"
+                },
+                "east": {
+                    "uv": [2.5,10,9,11],
+                    "texture": "#side"
+                },
+                "north": {
+                    "texture": "#side"
+                },
+                "south": {
+                    "texture": "#side"
+                }
+            }
+        },
+        {
+            "from": [7,10.5,0],
+            "to": [9,11.5,6.5],
+            "faces": {
+                "up": {
+                    "uv": [5,8,12,11],
+                    "texture": "#side",
+                    "rotation": 90
+                },
+                "down": {
+                    "uv": [9,6.5,7,0],
+                    "texture": "#side"
+                },
+                "west": {
+                    "uv": [2,4,8,5],
+                    "texture": "#side"
+                },
+                "east": {
+                    "uv": [4,0,10.5,1],
+                    "texture": "#side"
+                },
+                "north": {
+                    "texture": "#side"
+                },
+                "south": {
+                    "texture": "#side"
+                }
+            }
+        },
+        {
+            "from": [7,2,0],
+            "to": [9,3,6.5],
+            "faces": {
+                "up": {
+                    "texture": "#side"
+                },
+                "down": {
+                    "uv": [9,6.5,7,0],
+                    "texture": "#side"
+                },
+                "west": {
+                    "texture": "#side"
+                },
+                "east": {
+                    "uv": [9.5,13,16,14],
+                    "texture": "#side"
+                },
+                "north": {
+                    "texture": "#side"
+                },
+                "south": {
+                    "texture": "#side"
+                }
+            }
+        },
+        {
+            "from": [7.5,3,3.5],
+            "to": [8.5,10.5,5.5],
+            "faces": {
+                "up": {
+                    "texture": "#side"
+                },
+                "down": {
+                    "uv": [8.5,5.5,7.5,3.5],
+                    "texture": "#side"
+                },
+                "west": {
+                    "uv": [7,3,16,6],
+                    "texture": "#side",
+                    "rotation": 90
+                },
+                "east": {
+                    "uv": [0,5,10,8],
+                    "texture": "#side",
+                    "rotation": 90
+                },
+                "north": {
+                    "texture": "#side"
+                },
+                "south": {
+                    "uv": [0,5.5,10,7],
+                    "texture": "#side",
+                    "rotation": 90
+                }
+            }
+        },
+        {
+            "from": [7.5,3,0.5],
+            "to": [8.5,10.5,2.5],
+            "faces": {
+                "up": {
+                    "texture": "#side"
+                },
+                "down": {
+                    "uv": [8.5,2.5,7.5,0.5],
+                    "texture": "#side"
+                },
+                "west": {
+                    "uv": [0,3,9,6],
+                    "texture": "#side",
+                    "rotation": 90
+                },
+                "east": {
+                    "uv": [1,1,10,4],
+                    "texture": "#side",
+                    "rotation": 90
+                },
+                "north": {
+                    "uv": [4,4.5,15,6],
+                    "texture": "#side",
+                    "rotation": 90
+                },
+                "south": {
+                    "texture": "#side"
+                }
+            }
+        }
+    ]
+}

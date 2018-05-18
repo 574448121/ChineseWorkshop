@@ -1,0 +1,5 @@
+logo
+black_clay
+black_brick
+door
+high_door

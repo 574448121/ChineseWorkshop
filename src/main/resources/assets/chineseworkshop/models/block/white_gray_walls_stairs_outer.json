@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "top": "chineseworkshop:blocks/white_gray_walls",
+    "bottom": "chineseworkshop:blocks/white_gray_walls",
+    "side": "chineseworkshop:blocks/white_gray_walls"
+  }
+}
