@@ -1,16 +1,22 @@
 {
   "type": "forge:ore_shaped",
   "result": {
-    "item": "chineseworkshop:black_clay_block"
+    "item": "chineseworkshop:material",
+    "data": 0,
+    "count": 8
   },
   "pattern": [
-    "cc",
-    "cc"
+    "ccc",
+    "cdc",
+    "ccc"
   ],
   "key": {
     "c": {
-      "item": "chineseworkshop:material",
-      "data": 0
+      "item": "minecraft:clay_ball"
+    },
+    "d": {
+      "ore" : "dyeBlack",
+      "type": "forge:ore_dict"
     }
   }
 }
