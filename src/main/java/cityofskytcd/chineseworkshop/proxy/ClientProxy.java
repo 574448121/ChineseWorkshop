@@ -63,7 +63,8 @@ public class ClientProxy extends CommonProxy
             @Override
             public int colorMultiplier(ItemStack stack, int tintIndex)
             {
-                IBlockState iblockstate = ((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(stack.getMetadata());
+                IBlockState iblockstate = ((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(
+                        stack.getMetadata());
                 return blockColors.colorMultiplier(iblockstate, (IBlockAccess) null, (BlockPos) null, tintIndex);
             }
         }, CWItems.TREE_ALTAR);

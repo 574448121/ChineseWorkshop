@@ -41,14 +41,14 @@ public class CWItems
     @GameRegistry.ObjectHolder("andesite_pavement")
     public static final Item ANDESITE_PAVEMENT = null;
     // 红柱
-    @GameRegistry.ObjectHolder("red_pillars")
-    public static final Item RED_PILLARS = null;
+    @GameRegistry.ObjectHolder("red_pillar")
+    public static final Item RED_PILLAR = null;
     // 绿柱
-    @GameRegistry.ObjectHolder("dark_green_pillars")
-    public static final Item DARK_GREEN_PILLARS = null;
+    @GameRegistry.ObjectHolder("dark_green_pillar")
+    public static final Item DARK_GREEN_PILLAR = null;
     // 白灰墙
-    @GameRegistry.ObjectHolder("white_gray_walls")
-    public static final Item WHITE_GRAY_WALLS = null;
+    @GameRegistry.ObjectHolder("white_gray_wall")
+    public static final Item WHITE_GRAY_WALL = null;
 
     /* 灯 */
     // 石灯塔
@@ -87,8 +87,8 @@ public class CWItems
     @GameRegistry.ObjectHolder("table")
     public static final Item TABLE = null;
     // 白灰墙阶梯
-    @GameRegistry.ObjectHolder("white_gray_walls_stairs")
-    public static final Item WHITE_GRAY_WALLS_STAIRS = null;
+    @GameRegistry.ObjectHolder("white_gray_wall_stairs")
+    public static final Item WHITE_GRAY_WALL_STAIRS = null;
     // 纸窗
     @GameRegistry.ObjectHolder("paper_window")
     public static final Item PAPER_WINDOW = null;
@@ -99,8 +99,8 @@ public class CWItems
     @GameRegistry.ObjectHolder("small_black_brick_wall")
     public static final Item SMALL_BLACK_BRICK_WALL = null;
     // 小白灰墙
-    @GameRegistry.ObjectHolder("small_white_gray_walls")
-    public static final Item SMALL_WHITE_GRAY_WALLS = null;
+    @GameRegistry.ObjectHolder("small_white_gray_wall")
+    public static final Item SMALL_WHITE_GRAY_WALL = null;
     // 橡木中式栅栏
     @GameRegistry.ObjectHolder("oak_chinese_fence")
     public static final Item OAK_CHINESE_FENCE = null;
@@ -163,8 +163,8 @@ public class CWItems
 
     /* 薄墙 */
     // 薄白灰墙
-    @GameRegistry.ObjectHolder("thin_white_gray_walls")
-    public static final Item THIN_WHITE_GRAY_WALLS = null;
+    @GameRegistry.ObjectHolder("thin_white_gray_wall")
+    public static final Item THIN_WHITE_GRAY_WALL = null;
     // 黑瓦屋顶边缘右
     @GameRegistry.ObjectHolder("black_tile_roof_edge_y")
     public static final Item BLACK_TILE_ROOF_EDGE_Y = null;

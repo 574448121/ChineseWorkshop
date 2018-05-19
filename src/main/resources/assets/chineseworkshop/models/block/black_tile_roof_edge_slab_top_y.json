@@ -2,7 +2,7 @@
     "parent": "minecraft:block/block",
     "textures": {
         "particle": "chineseworkshop:blocks/black_tile_roof",
-        "white_gray_walls": "chineseworkshop:blocks/white_gray_walls"
+        "white_gray_wall": "chineseworkshop:blocks/white_gray_wall"
     },
     "elements": [
         {
@@ -223,17 +223,17 @@
             "to": [1,13,16],
             "faces": {
                 "down": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "west": {
                     "uv": [0,0,1,1],
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "south": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -242,14 +242,14 @@
             "to": [1,11,11],
             "faces": {
                 "down": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "west": {
                     "uv": [0,0,1,1],
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -258,14 +258,14 @@
             "to": [1,9,7],
             "faces": {
                 "down": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "west": {
                     "uv": [0,0,1,1],
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -274,20 +274,20 @@
             "to": [1,8,16],
             "faces": {
                 "down": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "west": {
                     "uv": [0,0,1,1],
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "north": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "south": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         }

@@ -42,8 +42,7 @@ public class EventHandler
         Vec3d vec = new Vec3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
         double maxDist = 2;
-        if ((vec.x - player.posX) * (vec.x - player.posX)
-                + (vec.y - player.posY) * (vec.y - player.posY)
+        if ((vec.x - player.posX) * (vec.x - player.posX) + (vec.y - player.posY) * (vec.y - player.posY)
                 + (vec.z - player.posZ) * (vec.z - player.posZ) > maxDist * maxDist)
             return;
 

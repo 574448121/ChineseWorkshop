@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:block/block",
     "textures": {
-        "white_gray_walls": "chineseworkshop:blocks/white_gray_walls",
+        "white_gray_wall": "chineseworkshop:blocks/white_gray_wall",
         "particle": "chineseworkshop:blocks/black_tile_roof"
     },
     "elements": [
@@ -442,7 +442,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "south": {
                     "uv": [0,0,1,1],
@@ -463,7 +463,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -480,7 +480,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -497,7 +497,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -513,7 +513,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -529,7 +529,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -545,7 +545,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },

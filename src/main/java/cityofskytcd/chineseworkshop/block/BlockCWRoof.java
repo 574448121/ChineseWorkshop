@@ -8,8 +8,6 @@
 
 package cityofskytcd.chineseworkshop.block;
 
-import java.util.List;
-
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -19,7 +17,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
@@ -39,7 +36,10 @@ public class BlockCWRoof extends BlockCWT
     public BlockCWRoof(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness);
-        setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(SHAPE, BlockCWRoof.EnumShape.STRAIGHT));
+        setDefaultState(
+                this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(
+                        SHAPE,
+                        BlockCWRoof.EnumShape.STRAIGHT));
     }
 
     @Override
@@ -53,7 +53,9 @@ public class BlockCWRoof extends BlockCWT
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         IBlockState iblockstate = super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
-        iblockstate = iblockstate.withProperty(FACING, placer.getHorizontalFacing()).withProperty(SHAPE, BlockCWRoof.EnumShape.STRAIGHT);
+        iblockstate = iblockstate.withProperty(FACING, placer.getHorizontalFacing()).withProperty(
+                SHAPE,
+                BlockCWRoof.EnumShape.STRAIGHT);
         return iblockstate;
     }
 
@@ -158,5 +160,7 @@ public class BlockCWRoof extends BlockCWT
     }
 
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
-    public static final PropertyEnum<BlockCWRoof.EnumShape> SHAPE = PropertyEnum.<BlockCWRoof.EnumShape>create("shape", BlockCWRoof.EnumShape.class);
+    public static final PropertyEnum<BlockCWRoof.EnumShape> SHAPE = PropertyEnum.<BlockCWRoof.EnumShape>create(
+            "shape",
+            BlockCWRoof.EnumShape.class);
 }

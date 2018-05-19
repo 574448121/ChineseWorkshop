@@ -151,6 +151,7 @@ public class BlockCWCandle extends BlockCWT
     {
         this.checkForDrop(worldIn, pos, state);
     }
+
     @Override
     public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos)
     {

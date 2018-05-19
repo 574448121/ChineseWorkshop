@@ -12,6 +12,7 @@ import javax.annotation.OverridingMethodsMustInvokeSuper;
 
 import cityofskytcd.chineseworkshop.crafting.CraftingLoader;
 import cityofskytcd.chineseworkshop.event.EventHandler;
+import cityofskytcd.chineseworkshop.event.RegistryRemapper;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -28,6 +29,7 @@ public class CommonProxy
     public void init(FMLInitializationEvent event)
     {
         EventHandler.init();
+        RegistryRemapper.init();
     }
 
     @OverridingMethodsMustInvokeSuper

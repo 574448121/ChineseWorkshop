@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "top": "chineseworkshop:blocks/white_gray_walls",
-    "bottom": "chineseworkshop:blocks/white_gray_walls",
-    "side": "chineseworkshop:blocks/white_gray_walls"
-  }
-}

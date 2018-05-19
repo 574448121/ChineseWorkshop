@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":  { "model": "chineseworkshop:red_pillar" },
+        "axis=z":   { "model": "chineseworkshop:red_pillar", "x": 90 },
+        "axis=x":   { "model": "chineseworkshop:red_pillar", "x": 90, "y": 90 }
+    }
+}

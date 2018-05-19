@@ -2,7 +2,7 @@
     "parent": "minecraft:block/block",
     "textures": {
         "particle": "chineseworkshop:blocks/black_tile_roof",
-        "white_gray_walls": "chineseworkshop:blocks/white_gray_walls"
+        "white_gray_wall": "chineseworkshop:blocks/white_gray_wall"
     },
     "elements": [
         {
@@ -238,10 +238,10 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 },
                 "north": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -258,7 +258,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         },
@@ -275,7 +275,7 @@
                     "texture": "#particle"
                 },
                 "east": {
-                    "texture": "#white_gray_walls"
+                    "texture": "#white_gray_wall"
                 }
             }
         }

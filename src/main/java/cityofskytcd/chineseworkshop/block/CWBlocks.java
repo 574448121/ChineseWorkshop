@@ -24,14 +24,14 @@ public class CWBlocks
     @GameRegistry.ObjectHolder("andesite_pavement")
     public static final Block ANDESITE_PAVEMENT = Blocks.AIR;
     // 红柱
-    @GameRegistry.ObjectHolder("red_pillars")
-    public static final Block RED_PILLARS = Blocks.AIR;
+    @GameRegistry.ObjectHolder("red_pillar")
+    public static final Block RED_PILLAR = Blocks.AIR;
     // 绿柱
-    @GameRegistry.ObjectHolder("dark_green_pillars")
-    public static final Block DARK_GREEN_PILLARS = Blocks.AIR;
+    @GameRegistry.ObjectHolder("dark_green_pillar")
+    public static final Block DARK_GREEN_PILLAR = Blocks.AIR;
     // 白灰墙
-    @GameRegistry.ObjectHolder("white_gray_walls")
-    public static final Block WHITE_GRAY_WALLS = Blocks.AIR;
+    @GameRegistry.ObjectHolder("white_gray_wall")
+    public static final Block WHITE_GRAY_WALL = Blocks.AIR;
 
     /* 灯 */
     // 石灯塔
@@ -70,8 +70,8 @@ public class CWBlocks
     @GameRegistry.ObjectHolder("table")
     public static final Block TABLE = Blocks.AIR;
     // 白灰墙阶梯
-    @GameRegistry.ObjectHolder("white_gray_walls_stairs")
-    public static final Block WHITE_GRAY_WALLS_STAIRS = Blocks.AIR;
+    @GameRegistry.ObjectHolder("white_gray_wall_stairs")
+    public static final Block WHITE_GRAY_WALL_STAIRS = Blocks.AIR;
     // 纸窗
     @GameRegistry.ObjectHolder("paper_window")
     public static final Block PAPER_WINDOW = Blocks.AIR;
@@ -82,8 +82,8 @@ public class CWBlocks
     @GameRegistry.ObjectHolder("small_black_brick_wall")
     public static final Block SMALL_BLACK_BRICK_WALL = Blocks.AIR;
     // 小白灰墙
-    @GameRegistry.ObjectHolder("small_white_gray_walls")
-    public static final Block SMALL_WHITE_GRAY_WALLS = Blocks.AIR;
+    @GameRegistry.ObjectHolder("small_white_gray_wall")
+    public static final Block SMALL_WHITE_GRAY_WALL = Blocks.AIR;
     // 橡木中式栅栏
     @GameRegistry.ObjectHolder("oak_chinese_fence")
     public static final Block OAK_CHINESE_FENCE = Blocks.AIR;
@@ -146,8 +146,8 @@ public class CWBlocks
 
     /* 薄墙 */
     // 薄白灰墙
-    @GameRegistry.ObjectHolder("thin_white_gray_walls")
-    public static final Block THIN_WHITE_GRAY_WALLS = Blocks.AIR;
+    @GameRegistry.ObjectHolder("thin_white_gray_wall")
+    public static final Block THIN_WHITE_GRAY_WALL = Blocks.AIR;
     // 黑瓦屋顶边缘右
     @GameRegistry.ObjectHolder("black_tile_roof_edge_y")
     public static final Block BLACK_TILE_ROOF_EDGE_Y = Blocks.AIR;

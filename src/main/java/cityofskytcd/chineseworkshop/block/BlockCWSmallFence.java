@@ -10,8 +10,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
-
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
