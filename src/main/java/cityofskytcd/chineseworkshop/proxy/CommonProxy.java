@@ -22,7 +22,6 @@ public class CommonProxy
     @OverridingMethodsMustInvokeSuper
     public void preInit(FMLPreInitializationEvent event)
     {
-
     }
 
     @OverridingMethodsMustInvokeSuper

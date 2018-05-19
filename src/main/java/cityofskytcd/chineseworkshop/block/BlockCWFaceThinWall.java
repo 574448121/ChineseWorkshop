@@ -27,14 +27,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 /**
  * 朝向薄墙类
  */
-public class BlockCWFaceThinWalls extends BlockCWT
+public class BlockCWFaceThinWall extends BlockCWT
 {
     private static final AxisAlignedBB AABB_EAST = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.1875D, 1.0D, 1.0D);
     private static final AxisAlignedBB AABB_WEST = new AxisAlignedBB(0.8125D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
     private static final AxisAlignedBB AABB_SOUTH = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.1875D);
     private static final AxisAlignedBB AABB_NORTH = new AxisAlignedBB(0.0D, 0.0D, 0.8125D, 1.0D, 1.0D, 1.0D);
 
-    public BlockCWFaceThinWalls(String name, Material materialIn, float hardness)
+    public BlockCWFaceThinWall(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));

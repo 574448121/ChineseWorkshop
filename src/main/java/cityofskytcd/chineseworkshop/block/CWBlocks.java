@@ -20,6 +20,9 @@ public class CWBlocks
     // 黑砖墙
     @GameRegistry.ObjectHolder("black_brick_wall")
     public static final Block BLACK_BRICK_WALL = Blocks.AIR;
+    // 黑粘土块
+    @GameRegistry.ObjectHolder("black_clay_block")
+    public static final Block BLACK_CLAY_BLOCK = Blocks.AIR;
     // 安山岩路面
     @GameRegistry.ObjectHolder("andesite_pavement")
     public static final Block ANDESITE_PAVEMENT = Blocks.AIR;

@@ -31,6 +31,7 @@ public class BlockRegistry
     {
         event.getRegistry().registerAll(
                 new BlockCW("black_brick_wall", Material.ROCK, 1.5F),
+                new BlockCWBlackClay("black_clay_block", Material.CLAY, 1F),
                 new BlockCWFace("andesite_pavement", Material.ROCK, 1.5F),
                 new BlockCWRotatedPillar("red_pillar", Material.WOOD, 1.0F),
                 new BlockCWRotatedPillar("dark_green_pillar", Material.WOOD, 1.0F),
@@ -70,15 +71,15 @@ public class BlockRegistry
                 new BlockCWFaceRoof("black_tile_roof_j", Material.ROCK, 1.5F),
                 new BlockCWRoofSlab("black_tile_roof_slab", Material.ROCK, 1.5F),
                 new BlockCWRoof("black_tile_roof_slab_top", Material.ROCK, 1.5F),
-                new BlockCWFaceThinWalls("thin_white_gray_wall", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWalls("black_tile_roof_edge_y", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWalls("black_tile_roof_edge_z", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWalls("black_tile_roof_edge_yj", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWalls("black_tile_roof_edge_zj", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWallsSlab("black_tile_roof_edge_slab_z", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWalls("black_tile_roof_edge_slab_top_z", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWallsSlab("black_tile_roof_edge_slab_y", Material.ROCK, 1.0F),
-                new BlockCWFaceThinWalls("black_tile_roof_edge_slab_top_y", Material.ROCK, 1.0F));
+                new BlockCWFaceThinWall("thin_white_gray_wall", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWall("black_tile_roof_edge_y", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWall("black_tile_roof_edge_z", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWall("black_tile_roof_edge_yj", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWall("black_tile_roof_edge_zj", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWallSlab("black_tile_roof_edge_slab_z", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWall("black_tile_roof_edge_slab_top_z", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWallSlab("black_tile_roof_edge_slab_y", Material.ROCK, 1.0F),
+                new BlockCWFaceThinWall("black_tile_roof_edge_slab_top_y", Material.ROCK, 1.0F));
     }
 
     @SubscribeEvent

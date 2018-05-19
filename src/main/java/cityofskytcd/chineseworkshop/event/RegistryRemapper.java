@@ -52,7 +52,6 @@ public class RegistryRemapper
         ImmutableList<Mapping<Block>> mappings = event.getAllMappings();
         for (RegistryEvent.MissingMappings.Mapping mapping : mappings)
         {
-            System.out.println(mapping.key.getResourcePath());
             if (mapping.key.getResourceDomain().equals(CW.MODID)
                     && blockMappings.containsKey(mapping.key.getResourcePath()))
             {
@@ -67,7 +66,6 @@ public class RegistryRemapper
         ImmutableList<Mapping<Item>> mappings = event.getAllMappings();
         for (RegistryEvent.MissingMappings.Mapping mapping : mappings)
         {
-            System.out.println(mapping.key.getResourcePath());
             if (mapping.key.getResourceDomain().equals(CW.MODID)
                     && itemMappings.containsKey(mapping.key.getResourcePath()))
             {

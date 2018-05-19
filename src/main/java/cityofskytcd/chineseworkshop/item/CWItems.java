@@ -9,6 +9,8 @@
 package cityofskytcd.chineseworkshop.item;
 
 import cityofskytcd.chineseworkshop.CW;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -34,6 +36,9 @@ public class CWItems
     // 黑砖墙
     @GameRegistry.ObjectHolder("black_brick_wall")
     public static final Item BLACK_BRICK_WALL = null;
+    // 黑粘土块
+    @GameRegistry.ObjectHolder("black_clay_block")
+    public static final Item BLACK_CLAY_BLOCK = null;
     // 安山岩路面
     @GameRegistry.ObjectHolder("andesite_pavement")
     public static final Item ANDESITE_PAVEMENT = null;

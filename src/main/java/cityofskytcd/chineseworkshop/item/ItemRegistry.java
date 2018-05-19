@@ -32,6 +32,7 @@ public class ItemRegistry
                 new ItemCWLogo("logo"),
                 new ItemCWMaterial(),
                 new ItemCWBlock(CWBlocks.BLACK_BRICK_WALL),
+                new ItemCWBlock(CWBlocks.BLACK_CLAY_BLOCK),
                 new ItemCWBlock(CWBlocks.RED_PILLAR),
                 new ItemCWBlock(CWBlocks.DARK_GREEN_PILLAR),
                 new ItemCWBlock(CWBlocks.ANDESITE_PAVEMENT),
@@ -101,6 +102,7 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
 
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL);
+        ModelUtil.mapItemModel(CWItems.BLACK_CLAY_BLOCK);
         ModelUtil.mapItemModel(CWItems.ANDESITE_PAVEMENT);
         ModelUtil.mapItemModel(CWItems.RED_PILLAR);
         ModelUtil.mapItemModel(CWItems.DARK_GREEN_PILLAR);

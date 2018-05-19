@@ -9,6 +9,7 @@
 package cityofskytcd.chineseworkshop.crafting;
 
 import cityofskytcd.chineseworkshop.item.CWItems;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -208,6 +209,7 @@ public class CraftingLoader
     {
         /* 装饰 */
         GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 0), new ItemStack(CWItems.MATERIAL, 1, 1), 0.1F);
+        GameRegistry.addSmelting(CWItems.BLACK_CLAY_BLOCK, new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 0.1F);
     }
 
     private static void registerFuel()
