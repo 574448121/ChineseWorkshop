@@ -20,11 +20,8 @@ public class CWItems
     public static final Item LOGO = null;
 
     /* 材料 */
-    @GameRegistry.ObjectHolder("black_clay")
-    public static final Item BLACK_CLAY = null;
-
-    @GameRegistry.ObjectHolder("black_brick")
-    public static final Item BLACK_BRICK = null;
+    @GameRegistry.ObjectHolder("material")
+    public static final Item MATERIAL = null;
 
     /* 门 */
     @GameRegistry.ObjectHolder("door")

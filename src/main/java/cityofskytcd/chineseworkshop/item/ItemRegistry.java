@@ -8,10 +8,13 @@
 
 package cityofskytcd.chineseworkshop.item;
 
+import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.block.CWBlocks;
 import cityofskytcd.chineseworkshop.util.ModelUtil;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -27,8 +30,7 @@ public class ItemRegistry
     {
         event.getRegistry().registerAll(
                 new ItemCWLogo("logo"),
-                new ItemCW("black_clay"),
-                new ItemCW("black_brick"),
+                new ItemCWMaterial(),
                 new ItemCWBlock(CWBlocks.BLACK_BRICK_WALL),
                 new ItemCWBlock(CWBlocks.RED_PILLAR),
                 new ItemCWBlock(CWBlocks.DARK_GREEN_PILLAR),
@@ -87,8 +89,14 @@ public class ItemRegistry
     public static void onModelRegister(ModelRegistryEvent event)
     {
         ModelUtil.mapItemModel(CWItems.LOGO);
-        ModelUtil.mapItemModel(CWItems.BLACK_CLAY);
-        ModelUtil.mapItemModel(CWItems.BLACK_BRICK);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.MATERIAL,
+                0,
+                new ModelResourceLocation(CW.MODID + ":black_clay", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.MATERIAL,
+                1,
+                new ModelResourceLocation(CW.MODID + ":black_brick", "inventory"));
         ModelUtil.mapItemModel(CWItems.DOOR);
         ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
 

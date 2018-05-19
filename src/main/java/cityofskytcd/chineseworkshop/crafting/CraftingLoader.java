@@ -207,7 +207,7 @@ public class CraftingLoader
     private static void registerSmelting()
     {
         /* 装饰 */
-        GameRegistry.addSmelting(CWItems.BLACK_CLAY, new ItemStack(CWItems.BLACK_BRICK), 0.5F);
+        GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 0), new ItemStack(CWItems.MATERIAL, 1, 1), 0.1F);
     }
 
     private static void registerFuel()

@@ -39,7 +39,7 @@ public class CWCreativeTabs
         @Override
         public ItemStack getTabIconItem()
         {
-            return new ItemStack(CWItems.BLACK_BRICK);
+            return new ItemStack(CWItems.MATERIAL, 1, 1);
         }
     };
 }

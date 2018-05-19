@@ -33,6 +33,8 @@ public class RegistryRemapper
         blockMappings.put("small_white_gray_walls", CWBlocks.SMALL_WHITE_GRAY_WALL);
         blockMappings.put("thin_white_gray_walls", CWBlocks.THIN_WHITE_GRAY_WALL);
 
+        itemMappings.put("black_clay", CWItems.MATERIAL);
+        itemMappings.put("black_brick", CWItems.MATERIAL);
         itemMappings.put("red_pillars", CWItems.RED_PILLAR);
         itemMappings.put("dark_green_pillars", CWItems.DARK_GREEN_PILLAR);
         itemMappings.put("white_gray_walls", CWItems.WHITE_GRAY_WALL);

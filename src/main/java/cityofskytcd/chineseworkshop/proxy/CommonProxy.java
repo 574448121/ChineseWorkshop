@@ -22,7 +22,7 @@ public class CommonProxy
     @OverridingMethodsMustInvokeSuper
     public void preInit(FMLPreInitializationEvent event)
     {
-        CraftingLoader.register();
+
     }
 
     @OverridingMethodsMustInvokeSuper
@@ -30,6 +30,7 @@ public class CommonProxy
     {
         EventHandler.init();
         RegistryRemapper.init();
+        CraftingLoader.register();
     }
 
     @OverridingMethodsMustInvokeSuper
