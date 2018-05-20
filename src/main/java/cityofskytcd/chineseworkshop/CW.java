@@ -17,12 +17,12 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = CW.MODID, name = CW.NAME, version = CW.VERSION, acceptedMinecraftVersions = "1.10.2")
+@Mod(modid = CW.MODID, name = CW.NAME, version = CW.VERSION, acceptedMinecraftVersions = "1.10.3")
 public class CW
 {
     public static final String MODID = "chineseworkshop";
     public static final String NAME = "ChineseWorkshop";
-    public static final String VERSION = "1.1.0.2";
+    public static final String VERSION = "1.1.0.3";
 
     private static final CW INSTANCE = new CW();
 

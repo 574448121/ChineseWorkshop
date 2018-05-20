@@ -102,10 +102,10 @@ public class CWBlocks
     // 中式木门
     @GameRegistry.ObjectHolder("door")
     public static final Block DOOR = Blocks.AIR;
-
+    // 中式高木门
     @GameRegistry.ObjectHolder("high_door")
     public static final Block HIGH_DOOR = Blocks.AIR;
-
+    //门顶框
     @GameRegistry.ObjectHolder("upper_door_frame")
     public static final Block UPPER_DOOR_FRAME = Blocks.AIR;
 
