@@ -4,8 +4,8 @@ itemGroup.chineseworkshop.items=中式工坊 | 物品
 
 tile.chineseworkshop.black_brick_wall.name=黑砖墙
 tile.chineseworkshop.andesite_pavement.name=安山岩路面
-tile.chineseworkshop.red_pillars.name=红柱
-tile.chineseworkshop.dark_green_pillars.name=墨绿柱
+tile.chineseworkshop.red_pillar.name=红柱
+tile.chineseworkshop.dark_green_pillar.name=墨绿柱
 tile.chineseworkshop.white_gray_wall.name=白灰墙
 tile.chineseworkshop.stone_tower_lamp.name=石塔灯
 tile.chineseworkshop.red_lantern.name=红灯笼

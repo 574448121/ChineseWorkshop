@@ -1,4 +1,5 @@
 {
+	"ambientocclusion": false,
     "parent": "minecraft:block/block",
     "textures": {
         "white_gray_wall": "chineseworkshop:blocks/white_gray_wall",

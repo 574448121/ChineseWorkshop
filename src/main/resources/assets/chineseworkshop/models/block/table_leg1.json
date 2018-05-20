@@ -1,4 +1,6 @@
+
 {
+"ambientocclusion": false,
 "textures": {
     "particle": "minecraft:blocks/planks_oak"
 },

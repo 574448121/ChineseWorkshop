@@ -1,7 +1,6 @@
 {
-    "__createdwith": "opl's Model Creator",
+	"ambientocclusion": false,
     "parent": "minecraft:block/thin_block",
-    "ambientocclusion": false,
     "textures": {
         "particle": "chineseworkshop:blocks/threshold"
     },

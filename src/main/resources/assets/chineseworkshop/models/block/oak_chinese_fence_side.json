@@ -1,4 +1,5 @@
 {
+	"ambientocclusion": false,
     "textures": {
         "side": "minecraft:blocks/planks_oak"
     },

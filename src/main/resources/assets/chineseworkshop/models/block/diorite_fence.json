@@ -1,6 +1,7 @@
 {
-"parent": "minecraft:block/block",
-"textures": {
+	"ambientocclusion": false,
+	"parent": "minecraft:block/block",
+	"textures": {
     "particle": "chineseworkshop:blocks/refined_diorite"
 },
 "elements": [

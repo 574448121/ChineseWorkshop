@@ -1,4 +1,5 @@
 {
+	"ambientocclusion": false,
     "parent": "minecraft:block/block",
     "textures": {
         "particle": "chineseworkshop:blocks/stone_tower_lamp"

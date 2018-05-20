@@ -1,4 +1,5 @@
 {
+"ambientocclusion": false,
 "textures": {
     "particle": "minecraft:blocks/planks_oak",
     "table": "chineseworkshop:blocks/table"

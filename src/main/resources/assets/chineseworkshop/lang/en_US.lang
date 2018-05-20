@@ -4,8 +4,8 @@ itemGroup.chineseworkshop.items=Chinese Workshop | Item
 
 tile.chineseworkshop.black_brick_wall.name=Black Brick Wall
 tile.chineseworkshop.andesite_pavement.name=Andesite Pavement
-tile.chineseworkshop.red_pillars.name=Red Pillars
-tile.chineseworkshop.dark_green_pillars.name=Dark Green Pillars
+tile.chineseworkshop.red_pillar.name=Red Pillar
+tile.chineseworkshop.dark_green_pillar.name=Dark Green Pillar
 tile.chineseworkshop.white_gray_wall.name=White Gray Walls
 tile.chineseworkshop.stone_tower_lamp.name=Stone Tower Lamp
 tile.chineseworkshop.red_lantern.name=Red Lantern

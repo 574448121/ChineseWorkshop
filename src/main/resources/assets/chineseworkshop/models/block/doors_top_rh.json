@@ -1,5 +1,6 @@
 {
-"textures": {
+	"ambientocclusion": false,
+	"textures": {
     "particle": "chineseworkshop:blocks/blocks/doors_upper"
 },
 "elements": [

@@ -1,4 +1,5 @@
 {
+	"ambientocclusion": false,
     "parent": "minecraft:block/block",
     "textures": {
         "particle": "chineseworkshop:blocks/dark_green_pillar"

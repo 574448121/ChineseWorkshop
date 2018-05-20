@@ -1,4 +1,5 @@
 {
+"ambientocclusion": false,
 "textures": {
     "particle": "chineseworkshop:blocks/black_brick_wall"
 },
