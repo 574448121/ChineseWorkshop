@@ -51,7 +51,7 @@ tile.chineseworkshop.black_tile_roof_edge_slab_z.name=黑瓦屋顶半砖边缘�
 tile.chineseworkshop.black_tile_roof_edge_slab_top_z.name=黑瓦屋顶半砖边缘左TOP
 tile.chineseworkshop.black_tile_roof_edge_slab_y.name=黑瓦屋顶半砖边缘右
 tile.chineseworkshop.black_tile_roof_edge_slab_top_y.name=黑瓦屋顶半砖边缘右TOP
-tile.chineseworkshop.black_clay_block.name=黑色黏土块
+tile.chineseworkshop.black_clay_block.name=黑粘土块
 
 item.chineseworkshop.logo.name=Logo
 item.chineseworkshop.black_clay.name=黑粘土
