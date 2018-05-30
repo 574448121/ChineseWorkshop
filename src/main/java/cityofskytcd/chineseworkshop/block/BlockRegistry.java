@@ -40,7 +40,7 @@ public class BlockRegistry
                 new BlockCWLantern("red_lantern", Material.WOOD, 0.5F, 1.0f),
                 new BlockCWCandle("candle", Material.WOOD, 1.0F),
                 new BlockCWLantern("white_lantern", Material.CLOTH, 0.5F, 1.0f),
-                new BlockCWBracketSet("bracket_set", Material.WOOD, 0.5F),
+                new BlockCWDougong("bracket_set", Material.WOOD, 0.5F),
                 new BlockCWMenDun("men_dun", Material.ROCK, 1.5F),
                 new BlockCWThreshold("threshold", Material.ROCK, 1.0F),
                 new BlockCWFaceDecorative("carving", Material.WOOD, 0.5F),

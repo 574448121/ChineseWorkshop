@@ -9,8 +9,6 @@
 package cityofskytcd.chineseworkshop.item;
 
 import cityofskytcd.chineseworkshop.CW;
-import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
