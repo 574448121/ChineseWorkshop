@@ -94,8 +94,8 @@ public class CWBlocks
     @GameRegistry.ObjectHolder("andesite_fence")
     public static final Block ANDESITE_FENCE = Blocks.AIR;
     // 挂落
-    @GameRegistry.ObjectHolder("implicate")
-    public static final Block IMPLICATE = Blocks.AIR;
+    @GameRegistry.ObjectHolder("lithel_deco")
+    public static final Block LITHEL_DECO = Blocks.AIR;
     // 安山岩路面阶梯
     @GameRegistry.ObjectHolder("andesite_pavement_stairs")
     public static final Block ANDESITE_PAVEMENT_STAIRS = Blocks.AIR;

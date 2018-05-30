@@ -110,8 +110,8 @@ public class CWItems
     @GameRegistry.ObjectHolder("andesite_fence")
     public static final Item ANDESITE_FENCE = null;
     // 挂落
-    @GameRegistry.ObjectHolder("implicate")
-    public static final Item IMPLICATE = null;
+    @GameRegistry.ObjectHolder("lithel_deco")
+    public static final Item LITHEL_DECO = null;
     // 安山岩路面阶梯
     @GameRegistry.ObjectHolder("andesite_pavement_stairs")
     public static final Item ANDESITE_PAVEMENT_STAIRS = null;

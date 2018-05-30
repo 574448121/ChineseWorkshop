@@ -55,7 +55,7 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.DIORITE_FENCE),
                 new ItemCWBlock(CWBlocks.ANDESITE_FENCE),
                 new ItemCWBlock(CWBlocks.OAK_CHINESE_FENCE),
-                new ItemCWBlock(CWBlocks.IMPLICATE),
+                new ItemCWBlock(CWBlocks.LITHEL_DECO),
                 new ItemCWBlock(CWBlocks.OAK_WALL),
                 new ItemCWDoor("door", CWBlocks.DOOR),
                 new ItemCWDoor("high_door", CWBlocks.HIGH_DOOR),
@@ -125,7 +125,7 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.SMALL_WHITE_GRAY_WALL);
         ModelUtil.mapItemModel(CWItems.OAK_CHINESE_FENCE);
         ModelUtil.mapItemModel(CWItems.ANDESITE_FENCE);
-        ModelUtil.mapItemModel(CWItems.IMPLICATE);
+        ModelUtil.mapItemModel(CWItems.LITHEL_DECO);
         ModelUtil.mapItemModel(CWItems.ANDESITE_PAVEMENT_STAIRS);
         ModelUtil.mapItemModel(CWItems.OAK_WALL);
         // ModelUtil.mapItemModel(CWItems.DOOR);

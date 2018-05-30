@@ -54,7 +54,7 @@ public class BlockRegistry
                 new BlockCWSmallFence("small_white_gray_wall", Material.ROCK, MapColor.STONE, 1.5F),
                 new BlockCWFence("oak_chinese_fence", Material.WOOD, MapColor.WOOD, 1.5F),
                 new BlockCWWall("andesite_fence", Blocks.STONE, 1.5F),
-                new BlockCWPane("implicate", Material.WOOD, true, 1.0F),
+                new BlockCWPane("lithel_deco", Material.WOOD, true, 1.0F),
                 new BlockCWStairs("andesite_pavement_stairs", Blocks.STONE.getDefaultState(), 1.5F),
                 new BlockCWSmallFence("oak_wall", Material.WOOD, MapColor.WOOD, 1.5F),
                 new BlockCWDoor("door", Material.WOOD, 1.5F),

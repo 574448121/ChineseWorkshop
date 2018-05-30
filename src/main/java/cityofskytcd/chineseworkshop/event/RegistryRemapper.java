@@ -32,6 +32,7 @@ public class RegistryRemapper
         blockMappings.put("white_gray_walls_stairs", CWBlocks.WHITE_GRAY_WALL_STAIRS);
         blockMappings.put("small_white_gray_walls", CWBlocks.SMALL_WHITE_GRAY_WALL);
         blockMappings.put("thin_white_gray_walls", CWBlocks.THIN_WHITE_GRAY_WALL);
+        blockMappings.put("implicate", CWBlocks.LITHEL_DECO);
 
         itemMappings.put("black_clay", CWItems.MATERIAL);
         itemMappings.put("black_brick", CWItems.MATERIAL);
@@ -44,6 +45,7 @@ public class RegistryRemapper
         itemMappings.put("white_gray_walls_stairs", CWItems.WHITE_GRAY_WALL_STAIRS);
         itemMappings.put("small_white_gray_walls", CWItems.SMALL_WHITE_GRAY_WALL);
         itemMappings.put("thin_white_gray_walls", CWItems.THIN_WHITE_GRAY_WALL);
+        itemMappings.put("implicate", CWItems.LITHEL_DECO);
     }
 
     @SubscribeEvent
