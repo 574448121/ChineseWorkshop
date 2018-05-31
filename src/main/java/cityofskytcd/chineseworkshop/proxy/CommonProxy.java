@@ -13,9 +13,13 @@ import javax.annotation.OverridingMethodsMustInvokeSuper;
 import cityofskytcd.chineseworkshop.crafting.CraftingLoader;
 import cityofskytcd.chineseworkshop.event.EventHandler;
 import cityofskytcd.chineseworkshop.event.RegistryRemapper;
+import cityofskytcd.chineseworkshop.item.CWItems;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy
 {
@@ -29,7 +33,8 @@ public class CommonProxy
     {
         EventHandler.init();
         RegistryRemapper.init();
-        CraftingLoader.register();
+        GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 0), new ItemStack(CWItems.MATERIAL, 1, 1), 0.1F);
+        GameRegistry.addSmelting(CWItems.BLACK_CLAY_BLOCK, new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 0.1F);
     }
 
     @OverridingMethodsMustInvokeSuper

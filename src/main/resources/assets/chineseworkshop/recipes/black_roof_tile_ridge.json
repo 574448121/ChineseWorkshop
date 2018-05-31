@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:black_roof_tile_ridge",
+    "count": 4
+  },
+  "pattern": [
+    " * ",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:material",
+      "data": 1
+    }
+  }
+}

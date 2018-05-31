@@ -17,9 +17,6 @@ public class CraftingLoader
 {
     public static void register()
     {
-        registerRecipe();
-        registerSmelting();
-        registerFuel();
     }
 
     private static void registerRecipe()
@@ -203,17 +200,5 @@ public class CraftingLoader
         // GameRegistry.addShapedRecipe(new
         // ItemStack(CWBlocks.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y, 6), new Object[] { "###",
         // '#', CWBlocks.BLACK_TILE_ROOF_EDGE_Y });
-    }
-
-    private static void registerSmelting()
-    {
-        /* 装饰 */
-        GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 0), new ItemStack(CWItems.MATERIAL, 1, 1), 0.1F);
-        GameRegistry.addSmelting(CWItems.BLACK_CLAY_BLOCK, new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 0.1F);
-    }
-
-    private static void registerFuel()
-    {
-
     }
 }
