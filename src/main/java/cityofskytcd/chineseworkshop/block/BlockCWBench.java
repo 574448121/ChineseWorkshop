@@ -16,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockCWBench extends BlockCWFaceDecorative implements ISeat
+public class BlockCWBench extends BlockCWTFace2D implements ISeat
 {
 
     public BlockCWBench(String name, Material materialIn, float hardness)
@@ -24,9 +24,7 @@ public class BlockCWBench extends BlockCWFaceDecorative implements ISeat
         super(name, materialIn, hardness);
     }
 
-    private static final AxisAlignedBB BS_NORTH_AABB = new AxisAlignedBB(1.0D, 0.0D, 0.1875D, 0.0D, 0.625D, 0.8125D);
     private static final AxisAlignedBB BS_SOUTH_AABB = new AxisAlignedBB(1.0D, 0.0D, 0.1875D, 0.0D, 0.625D, 0.8125D);
-    private static final AxisAlignedBB BS_WEST_AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.0D, 0.8125D, 0.625D, 1.0D);
     private static final AxisAlignedBB BS_EAST_AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.0D, 0.8125D, 0.625D, 1.0D);
 
     @Override
@@ -34,14 +32,10 @@ public class BlockCWBench extends BlockCWFaceDecorative implements ISeat
     {
         switch (state.getValue(FACING))
         {
-        case EAST:
+        case EAST_WEST:
             return BS_EAST_AABB;
-        case WEST:
-            return BS_WEST_AABB;
-        case SOUTH:
+        case SOUTH_NORTH:
             return BS_SOUTH_AABB;
-        case NORTH:
-            return BS_NORTH_AABB;
         default:
             return null;
         }

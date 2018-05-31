@@ -5,16 +5,8 @@
   },
   "variants": {
     "facing": {
-      "north": {},
-      "east": {
-        "y": 90
-      },
-      "south": {
-        "y": 180
-      },
-      "west": {
-        "y": 270
-      }
+      "south_north": {},
+      "east_west": { "y": 90 }
     }
   }
 }

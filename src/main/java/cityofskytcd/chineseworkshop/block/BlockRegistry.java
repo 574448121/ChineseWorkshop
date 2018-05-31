@@ -43,7 +43,7 @@ public class BlockRegistry
                 new BlockCWDougong("bracket_set", Material.WOOD, 0.5F),
                 new BlockCWMenDun("men_dun", Material.ROCK, 1.5F),
                 new BlockCWThreshold("threshold", Material.ROCK, 1.0F),
-                new BlockCWFaceDecorative("carving", Material.WOOD, 0.5F),
+                new BlockCWTFace("carving", Material.WOOD, 0.5F),
                 new BlockCWTreeAltar("tree_altar", Material.ROCK, 1.5F),
                 new BlockCWBench("bench", Material.WOOD, 0.5F),
                 new BlockCWTable("table", Material.WOOD, 1.0F),

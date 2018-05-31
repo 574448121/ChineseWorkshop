@@ -18,7 +18,7 @@ import net.minecraft.world.IBlockAccess;
  * 斗栱类
  */
 
-public class BlockCWDougong extends BlockCWFaceDecorative
+public class BlockCWDougong extends BlockCWTFace
 {
 
     public BlockCWDougong(String name, Material materialIn, float hardness)

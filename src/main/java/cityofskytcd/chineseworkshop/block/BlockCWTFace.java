@@ -26,10 +26,10 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 朝向装饰类
  */
 
-public class BlockCWFaceDecorative extends BlockCWT
+public class BlockCWTFace extends BlockCWT
 {
 
-    public BlockCWFaceDecorative(String name, Material materialIn, float hardness)
+    public BlockCWTFace(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness);
         setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
