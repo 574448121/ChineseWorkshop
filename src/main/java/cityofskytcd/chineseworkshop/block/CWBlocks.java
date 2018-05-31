@@ -116,24 +116,12 @@ public class CWBlocks
     // 黑瓦屋顶
     @GameRegistry.ObjectHolder("black_tile_roof")
     public static final Block BLACK_TILE_ROOF = Blocks.AIR;
-    // 黑瓦屋脊
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof")
-    public static final Block BLACK_TILE_RIDGE_ROOF = Blocks.AIR;
     // 黑瓦屋脊top
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_top")
     public static final Block BLACK_TILE_RIDGE_ROOF_TOP = Blocks.AIR;
-    // 黑瓦屋脊转角
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof_l")
-    public static final Block BLACK_TILE_RIDGE_ROOF_L = Blocks.AIR;
     // 黑瓦屋脊边缘
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge")
     public static final Block BLACK_TILE_RIDGE_ROOF_EDGE = Blocks.AIR;
-    // 黑瓦屋脊T
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof_t")
-    public static final Block BLACK_TILE_RIDGE_ROOF_T = Blocks.AIR;
-    // 黑瓦屋脊X
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof_x")
-    public static final Block BLACK_TILE_RIDGE_ROOF_X = Blocks.AIR;
     // 黑瓦屋脊飞檐
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_j")
     public static final Block BLACK_TILE_RIDGE_ROOF_J = Blocks.AIR;
@@ -175,4 +163,7 @@ public class CWBlocks
     // 黑瓦屋顶半砖边缘右top
     @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_top_y")
     public static final Block BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y = Blocks.AIR;
+    // 黑瓦屋脊
+    @GameRegistry.ObjectHolder("black_roof_tile_ridge")
+    public static final Block BLACK_ROOF_TILE_RIDGE = Blocks.AIR;
 }

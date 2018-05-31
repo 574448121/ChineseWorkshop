@@ -61,12 +61,9 @@ public class BlockRegistry
                 new BlockCWDoor("high_door", Material.WOOD, 1.5F),
                 new BlockCWUpperDoorFrame("upper_door_frame", Material.WOOD, MapColor.WOOD, 1.5F),
                 new BlockCWRoof("black_tile_roof", Material.ROCK, 1.5F),
-                new BlockCWFaceRoof("black_tile_ridge_roof", Material.ROCK, 1.5F),
+                new BlockCWRoofTileRidge("black_roof_tile_ridge", Material.ROCK, 1.0F),
                 new BlockCWFaceRoof("black_tile_ridge_roof_top", Material.ROCK, 1.5F),
-                new BlockCWFaceRoof("black_tile_ridge_roof_l", Material.ROCK, 1.5F),
                 new BlockCWFaceRoof("black_tile_ridge_roof_edge", Material.ROCK, 1.5F),
-                new BlockCWFaceRoof("black_tile_ridge_roof_t", Material.ROCK, 1.5F),
-                new BlockCWFaceRoof("black_tile_ridge_roof_x", Material.ROCK, 1.5F),
                 new BlockCWFaceRoof("black_tile_ridge_roof_j", Material.ROCK, 1.5F),
                 new BlockCWFaceRoof("black_tile_roof_j", Material.ROCK, 1.5F),
                 new BlockCWRoofSlab("black_tile_roof_slab", Material.ROCK, 1.5F),
@@ -88,5 +85,6 @@ public class BlockRegistry
     {
         ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.BLACK_ROOF_TILE_RIDGE, new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 }

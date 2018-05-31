@@ -9,6 +9,8 @@
 package cityofskytcd.chineseworkshop.item;
 
 import cityofskytcd.chineseworkshop.CW;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -130,24 +132,12 @@ public class CWItems
     // 黑瓦屋顶
     @GameRegistry.ObjectHolder("black_tile_roof")
     public static final Item BLACK_TILE_ROOF = null;
-    // 黑瓦屋脊
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof")
-    public static final Item BLACK_TILE_RIDGE_ROOF = null;
     // 黑瓦屋脊top
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_top")
     public static final Item BLACK_TILE_RIDGE_ROOF_TOP = null;
-    // 黑瓦屋脊转角
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof_l")
-    public static final Item BLACK_TILE_RIDGE_ROOF_L = null;
     // 黑瓦屋脊边缘
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge")
     public static final Item BLACK_TILE_RIDGE_ROOF_EDGE = null;
-    // 黑瓦屋脊T
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof_t")
-    public static final Item BLACK_TILE_RIDGE_ROOF_T = null;
-    // 黑瓦屋脊X
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof_x")
-    public static final Item BLACK_TILE_RIDGE_ROOF_X = null;
     // 黑瓦屋脊飞檐
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_j")
     public static final Item BLACK_TILE_RIDGE_ROOF_J = null;
@@ -189,4 +179,7 @@ public class CWItems
     // 黑瓦屋顶半砖边缘右top
     @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_top_y")
     public static final Item BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y = null;
+    // 黑瓦屋脊
+    @GameRegistry.ObjectHolder("black_roof_tile_ridge")
+    public static final Item BLACK_ROOF_TILE_RIDGE = null;
 }

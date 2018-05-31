@@ -30,18 +30,6 @@ public class BlockCWTable extends BlockCWT
     }
 
     @Override
-    public boolean isOpaqueCube(IBlockState state)
-    {
-        return false;
-    }
-
-    @Override
-    public boolean isFullCube(IBlockState state)
-    {
-        return false;
-    }
-
-    @Override
     protected BlockStateContainer createBlockState()
     {
         return new BlockStateContainer(this, NW, NE, SE, SW);

@@ -68,12 +68,9 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_J),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_SLAB),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_SLAB_TOP),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF),
+                new ItemCWBlock(CWBlocks.BLACK_ROOF_TILE_RIDGE),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_L),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_T),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_X),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_Y),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_Z),
@@ -132,12 +129,9 @@ public class ItemRegistry
         // ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
         ModelUtil.mapItemModel(CWItems.UPPER_DOOR_FRAME);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF);
+        ModelUtil.mapItemModel(CWItems.BLACK_ROOF_TILE_RIDGE);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_TOP);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_L);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_T);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_X);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_J);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_J);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_SLAB);
@@ -151,5 +145,6 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Z);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_Y);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y);
+        
     }
 }

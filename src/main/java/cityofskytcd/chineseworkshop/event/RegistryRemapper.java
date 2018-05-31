@@ -33,6 +33,10 @@ public class RegistryRemapper
         blockMappings.put("small_white_gray_walls", CWBlocks.SMALL_WHITE_GRAY_WALL);
         blockMappings.put("thin_white_gray_walls", CWBlocks.THIN_WHITE_GRAY_WALL);
         blockMappings.put("implicate", CWBlocks.LITHEL_DECO);
+        blockMappings.put("black_tile_ridge_roof", CWBlocks.BLACK_ROOF_TILE_RIDGE);
+        blockMappings.put("black_tile_ridge_roof_l", CWBlocks.BLACK_ROOF_TILE_RIDGE);
+        blockMappings.put("black_tile_ridge_roof_t", CWBlocks.BLACK_ROOF_TILE_RIDGE);
+        blockMappings.put("black_tile_ridge_roof_x", CWBlocks.BLACK_ROOF_TILE_RIDGE);
 
         itemMappings.put("black_clay", CWItems.MATERIAL);
         itemMappings.put("black_brick", CWItems.MATERIAL);
@@ -46,6 +50,10 @@ public class RegistryRemapper
         itemMappings.put("small_white_gray_walls", CWItems.SMALL_WHITE_GRAY_WALL);
         itemMappings.put("thin_white_gray_walls", CWItems.THIN_WHITE_GRAY_WALL);
         itemMappings.put("implicate", CWItems.LITHEL_DECO);
+        itemMappings.put("black_tile_ridge_roof", CWItems.BLACK_ROOF_TILE_RIDGE);
+        itemMappings.put("black_tile_ridge_roof_l", CWItems.BLACK_ROOF_TILE_RIDGE);
+        itemMappings.put("black_tile_ridge_roof_t", CWItems.BLACK_ROOF_TILE_RIDGE);
+        itemMappings.put("black_tile_ridge_roof_x", CWItems.BLACK_ROOF_TILE_RIDGE);
     }
 
     @SubscribeEvent
