@@ -50,7 +50,7 @@ public class EventHandler
 
         ItemStack stack1 = player.getHeldItemMainhand();
         ItemStack stack2 = player.getHeldItemOffhand();
-        if (stack1 != null || stack2 != null)
+        if (!stack1.isEmpty() || !stack2.isEmpty())
             return;
 
         if (state.getBlock() instanceof ISeat)

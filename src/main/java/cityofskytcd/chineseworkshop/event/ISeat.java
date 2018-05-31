@@ -10,7 +10,6 @@ package cityofskytcd.chineseworkshop.event;
 
 import java.util.List;
 
-import cityofskytcd.chineseworkshop.CW;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
@@ -52,7 +51,6 @@ public interface ISeat
             }
 
             List<Entity> passangers = getPassengers();
-            CW.log(passangers);
             if (passangers.isEmpty())
                 setDead();
             for (Entity e : passangers)
