@@ -1,3 +1,5 @@
 # ChineseWorkshop
 
-ChineseWorkshop. since then bid farewell to hand residue.
+[CurseForge](https://minecraft.curseforge.com/projects/chineseworkshop)
+
+Best friend of architecture dumb.
