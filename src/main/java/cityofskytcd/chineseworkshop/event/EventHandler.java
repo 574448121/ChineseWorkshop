@@ -27,6 +27,7 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -206,7 +207,7 @@ public class EventHandler
                 }
             }
 
-            drawBadge(mc, held, false);
+            drawBadge(mc, held, false, true);
 
             if (selection.size() < 2)
             {
@@ -226,7 +227,7 @@ public class EventHandler
 
                 boolean match = !matched && definition.equals(ItemDefinition.of(held));
                 matched = matched || match;
-                drawBadge(mc, definition.getItemStack(), match);
+                drawBadge(mc, definition.getItemStack(), match, false);
                 GlStateManager.popMatrix();
             }
             if (!matched)
@@ -244,12 +245,11 @@ public class EventHandler
         fontRendererIn.drawStringWithShadow(text, x - fontRendererIn.getStringWidth(text) / 2, y, 0xFFFFFF);
     }
 
-    public static void drawBadge(Minecraft mc, ItemStack stack, boolean selected)
+    public static void drawBadge(Minecraft mc, ItemStack stack, boolean selected, boolean rotation)
     {
         GlStateManager.enableBlend();
         GlStateManager.shadeModel(GL11.GL_SMOOTH);
         GlStateManager.disableTexture2D();
-
         GlStateManager.color(selected ? 0.1F : 0F, selected ? 0.5F : 0F, selected ? 0.9F : 0F, 0.3F);
         GL11.glBegin(GL11.GL_TRIANGLE_FAN);
         GL11.glVertex2f(0, -30);
@@ -267,8 +267,32 @@ public class EventHandler
 
         GlStateManager.pushMatrix();
         GlStateManager.scale(1.5, 1.5, 1.5);
-        RenderHelper.enableGUIStandardItemLighting();
-        mc.getRenderItem().renderItemAndEffectIntoGUI(stack, -8, -12);
+
+        if (rotation)
+        {
+            RenderHelper.enableGUIStandardItemLighting();
+            // GlStateManager.pushMatrix();
+
+            GlStateManager.translate(0, 0, 50);
+            GlStateManager.scale(10, 10, 10);
+
+            GlStateManager.pushMatrix();
+            GlStateManager.rotate(-30.0F, 0.0F, 1.0F, 0F);
+            GlStateManager.rotate(165.0F, 1.0F, 0.0F, 0F);
+            GlStateManager.rotate(mc.getSystemTime() / 20F, 0, 1, 0F);
+
+            RenderHelper.enableStandardItemLighting();
+
+            mc.getRenderItem().renderItem(stack, TransformType.NONE);
+            GlStateManager.popMatrix();
+
+        }
+        else
+        {
+            RenderHelper.enableGUIStandardItemLighting();
+            mc.getRenderItem().renderItemAndEffectIntoGUI(stack, -8, -12);
+        }
+
         RenderHelper.disableStandardItemLighting();
         GlStateManager.popMatrix();
     }
