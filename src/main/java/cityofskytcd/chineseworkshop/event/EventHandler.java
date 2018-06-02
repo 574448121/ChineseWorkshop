@@ -27,8 +27,10 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.crash.CrashReport;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
@@ -268,24 +270,28 @@ public class EventHandler
         GlStateManager.pushMatrix();
         GlStateManager.scale(1.5, 1.5, 1.5);
 
-        if (rotation)
+        // TODO: Directly render
+        IBakedModel bakedModel = mc.getRenderItem().getItemModelWithOverrides(
+                stack,
+                (World) null,
+                (EntityLivingBase) null);
+        if (rotation && bakedModel.isGui3d())
         {
             RenderHelper.enableGUIStandardItemLighting();
-            // GlStateManager.pushMatrix();
-
-            GlStateManager.translate(0, 0, 50);
+            GlStateManager.translate(0, -5, 150);
+            GlStateManager.scale(1.0F, -1.0F, 1.0F);
             GlStateManager.scale(10, 10, 10);
-
+            GlStateManager.alphaFunc(516, 0.1F);
             GlStateManager.pushMatrix();
-            GlStateManager.rotate(-30.0F, 0.0F, 1.0F, 0F);
-            GlStateManager.rotate(165.0F, 1.0F, 0.0F, 0F);
-            GlStateManager.rotate(mc.getSystemTime() / 20F, 0, 1, 0F);
-
+            GlStateManager.enableRescaleNormal();
+            GlStateManager.enableAlpha();
+            GlStateManager.rotate(30F, 1F, 0, 0F);
+            GlStateManager.rotate(Minecraft.getSystemTime() / 20F, 0, 1, 0F);
             RenderHelper.enableStandardItemLighting();
-
             mc.getRenderItem().renderItem(stack, TransformType.NONE);
+            GlStateManager.disableAlpha();
+            GlStateManager.disableRescaleNormal();
             GlStateManager.popMatrix();
-
         }
         else
         {
