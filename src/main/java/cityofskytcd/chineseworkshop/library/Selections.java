@@ -1,4 +1,4 @@
-package cityofskytcd.chineseworkshop.api;
+package cityofskytcd.chineseworkshop.library;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -55,7 +55,6 @@ public class Selections
     {
         for (ImmutableList<ItemDefinition> selection : selections)
         {
-            CW.log(selection.contains(definition));
             if (selection.contains(definition))
             {
                 return selection;

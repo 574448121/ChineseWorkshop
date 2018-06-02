@@ -2,8 +2,8 @@ package cityofskytcd.chineseworkshop.network;
 
 import com.google.common.collect.ImmutableList;
 
-import cityofskytcd.chineseworkshop.api.ItemDefinition;
-import cityofskytcd.chineseworkshop.api.Selections;
+import cityofskytcd.chineseworkshop.library.ItemDefinition;
+import cityofskytcd.chineseworkshop.library.Selections;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;

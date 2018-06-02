@@ -1,4 +1,4 @@
-package cityofskytcd.chineseworkshop.api;
+package cityofskytcd.chineseworkshop.library;
 
 import java.util.Objects;
 

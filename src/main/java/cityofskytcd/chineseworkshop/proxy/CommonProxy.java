@@ -10,10 +10,10 @@ package cityofskytcd.chineseworkshop.proxy;
 
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 
-import cityofskytcd.chineseworkshop.api.Selections;
 import cityofskytcd.chineseworkshop.event.EventHandler;
 import cityofskytcd.chineseworkshop.event.RegistryRemapper;
 import cityofskytcd.chineseworkshop.item.CWItems;
+import cityofskytcd.chineseworkshop.library.Selections;
 import cityofskytcd.chineseworkshop.network.CWNetworkChannel;
 import cityofskytcd.chineseworkshop.network.WheelMovePacket;
 import net.minecraft.init.Blocks;

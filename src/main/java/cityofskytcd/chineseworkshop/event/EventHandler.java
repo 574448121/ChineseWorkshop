@@ -15,9 +15,9 @@ import org.lwjgl.opengl.GL11;
 import com.google.common.collect.ImmutableList;
 
 import cityofskytcd.chineseworkshop.CW;
-import cityofskytcd.chineseworkshop.api.ItemDefinition;
-import cityofskytcd.chineseworkshop.api.Selections;
 import cityofskytcd.chineseworkshop.event.ISeat.Seat;
+import cityofskytcd.chineseworkshop.library.ItemDefinition;
+import cityofskytcd.chineseworkshop.library.Selections;
 import cityofskytcd.chineseworkshop.network.CWNetworkChannel;
 import cityofskytcd.chineseworkshop.network.WheelMovePacket;
 import cityofskytcd.chineseworkshop.proxy.ClientProxy;
@@ -33,6 +33,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.MouseEvent;
@@ -42,8 +43,6 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -52,7 +51,7 @@ public class EventHandler
 {
     private static boolean showGui = false;
     private static boolean animating = false;
-    private static int animationTick = 0;
+    private static float animationTick = 0;
 
     public static void init()
     {
@@ -108,12 +107,14 @@ public class EventHandler
             if (ClientProxy.kbSelect.isKeyDown() && Selections.findSelection(mc.player.getHeldItemMainhand()) != null)
             {
                 showGui = true;
+                animating = true;
             }
 
         }
         else if (showGui && !ClientProxy.kbSelect.isKeyDown())
         {
             showGui = false;
+            animating = true;
         }
     }
 
@@ -126,6 +127,12 @@ public class EventHandler
 
         if (showGui && event.getDwheel() != 0)
         {
+            if (!Minecraft.getMinecraft().inGameHasFocus)
+            {
+                showGui = false;
+                animating = false;
+                animationTick = 0;
+            }
             EntityPlayer player = Minecraft.getMinecraft().player;
             ItemStack held = player.getHeldItemMainhand();
             if (held.isEmpty())
@@ -156,9 +163,9 @@ public class EventHandler
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void drawHudPost(RenderGameOverlayEvent.Post event)
+    public static void drawHudPost(RenderGameOverlayEvent.Post event) throws InterruptedException
     {
-        if (showGui && event.getType() == ElementType.HOTBAR)
+        if ((showGui || animating) && event.getType() == ElementType.HOTBAR)
         {
             Minecraft mc = Minecraft.getMinecraft();
             ItemStack held = mc.player.getHeldItemMainhand();
@@ -178,14 +185,32 @@ public class EventHandler
 
             GlStateManager.pushMatrix();
             GlStateManager.translate(xStart, yStart, 0);
+            if (animating)
+            {
+                animationTick += mc.getRenderPartialTicks() * (showGui ? 1 : -1);
+                animationTick = MathHelper.clamp(animationTick, 0, 9);
+                if (animationTick == 9)
+                {
+                    animating = false;
+                }
+                else if (!showGui && animationTick < 0.01)
+                {
+                    animating = false;
+                    GlStateManager.popMatrix();
+                    return;
+                }
+                else
+                {
+                    double scale = Math.sqrt(animationTick) / 3;
+                    GlStateManager.scale(scale, scale, scale);
+                }
+            }
 
             drawBadge(mc, held, false);
 
             if (selection.size() < 2)
             {
-                CrashReport crash = CrashReport.makeCrashReport(
-                        new Exception(),
-                        "Number of IItemSelectable options smaller than 2");
+                CrashReport crash = CrashReport.makeCrashReport(new Exception(), "Number of options smaller than 2");
                 mc.crashed(crash);
             }
 
@@ -206,9 +231,7 @@ public class EventHandler
             }
             if (!matched)
             {
-                CrashReport crash = CrashReport.makeCrashReport(
-                        new Exception(),
-                        "IItemSelectable options do not contain item itself");
+                CrashReport crash = CrashReport.makeCrashReport(new Exception(), "Options do not contain item itself");
                 mc.crashed(crash);
             }
 
@@ -252,19 +275,9 @@ public class EventHandler
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void onTick(ClientTickEvent event)
-    {
-        if (animating && event.phase == Phase.END)
-        {
-            animationTick++;
-        }
-    }
-
-    @SubscribeEvent
-    @SideOnly(Side.CLIENT)
     public static void drawHudPre(RenderGameOverlayEvent.Pre event)
     {
-        if (showGui && event.getType() == ElementType.CROSSHAIRS)
+        if ((showGui || animating) && event.getType() == ElementType.CROSSHAIRS)
         {
             event.setCanceled(true);
         }
