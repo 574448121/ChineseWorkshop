@@ -10,6 +10,9 @@ package cityofskytcd.chineseworkshop.proxy;
 
 import javax.annotation.Nullable;
 
+import org.lwjgl.input.Keyboard;
+
+import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.block.CWBlocks;
 import cityofskytcd.chineseworkshop.item.CWItems;
 import net.minecraft.block.state.IBlockState;
@@ -18,22 +21,28 @@ import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.ColorizerGrass;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.biome.BiomeColorHelper;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ClientProxy extends CommonProxy
 {
+    public static final KeyBinding kbSelect = new KeyBinding(CW.MODID + ".keybind.select", Keyboard.KEY_LMENU, CW.MODID
+            + ".gui.keygroup");
+
     @Override
     public void preInit(FMLPreInitializationEvent event)
     {
         super.preInit(event);
+        ClientRegistry.registerKeyBinding(kbSelect);
     }
 
     @Override

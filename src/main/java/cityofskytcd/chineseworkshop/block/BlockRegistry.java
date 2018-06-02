@@ -85,6 +85,8 @@ public class BlockRegistry
     {
         ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.BLACK_ROOF_TILE_RIDGE, new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_RIDGE,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 }

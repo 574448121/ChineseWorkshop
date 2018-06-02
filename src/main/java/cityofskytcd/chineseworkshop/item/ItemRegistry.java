@@ -145,6 +145,6 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Z);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_Y);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y);
-        
+
     }
 }
