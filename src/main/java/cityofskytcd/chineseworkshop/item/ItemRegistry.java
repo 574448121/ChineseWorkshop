@@ -69,17 +69,11 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_SLAB),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_SLAB_TOP),
                 new ItemCWBlock(CWBlocks.BLACK_ROOF_TILE_RIDGE),
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE, new String[] { "n", "j" }),
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB, new String[] { "n", "t" }),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_Y),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_Z),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_YJ),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_ZJ),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_SLAB_Z),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Z),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_SLAB_Y),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y));
+                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J));
     }
 
     @SubscribeEvent
@@ -130,6 +124,16 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.UPPER_DOOR_FRAME);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF);
         ModelUtil.mapItemModel(CWItems.BLACK_ROOF_TILE_RIDGE);
+        ModelUtil.mapItemModel(CWItems.BLACK_ROOF_TILE_EDGE);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.BLACK_ROOF_TILE_EDGE,
+                1,
+                new ModelResourceLocation(CW.MODID + ":black_roof_tile_edge_j", "inventory"));
+        ModelUtil.mapItemModel(CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.BLACK_ROOF_TILE_EDGE_SLAB,
+                1,
+                new ModelResourceLocation(CW.MODID + ":black_roof_tile_edge_slab_t", "inventory"));
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_TOP);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_J);
@@ -137,14 +141,6 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_SLAB);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_SLAB_TOP);
         ModelUtil.mapItemModel(CWItems.THIN_WHITE_GRAY_WALL);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_Y);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_Z);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_YJ);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_ZJ);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_Z);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Z);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_Y);
-        ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y);
 
     }
 }

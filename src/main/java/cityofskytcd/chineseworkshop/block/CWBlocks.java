@@ -139,31 +139,13 @@ public class CWBlocks
     // 薄白灰墙
     @GameRegistry.ObjectHolder("thin_white_gray_wall")
     public static final Block THIN_WHITE_GRAY_WALL = Blocks.AIR;
-    // 黑瓦屋顶边缘右
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_y")
-    public static final Block BLACK_TILE_ROOF_EDGE_Y = Blocks.AIR;
-    // 黑瓦屋顶边缘左
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_z")
-    public static final Block BLACK_TILE_ROOF_EDGE_Z = Blocks.AIR;
-    // 黑瓦屋顶边缘右飞檐
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_yj")
-    public static final Block BLACK_TILE_ROOF_EDGE_YJ = Blocks.AIR;
-    // 黑瓦屋顶边缘左飞檐
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_zj")
-    public static final Block BLACK_TILE_ROOF_EDGE_ZJ = Blocks.AIR;
-    // 黑瓦屋顶半砖边缘左
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_z")
-    public static final Block BLACK_TILE_ROOF_EDGE_SLAB_Z = Blocks.AIR;
-    // 黑瓦屋顶半砖边缘左top
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_top_z")
-    public static final Block BLACK_TILE_ROOF_EDGE_SLAB_TOP_Z = Blocks.AIR;
-    // 黑瓦屋顶半砖边缘右
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_y")
-    public static final Block BLACK_TILE_ROOF_EDGE_SLAB_Y = Blocks.AIR;
-    // 黑瓦屋顶半砖边缘右top
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_top_y")
-    public static final Block BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y = Blocks.AIR;
     // 黑瓦屋脊
     @GameRegistry.ObjectHolder("black_roof_tile_ridge")
     public static final Block BLACK_ROOF_TILE_RIDGE = Blocks.AIR;
+    // 黑瓦屋顶边缘
+    @GameRegistry.ObjectHolder("black_roof_tile_edge")
+    public static final Block BLACK_ROOF_TILE_EDGE = Blocks.AIR;
+    // 黑瓦屋顶边缘台阶
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab")
+    public static final Block BLACK_ROOF_TILE_EDGE_SLAB = Blocks.AIR;
 }

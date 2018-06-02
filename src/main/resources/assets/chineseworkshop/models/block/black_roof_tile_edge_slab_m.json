@@ -1,6 +1,6 @@
 {
 	"ambientocclusion": false,
-    "parent": "minecraft:block/block",
+    "parent": "minecraft:block/thin_block",
     "textures": {
         "particle": "chineseworkshop:blocks/black_tile_roof",
         "white_gray_wall": "chineseworkshop:blocks/white_gray_wall"

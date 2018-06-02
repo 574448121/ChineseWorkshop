@@ -135,11 +135,15 @@ public class EventHandler
                 showGui = false;
                 animating = false;
                 animationTick = 0;
+                return;
             }
             EntityPlayer player = Minecraft.getMinecraft().player;
             ItemStack held = player.getHeldItemMainhand();
             if (held.isEmpty())
             {
+                showGui = false;
+                animating = false;
+                animationTick = 0;
                 return;
             }
             ImmutableList<ItemDefinition> selection = Selections.findSelection(held);

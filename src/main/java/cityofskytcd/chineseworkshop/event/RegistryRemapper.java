@@ -37,6 +37,14 @@ public class RegistryRemapper
         blockMappings.put("black_tile_ridge_roof_l", CWBlocks.BLACK_ROOF_TILE_RIDGE);
         blockMappings.put("black_tile_ridge_roof_t", CWBlocks.BLACK_ROOF_TILE_RIDGE);
         blockMappings.put("black_tile_ridge_roof_x", CWBlocks.BLACK_ROOF_TILE_RIDGE);
+        blockMappings.put("black_tile_roof_edge_y", CWBlocks.BLACK_ROOF_TILE_EDGE);
+        blockMappings.put("black_tile_roof_edge_z", CWBlocks.BLACK_ROOF_TILE_EDGE);
+        blockMappings.put("black_tile_roof_edge_yj", CWBlocks.BLACK_ROOF_TILE_EDGE);
+        blockMappings.put("black_tile_roof_edge_zj", CWBlocks.BLACK_ROOF_TILE_EDGE);
+        blockMappings.put("black_tile_roof_edge_slab_z", CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB);
+        blockMappings.put("black_tile_roof_edge_slab_y", CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB);
+        blockMappings.put("black_tile_roof_edge_slab_top_z", CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB);
+        blockMappings.put("black_tile_roof_edge_slab_top_y", CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB);
 
         itemMappings.put("black_clay", CWItems.MATERIAL);
         itemMappings.put("black_brick", CWItems.MATERIAL);
@@ -54,6 +62,14 @@ public class RegistryRemapper
         itemMappings.put("black_tile_ridge_roof_l", CWItems.BLACK_ROOF_TILE_RIDGE);
         itemMappings.put("black_tile_ridge_roof_t", CWItems.BLACK_ROOF_TILE_RIDGE);
         itemMappings.put("black_tile_ridge_roof_x", CWItems.BLACK_ROOF_TILE_RIDGE);
+        itemMappings.put("black_tile_roof_edge_y", CWItems.BLACK_ROOF_TILE_EDGE);
+        itemMappings.put("black_tile_roof_edge_z", CWItems.BLACK_ROOF_TILE_EDGE);
+        itemMappings.put("black_tile_roof_edge_yj", CWItems.BLACK_ROOF_TILE_EDGE);
+        itemMappings.put("black_tile_roof_edge_zj", CWItems.BLACK_ROOF_TILE_EDGE);
+        itemMappings.put("black_tile_roof_edge_slab_z", CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
+        itemMappings.put("black_tile_roof_edge_slab_y", CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
+        itemMappings.put("black_tile_roof_edge_slab_top_z", CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
+        itemMappings.put("black_tile_roof_edge_slab_top_y", CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
     }
 
     @SubscribeEvent

@@ -153,31 +153,13 @@ public class CWItems
     // 薄白灰墙
     @GameRegistry.ObjectHolder("thin_white_gray_wall")
     public static final Item THIN_WHITE_GRAY_WALL = null;
-    // 黑瓦屋顶边缘右
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_y")
-    public static final Item BLACK_TILE_ROOF_EDGE_Y = null;
-    // 黑瓦屋顶边缘左
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_z")
-    public static final Item BLACK_TILE_ROOF_EDGE_Z = null;
-    // 黑瓦屋顶边缘右飞檐
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_yj")
-    public static final Item BLACK_TILE_ROOF_EDGE_YJ = null;
-    // 黑瓦屋顶边缘左飞檐
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_zj")
-    public static final Item BLACK_TILE_ROOF_EDGE_ZJ = null;
-    // 黑瓦屋顶半砖边缘左
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_z")
-    public static final Item BLACK_TILE_ROOF_EDGE_SLAB_Z = null;
-    // 黑瓦屋顶半砖边缘左top
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_top_z")
-    public static final Item BLACK_TILE_ROOF_EDGE_SLAB_TOP_Z = null;
-    // 黑瓦屋顶半砖边缘右
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_y")
-    public static final Item BLACK_TILE_ROOF_EDGE_SLAB_Y = null;
-    // 黑瓦屋顶半砖边缘右top
-    @GameRegistry.ObjectHolder("black_tile_roof_edge_slab_top_y")
-    public static final Item BLACK_TILE_ROOF_EDGE_SLAB_TOP_Y = null;
     // 黑瓦屋脊
     @GameRegistry.ObjectHolder("black_roof_tile_ridge")
     public static final Item BLACK_ROOF_TILE_RIDGE = null;
+    // 黑瓦屋顶边缘
+    @GameRegistry.ObjectHolder("black_roof_tile_edge")
+    public static final Item BLACK_ROOF_TILE_EDGE = null;
+    // 黑瓦屋顶边缘台阶
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab")
+    public static final Item BLACK_ROOF_TILE_EDGE_SLAB = null;
 }

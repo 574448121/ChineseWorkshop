@@ -77,13 +77,6 @@ public class BlockCWFaceThinWall extends BlockCWT
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void getSubBlocks(CreativeTabs itemIn, NonNullList<ItemStack> items)
-    {
-        items.add(new ItemStack(this));
-    }
-
-    @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         IBlockState origin = super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
