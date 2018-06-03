@@ -1,0 +1,26 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:white_lantern",
+    "count": 2
+  },
+  "pattern": [
+    "***",
+    "STS",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "ore" : "paper",
+      "type": "forge:ore_dict"
+    },
+    "S": {
+      "ore" : "stickWood",
+      "type": "forge:ore_dict"
+    },
+    "T": {
+      "ore" : "torch",
+      "type": "forge:ore_dict"
+    }
+  }
+}

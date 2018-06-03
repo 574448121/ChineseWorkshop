@@ -1,0 +1,19 @@
+{
+  "type": "forge:ore_shapeless",
+  "result": {
+    "item": "chineseworkshop:red_pillar"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "ore" : "logWood",
+      "type": "forge:ore_dict"
+    },
+    {
+      "ore" : "dyeRed",
+      "type": "forge:ore_dict"
+    }
+  ]
+}

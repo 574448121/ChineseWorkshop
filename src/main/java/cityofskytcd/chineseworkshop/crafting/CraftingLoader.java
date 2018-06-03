@@ -17,41 +17,6 @@ public class CraftingLoader
     private static void registerRecipe()
     {
         // // TODO: Data-driven recipes
-        // /* 方块 */
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.BLACK_BRICK_WALL), new
-        // Object[] { "##", "##", '#',
-        // CWItems.BLACK_BRICK });
-        // GameRegistry.addShapelessRecipe(new ItemStack(CWBlocks.RED_PILLARS, 2), new
-        // Object[] { Items.CLAY_BALL,
-        // Blocks.LOG, new ItemStack(Items.DYE, 1, 1), Items.CLAY_BALL });
-        // GameRegistry.addShapelessRecipe(new ItemStack(CWBlocks.DARK_GREEN_PILLARS,
-        // 2), new Object[] { Items.CLAY_BALL,
-        // Blocks.LOG, new ItemStack(Items.DYE, 1, 2), Items.CLAY_BALL });
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.WHITE_GRAY_WALLS, 4), new
-        // Object[] { "**", "*#", '#',
-        // Blocks.SAND, '*', Items.QUARTZ });
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.WHITE_GRAY_WALLS, 2), new
-        // Object[] { "**", "*#", '#',
-        // Blocks.SAND, '*', new ItemStack(Items.DYE, 1, 15) });
-        // /* 灯 */
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.STONE_TOWER_LAMP, 3), new
-        // Object[] { " * ", "*@*", "#!#",
-        // '#', Blocks.STONE, '*', Blocks.STONEBRICK, '@', Blocks.REDSTONE_LAMP, '!',
-        // Blocks.REDSTONE_TORCH });
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.RED_LANTERN, 6), new
-        // Object[] { "#*#", "#!#", "#*#", '#',
-        // new ItemStack(Blocks.WOOL, 1, 14), '*', new ItemStack(Blocks.WOOL, 1, 4),
-        // '!', Blocks.TORCH });
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.CANDLE, 6), new Object[]
-        // { " #", " **", "* ", '#',
-        // Blocks.TORCH, '*', Items.IRON_INGOT });
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.WHITE_LANTERN, 2), new
-        // Object[] { "***", "#!#", "***", '#',
-        // Items.STICK, '*', Items.PAPER, '!', Blocks.TORCH });
-        // /* 材料 */
-        // GameRegistry.addShapedRecipe(new ItemStack(CWItems.BLACK_CLAY, 8), new
-        // Object[] { "###", "#*#", "###", '#',
-        // Items.CLAY_BALL, '*', Items.DYE });
         // /* 装饰 */
         //
         // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.BRACKET_SET), new
@@ -93,9 +58,6 @@ public class CraftingLoader
         // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.BLACK_TILE_ROOF_J, 3),
         // new Object[] { "# ", " # ", " #",
         // '#', CWBlocks.BLACK_TILE_ROOF });
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.THIN_WHITE_GRAY_WALLS,
-        // 18), new Object[] { "#", "#", "#",
-        // '#', CWBlocks.WHITE_GRAY_WALLS });
         // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.BLACK_TILE_ROOF_EDGE_Z,
         // 6), new Object[] { " #", "#*", '#',
         // CWBlocks.WHITE_GRAY_WALLS, '*', CWBlocks.BLACK_TILE_ROOF });
@@ -124,10 +86,6 @@ public class CraftingLoader
         // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.WHITE_GRAY_WALLS_STAIRS,
         // 6), new Object[] { "# ", "## ",
         // "###", '#', CWBlocks.WHITE_GRAY_WALLS });
-        // // 纸窗
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.PAPER_WINDOW, 4), new
-        // Object[] { "#*#", "#*#", '#',
-        // Items.STICK, '*', Items.PAPER });
         // // 闪长岩栅栏
         // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.DIORITE_FENCE, 6), new
         // Object[] { "###", "###", '#',
@@ -152,10 +110,6 @@ public class CraftingLoader
         // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.IMPLICATE, 10), new
         // Object[] { "#*#", "#*#", '*',
         // new ItemStack(Blocks.LOG, 1, 0), '#', Items.STICK });
-        // // 安山岩路面楼梯
-        // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.ANDESITE_PAVEMENT_STAIRS,
-        // 6), new Object[] { "# ", "## ",
-        // "###", '#', CWBlocks.ANDESITE_PAVEMENT });
         // // 橡木墙
         // GameRegistry.addShapedRecipe(new ItemStack(CWBlocks.OAK_WALL, 9), new
         // Object[] { "###", "###", "###", '#',

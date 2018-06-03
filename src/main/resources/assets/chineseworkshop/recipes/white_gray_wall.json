@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:white_gray_wall",
+    "count": 4
+  },
+  "pattern": [
+    "**",
+    "*#"
+  ],
+  "key": {
+    "*": {
+      "ore" : "sand",
+      "type": "forge:ore_dict"
+    },
+    "#": {
+      "ore" : "gemQuartz",
+      "type": "forge:ore_dict"
+    }
+  }
+}
