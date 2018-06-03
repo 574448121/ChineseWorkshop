@@ -2,27 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "chineseworkshop:black_clay"
+      "chineseworkshop:stone_tower_lamp"
     ]
   },
   "criteria": {
-    "has_clay": {
+    "has_lamp": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:clay_ball"
-          }
-        ]
-      }
-    },
-    "has_dye": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "type": "forge:ore_dict",
-            "ore": "dyeBlack"
+            "item": "minecraft:redstone_lamp"
           }
         ]
       }
@@ -30,14 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "chineseworkshop:black_clay"
+        "recipe": "chineseworkshop:stone_tower_lamp"
       }
     }
   },
   "requirements": [
     [
-      "has_clay",
-      "has_dye",
+      "has_lamp",
       "has_the_recipe"
     ]
   ]

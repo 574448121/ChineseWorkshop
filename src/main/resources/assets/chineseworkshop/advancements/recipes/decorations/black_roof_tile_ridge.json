@@ -2,27 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "chineseworkshop:black_clay"
+      "chineseworkshop:black_roof_tile_ridge"
     ]
   },
   "criteria": {
-    "has_clay": {
+    "has_mat": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "minecraft:clay_ball"
-          }
-        ]
-      }
-    },
-    "has_dye": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "type": "forge:ore_dict",
-            "ore": "dyeBlack"
+            "item": "chineseworkshop:material",
+            "data": 1
           }
         ]
       }
@@ -30,14 +20,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "chineseworkshop:black_clay"
+        "recipe": "chineseworkshop:black_roof_tile_ridge"
       }
     }
   },
   "requirements": [
     [
-      "has_clay",
-      "has_dye",
+      "has_mat",
       "has_the_recipe"
     ]
   ]
