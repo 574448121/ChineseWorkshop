@@ -55,6 +55,7 @@ public class EventHandler
     private static boolean showGui = false;
     private static boolean animating = false;
     private static float animationTick = 0;
+    private static float[] badgeProcess = new float[0];
 
     public static void init()
     {
@@ -213,7 +214,7 @@ public class EventHandler
                 }
             }
 
-            drawBadge(mc, held, false, true);
+            drawBadge(mc, held, 0, true);
 
             if (selection.size() < 2)
             {
@@ -223,6 +224,10 @@ public class EventHandler
 
             float degPer = 360F / selection.size();
             boolean matched = false;
+            if (selection.size() != badgeProcess.length)
+            {
+                badgeProcess = new float[selection.size()];
+            }
             for (int i = 0; i < selection.size(); i++)
             {
                 ItemDefinition definition = selection.get(i);
@@ -233,7 +238,9 @@ public class EventHandler
 
                 boolean match = !matched && definition.equals(ItemDefinition.of(held));
                 matched = matched || match;
-                drawBadge(mc, definition.getItemStack(), match, false);
+                badgeProcess[i] += match ? mc.getRenderPartialTicks() : -mc.getRenderPartialTicks();
+                badgeProcess[i] = MathHelper.clamp(badgeProcess[i], 0, 10);
+                drawBadge(mc, definition.getItemStack(), badgeProcess[i], false);
                 GlStateManager.popMatrix();
             }
             if (!matched)
@@ -251,12 +258,13 @@ public class EventHandler
         fontRendererIn.drawStringWithShadow(text, x - fontRendererIn.getStringWidth(text) / 2, y, 0xFFFFFF);
     }
 
-    public static void drawBadge(Minecraft mc, ItemStack stack, boolean selected, boolean rotation)
+    public static void drawBadge(Minecraft mc, ItemStack stack, float color, boolean rotation)
     {
         GlStateManager.enableBlend();
         GlStateManager.shadeModel(GL11.GL_SMOOTH);
         GlStateManager.disableTexture2D();
-        GlStateManager.color(selected ? 0.1F : 0F, selected ? 0.5F : 0F, selected ? 0.9F : 0F, 0.3F);
+        color = (float) (Math.sin((color - 5) / 5F) + 0.5F);
+        GlStateManager.color(color * 0.1F, color * 0.5F, color * 0.9F, 0.3F);
         GL11.glBegin(GL11.GL_TRIANGLE_FAN);
         GL11.glVertex2f(0, -30);
         GL11.glVertex2f(-26, -15);
@@ -290,7 +298,7 @@ public class EventHandler
             GlStateManager.enableRescaleNormal();
             GlStateManager.enableAlpha();
             GlStateManager.rotate(30F, 1F, 0, 0F);
-            GlStateManager.rotate(Minecraft.getSystemTime() / 20F, 0, 1, 0F);
+            GlStateManager.rotate(Minecraft.getSystemTime() / 15F, 0, 1, 0F);
             RenderHelper.enableStandardItemLighting();
             mc.getRenderItem().renderItem(stack, TransformType.NONE);
             GlStateManager.disableAlpha();
