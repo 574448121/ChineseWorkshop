@@ -5,6 +5,8 @@ itemGroup.chineseworkshop.decorations=Chinese Workshop | Decoration
 itemGroup.chineseworkshop.items=Chinese Workshop | Items
 
 chineseworkshop.tip.selectable=Press %s and scroll to select item
+chineseworkshop.gui.keygroup=Chinese Workshop
+chineseworkshop.keybind.select=Select
 
 tile.chineseworkshop.black_brick_wall.name=Black Brick Wall
 tile.chineseworkshop.andesite_pavement.name=Andesite Road
