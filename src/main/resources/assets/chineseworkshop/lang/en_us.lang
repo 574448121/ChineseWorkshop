@@ -1,6 +1,10 @@
+chineseworkshop.mod.name=Chinese Workshop
+
 itemGroup.chineseworkshop.building_blocks=Chinese Workshop | Construction Blocks
 itemGroup.chineseworkshop.decorations=Chinese Workshop | Decoration
 itemGroup.chineseworkshop.items=Chinese Workshop | Items
+
+chineseworkshop.tip.selectable=<Press %s and scroll to select item>
 
 tile.chineseworkshop.black_brick_wall.name=Black Brick Wall
 tile.chineseworkshop.andesite_pavement.name=Andesite Road

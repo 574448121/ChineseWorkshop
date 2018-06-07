@@ -9,11 +9,14 @@
 package cityofskytcd.chineseworkshop.event;
 
 import java.util.List;
+import java.util.Locale;
 
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
 import com.google.common.collect.ImmutableList;
 
+import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.event.ISeat.Seat;
 import cityofskytcd.chineseworkshop.library.ItemDefinition;
 import cityofskytcd.chineseworkshop.library.Selections;
@@ -28,6 +31,7 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -41,6 +45,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.client.event.MouseEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -320,6 +325,37 @@ public class EventHandler
         if ((showGui || animating) && event.getType() == ElementType.CROSSHAIRS)
         {
             event.setCanceled(true);
+        }
+    }
+
+    @SubscribeEvent
+    @SideOnly(Side.CLIENT)
+    public static void onTooltip(ItemTooltipEvent event)
+    {
+        if (Selections.findSelection(ItemDefinition.of(event.getItemStack())) != null)
+        {
+            String key;
+            if (ClientProxy.kbSelect.getKeyCode() == Keyboard.KEY_LMENU)
+            {
+                String os = System.getProperty("os.name").toLowerCase(Locale.ENGLISH);
+                if (os.startsWith("win"))
+                {
+                    key = "LAlt";
+                }
+                else if (os.startsWith("mac"))
+                {
+                    key = "Option";
+                }
+                else
+                {
+                    key = ClientProxy.kbSelect.getDisplayName();
+                }
+            }
+            else
+            {
+                key = ClientProxy.kbSelect.getDisplayName();
+            }
+            event.getToolTip().add(I18n.format(CW.MODID + ".tip.selectable", key));
         }
     }
 }
