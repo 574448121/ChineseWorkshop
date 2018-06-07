@@ -26,11 +26,16 @@ public class BlockCWDougong extends BlockCWTFace
         super(name, materialIn, hardness);
     }
 
-    private static final AxisAlignedBB BS_NORTH_AABB = new AxisAlignedBB(1.0D, 1.0D, 1.0D, 0.0D, 0.0D, 0.7D);
-    private static final AxisAlignedBB BS_SOUTH_AABB = new AxisAlignedBB(1.0D, 1.0D, 0.3D, 0.0D, 0.0D, 0.0D);
-    private static final AxisAlignedBB BS_WEST_AABB = new AxisAlignedBB(1.0D, 1.0D, 1.0D, 0.7D, 0.0D, 0.0D);
-    private static final AxisAlignedBB BS_EAST_AABB = new AxisAlignedBB(0.3D, 1.0D, 1.0D, 0.0D, 0.0D, 0.0D);
+    // private static final AxisAlignedBB BS_NORTH_AABB = new AxisAlignedBB(1.0D,
+    // 1.0D, 1.0D, 0.0D, 0.0D, 0.7D);
+    // private static final AxisAlignedBB BS_SOUTH_AABB = new AxisAlignedBB(1.0D,
+    // 1.0D, 0.3D, 0.0D, 0.0D, 0.0D);
+    // private static final AxisAlignedBB BS_WEST_AABB = new AxisAlignedBB(1.0D,
+    // 1.0D, 1.0D, 0.7D, 0.0D, 0.0D);
+    // private static final AxisAlignedBB BS_EAST_AABB = new AxisAlignedBB(0.3D,
+    // 1.0D, 1.0D, 0.0D, 0.0D, 0.0D);
 
+    @SuppressWarnings("deprecation")
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
     {

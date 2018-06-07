@@ -59,10 +59,7 @@ public class ClientProxy extends CommonProxy
                 {
                     return BiomeColorHelper.getGrassColorAtPos(worldIn, pos);
                 }
-                else
-                {
-                    return ColorizerGrass.getGrassColor(0.5D, 1.0D);
-                }
+                return ColorizerGrass.getGrassColor(0.5D, 1.0D);
             }
         }, CWBlocks.TREE_ALTAR);
 
@@ -72,9 +69,8 @@ public class ClientProxy extends CommonProxy
             @Override
             public int colorMultiplier(ItemStack stack, int tintIndex)
             {
-                IBlockState iblockstate = ((ItemBlock) stack.getItem()).getBlock().getStateFromMeta(
-                        stack.getMetadata());
-                return blockColors.colorMultiplier(iblockstate, (IBlockAccess) null, (BlockPos) null, tintIndex);
+                IBlockState iblockstate = ((ItemBlock) stack.getItem()).getBlock().getDefaultState();
+                return blockColors.colorMultiplier(iblockstate, null, null, tintIndex);
             }
         }, CWItems.TREE_ALTAR);
     }

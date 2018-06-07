@@ -14,7 +14,6 @@ import org.lwjgl.opengl.GL11;
 
 import com.google.common.collect.ImmutableList;
 
-import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.event.ISeat.Seat;
 import cityofskytcd.chineseworkshop.library.ItemDefinition;
 import cityofskytcd.chineseworkshop.library.Selections;
@@ -101,9 +100,8 @@ public class EventHandler
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void onKeyInput(KeyInputEvent event)
+    public static void onKeyInput(@SuppressWarnings("unused") KeyInputEvent event)
     {
-        ClientProxy proxy = (ClientProxy) CW.proxy;
         Minecraft mc = Minecraft.getMinecraft();
 
         if (!showGui && mc.inGameHasFocus)
@@ -171,7 +169,7 @@ public class EventHandler
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void drawHudPost(RenderGameOverlayEvent.Post event) throws InterruptedException
+    public static void drawHudPost(RenderGameOverlayEvent.Post event)
     {
         if ((showGui || animating) && event.getType() == ElementType.HOTBAR)
         {

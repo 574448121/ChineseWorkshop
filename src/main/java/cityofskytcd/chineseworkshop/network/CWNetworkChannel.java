@@ -92,6 +92,7 @@ public final class CWNetworkChannel
         }
         catch (Exception e)
         {
+            CW.logger.catching(e);
             return null;
         }
     }

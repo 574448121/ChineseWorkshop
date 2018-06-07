@@ -28,16 +28,13 @@ public class ItemCWBlockVariants extends ItemCWBlock
     @Override
     public String getUnlocalizedName(ItemStack stack)
     {
-        if (this.subtypeNames == null)
+        if (subtypeNames == null)
         {
             return super.getUnlocalizedName(stack);
         }
-        else
-        {
-            int i = stack.getMetadata();
-            return i >= 0 && i < this.subtypeNames.length ? super.getUnlocalizedName(stack) + "." + this.subtypeNames[i]
-                    : super.getUnlocalizedName(stack);
-        }
+        int i = stack.getMetadata();
+        return i >= 0 && i < subtypeNames.length ? super.getUnlocalizedName(stack) + "." + this.subtypeNames[i]
+                : super.getUnlocalizedName(stack);
     }
 
 }

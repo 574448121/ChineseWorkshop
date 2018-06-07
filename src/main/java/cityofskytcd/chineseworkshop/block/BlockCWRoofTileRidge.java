@@ -69,19 +69,16 @@ public class BlockCWRoofTileRidge extends BlockCWTFace2D
             {
                 return state.withProperty(VARIANT, connect[0] ? Variant.I : Variant.I_90);
             }
-            else
+            state = state.withProperty(VARIANT, Variant.L_270);
+            for (int i = 0; i < 3; i++)
             {
-                state = state.withProperty(VARIANT, Variant.L_270);
-                for (int i = 0; i < 3; i++)
+                if (connect[i] && connect[i + 1])
                 {
-                    if (connect[i] && connect[i + 1])
-                    {
-                        state = state.withProperty(VARIANT, Variant.values()[Variant.L.ordinal() + i]);
-                        break;
-                    }
+                    state = state.withProperty(VARIANT, Variant.values()[Variant.L.ordinal() + i]);
+                    break;
                 }
-                return state;
             }
+            return state;
         }
         else if (connection == 1)
         {

@@ -78,7 +78,7 @@ public class ItemRegistry
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void onModelRegister(ModelRegistryEvent event)
+    public static void onModelRegister(@SuppressWarnings("unused") ModelRegistryEvent event)
     {
         ModelUtil.mapItemModel(CWItems.LOGO);
         ModelLoader.setCustomModelResourceLocation(

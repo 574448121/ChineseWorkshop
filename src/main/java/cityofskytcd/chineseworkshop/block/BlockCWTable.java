@@ -38,7 +38,6 @@ public class BlockCWTable extends BlockCWT
     @Override
     public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos)
     {
-        IBlockState newState = getDefaultState();
         EnumFacing facing;
         int n = 0;
         boolean nw = false, ne = false, se = false, sw = false;

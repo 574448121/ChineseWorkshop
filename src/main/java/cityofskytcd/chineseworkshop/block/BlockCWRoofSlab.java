@@ -10,7 +10,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -61,7 +60,7 @@ public class BlockCWRoofSlab extends BlockCWT
     @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
-        IBlockState iblockstate = super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
+        IBlockState iblockstate = getDefaultState();
         iblockstate = iblockstate.withProperty(FACING, placer.getHorizontalFacing()).withProperty(
                 SHAPE,
                 BlockCWRoofSlab.EnumShape.STRAIGHT);
@@ -71,7 +70,7 @@ public class BlockCWRoofSlab extends BlockCWT
     @Override
     protected BlockStateContainer createBlockState()
     {
-        return new BlockStateContainer(this, new IProperty[] { FACING, SHAPE });
+        return new BlockStateContainer(this, FACING, SHAPE);
     }
 
     @Override

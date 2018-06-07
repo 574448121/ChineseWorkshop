@@ -21,7 +21,7 @@ import net.minecraft.world.IBlockAccess;
  */
 public class BlockCWLantern extends BlockCWLight
 {
-    public BlockCWLantern(String name, Material materialIn, float hardness, float lightLevel)
+    public BlockCWLantern(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness, 1F);
     }

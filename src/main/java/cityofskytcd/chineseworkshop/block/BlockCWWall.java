@@ -28,6 +28,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class BlockCWWall extends BlockWall
 {
 
+    @SuppressWarnings("deprecation")
     public BlockCWWall(String id, Block modelBlock, float hardness)
     {
         super(modelBlock);

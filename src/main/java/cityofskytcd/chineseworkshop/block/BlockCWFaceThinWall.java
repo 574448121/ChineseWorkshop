@@ -74,7 +74,7 @@ public class BlockCWFaceThinWall extends BlockCWT
     @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
-        IBlockState origin = super.getStateForPlacement(worldIn, pos, facing, hitX, hitY, hitZ, meta, placer);
+        IBlockState origin = getDefaultState();
         return origin.withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
 

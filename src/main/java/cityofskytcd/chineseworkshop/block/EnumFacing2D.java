@@ -21,9 +21,6 @@ public enum EnumFacing2D implements IStringSerializable
         {
             return EnumFacing2D.SOUTH_NORTH;
         }
-        else
-        {
-            return EnumFacing2D.EAST_WEST;
-        }
+        return EnumFacing2D.EAST_WEST;
     }
 }

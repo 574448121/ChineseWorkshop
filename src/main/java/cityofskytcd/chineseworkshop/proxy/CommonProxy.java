@@ -25,13 +25,14 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy
 {
+
     @OverridingMethodsMustInvokeSuper
-    public void preInit(FMLPreInitializationEvent event)
+    public void preInit(@SuppressWarnings("unused") FMLPreInitializationEvent event)
     {
     }
 
     @OverridingMethodsMustInvokeSuper
-    public void init(FMLInitializationEvent event)
+    public void init(@SuppressWarnings("unused") FMLInitializationEvent event)
     {
         EventHandler.init();
         RegistryRemapper.init();
@@ -42,7 +43,7 @@ public class CommonProxy
     }
 
     @OverridingMethodsMustInvokeSuper
-    public void postInit(FMLPostInitializationEvent event)
+    public void postInit(@SuppressWarnings("unused") FMLPostInitializationEvent event)
     {
     }
 }

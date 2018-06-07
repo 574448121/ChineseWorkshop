@@ -3,8 +3,6 @@ package cityofskytcd.chineseworkshop.event;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.common.collect.ImmutableList;
-
 import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.block.CWBlocks;
 import cityofskytcd.chineseworkshop.item.CWItems;
@@ -18,11 +16,15 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @Mod.EventBusSubscriber
 public class RegistryRemapper
 {
-    private static Map<String, Block> blockMappings = new HashMap<>();
-    private static Map<String, Item> itemMappings = new HashMap<>();
-
     public static void init()
     {
+    }
+
+    @SubscribeEvent
+    public static void MissingMappingsBlock(RegistryEvent.MissingMappings<Block> event)
+    {
+        Map<String, Block> blockMappings = new HashMap<>();
+
         blockMappings.put("red_pillars", CWBlocks.RED_PILLAR);
         blockMappings.put("dark_green_pillars", CWBlocks.DARK_GREEN_PILLAR);
         blockMappings.put("white_gray_walls", CWBlocks.WHITE_GRAY_WALL);
@@ -45,6 +47,21 @@ public class RegistryRemapper
         blockMappings.put("black_tile_roof_edge_slab_y", CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB);
         blockMappings.put("black_tile_roof_edge_slab_top_z", CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB);
         blockMappings.put("black_tile_roof_edge_slab_top_y", CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB);
+
+        for (Mapping<Block> mapping : event.getAllMappings())
+        {
+            if (mapping.key.getResourceDomain().equals(CW.MODID)
+                    && blockMappings.containsKey(mapping.key.getResourcePath()))
+            {
+                mapping.remap(blockMappings.get(mapping.key.getResourcePath()));
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void MissingMappingsItem(RegistryEvent.MissingMappings<Item> event)
+    {
+        Map<String, Item> itemMappings = new HashMap<>();
 
         itemMappings.put("black_clay", CWItems.MATERIAL);
         itemMappings.put("black_brick", CWItems.MATERIAL);
@@ -70,27 +87,8 @@ public class RegistryRemapper
         itemMappings.put("black_tile_roof_edge_slab_y", CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
         itemMappings.put("black_tile_roof_edge_slab_top_z", CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
         itemMappings.put("black_tile_roof_edge_slab_top_y", CWItems.BLACK_ROOF_TILE_EDGE_SLAB);
-    }
 
-    @SubscribeEvent
-    public static void MissingMappingsBlock(RegistryEvent.MissingMappings<Block> event)
-    {
-        ImmutableList<Mapping<Block>> mappings = event.getAllMappings();
-        for (RegistryEvent.MissingMappings.Mapping mapping : mappings)
-        {
-            if (mapping.key.getResourceDomain().equals(CW.MODID)
-                    && blockMappings.containsKey(mapping.key.getResourcePath()))
-            {
-                mapping.remap(blockMappings.get(mapping.key.getResourcePath()));
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void MissingMappingsItem(RegistryEvent.MissingMappings<Item> event)
-    {
-        ImmutableList<Mapping<Item>> mappings = event.getAllMappings();
-        for (RegistryEvent.MissingMappings.Mapping mapping : mappings)
+        for (Mapping<Item> mapping : event.getAllMappings())
         {
             if (mapping.key.getResourceDomain().equals(CW.MODID)
                     && itemMappings.containsKey(mapping.key.getResourcePath()))

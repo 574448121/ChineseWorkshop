@@ -20,6 +20,8 @@ archivesBaseName = "ChineseWorkshop"
 
 sourceCompatibility = targetCompatibility = '1.8'
 
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
 repositories {
     maven {
         name = "jei"
@@ -52,4 +54,8 @@ processResources {
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+}
+
+compileJava {
+    options.compilerArgs << "-Xlint:all"
 }

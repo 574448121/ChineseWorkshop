@@ -93,10 +93,7 @@ public class BlockCWCandle extends BlockCWT
         {
             return true;
         }
-        else
-        {
-            return state.getBlock().canPlaceTorchOnTop(state, worldIn, pos);
-        }
+        return state.getBlock().canPlaceTorchOnTop(state, worldIn, pos);
     }
 
     @Override
@@ -132,18 +129,15 @@ public class BlockCWCandle extends BlockCWT
         {
             return this.getDefaultState().withProperty(FACING, facing);
         }
-        else
+        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
         {
-            for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
+            if (worldIn.isSideSolid(pos.offset(enumfacing.getOpposite()), enumfacing, true))
             {
-                if (worldIn.isSideSolid(pos.offset(enumfacing.getOpposite()), enumfacing, true))
-                {
-                    return this.getDefaultState().withProperty(FACING, enumfacing);
-                }
+                return this.getDefaultState().withProperty(FACING, enumfacing);
             }
-
-            return this.getDefaultState();
         }
+
+        return this.getDefaultState();
     }
 
     @Override
@@ -164,33 +158,27 @@ public class BlockCWCandle extends BlockCWT
         {
             return true;
         }
-        else
+        EnumFacing enumfacing = state.getValue(FACING);
+        EnumFacing.Axis enumfacing$axis = enumfacing.getAxis();
+        EnumFacing enumfacing1 = enumfacing.getOpposite();
+        boolean flag = false;
+
+        if (enumfacing$axis.isHorizontal() && !worldIn.isSideSolid(pos.offset(enumfacing1), enumfacing, true))
         {
-            EnumFacing enumfacing = state.getValue(FACING);
-            EnumFacing.Axis enumfacing$axis = enumfacing.getAxis();
-            EnumFacing enumfacing1 = enumfacing.getOpposite();
-            boolean flag = false;
-
-            if (enumfacing$axis.isHorizontal() && !worldIn.isSideSolid(pos.offset(enumfacing1), enumfacing, true))
-            {
-                flag = true;
-            }
-            else if (enumfacing$axis.isVertical() && !this.canPlaceOn(worldIn, pos.offset(enumfacing1)))
-            {
-                flag = true;
-            }
-
-            if (flag)
-            {
-                this.dropBlockAsItem(worldIn, pos, state, 0);
-                worldIn.setBlockToAir(pos);
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            flag = true;
         }
+        else if (enumfacing$axis.isVertical() && !this.canPlaceOn(worldIn, pos.offset(enumfacing1)))
+        {
+            flag = true;
+        }
+
+        if (flag)
+        {
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
+            return true;
+        }
+        return false;
     }
 
     protected boolean checkForDrop(World worldIn, BlockPos pos, IBlockState state)
@@ -199,16 +187,13 @@ public class BlockCWCandle extends BlockCWT
         {
             return true;
         }
-        else
+        if (worldIn.getBlockState(pos).getBlock() == this)
         {
-            if (worldIn.getBlockState(pos).getBlock() == this)
-            {
-                this.dropBlockAsItem(worldIn, pos, state, 0);
-                worldIn.setBlockToAir(pos);
-            }
-
-            return false;
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
         }
+
+        return false;
     }
 
     @Override
@@ -219,12 +204,8 @@ public class BlockCWCandle extends BlockCWT
         double d0 = pos.getX() + 0.5D;
         double d1 = pos.getY() + 0.5D;
         double d2 = pos.getZ() + 0.5D;
-        double d3 = 0.22D;
-        double d4 = 0.27D;
-
         if (enumfacing.getAxis().isHorizontal())
         {
-            EnumFacing enumfacing1 = enumfacing.getOpposite();
             worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1 + 0.4D, d2, 0.0D, 0.0D, 0.0D, new int[0]);
             worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1 + 0.4D, d2, 0.0D, 0.0D, 0.0D, new int[0]);
         }

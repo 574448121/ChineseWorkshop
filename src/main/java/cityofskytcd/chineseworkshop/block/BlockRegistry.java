@@ -37,9 +37,9 @@ public class BlockRegistry
                 new BlockCWRotatedPillar("dark_green_pillar", Material.WOOD, 1.0F),
                 new BlockCW("white_gray_wall", Material.ROCK, 1.5F),
                 new BlockCWLight("stone_tower_lamp", Material.ROCK, 1.0F, 1.0f),
-                new BlockCWLantern("red_lantern", Material.WOOD, 0.5F, 1.0f),
+                new BlockCWLantern("red_lantern", Material.WOOD, 0.5F),
                 new BlockCWCandle("candle", Material.WOOD, 1.0F),
-                new BlockCWLantern("white_lantern", Material.CLOTH, 0.5F, 1.0f),
+                new BlockCWLantern("white_lantern", Material.CLOTH, 0.5F),
                 new BlockCWDougong("bracket_set", Material.WOOD, 0.5F),
                 new BlockCWMenDun("men_dun", Material.ROCK, 1.5F),
                 new BlockCWThreshold("threshold", Material.ROCK, 1.0F),
@@ -75,7 +75,7 @@ public class BlockRegistry
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
-    public static void onModelRegister(ModelRegistryEvent event)
+    public static void onModelRegister(@SuppressWarnings("unused") ModelRegistryEvent event)
     {
         ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
