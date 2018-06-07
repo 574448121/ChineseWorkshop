@@ -22,7 +22,7 @@ public class CW
 {
     public static final String MODID = "chineseworkshop";
     public static final String NAME = "ChineseWorkshop";
-    public static final String VERSION = "1.1.0.2";
+    public static final String VERSION = "@VERSION_INJECT@";
 
     private static final CW INSTANCE = new CW();
 
