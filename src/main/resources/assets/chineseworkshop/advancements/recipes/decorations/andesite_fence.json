@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "chineseworkshop:andesite_fence"
+    ]
+  },
+  "criteria": {
+    "has_mat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "ore": "stoneAndesite",
+            "type": "forge:ore_dict"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "chineseworkshop:andesite_fence"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mat",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -4,7 +4,7 @@ itemGroup.chineseworkshop.building_blocks=中式工坊 | 建筑方块
 itemGroup.chineseworkshop.decorations=中式工坊 | 装饰方块
 itemGroup.chineseworkshop.items=中式工坊 | 物品
 
-chineseworkshop.tip.selectable=<按住 %s 并滚动滚轮选择物品>
+chineseworkshop.tip.selectable=按住 %s 并滚动滚轮选择物品
 
 tile.chineseworkshop.black_brick_wall.name=黑砖墙
 tile.chineseworkshop.andesite_pavement.name=安山岩路面
