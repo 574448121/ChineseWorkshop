@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:oak_chinese_fence",
+    "count": 12
+  },
+  "pattern": [
+    "lsl",
+    "lsl"
+  ],
+  "key": {
+    "s": {
+      "ore" : "stickWood",
+      "type": "forge:ore_dict"
+    },
+    "l": {
+      "ore" : "logWood",
+      "type": "forge:ore_dict"
+    }
+  }
+}

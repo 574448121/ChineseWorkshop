@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:carving",
+    "count": 4
+  },
+  "pattern": [
+    "sfs",
+    "sfs"
+  ],
+  "key": {
+    "s": {
+      "ore" : "stickWood",
+      "type": "forge:ore_dict"
+    },
+    "f": {
+      "ore" : "fenceWood",
+      "type": "forge:ore_dict"
+    }
+  }
+}

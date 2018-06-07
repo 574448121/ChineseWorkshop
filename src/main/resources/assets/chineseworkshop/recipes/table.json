@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:table"
+  },
+  "pattern": [
+    "***",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:wooden_pressure_plate"
+    },
+    "#": {
+      "ore": "stickWood",
+      "type": "forge:ore_dict"
+    }
+  }
+}

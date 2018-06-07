@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:diorite_fence",
+    "count": 6
+  },
+  "pattern": [
+    "***",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "ore" : "stoneDiorite",
+      "type": "forge:ore_dict"
+    }
+  }
+}

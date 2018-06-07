@@ -1,0 +1,15 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:upper_door_frame"
+  },
+  "pattern": [
+    "*"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:wooden_slab",
+      "data": 0
+    }
+  }
+}
