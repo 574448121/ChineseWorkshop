@@ -39,7 +39,7 @@ public class BlockCWRoof extends BlockCWTFace
     {
         super(name, materialIn, hardness);
         setDefaultState(
-                this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(
+                this.blockState.getBaseState().withProperty(
                         SHAPE,
                         BlockCWRoof.EnumShape.STRAIGHT));
     }

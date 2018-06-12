@@ -42,7 +42,7 @@ public class BlockCWRoofSlab extends BlockCWTFace
     {
         super(name, materialIn, hardness);
         setDefaultState(
-                this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(
+                this.blockState.getBaseState().withProperty(
                         SHAPE,
                         BlockCWRoofSlab.EnumShape.STRAIGHT));
     }

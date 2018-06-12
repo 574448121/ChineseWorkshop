@@ -70,7 +70,7 @@ public class BlockRegistry
                 new BlockCWTFace("black_tile_roof_j", Material.ROCK, 1.5F),
                 new BlockCWRoofSlab("black_tile_roof_slab", Material.ROCK, 1.5F),
                 new BlockCWRoof("black_tile_roof_slab_top", Material.ROCK, 1.5F),
-                new BlockCWFaceThinWall("thin_white_gray_wall", Material.ROCK, 1.0F));
+                new BlockCWThinWall("thin_white_gray_wall", Material.ROCK, 1.0F));
     }
 
     @SubscribeEvent

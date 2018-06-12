@@ -24,8 +24,8 @@ public class BlockCWBench extends BlockCWTFace2D implements ISeat
         super(name, materialIn, hardness);
     }
 
-    private static final AxisAlignedBB BS_SOUTH_AABB = new AxisAlignedBB(1.0D, 0.0D, 0.1875D, 0.0D, 0.625D, 0.8125D);
-    private static final AxisAlignedBB BS_EAST_AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.0D, 0.8125D, 0.625D, 1.0D);
+    private static final AxisAlignedBB BS_SOUTH_AABB = new AxisAlignedBB(0.9375D, 0.0D, 0.1875D, 0.0625D, 0.625D, 0.8125D);
+    private static final AxisAlignedBB BS_EAST_AABB = new AxisAlignedBB(0.1875D, 0.0D, 0.0625D, 0.8125D, 0.625D, 0.9375D);
 
     @Override
     public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)

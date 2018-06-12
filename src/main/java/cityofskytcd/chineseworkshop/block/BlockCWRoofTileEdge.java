@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockCWRoofTileEdge extends BlockCWFaceThinWall
+public class BlockCWRoofTileEdge extends BlockCWThinWall
 {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 1);
     private static final PropertyBool MIRRORED = PropertyBool.create("mirrored");
