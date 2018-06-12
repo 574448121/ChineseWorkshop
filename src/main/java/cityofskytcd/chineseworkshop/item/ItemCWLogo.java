@@ -104,7 +104,7 @@ public class ItemCWLogo extends ItemCW
                     case "Mirror":
                         worldIn.setBlockState(
                                 pos,
-                                state.withMirror(playerIn.isSneaking() ? Mirror.LEFT_RIGHT : Mirror.FRONT_BACK));
+                                state.withMirror(playerIn.isSneaking() ? Mirror.FRONT_BACK : Mirror.LEFT_RIGHT));
                         break;
 
                     default:

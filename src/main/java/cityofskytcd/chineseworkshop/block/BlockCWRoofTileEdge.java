@@ -10,6 +10,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.Mirror;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -87,6 +88,13 @@ public class BlockCWRoofTileEdge extends BlockCWFaceThinWall
     public int damageDropped(IBlockState state)
     {
         return state.getValue(TYPE);
+    }
+
+    @Override
+    public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
+    {
+        return mirrorIn == Mirror.LEFT_RIGHT ? state.withProperty(MIRRORED, !state.getValue(MIRRORED))
+                : super.withMirror(state, mirrorIn);
     }
 
 }
