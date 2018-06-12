@@ -9,7 +9,6 @@
 package cityofskytcd.chineseworkshop.block;
 
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
@@ -23,7 +22,7 @@ import net.minecraft.world.World;
 /**
  * 朝向薄墙类
  */
-public class BlockCWFaceThinWall extends BlockCWT
+public class BlockCWFaceThinWall extends BlockCWTFace
 {
     private static final AxisAlignedBB AABB_EAST = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.1875D, 1.0D, 1.0D);
     private static final AxisAlignedBB AABB_WEST = new AxisAlignedBB(0.8125D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
@@ -90,6 +89,4 @@ public class BlockCWFaceThinWall extends BlockCWT
     {
         return face.getOpposite() == state.getValue(FACING) ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
     }
-
-    public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 }

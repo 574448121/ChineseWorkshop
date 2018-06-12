@@ -7,7 +7,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.Mirror;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
@@ -16,6 +18,8 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCWTFace2D extends BlockCWT
 {
+    public static final PropertyDirection2D FACING = PropertyDirection2D.create("facing");
+
     public BlockCWTFace2D(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness);
@@ -61,5 +65,15 @@ public class BlockCWTFace2D extends BlockCWT
         return 0;
     }
 
-    public static final PropertyDirection2D FACING = PropertyDirection2D.create("facing");
+    @Override
+    public IBlockState withRotation(IBlockState state, Rotation rot)
+    {
+        return state.withProperty(FACING, state.getValue(FACING).rotate(rot));
+    }
+
+    @Override
+    public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
+    {
+        return state.withProperty(FACING, state.getValue(FACING).mirror(mirrorIn));
+    }
 }
