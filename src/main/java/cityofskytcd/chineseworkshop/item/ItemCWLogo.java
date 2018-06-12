@@ -13,6 +13,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
@@ -20,6 +21,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickItem;
@@ -80,9 +82,11 @@ public class ItemCWLogo extends ItemCW
                         switch (getMode(stack))
                         {
                         case "Mirror":
+                            ItemCWLogo.setMode(stack, "Info");
+                            break;
+                        case "Info":
                             ItemCWLogo.setMode(stack, "Rotate");
                             break;
-
                         default:
                             ItemCWLogo.setMode(stack, "Mirror");
                             break;
@@ -107,8 +111,21 @@ public class ItemCWLogo extends ItemCW
                                 state.withMirror(playerIn.isSneaking() ? Mirror.FRONT_BACK : Mirror.LEFT_RIGHT));
                         break;
 
+                    case "Info":
+                        if (playerIn != null)
+                        {
+                            String msg = String.format("Class: %s", state.getBlock().getClass().getSimpleName());
+                            msg += String.format("\nMeta: %d", state.getBlock().getMetaFromState(state));
+                            TileEntity te = worldIn.getTileEntity(pos);
+                            if (te != null)
+                            {
+                                msg += String.format("\nNBT: %s", te.writeToNBT(new NBTTagCompound()));
+                            }
+                            playerIn.sendMessage(new TextComponentString(msg));
+                        }
+                        break;
+
                     default:
-                        CW.log(state.getBlock());
                         worldIn.setBlockState(
                                 pos,
                                 state.withRotation(
