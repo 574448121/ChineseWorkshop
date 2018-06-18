@@ -8,10 +8,9 @@
 
 package cityofskytcd.chineseworkshop.block;
 
-import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -31,15 +30,19 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 屋顶半砖类
  */
 
-public class BlockCWRoofSlab extends BlockCWT
+public class BlockCWRoofSlab extends BlockCWTFace
 {
+    public static final PropertyEnum<BlockCWRoofSlab.EnumShape> SHAPE = PropertyEnum.<BlockCWRoofSlab.EnumShape>create(
+            "shape",
+            BlockCWRoofSlab.EnumShape.class);
+
     private static final AxisAlignedBB AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.5D, 1.0D);
 
     public BlockCWRoofSlab(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness);
         setDefaultState(
-                this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(
+                this.blockState.getBaseState().withProperty(
                         SHAPE,
                         BlockCWRoofSlab.EnumShape.STRAIGHT));
     }
@@ -119,6 +122,12 @@ public class BlockCWRoofSlab extends BlockCWT
         return BlockCWRoofSlab.EnumShape.STRAIGHT;
     }
 
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return face == EnumFacing.DOWN ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
+    }
+
     public static boolean isBlockStairs(IBlockState state)
     {
         return state.getBlock() instanceof BlockCWRoofSlab;
@@ -166,9 +175,4 @@ public class BlockCWRoofSlab extends BlockCWT
             return this.name;
         }
     }
-
-    public static final PropertyDirection FACING = BlockHorizontal.FACING;
-    public static final PropertyEnum<BlockCWRoofSlab.EnumShape> SHAPE = PropertyEnum.<BlockCWRoofSlab.EnumShape>create(
-            "shape",
-            BlockCWRoofSlab.EnumShape.class);
 }

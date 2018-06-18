@@ -1,11 +1,17 @@
+chineseworkshop.mod.name=Chinese Workshop
+
 itemGroup.chineseworkshop.building_blocks=Chinese Workshop | Construction Blocks
 itemGroup.chineseworkshop.decorations=Chinese Workshop | Decoration
 itemGroup.chineseworkshop.items=Chinese Workshop | Items
 
+chineseworkshop.tip.selectable=Press %s and scroll to select item
+chineseworkshop.gui.keygroup=Chinese Workshop
+chineseworkshop.keybind.select=Select
+
 tile.chineseworkshop.black_brick_wall.name=Black Brick Wall
 tile.chineseworkshop.andesite_pavement.name=Andesite Road
-tile.chineseworkshop.red_pillars.name=Red Pillars
-tile.chineseworkshop.dark_green_pillars.name=Dark Green Pillars
+tile.chineseworkshop.red_pillar.name=Red Pillars
+tile.chineseworkshop.dark_green_pillar.name=Dark Green Pillars
 tile.chineseworkshop.white_gray_wall.name=White Gray Wall
 tile.chineseworkshop.stone_tower_lamp.name=Stone Tower Lamp
 tile.chineseworkshop.red_lantern.name=Red Lantern
@@ -29,7 +35,7 @@ tile.chineseworkshop.lithel_deco.name=Lithel Deco
 tile.chineseworkshop.andesite_pavement_stairs.name=Andesite Road Stairs
 tile.chineseworkshop.oak_wall.name=Oak Wall
 tile.chineseworkshop.door.name=Chinese Wooden Door
-tile.chineseworkshop.high_door.name=High Door
+tile.chineseworkshop.high_door.name=Chinese High Door
 tile.chineseworkshop.upper_door_frame.name=Upper Door Frame
 tile.chineseworkshop.black_tile_roof.name=Black Roof Tile
 tile.chineseworkshop.black_roof_tile_ridge.name=Black Roof Tile Ridge
@@ -46,7 +52,8 @@ tile.chineseworkshop.black_roof_tile_edge_slab.n.name=Black Roof Tile Edge Slab
 tile.chineseworkshop.black_roof_tile_edge_slab.t.name=Black Roof Tile Edge Slab Top
 tile.chineseworkshop.black_clay_block.name=Block of Black Clay
 
-item.chineseworkshop.logo.name=Logo
+item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay
 item.chineseworkshop.black_brick.name=Black Brick
 item.chineseworkshop.door.name=Chinese Style Wooden Door
+item.chineseworkshop.high_door.name=Chinese High Door

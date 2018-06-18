@@ -1,6 +1,12 @@
+chineseworkshop.mod.name=中式工坊
+
 itemGroup.chineseworkshop.building_blocks=中式工坊 | 建筑方块
 itemGroup.chineseworkshop.decorations=中式工坊 | 装饰方块
 itemGroup.chineseworkshop.items=中式工坊 | 物品
+
+chineseworkshop.tip.selectable=按住 %s 并滚动滚轮选择物品
+chineseworkshop.gui.keygroup=中式工坊
+chineseworkshop.keybind.select=选择
 
 tile.chineseworkshop.black_brick_wall.name=黑砖墙
 tile.chineseworkshop.andesite_pavement.name=安山岩路面
@@ -46,7 +52,7 @@ tile.chineseworkshop.black_roof_tile_edge_slab.n.name=黑瓦屋顶边缘-半砖
 tile.chineseworkshop.black_roof_tile_edge_slab.t.name=黑瓦屋顶边缘-上半砖
 tile.chineseworkshop.black_clay_block.name=黑粘土块
 
-item.chineseworkshop.logo.name=Logo
+item.chineseworkshop.logo.name=调试工具
 item.chineseworkshop.black_clay.name=黑粘土
 item.chineseworkshop.black_brick.name=黑砖
 item.chineseworkshop.door.name=中式木门

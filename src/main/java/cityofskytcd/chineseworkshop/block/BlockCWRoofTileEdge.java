@@ -3,19 +3,22 @@ package cityofskytcd.chineseworkshop.block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyInteger;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.Mirror;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockCWRoofTileEdge extends BlockCWFaceThinWall
+public class BlockCWRoofTileEdge extends BlockCWThinWall
 {
     private static final PropertyInteger TYPE = PropertyInteger.create("type", 0, 1);
     private static final PropertyBool MIRRORED = PropertyBool.create("mirrored");
@@ -30,6 +33,12 @@ public class BlockCWRoofTileEdge extends BlockCWFaceThinWall
     {
         this(name, materialIn, hardness);
         this.noSubType = noSubType;
+    }
+
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return face == EnumFacing.DOWN ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
     }
 
     @Override
@@ -79,6 +88,13 @@ public class BlockCWRoofTileEdge extends BlockCWFaceThinWall
     public int damageDropped(IBlockState state)
     {
         return state.getValue(TYPE);
+    }
+
+    @Override
+    public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
+    {
+        return mirrorIn == Mirror.LEFT_RIGHT ? state.withProperty(MIRRORED, !state.getValue(MIRRORED))
+                : super.withMirror(state, mirrorIn);
     }
 
 }

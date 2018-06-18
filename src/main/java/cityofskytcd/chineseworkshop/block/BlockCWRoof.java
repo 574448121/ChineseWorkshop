@@ -8,10 +8,9 @@
 
 package cityofskytcd.chineseworkshop.block;
 
-import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
@@ -30,13 +29,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
  * 屋顶类
  */
 
-public class BlockCWRoof extends BlockCWT
+public class BlockCWRoof extends BlockCWTFace
 {
+    public static final PropertyEnum<BlockCWRoof.EnumShape> SHAPE = PropertyEnum.<BlockCWRoof.EnumShape>create(
+            "shape",
+            BlockCWRoof.EnumShape.class);
+
     public BlockCWRoof(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness);
         setDefaultState(
-                this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(
+                this.blockState.getBaseState().withProperty(
                         SHAPE,
                         BlockCWRoof.EnumShape.STRAIGHT));
     }
@@ -110,6 +113,12 @@ public class BlockCWRoof extends BlockCWT
         return BlockCWRoof.EnumShape.STRAIGHT;
     }
 
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face)
+    {
+        return face == EnumFacing.DOWN ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
+    }
+
     public static boolean isBlockStairs(IBlockState state)
     {
         return state.getBlock() instanceof BlockCWRoof;
@@ -157,9 +166,4 @@ public class BlockCWRoof extends BlockCWT
             return this.name;
         }
     }
-
-    public static final PropertyDirection FACING = BlockHorizontal.FACING;
-    public static final PropertyEnum<BlockCWRoof.EnumShape> SHAPE = PropertyEnum.<BlockCWRoof.EnumShape>create(
-            "shape",
-            BlockCWRoof.EnumShape.class);
 }

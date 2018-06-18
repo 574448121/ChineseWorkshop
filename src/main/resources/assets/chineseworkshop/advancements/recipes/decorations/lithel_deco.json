@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "chineseworkshop:lithel_deco"
+    ]
+  },
+  "criteria": {
+    "has_mat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "ore": "stickWood",
+            "type": "forge:ore_dict"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "chineseworkshop:lithel_deco"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mat",
+      "has_the_recipe"
+    ]
+  ]
+}
