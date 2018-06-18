@@ -1,9 +1,9 @@
 {
     "variants": {
-        "facing=east,shape=straight":  { "model": "ChineseWorkshop:black_tile_roof_slab", "y": 270 },
-        "facing=west,shape=straight":  { "model": "ChineseWorkshop:black_tile_roof_slab", "y": 90 },
-        "facing=south,shape=straight": { "model": "ChineseWorkshop:black_tile_roof_slab" },
-        "facing=north,shape=straight": { "model": "ChineseWorkshop:black_tile_roof_slab", "y": 180 },
+        "facing=east,shape=straight":  { "model": "ChineseWorkshop:black_tile_roof_slab", "y": 90 },
+        "facing=west,shape=straight":  { "model": "ChineseWorkshop:black_tile_roof_slab", "y": 270 },
+        "facing=south,shape=straight": { "model": "ChineseWorkshop:black_tile_roof_slab", "y": 180 },
+        "facing=north,shape=straight": { "model": "ChineseWorkshop:black_tile_roof_slab", "y": 360 },
         "facing=east,shape=outer_right":  { "model": "ChineseWorkshop:black_tile_roof_slab_l", "y": 360 },
         "facing=west,shape=outer_right":  { "model": "ChineseWorkshop:black_tile_roof_slab_l", "y": 180 },
         "facing=south,shape=outer_right": { "model": "ChineseWorkshop:black_tile_roof_slab_l", "y": 90 },
