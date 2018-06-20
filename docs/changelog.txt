@@ -1,0 +1,13 @@
+1.2.1
+New model for roof tiles and roof tile edges
+Fix roof tile side sometimes aren't rendered
+
+1.2.0
+Add doors, upper door frame, threshold and block of black clay
+Make table and bench more functional, now you can right click bench with empty hand to sit on
+New GUI for block selecting!
+New models!
+Completely restructure. fix null block registry
+Fix spelling
+Decorative tree bed now has more natural texture
+And more things that I have forgotten
