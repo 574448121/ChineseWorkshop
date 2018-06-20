@@ -15,10 +15,10 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-public class BlockCWTreeAltar extends BlockCWT
+public class BlockCWTreeBed extends BlockCWT
 {
 
-    public BlockCWTreeAltar(String id, Material materialIn, float hardness)
+    public BlockCWTreeBed(String id, Material materialIn, float hardness)
     {
         super(id, materialIn, hardness);
     }

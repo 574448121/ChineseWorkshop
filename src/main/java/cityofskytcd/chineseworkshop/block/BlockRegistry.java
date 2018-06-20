@@ -44,7 +44,7 @@ public class BlockRegistry
                 new BlockCWMenDun("men_dun", Material.ROCK, 1.5F),
                 new BlockCWThreshold("threshold", Material.ROCK, 1.0F),
                 new BlockCWTFace("carving", Material.WOOD, 0.5F),
-                new BlockCWTreeAltar("tree_altar", Material.ROCK, 1.5F),
+                new BlockCWTreeBed("tree_altar", Material.ROCK, 1.5F),
                 new BlockCWBench("bench", Material.WOOD, 0.5F),
                 new BlockCWTable("table", Material.WOOD, 1.0F),
                 new BlockCWStairs("white_gray_wall_stairs", Blocks.STONE.getDefaultState(), 1.5F),
