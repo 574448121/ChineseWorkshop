@@ -35,7 +35,7 @@ public class BlockRegistry
                 new BlockCWFace("andesite_pavement", Material.ROCK, 1.5F),
                 new BlockCWRotatedPillar("red_pillar", Material.WOOD, 1.0F),
                 new BlockCWRotatedPillar("dark_green_pillar", Material.WOOD, 1.0F),
-                new BlockCW("white_gray_wall", Material.ROCK, 1.5F),
+                new BlockCW("white_gray_wall", Material.ROCK, MapColor.QUARTZ, 1.5F),
                 new BlockCWLight("stone_tower_lamp", Material.ROCK, 1.0F, 1.0f),
                 new BlockCWLantern("red_lantern", Material.WOOD, 0.5F),
                 new BlockCWCandle("candle", Material.WOOD, 1.0F),

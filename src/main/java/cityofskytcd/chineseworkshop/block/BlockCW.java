@@ -12,6 +12,7 @@ import cityofskytcd.chineseworkshop.CWCreativeTabs;
 import cityofskytcd.chineseworkshop.util.BlockUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
@@ -20,11 +21,16 @@ import net.minecraft.creativetab.CreativeTabs;
  */
 public class BlockCW extends Block
 {
-    public BlockCW(String id, Material materialIn, float hardness, SoundType soundType, CreativeTabs tabs)
+    public BlockCW(String id, Material materialIn, MapColor mapColor, float hardness, SoundType soundType, CreativeTabs tabs)
     {
-        super(materialIn);
+        super(materialIn, mapColor);
         BlockUtil.setAttributes(this, id, hardness, tabs);
         setSoundType(soundType);
+    }
+
+    public BlockCW(String id, Material materialIn, float hardness, SoundType soundType, CreativeTabs tabs)
+    {
+        this(id, materialIn, materialIn.getMaterialMapColor(), hardness, soundType, tabs);
     }
 
     public BlockCW(String id, Material materialIn, float hardness, CreativeTabs tabs)
@@ -40,5 +46,10 @@ public class BlockCW extends Block
     public BlockCW(String id, Material materialIn, float hardness)
     {
         this(id, materialIn, hardness, CWCreativeTabs.BUILDING_BLOCKS);
+    }
+
+    public BlockCW(String id, Material materialIn, MapColor mapColor, float hardness)
+    {
+        this(id, materialIn, mapColor, hardness, BlockUtil.getDefaultSound(materialIn), CWCreativeTabs.BUILDING_BLOCKS);
     }
 }
