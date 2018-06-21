@@ -21,10 +21,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-/**
- * 小墙类
- */
-
 public class BlockCWUpperDoorFrame extends BlockCWFence
 {
     public BlockCWUpperDoorFrame(String name, Material materialIn, MapColor blockMapColor, float hardness)

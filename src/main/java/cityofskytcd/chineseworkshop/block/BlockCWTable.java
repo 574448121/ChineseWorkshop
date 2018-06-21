@@ -151,4 +151,10 @@ public class BlockCWTable extends BlockCWT
     {
         return face == EnumFacing.UP ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
     }
+
+    @Override
+    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
+    {
+        return side != EnumFacing.UP;
+    }
 }

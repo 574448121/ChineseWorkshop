@@ -28,4 +28,10 @@ public class BlockCWTreeBed extends BlockCWT
     {
         return (face == EnumFacing.UP || face == EnumFacing.DOWN) ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
     }
+
+    @Override
+    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
+    {
+        return side == EnumFacing.DOWN;
+    }
 }

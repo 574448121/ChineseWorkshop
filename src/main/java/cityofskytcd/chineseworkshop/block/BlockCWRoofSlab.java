@@ -41,10 +41,7 @@ public class BlockCWRoofSlab extends BlockCWTFace
     public BlockCWRoofSlab(String name, Material materialIn, float hardness)
     {
         super(name, materialIn, hardness);
-        setDefaultState(
-                this.blockState.getBaseState().withProperty(
-                        SHAPE,
-                        BlockCWRoofSlab.EnumShape.STRAIGHT));
+        setDefaultState(this.blockState.getBaseState().withProperty(SHAPE, BlockCWRoofSlab.EnumShape.STRAIGHT));
     }
 
     @Override

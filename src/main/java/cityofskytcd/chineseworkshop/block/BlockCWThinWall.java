@@ -88,4 +88,10 @@ public class BlockCWThinWall extends BlockCWTFace
     {
         return face.getOpposite() == state.getValue(FACING) ? BlockFaceShape.SOLID : BlockFaceShape.UNDEFINED;
     }
+
+    @Override
+    public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side)
+    {
+        return side.getOpposite() == blockState.getValue(FACING);
+    }
 }
