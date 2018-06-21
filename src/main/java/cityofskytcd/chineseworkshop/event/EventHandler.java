@@ -53,7 +53,7 @@ import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod.EventBusSubscriber()
+@Mod.EventBusSubscriber
 public class EventHandler
 {
     private static boolean showGui = false;

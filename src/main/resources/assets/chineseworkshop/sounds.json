@@ -1,0 +1,10 @@
+{
+  "block.note.test":{
+    "category":"record",
+    "subtitle":"subtitles.block.note.note",
+    "sounds":[
+      "chineseworkshop:note.test"
+    ]
+  }
+}
+
