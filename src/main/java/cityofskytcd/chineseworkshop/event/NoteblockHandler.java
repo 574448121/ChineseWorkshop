@@ -2,7 +2,6 @@ package cityofskytcd.chineseworkshop.event;
 
 import cityofskytcd.chineseworkshop.CW;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
@@ -11,8 +10,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.NoteBlockEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.relauncher.Side;
 
+@EventBusSubscriber(Side.CLIENT)
 public class NoteblockHandler
 {
     private static final SoundEvent SOUND_TEST = new SoundEvent(new ResourceLocation(CW.MODID, "block.note.test"));
@@ -26,13 +28,7 @@ public class NoteblockHandler
         {
             int note = event.getVanillaNoteId();
             float f = (float) Math.pow(2.0D, (note - 12) / 12.0D);
-            world.playSound(
-                    (EntityPlayer) null,
-                    pos,
-                    SoundEvents.ENTITY_ENDERMEN_TELEPORT,
-                    SoundCategory.RECORDS,
-                    3.0F,
-                    f);
+            world.playSound((EntityPlayer) null, pos, SOUND_TEST, SoundCategory.RECORDS, 3.0F, f);
             world.spawnParticle(
                     EnumParticleTypes.NOTE,
                     pos.getX() + 0.5D,
