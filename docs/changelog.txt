@@ -1,3 +1,6 @@
+1.2.2
+Fix server-side crash
+
 1.2.1
 New model for roof tiles and roof tile edges
 Fix roof tile side sometimes aren't rendered
