@@ -10,8 +10,6 @@ package cityofskytcd.chineseworkshop.proxy;
 
 import javax.annotation.OverridingMethodsMustInvokeSuper;
 
-import cityofskytcd.chineseworkshop.event.EventHandler;
-import cityofskytcd.chineseworkshop.event.RegistryRemapper;
 import cityofskytcd.chineseworkshop.item.CWItems;
 import cityofskytcd.chineseworkshop.library.Selections;
 import cityofskytcd.chineseworkshop.network.CWNetworkChannel;
@@ -34,8 +32,6 @@ public class CommonProxy
     @OverridingMethodsMustInvokeSuper
     public void init(@SuppressWarnings("unused") FMLInitializationEvent event)
     {
-        EventHandler.init();
-        RegistryRemapper.init();
         Selections.init();
         CWNetworkChannel.INSTANCE.register(WheelMovePacket.class);
         GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 0), new ItemStack(CWItems.MATERIAL, 1, 1), 0.1F);

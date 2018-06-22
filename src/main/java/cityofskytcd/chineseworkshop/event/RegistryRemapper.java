@@ -16,10 +16,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 @EventBusSubscriber
 public class RegistryRemapper
 {
-    public static void init()
-    {
-    }
-
     @SubscribeEvent
     public static void MissingMappingsBlock(RegistryEvent.MissingMappings<Block> event)
     {

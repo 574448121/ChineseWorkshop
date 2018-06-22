@@ -14,6 +14,7 @@ import org.lwjgl.input.Keyboard;
 
 import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.block.CWBlocks;
+import cityofskytcd.chineseworkshop.event.HudHandler;
 import cityofskytcd.chineseworkshop.item.CWItems;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -49,6 +50,8 @@ public class ClientProxy extends CommonProxy
     public void init(FMLInitializationEvent event)
     {
         super.init(event);
+        HudHandler.init();
+
         final BlockColors blockColors = Minecraft.getMinecraft().getBlockColors();
         blockColors.registerBlockColorHandler(new IBlockColor()
         {
