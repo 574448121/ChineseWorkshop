@@ -29,7 +29,8 @@ public class Selections
                         ItemDefinition.of(CWItems.BLACK_ROOF_TILE_RIDGE),
                         ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE),
                         ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_J),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_TOP)));
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_TOP),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_TOP)));
 
         addSelection(
                 ImmutableList.of(

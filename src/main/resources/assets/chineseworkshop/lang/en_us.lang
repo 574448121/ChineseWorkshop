@@ -51,6 +51,8 @@ tile.chineseworkshop.black_roof_tile_edge.j.name=Black Roof Tile Edge
 tile.chineseworkshop.black_roof_tile_edge_slab.n.name=Black Roof Tile Edge Slab
 tile.chineseworkshop.black_roof_tile_edge_slab.t.name=Black Roof Tile Edge Slab Top
 tile.chineseworkshop.black_clay_block.name=Block of Black Clay
+tile.chineseworkshop.black_tile_ridge_roof_edge_top.name=Black Roof Tile Ridge Edge Top
+
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay

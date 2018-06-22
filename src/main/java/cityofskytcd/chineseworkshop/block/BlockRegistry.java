@@ -64,13 +64,14 @@ public class BlockRegistry
                 new BlockCWRoofTileRidge("black_roof_tile_ridge", Material.ROCK, 1.0F),
                 new BlockCWRoofTileEdge("black_roof_tile_edge", Material.ROCK, 1.0F),
                 new BlockCWRoofTileEdgeSlab("black_roof_tile_edge_slab", Material.ROCK, 1.0F),
-                new BlockCWTFace2D("black_tile_ridge_roof_top", Material.ROCK, 1.5F),
+                new BlockCWRoofTileRidge("black_tile_ridge_roof_top", Material.ROCK, 1.5F),
                 new BlockCWTFace("black_tile_ridge_roof_edge", Material.ROCK, 1.5F),
                 new BlockCWTFace("black_tile_ridge_roof_j", Material.ROCK, 1.5F),
                 new BlockCWTFace("black_tile_roof_j", Material.ROCK, 1.5F),
                 new BlockCWRoofSlab("black_tile_roof_slab", Material.ROCK, 1.5F),
                 new BlockCWRoof("black_tile_roof_slab_top", Material.ROCK, 1.5F),
-                new BlockCWThinWall("thin_white_gray_wall", Material.ROCK, 1.0F));
+                new BlockCWThinWall("thin_white_gray_wall", Material.ROCK, 1.0F),
+        		new BlockCWTFace("black_tile_ridge_roof_edge_top", Material.ROCK, 1.5F));
     }
 
     @SubscribeEvent
@@ -82,5 +83,9 @@ public class BlockRegistry
         ModelLoader.setCustomStateMapper(
                 CWBlocks.BLACK_ROOF_TILE_RIDGE,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
+    
 }
