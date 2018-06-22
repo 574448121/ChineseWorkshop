@@ -32,22 +32,19 @@ import net.minecraftforge.client.event.MouseEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SideOnly(Side.CLIENT)
+@EventBusSubscriber(Side.CLIENT)
 public class HudHandler
 {
     private static boolean showGui = false;
     private static boolean animating = false;
     private static float animationTick = 0;
     private static float[] badgeProcess = new float[0];
-
-    public static void init()
-    {
-    }
 
     @SubscribeEvent
     @SideOnly(Side.CLIENT)

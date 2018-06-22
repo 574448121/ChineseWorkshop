@@ -8,6 +8,8 @@ import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class WheelMovePacket implements CWPacket
 {
@@ -29,6 +31,7 @@ public class WheelMovePacket implements CWPacket
     }
 
     @Override
+    @SideOnly(Side.CLIENT)
     public void readDataFrom(ByteBuf buffer, EntityPlayer player)
     {
         index = buffer.readInt();

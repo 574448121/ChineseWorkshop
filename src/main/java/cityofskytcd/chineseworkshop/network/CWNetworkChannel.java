@@ -18,6 +18,8 @@ import net.minecraftforge.fml.common.network.FMLEventChannel;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.internal.FMLProxyPacket;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public final class CWNetworkChannel
 {
@@ -34,12 +36,14 @@ public final class CWNetworkChannel
     }
 
     @SubscribeEvent
+    @SideOnly(Side.SERVER)
     public void onServerPacketIncoming(FMLNetworkEvent.ServerCustomPacketEvent event)
     {
         decodeData(event.getPacket().payload(), ((NetHandlerPlayServer) event.getHandler()).player);
     }
 
     @SubscribeEvent
+    @SideOnly(Side.CLIENT)
     public void onClientPacketIncoming(FMLNetworkEvent.ClientCustomPacketEvent event)
     {
         decodeData(event.getPacket().payload(), Minecraft.getMinecraft().player);
