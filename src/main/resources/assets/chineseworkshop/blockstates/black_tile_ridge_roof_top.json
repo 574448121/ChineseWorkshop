@@ -4,9 +4,18 @@
     "model": "chineseworkshop:black_tile_ridge_roof_top"
   },
   "variants": {
-    "facing": {
-      "south_north": {},
-      "east_west": { "y": 90 }
+    "variant": {
+      "i": { "model": "chineseworkshop:black_tile_ridge_roof_top", "y": 90 },
+      "i_90": { "model": "chineseworkshop:black_tile_ridge_roof_top" },
+      "l": { "model": "chineseworkshop:black_tile_ridge_roof_top_l", "y": 90 },
+      "l_90": { "model": "chineseworkshop:black_tile_ridge_roof_top_l", "y": 180 },
+      "l_180": { "model": "chineseworkshop:black_tile_ridge_roof_top_l", "y": 270 },
+      "l_270": { "model": "chineseworkshop:black_tile_ridge_roof_top_l" },
+      "t": { "model": "chineseworkshop:black_tile_ridge_roof_top_t", "y": 180 },
+      "t_90": { "model": "chineseworkshop:black_tile_ridge_roof_top_t", "y": 270 },
+      "t_180": { "model": "chineseworkshop:black_tile_ridge_roof_top_t" },
+      "t_270": { "model": "chineseworkshop:black_tile_ridge_roof_top_t", "y": 90 },
+      "x": { "model": "chineseworkshop:black_tile_ridge_roof_top_x" }
     }
   }
 }

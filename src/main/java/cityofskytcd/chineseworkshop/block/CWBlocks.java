@@ -134,6 +134,9 @@ public class CWBlocks
     // 黑瓦屋顶半砖top
     @GameRegistry.ObjectHolder("black_tile_roof_slab_top")
     public static final Block BLACK_TILE_ROOF_SLAB_TOP = Blocks.AIR;
+    // 黑瓦屋脊边缘top
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_TOP = Blocks.AIR;
 
     /* 薄墙 */
     // 薄白灰墙

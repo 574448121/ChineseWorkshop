@@ -148,6 +148,9 @@ public class CWItems
     // 黑瓦屋顶半砖top
     @GameRegistry.ObjectHolder("black_tile_roof_slab_top")
     public static final Item BLACK_TILE_ROOF_SLAB_TOP = null;
+    // 黑瓦屋脊边缘top
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_TOP = null;
 
     /* 薄墙 */
     // 薄白灰墙
