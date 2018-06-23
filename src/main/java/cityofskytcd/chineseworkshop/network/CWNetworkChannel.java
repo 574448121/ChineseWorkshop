@@ -36,7 +36,6 @@ public final class CWNetworkChannel
     }
 
     @SubscribeEvent
-    @SideOnly(Side.SERVER)
     public void onServerPacketIncoming(FMLNetworkEvent.ServerCustomPacketEvent event)
     {
         decodeData(event.getPacket().payload(), ((NetHandlerPlayServer) event.getHandler()).player);
