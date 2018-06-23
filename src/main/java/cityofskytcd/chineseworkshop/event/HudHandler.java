@@ -178,8 +178,8 @@ public class HudHandler
             {
                 ItemDefinition definition = selection.get(i);
                 GlStateManager.pushMatrix();
-                float rad = (float) (((i + 0.5F) * degPer) / 180F * Math.PI);
-                GlStateManager.translate(Math.cos(rad) * 60, Math.sin(rad) * 60, 0);
+                float rad = (float) (((i + (selection.size() % 2 == 0 ? 0.5F : 0)) * degPer + 180) / 180F * Math.PI);
+                GlStateManager.translate(Math.sin(rad) * 60, Math.cos(rad) * 60, 0);
                 GlStateManager.scale(0.618, 0.618, 0.618);
 
                 boolean match = !matched && definition.equals(ItemDefinition.of(held));
