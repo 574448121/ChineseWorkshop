@@ -22,6 +22,10 @@ public class NoteblockHandler
     @SubscribeEvent
     public static void onNoteBlockPlay(NoteBlockEvent.Play event)
     {
+        if (event.isCanceled())
+        {
+            return;
+        }
         World world = event.getWorld();
         BlockPos pos = event.getPos();
         if (world.getBlockState(pos.down()).getBlock().getRegistryName().getResourceDomain().equals(CW.MODID))
