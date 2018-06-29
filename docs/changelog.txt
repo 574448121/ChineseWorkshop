@@ -1,5 +1,6 @@
 1.2.3
-Fix selecting block desync
+Fixed selecting block desync
+Improved model of roof tile
 
 1.2.2
 Fix server-side crash
