@@ -1,4 +1,5 @@
 {
+	"__comment": "Designed by CityOfSkyTCD with %",
 	"ambientocclusion": false,
 	"textures": {
 		"particle": "chineseworkshop:blocks/black_tile",
@@ -22,9 +23,9 @@
 		},
 		{
 			"__comment": "Element",
-			"from": [ 14.5, 9.2036, 5.9386 ],
-			"to": [ 15.9999, 12.2036, 16.9386 ],
-			"rotation": { "origin": [ 14.5, 4.8125, 9 ], "axis": "x", "angle": 22.5 },
+			"from": [ 14.5, 9.8126, 9 ],
+			"to": [ 16, 12.8126, 20 ],
+			"rotation": { "origin": [ 14.5, 12.8125, 9 ], "axis": "x", "angle": 22.5 },
 			"faces": {
 				"down": { "uv": [ 14, 0, 16, 11 ], "texture": "#texture" },
 				"up": { "uv": [ 14, 0, 16, 11 ], "texture": "#texture" },
@@ -36,9 +37,9 @@
 		},
 		{
 			"__comment": "Element",
-			"from": [ 14.5, 5.0738, -0.2271 ],
-			"to": [ 15.9999, 8.0738, 10.7729 ],
-			"rotation": { "origin": [ 14.5, 0.625, -3.3125 ], "axis": "x", "angle": -22.5 },
+			"from": [ 14.5, 5.6875, -2.9999 ],
+			"to": [ 16, 8.6875, 8.0001 ],
+			"rotation": { "origin": [ 14.5625, 8.6875, -3 ], "axis": "x", "angle": -22.5 },
 			"faces": {
 				"down": { "uv": [ 14, 0, 16, 11 ], "texture": "#texture" },
 				"up": { "uv": [ 14, 0, 16, 11 ], "texture": "#texture" },
@@ -50,9 +51,9 @@
 		},
 		{
 			"__comment": "Element",
-			"from": [ 9.5, 7.7518, -1.2417 ],
-			"to": [ 14.5, 10.7518, 9.7583 ],
-			"rotation": { "origin": [ 9.5, 3.1875, -4.375 ], "axis": "x", "angle": -22.5 },
+			"from": [ 9.5, 8.2554, -4.0862 ],
+			"to": [ 14.5625, 11.2554, 6.9138 ],
+			"rotation": { "origin": [ 9.5, 11.375, -4.375 ], "axis": "x", "angle": -22.5 },
 			"faces": {
 				"down": { "uv": [ 0, 0, 5, 11 ], "texture": "#texture", "rotation": 180 },
 				"up": { "uv": [ 0, 0, 5, 11 ], "texture": "#texture", "rotation": 180 },
@@ -65,7 +66,7 @@
 		{
 			"__comment": "Element",
 			"from": [ 8.5, 10.0625, 5 ],
-			"to": [ 16, 16.5625, 11 ],
+			"to": [ 16.03, 16.5625, 11 ],
 			"faces": {
 				"down": { "uv": [ 6, 0, 11, 11 ], "texture": "#texture", "rotation": 90 },
 				"up": { "uv": [ 6, 0, 11, 11 ], "texture": "#texture", "rotation": 90 },
@@ -78,7 +79,7 @@
 		{
 			"__comment": "Element",
 			"from": [ 15, 8, 1.5 ],
-			"to": [ 15.9998, 10, 14.5 ],
+			"to": [ 15.98, 10, 14.5 ],
 			"faces": {
 				"down": { "uv": [ 0.9375, 14.5, 0, 1.5 ], "texture": "#white_gray_wall" },
 				"up": { "uv": [ 15.0625, 1.5, 16, 14.5 ], "texture": "#white_gray_wall" },
@@ -119,7 +120,7 @@
 		{
 			"__comment": "Box9",
 			"from": [ 15, 0, 0 ],
-			"to": [ 15.9998, 8, 16 ],
+			"to": [ 15.98, 8, 16 ],
 			"faces": {
 				"down": { "uv": [ 15, 0, 15.9998, 16 ], "texture": "#white_gray_wall" },
 				"up": { "uv": [ 15, 0, 15.9998, 16 ], "texture": "#white_gray_wall" },
