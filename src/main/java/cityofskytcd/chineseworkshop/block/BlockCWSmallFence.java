@@ -10,10 +10,14 @@ package cityofskytcd.chineseworkshop.block;
 
 import java.util.List;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockFenceGate;
+import net.minecraft.block.BlockPane;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
@@ -114,5 +118,18 @@ public class BlockCWSmallFence extends BlockCWFence
         }
 
         return i;
+    }
+
+    @Override
+    public boolean canConnectTo(IBlockAccess worldIn, BlockPos pos, EnumFacing facing)
+    {
+        IBlockState iblockstate = worldIn.getBlockState(pos);
+        Block block = iblockstate.getBlock();
+        return block == Blocks.BARRIER ? false
+                : (!(block == this || block instanceof BlockPane || block instanceof BlockFenceGate)
+                        ? (iblockstate.getMaterial().isOpaque() && iblockstate.isFullCube()
+                                ? iblockstate.getMaterial() != Material.GOURD
+                                : false)
+                        : true);
     }
 }
