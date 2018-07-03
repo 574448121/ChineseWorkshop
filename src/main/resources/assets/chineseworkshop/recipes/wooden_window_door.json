@@ -1,0 +1,14 @@
+{
+  "type": "forge:ore_shapeless",
+  "result": {
+    "item": "chineseworkshop:wooden_window_door"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:wooden_door"
+    },
+    {
+      "item" : "chineseworkshop:paper_window"
+    }
+  ]
+}

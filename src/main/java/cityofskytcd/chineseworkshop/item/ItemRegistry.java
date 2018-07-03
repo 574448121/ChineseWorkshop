@@ -59,6 +59,7 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.OAK_WALL),
                 new ItemCWDoor("door", CWBlocks.DOOR),
                 new ItemCWDoor("high_door", CWBlocks.HIGH_DOOR),
+                new ItemCWDoor("wooden_window_door", CWBlocks.WOODEN_WINDOW_DOOR),
                 new ItemCWBlock(CWBlocks.UPPER_DOOR_FRAME),
                 new ItemCWBlock(CWBlocks.THRESHOLD),
                 new ItemCWBlock(CWBlocks.MEN_DUN),
@@ -92,6 +93,7 @@ public class ItemRegistry
                 new ModelResourceLocation(CW.MODID + ":black_brick", "inventory"));
         ModelUtil.mapItemModel(CWItems.DOOR);
         ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
+        ModelUtil.mapItemModel(CWItems.WOODEN_WINDOW_DOOR);
 
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL);
         ModelUtil.mapItemModel(CWItems.BLACK_CLAY_BLOCK);

@@ -1,0 +1,33 @@
+{
+	"__comment": "Designed by CityOfSkyTCD with %",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "chineseworkshop:blocks/wooden_window_door_bottom",
+		"texture": "chineseworkshop:blocks/wooden_window_door"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Element",
+			"from": [ 3, -8, 0 ],
+			"to": [ 5, 8, 16 ],
+			"faces": {
+				"north": { "uv": [ 7, 0, 9, 16 ], "texture": "#texture" },
+				"south": { "uv": [ 7, 0, 9, 16 ], "texture": "#texture" },
+				"west": { "uv": [ 0, 0, 16, 16 ], "texture": "#particle" },
+				"east": { "uv": [ 16, 0, 0, 16 ], "texture": "#particle" }
+			}
+		},
+		{
+			"__comment": "Element",
+			"from": [ 3, 8, 0 ],
+			"to": [ 5, 16, 16 ],
+			"faces": {
+				"down": { "uv": [ 7, 0, 9, 16 ], "texture": "#texture" },
+				"north": { "uv": [ 7, 0, 9, 8 ], "texture": "#texture" },
+				"south": { "uv": [ 7, 0, 9, 8 ], "texture": "#texture" },
+				"west": { "uv": [ 0, 8, 16, 16 ], "texture": "#texture" },
+				"east": { "uv": [ 16, 8, 0, 16 ], "texture": "#texture" }
+			}
+		}
+	]
+}

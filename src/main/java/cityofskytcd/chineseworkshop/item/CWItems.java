@@ -24,11 +24,15 @@ public class CWItems
     public static final Item MATERIAL = null;
 
     /* 门 */
+    //中式木门
     @GameRegistry.ObjectHolder("door")
     public static final Item DOOR = null;
-
+    //中式大木门
     @GameRegistry.ObjectHolder("high_door")
     public static final Item HIGH_DOOR = null;
+    //木窗门
+    @GameRegistry.ObjectHolder("wooden_window_door")
+    public static final Item WOODEN_WINDOW_DOOR = null;
 
     /* 方块 */
     // 黑砖墙
