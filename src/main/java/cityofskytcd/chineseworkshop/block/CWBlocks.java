@@ -35,6 +35,9 @@ public class CWBlocks
     // 白灰墙
     @GameRegistry.ObjectHolder("white_gray_wall")
     public static final Block WHITE_GRAY_WALL = Blocks.AIR;
+    // 福
+    @GameRegistry.ObjectHolder("fu")
+    public static final Block FU = Blocks.AIR;
 
     /* 灯 */
     // 石灯塔

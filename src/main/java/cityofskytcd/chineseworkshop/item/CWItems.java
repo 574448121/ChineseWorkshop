@@ -169,4 +169,7 @@ public class CWItems
     // 黑瓦屋顶边缘台阶
     @GameRegistry.ObjectHolder("black_roof_tile_edge_slab")
     public static final Item BLACK_ROOF_TILE_EDGE_SLAB = null;
+    // 福
+    @GameRegistry.ObjectHolder("fu")
+    public static final Item FU = null;
 }

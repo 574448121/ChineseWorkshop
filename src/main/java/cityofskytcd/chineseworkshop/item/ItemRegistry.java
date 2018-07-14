@@ -75,7 +75,8 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J),
-                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE_TOP));
+                new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE_TOP),
+                new ItemCWBlock(CWBlocks.FU));
     }
 
     @SubscribeEvent
@@ -145,6 +146,7 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_SLAB_TOP);
         ModelUtil.mapItemModel(CWItems.THIN_WHITE_GRAY_WALL);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_TOP);
+        ModelUtil.mapItemModel(CWItems.FU);
 
     }
 }
