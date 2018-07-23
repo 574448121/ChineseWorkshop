@@ -53,6 +53,12 @@ public class CWItems
     // 白灰墙
     @GameRegistry.ObjectHolder("white_gray_wall")
     public static final Item WHITE_GRAY_WALL = null;
+    // 福
+    @GameRegistry.ObjectHolder("fu")
+    public static final Item FU = null;
+    // 夯土
+    @GameRegistry.ObjectHolder("rammed_earth")
+    public static final Item RAMMED_EARTH = null;
 
     /* 灯 */
     // 石灯塔
@@ -169,7 +175,4 @@ public class CWItems
     // 黑瓦屋顶边缘台阶
     @GameRegistry.ObjectHolder("black_roof_tile_edge_slab")
     public static final Item BLACK_ROOF_TILE_EDGE_SLAB = null;
-    // 福
-    @GameRegistry.ObjectHolder("fu")
-    public static final Item FU = null;
 }

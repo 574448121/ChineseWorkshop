@@ -38,6 +38,9 @@ public class CWBlocks
     // 福
     @GameRegistry.ObjectHolder("fu")
     public static final Block FU = Blocks.AIR;
+    // 夯土
+    @GameRegistry.ObjectHolder("rammed_earth")
+    public static final Block RAMMED_EARTH = Blocks.AIR;
 
     /* 灯 */
     // 石灯塔

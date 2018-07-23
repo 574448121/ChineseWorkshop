@@ -73,7 +73,8 @@ public class BlockRegistry
                 new BlockCWThinWall("thin_white_gray_wall", Material.ROCK, 1.0F),
         		new BlockCWTFace("black_tile_ridge_roof_edge_top", Material.ROCK, 1.5F),
         		new BlockCWDoor("wooden_window_door", Material.WOOD, 1.5F),
-        		new BlockCWThinWall("fu", Material.WOOD, 1.0F));
+        		new BlockCWThinWall("fu", Material.WOOD, 1.0F),
+        		new BlockCW("rammed_earth", Material.ROCK, 1.5F));
     }
 
     @SubscribeEvent

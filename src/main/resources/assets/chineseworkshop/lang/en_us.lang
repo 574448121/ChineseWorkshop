@@ -53,6 +53,7 @@ tile.chineseworkshop.black_roof_tile_edge_slab.t.name=Black Roof Tile Edge Slab 
 tile.chineseworkshop.black_clay_block.name=Block of Black Clay
 tile.chineseworkshop.black_tile_ridge_roof_edge_top.name=Black Roof Tile Ridge Edge Top
 tile.chineseworkshop.fu.name=Blessing
+tile.chineseworkshop.rammed_earth.name=Rammed Earth
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay
