@@ -74,7 +74,9 @@ public class BlockRegistry
         		new BlockCWTFace("black_tile_ridge_roof_edge_top", Material.ROCK, 1.5F),
         		new BlockCWDoor("wooden_window_door", Material.WOOD, 1.5F),
         		new BlockCWThinWall("fu", Material.WOOD, 1.0F),
-        		new BlockCW("rammed_earth", Material.ROCK, 1.5F));
+        		new BlockCW("rammed_earth", Material.ROCK, 1.5F),
+        		new BlockCWSmallFence("rammed_earth_wall", Material.ROCK, MapColor.STONE, 1.5F),
+        		new BlockCWStairs("rammed_earth_stairs", Blocks.STONE.getDefaultState(), 1.5F));
     }
 
     @SubscribeEvent

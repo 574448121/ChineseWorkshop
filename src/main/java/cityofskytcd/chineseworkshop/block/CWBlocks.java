@@ -120,6 +120,12 @@ public class CWBlocks
     // 木窗门
     @GameRegistry.ObjectHolder("wooden_window_door")
     public static final Block WOODEN_WINDOW_DOOR = Blocks.AIR;
+    // 夯土墙
+    @GameRegistry.ObjectHolder("rammed_earth_wall")
+    public static final Block RAMMED_EARTH_WALL = Blocks.AIR;
+    // 夯土阶梯
+    @GameRegistry.ObjectHolder("rammed_earth_stairs")
+    public static final Block RAMMED_EARTH_STAIRS = Blocks.AIR;
 
     /* 屋顶 */
     // 黑瓦屋顶

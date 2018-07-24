@@ -132,9 +132,15 @@ public class CWItems
     //
     // @GameRegistry.ObjectHolder("high_door")
     // public static final Item HIGH_DOOR = null;
-
+    // 门顶框
     @GameRegistry.ObjectHolder("upper_door_frame")
     public static final Item UPPER_DOOR_FRAME = null;
+    // 夯土墙
+    @GameRegistry.ObjectHolder("rammed_earth_wall")
+    public static final Item RAMMED_EARTH_WALL = null;
+    // 安山岩路面阶梯
+    @GameRegistry.ObjectHolder("rammed_earth_stairs")
+    public static final Item RAMMED_EARTH_STAIRS = null;
 
     /* 屋顶 */
     // 黑瓦屋顶

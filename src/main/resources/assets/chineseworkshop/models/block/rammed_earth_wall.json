@@ -1,0 +1,6 @@
+{
+	"parent": "chineseworkshop:block/wall",
+	"textures": {
+		"particle": "chineseworkshop:blocks/rammed_earth"
+    }
+}
