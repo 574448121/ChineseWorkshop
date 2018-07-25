@@ -126,6 +126,9 @@ public class CWBlocks
     // 夯土阶梯
     @GameRegistry.ObjectHolder("rammed_earth_stairs")
     public static final Block RAMMED_EARTH_STAIRS = Blocks.AIR;
+    // 窗门
+    @GameRegistry.ObjectHolder("window_door")
+    public static final Block WINDOW_DOOR = Blocks.AIR;
 
     /* 屋顶 */
     // 黑瓦屋顶

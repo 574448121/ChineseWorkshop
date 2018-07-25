@@ -1,0 +1,20 @@
+{
+	"__comment": "Designed by CityOfSkyTCD",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "chineseworkshop:blocks/paper_window_s"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Element",
+			"from": [ 11, 0, 0 ],
+			"to": [ 13, 16, 16 ],
+			"faces": {
+				"north": { "uv": [ 0, 0, 1, 16 ], "texture": "#particle" },
+				"south": { "uv": [ 0, 0, 1, 16 ], "texture": "#particle" },
+				"west": { "uv": [ 0, 0, 16, 16 ], "texture": "#particle", "rotation": 180 },
+				"east": { "uv": [ 16, 0, 0, 16 ], "texture": "#particle", "rotation": 180 }
+			}
+		}
+	]
+}

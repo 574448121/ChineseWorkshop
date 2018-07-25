@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:window_door",
+	"count": 1
+  },
+  "pattern": [
+    "*",
+    "*"
+  ],
+  "key": {
+    "*": {
+      "item" : "chineseworkshop:paper_window"
+    }
+  }
+}

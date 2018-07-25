@@ -76,7 +76,8 @@ public class BlockRegistry
         		new BlockCWThinWall("fu", Material.WOOD, 1.0F),
         		new BlockCW("rammed_earth", Material.ROCK, 1.5F),
         		new BlockCWSmallFence("rammed_earth_wall", Material.ROCK, MapColor.STONE, 1.5F),
-        		new BlockCWStairs("rammed_earth_stairs", Blocks.STONE.getDefaultState(), 1.5F));
+        		new BlockCWStairs("rammed_earth_stairs", Blocks.STONE.getDefaultState(), 1.5F),
+        		new BlockCWDoor("window_door", Material.WOOD, 1.5F));
     }
 
     @SubscribeEvent
@@ -86,6 +87,7 @@ public class BlockRegistry
         ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(CWBlocks.WOODEN_WINDOW_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.WINDOW_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(
                 CWBlocks.BLACK_ROOF_TILE_RIDGE,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
