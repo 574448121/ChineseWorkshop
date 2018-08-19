@@ -1,3 +1,6 @@
+1.2.4
+Add wooden window door, windowed door, 福, rammed earth, rammed earth wall and rammed earth stairs
+
 1.2.3
 Fixed selecting block desync
 Improved model of roof tile

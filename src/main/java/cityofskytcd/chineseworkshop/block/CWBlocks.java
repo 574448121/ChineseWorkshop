@@ -41,6 +41,9 @@ public class CWBlocks
     // 夯土
     @GameRegistry.ObjectHolder("rammed_earth")
     public static final Block RAMMED_EARTH = Blocks.AIR;
+    // 胭脂砖
+    @GameRegistry.ObjectHolder("rouge_brick")
+    public static final Block ROUGE_BRICK = Blocks.AIR;
 
     /* 灯 */
     // 石灯塔
@@ -129,6 +132,12 @@ public class CWBlocks
     // 窗门
     @GameRegistry.ObjectHolder("window_door")
     public static final Block WINDOW_DOOR = Blocks.AIR;
+    // 石窗
+    @GameRegistry.ObjectHolder("stone_window")
+    public static final Block STONE_WINDOW = Blocks.AIR;
+    // 胭脂砖墙
+    @GameRegistry.ObjectHolder("rouge_brick_wall")
+    public static final Block ROUGE_BRICK_WALL = Blocks.AIR;
 
     /* 屋顶 */
     // 黑瓦屋顶

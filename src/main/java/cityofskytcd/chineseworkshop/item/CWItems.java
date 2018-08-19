@@ -62,6 +62,9 @@ public class CWItems
     // 夯土
     @GameRegistry.ObjectHolder("rammed_earth")
     public static final Item RAMMED_EARTH = null;
+    // 胭脂砖
+    @GameRegistry.ObjectHolder("rouge_brick")
+    public static final Item ROUGE_BRICK = null;
 
     /* 灯 */
     // 石灯塔
@@ -144,6 +147,12 @@ public class CWItems
     // 安山岩路面阶梯
     @GameRegistry.ObjectHolder("rammed_earth_stairs")
     public static final Item RAMMED_EARTH_STAIRS = null;
+    // 石窗
+    @GameRegistry.ObjectHolder("stone_window")
+    public static final Item STONE_WINDOW = null;
+    // 夯土墙
+    @GameRegistry.ObjectHolder("rouge_brick_wall")
+    public static final Item ROUGE_BRICK_WALL = null;
 
     /* 屋顶 */
     // 黑瓦屋顶

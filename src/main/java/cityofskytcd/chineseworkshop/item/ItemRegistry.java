@@ -80,7 +80,10 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.FU),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH_WALL),
-                new ItemCWBlock(CWBlocks.RAMMED_EARTH_STAIRS));
+                new ItemCWBlock(CWBlocks.RAMMED_EARTH_STAIRS),
+                new ItemCWBlock(CWBlocks.STONE_WINDOW),
+                new ItemCWBlock(CWBlocks.ROUGE_BRICK),
+                new ItemCWBlock(CWBlocks.ROUGE_BRICK_WALL));
     }
 
     @SubscribeEvent
@@ -155,6 +158,9 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.RAMMED_EARTH);
         ModelUtil.mapItemModel(CWItems.RAMMED_EARTH_WALL);
         ModelUtil.mapItemModel(CWItems.RAMMED_EARTH_STAIRS);
+        ModelUtil.mapItemModel(CWItems.STONE_WINDOW);
+        ModelUtil.mapItemModel(CWItems.ROUGE_BRICK);
+        ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_WALL);
 
     }
 }

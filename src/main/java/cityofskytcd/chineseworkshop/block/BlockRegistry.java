@@ -77,7 +77,10 @@ public class BlockRegistry
         		new BlockCW("rammed_earth", Material.ROCK, 1.5F),
         		new BlockCWSmallFence("rammed_earth_wall", Material.ROCK, MapColor.STONE, 1.5F),
         		new BlockCWStairs("rammed_earth_stairs", Blocks.STONE.getDefaultState(), 1.5F),
-        		new BlockCWDoor("window_door", Material.WOOD, 1.5F));
+        		new BlockCWDoor("window_door", Material.WOOD, 1.5F),
+        		new BlockCWPane("stone_window", Material.ROCK, true, 1.0F),
+        		new BlockCW("rouge_brick", Material.ROCK, 1.5F),
+        		new BlockCWSmallFence("rouge_brick_wall", Material.ROCK, MapColor.STONE, 1.5F));
     }
 
     @SubscribeEvent

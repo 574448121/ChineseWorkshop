@@ -1,4 +1,4 @@
-chineseworkshop.mod.name=Chinese Workshop
+﻿chineseworkshop.mod.name=Chinese Workshop
 
 itemGroup.chineseworkshop.building_blocks=Chinese Workshop | Construction Blocks
 itemGroup.chineseworkshop.decorations=Chinese Workshop | Decoration
@@ -52,10 +52,13 @@ tile.chineseworkshop.black_roof_tile_edge_slab.n.name=Black Roof Tile Edge Slab
 tile.chineseworkshop.black_roof_tile_edge_slab.t.name=Black Roof Tile Edge Slab Top
 tile.chineseworkshop.black_clay_block.name=Block of Black Clay
 tile.chineseworkshop.black_tile_ridge_roof_edge_top.name=Black Roof Tile Ridge Edge Top
-tile.chineseworkshop.fu.name=Blessing
+tile.chineseworkshop.fu.name=福
 tile.chineseworkshop.rammed_earth.name=Rammed Earth
 tile.chineseworkshop.rammed_earth_wall.name=Rammed Earth Wall
 tile.chineseworkshop.rammed_earth_stairs.name=Rammed Earth Stairs
+tile.chineseworkshop.stone_window.name=Stone Window
+tile.chineseworkshop.rouge_brick.name=Rouge Brick
+tile.chineseworkshop.rouge_brick_wall.name=Rouge Brick Wall
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay
@@ -63,4 +66,4 @@ item.chineseworkshop.black_brick.name=Black Brick
 item.chineseworkshop.door.name=Chinese Style Wooden Door
 item.chineseworkshop.high_door.name=Chinese High Door
 item.chineseworkshop.wooden_window_door.name=Wooden Window Door
-item.chineseworkshop.window_door.name=Window Door
+item.chineseworkshop.window_door.name=windowed door
