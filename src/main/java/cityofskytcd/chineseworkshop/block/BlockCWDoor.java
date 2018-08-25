@@ -22,13 +22,22 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3i;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCWDoor extends BlockDoor
 {
+    protected static final AxisAlignedBB SOUTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 0.125D);
+    protected static final AxisAlignedBB NORTH_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.875D, 1.0D, 1.0D, 1.0D);
+    protected static final AxisAlignedBB WEST_AABB = new AxisAlignedBB(0.875D, 0.0D, 0.0D, 1.0D, 1.0D, 1.0D);
+    protected static final AxisAlignedBB EAST_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 0.125D, 1.0D, 1.0D);
+
     protected BlockCWDoor(String id, Material materialIn, float hardness)
     {
         super(materialIn);
@@ -45,6 +54,14 @@ public class BlockCWDoor extends BlockDoor
         else if (this == CWBlocks.HIGH_DOOR)
         {
             return CWItems.HIGH_DOOR;
+        }
+        else if (this == CWBlocks.WINDOW_DOOR)
+        {
+            return CWItems.WINDOW_DOOR;
+        }
+        else if (this == CWBlocks.WOODEN_WINDOW_DOOR)
+        {
+            return CWItems.WOODEN_WINDOW_DOOR;
         }
         return null;
     }
@@ -111,11 +128,45 @@ public class BlockCWDoor extends BlockDoor
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {
-        return new ItemStack(this.getItem());
+        Item item = getItem();
+        return item == null ? ItemStack.EMPTY : new ItemStack(item);
     }
+
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos)
+    {
+        state = state.getActualState(source, pos);
+        EnumFacing enumfacing = state.getValue(FACING);
+        boolean flag = !state.getValue(OPEN).booleanValue();
+        boolean flag1 = state.getValue(HINGE) == BlockDoor.EnumHingePosition.RIGHT;
+
+        AxisAlignedBB box;
+        switch (enumfacing)
+        {
+        case EAST:
+        default:
+            box = flag ? EAST_AABB : (flag1 ? NORTH_AABB : SOUTH_AABB);
+            break;
+        case SOUTH:
+            box = flag ? SOUTH_AABB : (flag1 ? EAST_AABB : WEST_AABB);
+            break;
+        case WEST:
+            box = flag ? WEST_AABB : (flag1 ? SOUTH_AABB : NORTH_AABB);
+            break;
+        case NORTH:
+            box = flag ? NORTH_AABB : (flag1 ? WEST_AABB : EAST_AABB);
+            break;
+        }
+
+        Vec3i facing = enumfacing.getDirectionVec();
+        float offset = 3 / 16F;
+        return box.offset(facing.getX() * offset, facing.getY(), facing.getZ() * offset);
+    }
+
+    @Override
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer()
     {
-    	return BlockRenderLayer.TRANSLUCENT;
+        return BlockRenderLayer.CUTOUT;
     }
 }
