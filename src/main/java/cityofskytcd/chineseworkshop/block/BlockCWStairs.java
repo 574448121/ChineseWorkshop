@@ -21,5 +21,6 @@ public class BlockCWStairs extends BlockStairs
         super(state);
         BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.BUILDING_BLOCKS);
         setSoundType(BlockUtil.getDefaultSound(state.getMaterial()));
+        useNeighborBrightness = true;
     }
 }
