@@ -80,7 +80,8 @@ public class BlockRegistry
         		new BlockCWDoor("window_door", Material.WOOD, 1.5F),
         		new BlockCWPane("stone_window", Material.ROCK, true, 1.0F),
         		new BlockCW("rouge_brick", Material.ROCK, 1.5F),
-        		new BlockCWSmallFence("rouge_brick_wall", Material.ROCK, MapColor.STONE, 1.5F));
+        		new BlockCWSmallFence("rouge_brick_wall", Material.ROCK, MapColor.STONE, 1.5F),
+        		new BlockCWLantern("palace_lantern", Material.WOOD, 0.5F));
     }
 
     @SubscribeEvent

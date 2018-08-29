@@ -58,6 +58,9 @@ public class CWBlocks
     // 白灯笼
     @GameRegistry.ObjectHolder("white_lantern")
     public static final Block WHITE_LANTERN = Blocks.AIR;
+    // 宫灯
+    @GameRegistry.ObjectHolder("palace_lantern")
+    public static final Block PALACE_LANTERN = Blocks.AIR;
 
     /* 装饰 */
     // 斗栱

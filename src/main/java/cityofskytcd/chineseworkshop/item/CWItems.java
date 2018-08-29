@@ -79,6 +79,9 @@ public class CWItems
     // 白灯笼
     @GameRegistry.ObjectHolder("white_lantern")
     public static final Item WHITE_LANTERN = null;
+    // 白灯笼
+    @GameRegistry.ObjectHolder("palace_lantern")
+    public static final Item PALACE_LANTERN = null;
 
     /* 装饰 */
     // 斗栱
