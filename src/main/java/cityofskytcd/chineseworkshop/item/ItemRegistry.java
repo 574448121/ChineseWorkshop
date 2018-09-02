@@ -77,6 +77,19 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE_TOP),
+                
+	            new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF),
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_J),
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_SLAB),
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_SLAB_TOP),
+                new ItemCWBlock(CWBlocks.YELLOW_ROOF_TILE_RIDGE),
+                new ItemCWBlockVariants(CWBlocks.YELLOW_ROOF_TILE_EDGE, new String[] { "n", "j" }),
+                new ItemCWBlockVariants(CWBlocks.YELLOW_ROOF_TILE_EDGE_SLAB, new String[] { "n", "t" }),
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_TOP),
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_EDGE),
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_J),
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP),
+                
                 new ItemCWBlock(CWBlocks.FU),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH_WALL),
@@ -153,8 +166,8 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_J);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_SLAB);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_ROOF_SLAB_TOP);
-        ModelUtil.mapItemModel(CWItems.THIN_WHITE_GRAY_WALL);
         ModelUtil.mapItemModel(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_TOP);
+        ModelUtil.mapItemModel(CWItems.THIN_WHITE_GRAY_WALL);
         ModelUtil.mapItemModel(CWItems.FU);
         ModelUtil.mapItemModel(CWItems.RAMMED_EARTH);
         ModelUtil.mapItemModel(CWItems.RAMMED_EARTH_WALL);
@@ -163,6 +176,26 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK);
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_WALL);
         ModelUtil.mapItemModel(CWItems.PALACE_LANTERN);
+        
+		ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF);
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF_J);
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF_SLAB);
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF_SLAB_TOP);
+        ModelUtil.mapItemModel(CWItems.YELLOW_ROOF_TILE_RIDGE);
+        ModelUtil.mapItemModel(CWItems.YELLOW_ROOF_TILE_EDGE);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.YELLOW_ROOF_TILE_EDGE,
+                1,
+                new ModelResourceLocation(CW.MODID + ":yellow_roof_tile_edge_j", "inventory"));
+        ModelUtil.mapItemModel(CWItems.YELLOW_ROOF_TILE_EDGE_SLAB);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.YELLOW_ROOF_TILE_EDGE_SLAB,
+                1,
+                new ModelResourceLocation(CW.MODID + ":yellow_roof_tile_edge_slab_t", "inventory"));
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_TOP);
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE);
+		ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_J);
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP);
 
     }
 }
