@@ -25,6 +25,10 @@ public class ItemCWMaterial extends ItemCW
             return "item." + CW.MODID + ".black_clay";
         case 1:
             return "item." + CW.MODID + ".black_brick";
+        case 2:
+            return "item." + CW.MODID + ".yellow_clay";
+        case 3:
+            return "item." + CW.MODID + ".yellow_brick";
         }
         return "item." + CW.MODID + ".unknown_material";
     }

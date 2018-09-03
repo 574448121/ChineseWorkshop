@@ -113,6 +113,14 @@ public class ItemRegistry
                 CWItems.MATERIAL,
                 1,
                 new ModelResourceLocation(CW.MODID + ":black_brick", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.MATERIAL,
+                2,
+                new ModelResourceLocation(CW.MODID + ":yellow_clay", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.MATERIAL,
+                3,
+                new ModelResourceLocation(CW.MODID + ":yellow_brick", "inventory")); 
         ModelUtil.mapItemModel(CWItems.DOOR);
         ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
         ModelUtil.mapItemModel(CWItems.WOODEN_WINDOW_DOOR);
