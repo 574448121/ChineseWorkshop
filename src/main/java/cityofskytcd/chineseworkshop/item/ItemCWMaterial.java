@@ -29,8 +29,9 @@ public class ItemCWMaterial extends ItemCW
             return "item." + CW.MODID + ".yellow_clay";
         case 3:
             return "item." + CW.MODID + ".yellow_brick";
+        default:
+            return "item." + CW.MODID + ".unknown_material";
         }
-        return "item." + CW.MODID + ".unknown_material";
     }
 
     @Override
@@ -38,7 +39,7 @@ public class ItemCWMaterial extends ItemCW
     {
         if (this.isInCreativeTab(tab))
         {
-            for (int i = 0; i < 2; ++i)
+            for (int i = 0; i < 4; ++i)
             {
                 items.add(new ItemStack(this, 1, i));
             }
