@@ -237,14 +237,13 @@ public class HudHandler
         {
             RenderHelper.enableGUIStandardItemLighting();
             GlStateManager.translate(0, -5, 150);
-            GlStateManager.scale(1.0F, -1.0F, 1.0F);
-            GlStateManager.scale(10, 10, 10);
+            GlStateManager.scale(10, -10, 10);
             GlStateManager.alphaFunc(516, 0.1F);
             GlStateManager.pushMatrix();
             GlStateManager.enableRescaleNormal();
             GlStateManager.enableAlpha();
             GlStateManager.rotate(30F, 1F, 0, 0F);
-            GlStateManager.rotate(Minecraft.getSystemTime() / 15F, 0, 1, 0F);
+            GlStateManager.rotate(Minecraft.getSystemTime() % 3600 / 10, 0, 1, 0F);
             RenderHelper.enableStandardItemLighting();
             mc.getRenderItem().renderItem(stack, TransformType.NONE);
             GlStateManager.disableAlpha();
