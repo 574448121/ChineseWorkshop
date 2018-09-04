@@ -1,3 +1,6 @@
+1.2.5
+Fix lag in HUD
+
 1.2.4
 Add wooden window door, windowed door, 福, rammed earth, rammed earth wall and rammed earth stairs
 
