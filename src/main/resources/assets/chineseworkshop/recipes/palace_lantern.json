@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:palace_lantern",
+    "count": 1
+  },
+  "pattern": [
+    "/+/",
+    ".-.",
+    "/*/"
+  ],
+  "key": {
+    "/": {
+      "ore" : "stickWood",
+      "type": "forge:ore_dict"
+    },
+	"*": {
+      "item": "minecraft:carpet",
+      "data": 14
+    },
+	"-": {
+      "ore" : "torch",
+      "type": "forge:ore_dict"
+    },
+	"+": {
+      "ore" : "slabWood",
+      "type": "forge:ore_dict"
+    },
+    ".": {
+      "ore" : "paper",
+      "type": "forge:ore_dict"
+    }
+  }
+}

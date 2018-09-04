@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:material",
+    "data": 2,
+    "count": 8
+  },
+  "pattern": [
+    "ccc",
+    "cdc",
+    "ccc"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:clay_ball"
+    },
+    "d": {
+      "ore" : "dyeYellow",
+      "type": "forge:ore_dict"
+    }
+  }
+}

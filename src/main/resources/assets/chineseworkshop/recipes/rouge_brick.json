@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+   "result": {
+    "item": "chineseworkshop:rouge_brick"
+  },
+  "pattern": [
+    "ccc",
+    "cdc",
+    "ccc"
+  ],
+  "key": {
+    "d": {
+      "ore" : "dyeBlack",
+      "type": "forge:ore_dict"
+    },
+    "c": {
+      "ore" : "brickBlock",
+      "type": "forge:ore_dict"
+    }
+  }
+}
