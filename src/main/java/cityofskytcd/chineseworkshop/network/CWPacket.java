@@ -1,7 +1,8 @@
 package cityofskytcd.chineseworkshop.network;
 
 import io.netty.buffer.ByteBuf;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -9,6 +10,10 @@ public interface CWPacket
 {
     void writeDataTo(ByteBuf buffer);
 
+    void readDataFrom(ByteBuf buffer);
+
     @SideOnly(Side.CLIENT)
-    void readDataFrom(ByteBuf buffer, EntityPlayer player);
+    void handleClient(EntityPlayerSP player);
+
+    void handleServer(EntityPlayerMP player);
 }

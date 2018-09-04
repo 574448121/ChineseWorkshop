@@ -5,7 +5,8 @@ import com.google.common.collect.ImmutableList;
 import cityofskytcd.chineseworkshop.library.ItemDefinition;
 import cityofskytcd.chineseworkshop.library.Selections;
 import io.netty.buffer.ByteBuf;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
@@ -31,10 +32,20 @@ public class WheelMovePacket implements CWPacket
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
-    public void readDataFrom(ByteBuf buffer, EntityPlayer player)
+    public void readDataFrom(ByteBuf buffer)
     {
         index = buffer.readInt();
+    }
+
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void handleClient(EntityPlayerSP player)
+    {
+    }
+
+    @Override
+    public void handleServer(EntityPlayerMP player)
+    {
         ItemStack held = player.getHeldItemMainhand();
         if (held.isEmpty() || index < 0)
         {
@@ -53,6 +64,6 @@ public class WheelMovePacket implements CWPacket
             stack.setTagCompound(held.getTagCompound());
             player.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, stack);
         }
-
     }
+
 }
