@@ -34,8 +34,9 @@ public class CommonProxy
     {
         Selections.init();
         CWNetworkChannel.INSTANCE.register(WheelMovePacket.class);
-        GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 0), new ItemStack(CWItems.MATERIAL, 1, 1), 0.1F);
+        GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 0), new ItemStack(CWItems.MATERIAL, 3, 1), 0.1F);
         GameRegistry.addSmelting(CWItems.BLACK_CLAY_BLOCK, new ItemStack(Blocks.STAINED_HARDENED_CLAY, 1, 15), 0.1F);
+        GameRegistry.addSmelting(new ItemStack(CWItems.MATERIAL, 1, 2), new ItemStack(CWItems.MATERIAL, 3, 3), 0.1F);
     }
 
     @OverridingMethodsMustInvokeSuper

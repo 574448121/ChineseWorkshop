@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "chineseworkshop:palace_lantern"
+    ]
+  },
+  "criteria": {
+    "has_torch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "type": "forge:ore_dict",
+            "ore": "torch"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "chineseworkshop:palace_lantern"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_torch",
+      "has_the_recipe"
+    ]
+  ]
+}
