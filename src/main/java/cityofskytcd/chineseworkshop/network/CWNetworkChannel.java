@@ -8,7 +8,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2IntArrayMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.NetHandlerPlayServer;
 import net.minecraft.network.PacketBuffer;
@@ -38,14 +38,14 @@ public final class CWNetworkChannel
     @SubscribeEvent
     public void onServerPacketIncoming(FMLNetworkEvent.ServerCustomPacketEvent event)
     {
-        decodeData(event.getPacket().payload(), ((NetHandlerPlayServer) event.getHandler()).player);
+        handleOnServer(decodeData(event.getPacket().payload()), ((NetHandlerPlayServer) event.getHandler()).player);
     }
 
-    @SubscribeEvent
     @SideOnly(Side.CLIENT)
+    @SubscribeEvent
     public void onClientPacketIncoming(FMLNetworkEvent.ClientCustomPacketEvent event)
     {
-        decodeData(event.getPacket().payload(), Minecraft.getMinecraft().player);
+        handleOnClient(decodeData(event.getPacket().payload()), Minecraft.getMinecraft().player);
     }
 
     public void sendToAll(CWPacket packet)
@@ -100,20 +100,42 @@ public final class CWNetworkChannel
         }
     }
 
-    private void decodeData(ByteBuf buffer, EntityPlayer player)
+    private CWPacket decodeData(ByteBuf buffer)
     {
         final int index = buffer.readInt();
         CWPacket packet = this.getByIndex(index);
         if (packet == null)
         {
             CW.logger.error("Receiving malformed packet");
-            return;
+            return null;
         }
+        packet.readDataFrom(buffer);
+        return packet;
+    }
+
+    @SideOnly(Side.CLIENT)
+    private void handleOnClient(CWPacket packet, EntityPlayerSP player)
+    {
+        Minecraft.getMinecraft().addScheduledTask(() ->
+        {
+            try
+            {
+                packet.handleClient(player);
+            }
+            catch (Exception e)
+            {
+                CW.logger.catching(e);
+            }
+        });
+    }
+
+    private void handleOnServer(CWPacket packet, EntityPlayerMP player)
+    {
         FMLCommonHandler.instance().getMinecraftServerInstance().addScheduledTask(() ->
         {
             try
             {
-                packet.readDataFrom(buffer, player);
+                packet.handleServer(player);
             }
             catch (Exception e)
             {
