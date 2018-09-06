@@ -1,7 +1,8 @@
 {
   "type": "forge:ore_shaped",
-   "result": {
-    "item": "chineseworkshop:rouge_brick"
+  "result": {
+    "item": "chineseworkshop:rouge_brick",
+	"count": 16
   },
   "pattern": [
     "ccc",
@@ -14,8 +15,7 @@
       "type": "forge:ore_dict"
     },
     "c": {
-      "ore" : "brickBlock",
-      "type": "forge:ore_dict"
+      "item": "minecraft:brick_block"
     }
   }
 }

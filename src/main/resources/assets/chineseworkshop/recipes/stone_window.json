@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:stone_window",
+	"count": 3
+  },
+  "pattern": [
+    "d d",
+    "d d",
+    "d d"
+  ],
+  "key": {
+    "d": {
+      "ore" : "stoneDiorite",
+      "type": "forge:ore_dict"
+    }
+  }
+}
