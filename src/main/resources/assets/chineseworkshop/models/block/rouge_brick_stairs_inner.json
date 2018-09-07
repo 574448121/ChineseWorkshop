@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "top": "chineseworkshop:blocks/rouge_brick",
+    "bottom": "chineseworkshop:blocks/rouge_brick",
+    "side": "chineseworkshop:blocks/rouge_brick"
+  }
+}

@@ -104,7 +104,9 @@ public class BlockRegistry
                 new BlockCWStairs("andesite_pavement_stairs", Blocks.STONE.getDefaultState(), 1.5F),
                 new BlockCWThinWall("fu", Material.WOOD, 1.0F),
                 new BlockCWStairs("rammed_earth_stairs", Blocks.STONE.getDefaultState(), 1.5F),
-                new BlockCWPane("stone_window", Material.ROCK, true, 1.0F));
+                new BlockCWPane("stone_window", Material.ROCK, true, 1.0F),
+                new BlockCWStairs("rouge_brick_stairs", Blocks.STONE.getDefaultState(), 1.5F),
+                new BlockCWStairs("black_brick_wall_stairs", Blocks.STONE.getDefaultState(), 1.5F));
     }
 
     @SubscribeEvent

@@ -73,6 +73,8 @@ tile.chineseworkshop.stone_window.name=Diorite Window
 tile.chineseworkshop.rouge_brick.name=Rouge Brick
 tile.chineseworkshop.rouge_brick_wall.name=Rouge Brick Wall
 tile.chineseworkshop.palace_lantern.name=Palace Lantern
+tile.chineseworkshop.rouge_brick_stairs.name=Rouge Brick Stairs
+tile.chineseworkshop.black_brick_wall_stairs.name=Black Brick Wall Stairs
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay

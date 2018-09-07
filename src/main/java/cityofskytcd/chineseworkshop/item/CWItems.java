@@ -156,6 +156,12 @@ public class CWItems
     // 夯土墙
     @GameRegistry.ObjectHolder("rouge_brick_wall")
     public static final Item ROUGE_BRICK_WALL = null;
+    // 安山岩路面阶梯
+    @GameRegistry.ObjectHolder("rouge_brick_stairs")
+    public static final Item ROUGE_BRICK_STAIRS = null;
+    // 安山岩路面阶梯
+    @GameRegistry.ObjectHolder("black_brick_wall_stairs")
+    public static final Item BLACK_BRICK_WALL_STAIRS = null;
 
     /* 屋顶 */
     // 黑瓦屋顶

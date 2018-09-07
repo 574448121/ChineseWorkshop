@@ -141,6 +141,12 @@ public class CWBlocks
     // 胭脂砖墙
     @GameRegistry.ObjectHolder("rouge_brick_wall")
     public static final Block ROUGE_BRICK_WALL = Blocks.AIR;
+    // 胭脂砖阶梯
+    @GameRegistry.ObjectHolder("rouge_brick_stairs")
+    public static final Block ROUGE_BRICK_STAIRS = Blocks.AIR;
+    // 黑砖墙阶梯
+    @GameRegistry.ObjectHolder("black_brick_wall_stairs")
+    public static final Block BLACK_BRICK_WALL_STAIRS = Blocks.AIR;
 
     /* 屋顶 */
     // 黑瓦屋顶

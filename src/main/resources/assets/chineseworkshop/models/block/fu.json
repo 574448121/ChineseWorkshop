@@ -7,9 +7,9 @@
 	"elements": [ 	 
 		{
 			"__comment": "Element",
-			"from": [ 5, -3, 15 ],
+			"from": [ 5, -3, 14 ],
 			"to": [ 16, 8, 16 ],
-			"rotation": { "origin": [ 16, 8, 15 ], "axis": "z", "angle": -45 },
+			"rotation": { "origin": [ 16, 8, 14 ], "axis": "z", "angle": -45 },
 			"faces": {
 				"down": { "uv": [ 0, 15, 16, 16 ], "texture": "#particle", "rotation": 180 },
 				"up": { "uv": [ 0, 0, 16, 1 ], "texture": "#particle", "rotation": 180 },
@@ -35,7 +35,7 @@
 			"scale":  [ 0.4, 0.4, 0.4 ]
 		},
 		"gui": {
-			"rotation":  [ 30, 225, 0 ],	
+			"rotation":  [ 30, 225, 0 ],
 			"scale":  [ 1, 1, 0.1 ]
 		},
 		"ground": {

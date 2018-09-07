@@ -73,6 +73,8 @@ tile.chineseworkshop.stone_window.name=石窗
 tile.chineseworkshop.rouge_brick.name=胭脂砖
 tile.chineseworkshop.rouge_brick_wall.name=胭脂砖墙
 tile.chineseworkshop.palace_lantern.name=宫灯
+tile.chineseworkshop.rouge_brick_stairs.name=胭脂砖楼梯
+tile.chineseworkshop.black_brick_wall_stairs.name=黑砖墙楼梯
 
 item.chineseworkshop.logo.name=调试工具
 item.chineseworkshop.black_clay.name=黑粘土
