@@ -1,0 +1,90 @@
+{
+	"__comment": "Designed by CityOfSkyTCD",
+	"textures": {
+		"particle": "blocks/black_tile",
+		"texture": "blocks/tree_altar_b",
+		"white_gray_wall": "blocks/oak_wall"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Element",
+			"from": [ 13, 2, 9 ],
+			"to": [ 16, 5, 20 ],
+			"rotation": { "origin": [ 13, 5, 9 ], "axis": "x", "angle": 22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 3, 11 ], "texture": "#texture" },
+				"up": { "uv": [ 0, 0, 3, 11 ], "texture": "#texture" },
+				"north": { "uv": [ 1, 0, 2.5, 3 ], "texture": "#texture" },
+				"south": { "uv": [ 1, 0, 2.5, 3 ], "texture": "#texture" },
+				"west": { "uv": [ 1, 0, 4, 11 ], "texture": "#texture", "rotation": 90 },
+				"east": { "uv": [ 1, 0, 4, 11 ], "texture": "#texture", "rotation": 90 }
+			}
+		},
+		{
+			"__comment": "Element",
+			"from": [ 13, -2.5, -3 ],
+			"to": [ 16, 0.5, 8 ],
+			"rotation": { "origin": [ 13, 0.5, -3 ], "axis": "x", "angle": -22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 3, 11 ], "texture": "#texture" },
+				"up": { "uv": [ 0, 0, 3, 11 ], "texture": "#texture" },
+				"north": { "uv": [ 2, 2, 3.5, 5 ], "texture": "#texture" },
+				"south": { "uv": [ 2, 2, 3.5, 5 ], "texture": "#texture" },
+				"west": { "uv": [ 0, 0, 3, 11 ], "texture": "#texture", "rotation": 90 },
+				"east": { "uv": [ 1, 0, 4, 11 ], "texture": "#texture", "rotation": 90 }
+			}
+		},
+		{
+			"__comment": "Element",
+			"from": [ 8.5, 2, 5 ],
+			"to": [ 15.998, 8.5, 11 ],
+			"faces": {
+				"down": { "uv": [ 6, 0, 11, 11 ], "texture": "#white_gray_wall", "rotation": 90 },
+				"up": { "uv": [ 6, 0, 11, 11 ], "texture": "#white_gray_wall", "rotation": 90 },
+				"north": { "uv": [ 0, 0, 5, 11 ], "texture": "#white_gray_wall", "rotation": 90 },
+				"south": { "uv": [ 0, 0, 5, 11 ], "texture": "#white_gray_wall", "rotation": 90 },
+				"west": { "uv": [ 0, 0, 5, 6.5 ], "texture": "#white_gray_wall" },
+				"east": { "uv": [ 0, 0, 5, 6.5 ], "texture": "#white_gray_wall" }
+			}
+		},
+		{
+			"__comment": "Element",
+			"from": [ 15.0625, 0, 1.5 ],
+			"to": [ 16, 2, 14.5 ],
+			"faces": {
+				"down": { "uv": [ 0.9375, 14.5, 0, 1.5 ], "texture": "#white_gray_wall" },
+				"up": { "uv": [ 15.0625, 1.5, 16, 14.5 ], "texture": "#white_gray_wall" },
+				"north": { "uv": [ 0, 14, 0.9375, 16 ], "texture": "#texture" },
+				"south": { "uv": [ 15.0625, 14, 16, 16 ], "texture": "#white_gray_wall" },
+				"west": { "uv": [ 1.5, 14, 14.5, 16 ], "texture": "#white_gray_wall" },
+				"east": { "uv": [ 1.5, 14, 14.5, 16 ], "texture": "#white_gray_wall" }
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation":  [ 75, 45, 0 ],
+			"translation":  [ 0, 2.5, 0 ],
+			"scale":  [ 0.375, 0.375, 0.375 ]
+		},
+		"firstperson_righthand": {
+			"rotation":  [ 0, 45, 0 ],
+			"scale":  [ 0.4, 0.4, 0.4 ]
+		},
+		"firstperson_lefthand": {
+			"rotation":  [ 0, 225, 0 ],
+			"scale":  [ 0.4, 0.4, 0.4 ]
+		},
+		"gui": {
+			"rotation":  [ 30, 45, 0 ],
+			"scale":  [ 0.625, 0.625, 0.625 ]
+		},
+		"ground": {
+			"translation":  [ 0, 3, 0 ],
+			"scale":  [ 0.25, 0.25, 0.25 ]
+		},
+		"fixed": {
+			"scale":  [ 0.5, 0.5, 0.5 ]
+		}
+	}
+}

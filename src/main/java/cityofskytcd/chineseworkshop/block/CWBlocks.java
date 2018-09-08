@@ -198,6 +198,10 @@ public class CWBlocks
     // 黄瓦屋脊边缘top
     @GameRegistry.ObjectHolder("yellow_tile_ridge_roof_edge_top")
     public static final Block YELLOW_TILE_RIDGE_ROOF_EDGE_TOP = Blocks.AIR;
+    
+    // 茅草屋顶
+    @GameRegistry.ObjectHolder("thatch_roof")
+    public static final Block THATCH_ROOF = Blocks.AIR;
 
     /* 薄墙 */
     // 薄白灰墙

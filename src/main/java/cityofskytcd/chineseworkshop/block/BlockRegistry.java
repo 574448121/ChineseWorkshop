@@ -63,6 +63,8 @@ public class BlockRegistry
                 new BlockCWRoofSlab("yellow_tile_roof_slab", Material.ROCK, 1.5F),
                 new BlockCWRoof("yellow_tile_roof_slab_top", Material.ROCK, 1.5F),
                 new BlockCWTFace("yellow_tile_ridge_roof_edge_top", Material.ROCK, 1.5F),
+                
+                new BlockCWRoof("thatch_roof", Material.ROCK, 1.5F),
 
                 // 门
                 new BlockCWDoor("door", Material.WOOD, 1.5F),

@@ -213,6 +213,10 @@ public class CWItems
     // 黄瓦屋脊边缘top
     @GameRegistry.ObjectHolder("yellow_tile_ridge_roof_edge_top")
     public static final Item YELLOW_TILE_RIDGE_ROOF_EDGE_TOP = null;
+    
+    // 茅草屋顶
+    @GameRegistry.ObjectHolder("thatch_roof")
+    public static final Item THATCH_ROOF = null;
 
     /* 薄墙 */
     // 薄白灰墙

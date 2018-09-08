@@ -1,7 +1,8 @@
 {
   "type": "forge:ore_shapeless",
   "result": {
-    "item": "chineseworkshop:red_pillar"
+    "item": "chineseworkshop:red_pillar",
+    "count": 3
   },
   "ingredients": [
     {
