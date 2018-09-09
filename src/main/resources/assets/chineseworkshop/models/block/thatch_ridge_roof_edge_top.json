@@ -2,9 +2,9 @@
 	"__comment": "Designed by CityOfSkyTCD with %",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "blocks/tree_altar_b",
-		"texture": "blocks/tree_altar_b",
-		"white_gray_wall": "blocks/oak_wall"
+		"particle": "chineseworkshop:blocks/tree_altar_b",
+		"texture": "chineseworkshop:blocks/tree_altar_b",
+		"white_gray_wall": "chineseworkshop:blocks/oak_wall"
 	},
 	"elements": [ 	 
 		{

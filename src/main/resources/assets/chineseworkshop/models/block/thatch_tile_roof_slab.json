@@ -2,9 +2,9 @@
 	"__comment": "Designed by CityOfSkyTCD",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "blocks/tree_altar_b",
-		"texture": "blocks/tree_altar_b",
-		"wood": "blocks/planks_oak"
+		"particle": "chineseworkshop:blocks/tree_altar_b",
+		"texture": "chineseworkshop:blocks/tree_altar_b",
+		"wood": "minecraft:blocks/planks_oak"
 	},
 	"elements": [ 	 
 		{
@@ -14,8 +14,8 @@
 			"faces": {
 				"down": { "uv": [ 0, 0, 16, 10.5 ], "texture": "#texture" },
 				"up": { "uv": [ 0, 0, 16, 10.5 ], "texture": "#texture" },
-				"north": { "uv": [ 1.5, 3.5, 3, 6.5 ], "texture": "#texture" },
-				"south": { "uv": [ 1.5, 3.5, 3, 6.5 ], "texture": "#texture" },
+				"north": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" },
+				"south": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" },
 				"west": { "uv": [ 1, 0, 4, 11 ], "texture": "#texture", "rotation": 90 },
 				"east": { "uv": [ 1, 0, 4, 11 ], "texture": "#texture", "rotation": 90 }
 			}
@@ -28,8 +28,8 @@
 			"faces": {
 				"down": { "uv": [ 0, 0, 16, 11 ], "texture": "#texture" },
 				"up": { "uv": [ 0, 0, 16, 11 ], "texture": "#texture" },
-				"north": { "uv": [ 1, 0, 2.5, 3 ], "texture": "#texture" },
-				"south": { "uv": [ 1, 0, 2.5, 3 ], "texture": "#texture" },
+				"north": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" },
+				"south": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" },
 				"west": { "uv": [ 1, 0, 4, 11 ], "texture": "#texture", "rotation": 90 },
 				"east": { "uv": [ 0, 0, 3, 11 ], "texture": "#texture", "rotation": 90 }
 			}
@@ -50,27 +50,41 @@
 		{
 			"__comment": "Element",
 			"from": [ 1.5, 2, 0 ],
-			"to": [ 6.5, 5.5, 2.5 ],
+			"to": [ 6.5, 3, 2.5 ],
 			"faces": {
 				"down": { "uv": [ 14.5, 2.5, 9.5, 0 ], "texture": "#wood" },
 				"up": { "uv": [ 1.5, 0, 6.5, 2.5 ], "texture": "#wood" },
-				"north": { "uv": [ 9.5, 10.5, 14.5, 14 ], "texture": "#wood" },
-				"south": { "uv": [ 1.5, 10.5, 6.5, 14 ], "texture": "#wood" },
-				"west": { "uv": [ 0, 10.5, 2.5, 14 ], "texture": "#wood" },
-				"east": { "uv": [ 13.5, 10.5, 16, 14 ], "texture": "#wood" }
+				"north": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" },
+				"south": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" },
+				"west": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" },
+				"east": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" }
 			}
 		},
 		{
 			"__comment": "Element",
 			"from": [ 9.5, 2, 0 ],
-			"to": [ 14.5, 5.5, 2.5 ],
+			"to": [ 14.5, 3, 2.5 ],
 			"faces": {
 				"down": { "uv": [ 6.5, 2.5, 1.5, 0 ], "texture": "#wood" },
 				"up": { "uv": [ 9.5, 0, 14.5, 2.5 ], "texture": "#wood" },
-				"north": { "uv": [ 1.5, 10.5, 6.5, 14 ], "texture": "#wood" },
-				"south": { "uv": [ 9.5, 10.5, 14.5, 14 ], "texture": "#wood" },
-				"west": { "uv": [ 0, 10.5, 2.5, 14 ], "texture": "#wood" },
-				"east": { "uv": [ 13.5, 10.5, 16, 14 ], "texture": "#wood" }
+				"north": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" },
+				"south": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" },
+				"west": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" },
+				"east": { "uv": [ 0, 0, 4.5, 1 ], "texture": "#wood" }
+			}
+		},
+		{
+			"__comment": "Box6",
+			"from": [ 7, 1.5, 7.5 ],
+			"to": [ 8.5, 3.5, 21.5 ],
+			"rotation": { "origin": [ 7, 1.5, 7.5 ], "axis": "x", "angle": 22.5 },
+			"faces": {
+				"down": { "uv": [ 1, 1.5, 3, 16 ], "texture": "#wood" },
+				"up": { "uv": [ 1, 0, 3, 14.5 ], "texture": "#wood" },
+				"north": { "uv": [ 13, 14, 15, 16 ], "texture": "#wood" },
+				"south": { "uv": [ 1, 14, 3, 16 ], "texture": "#wood" },
+				"west": { "uv": [ 0, 14, 14.5, 16 ], "texture": "#wood" },
+				"east": { "uv": [ 1.5, 14, 16, 16 ], "texture": "#wood" }
 			}
 		}
 	],

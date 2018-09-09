@@ -65,7 +65,11 @@ public class BlockRegistry
                 new BlockCWTFace("yellow_tile_ridge_roof_edge_top", Material.ROCK, 1.5F),
                 
                 new BlockCWRoof("thatch_roof", Material.ROCK, 1.5F),
-
+                new BlockCWRoofTileRidge("thatch_tile_ridge_roof", Material.ROCK, 1.0F),
+                new BlockCWRoofTileRidge("thatch_tile_ridge_roof_top", Material.ROCK, 1.5F),
+                new BlockCWRoofSlab("thatch_tile_roof_slab", Material.ROCK, 1.5F),
+                new BlockCWRoof("thatch_tile_roof_slab_top", Material.ROCK, 1.5F),
+                
                 // 门
                 new BlockCWDoor("door", Material.WOOD, 1.5F),
                 new BlockCWDoor("wooden_window_door", Material.WOOD, 1.5F),
@@ -134,6 +138,12 @@ public class BlockRegistry
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
         ModelLoader.setCustomStateMapper(
                 CWBlocks.YELLOW_TILE_RIDGE_ROOF_TOP,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.THATCH_TILE_RIDGE_ROOF,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 

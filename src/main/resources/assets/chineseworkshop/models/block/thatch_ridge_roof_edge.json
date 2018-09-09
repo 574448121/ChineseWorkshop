@@ -1,8 +1,8 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
 	"textures": {
-		"particle": "blocks/black_tile",
-		"texture": "blocks/tree_altar_b",
+		"particle": "chineseworkshop:blocks/black_tile",
+		"texture": "chineseworkshop:blocks/tree_altar_b",
 		"white_gray_wall": "blocks/oak_wall"
 	},
 	"elements": [ 	 

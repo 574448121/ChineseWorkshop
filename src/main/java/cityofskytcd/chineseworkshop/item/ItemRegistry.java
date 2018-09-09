@@ -91,6 +91,10 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP),
                 
                 new ItemCWBlock(CWBlocks.THATCH_ROOF),
+                new ItemCWBlock(CWBlocks.THATCH_TILE_ROOF_SLAB),
+                new ItemCWBlock(CWBlocks.THATCH_TILE_ROOF_SLAB_TOP),
+                new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF),
+                new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP),
                 
                 new ItemCWBlock(CWBlocks.FU),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH),
@@ -210,6 +214,10 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP);
         
         ModelUtil.mapItemModel(CWItems.THATCH_ROOF);
+        ModelUtil.mapItemModel(CWItems.THATCH_TILE_ROOF_SLAB);
+        ModelUtil.mapItemModel(CWItems.THATCH_TILE_ROOF_SLAB_TOP);
+        ModelUtil.mapItemModel(CWItems.THATCH_TILE_RIDGE_ROOF);
+        ModelUtil.mapItemModel(CWItems.THATCH_TILE_RIDGE_ROOF_TOP);
         
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_STAIRS);
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL_STAIRS);

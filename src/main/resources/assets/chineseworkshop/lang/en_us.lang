@@ -76,6 +76,10 @@ tile.chineseworkshop.palace_lantern.name=Palace Lantern
 tile.chineseworkshop.rouge_brick_stairs.name=Rouge Brick Stairs
 tile.chineseworkshop.black_brick_wall_stairs.name=Black Brick Wall Stairs
 tile.chineseworkshop.thatch_roof.name=Thatch Roof
+tile.chineseworkshop.thatch_tile_ridge_roof.name=Thatch Tile Ridge Roof
+tile.chineseworkshop.thatch_tile_ridge_roof_top.name=Thatch Tile Ridge Roof TOP
+tile.chineseworkshop.thatch_tile_roof_slab.name=Thatch Tile Roof Slab
+tile.chineseworkshop.thatch_tile_roof_slab_top.name=Thatch Tile Roof Slab TOP
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay
