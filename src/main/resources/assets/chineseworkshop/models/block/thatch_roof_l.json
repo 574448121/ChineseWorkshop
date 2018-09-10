@@ -2,8 +2,8 @@
 	"__comment": "Designed by CityOfSkyTCD",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/tree_altar_b",
-		"texture": "chineseworkshop:blocks/tree_altar_b",
+		"particle": "chineseworkshop:blocks/thatch",
+		"texture": "chineseworkshop:blocks/thatch",
 		"wood": "minecraft:blocks/planks_oak"
 	},
 	"elements": [ 	 

@@ -2,8 +2,8 @@
 	"__comment": "Designed by CityOfSkyTCD",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/tree_altar_b",
-		"texture": "chineseworkshop:blocks/tree_altar_b",
+		"particle": "chineseworkshop:blocks/thatch",
+		"texture": "chineseworkshop:blocks/thatch",
 		"wood": "minecraft:blocks/planks_oak"
 	},
 	"elements": [ 	 
@@ -98,6 +98,19 @@
 				"south": { "uv": [ 1, 14, 3, 16 ], "texture": "#wood" },
 				"west": { "uv": [ 0, 14, 13, 16 ], "texture": "#wood" },
 				"east": { "uv": [ 3, 14, 16, 16 ], "texture": "#wood" }
+			}
+		},
+		{
+			"__comment": "Box8",
+			"from": [ 7, 11.5, 3.5 ],
+			"to": [ 9, 13, 14.5 ],
+			"faces": {
+				"down": { "uv": [ 7, 1.5, 9, 12.5 ], "texture": "#wood" },
+				"up": { "uv": [ 7, 3.5, 9, 14.5 ], "texture": "#wood" },
+				"north": { "uv": [ 7, 3, 9, 4.5 ], "texture": "#wood" },
+				"south": { "uv": [ 7, 3, 9, 4.5 ], "texture": "#wood" },
+				"west": { "uv": [ 3.5, 3, 14.5, 4.5 ], "texture": "#wood" },
+				"east": { "uv": [ 1.5, 3, 12.5, 4.5 ], "texture": "#wood" }
 			}
 		}
 	],

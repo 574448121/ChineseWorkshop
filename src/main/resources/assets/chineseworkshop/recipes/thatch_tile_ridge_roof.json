@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:thatch_tile_ridge_roof",
+    "count": 6
+  },
+  "pattern": [
+    " * ",
+    "*/*"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:wheat"
+    },
+	"/": {
+      "ore" : "stickWood",
+      "type": "forge:ore_dict"
+    }
+  }
+}
