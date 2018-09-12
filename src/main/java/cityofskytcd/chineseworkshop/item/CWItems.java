@@ -162,6 +162,9 @@ public class CWItems
     // 安山岩路面阶梯
     @GameRegistry.ObjectHolder("black_brick_wall_stairs")
     public static final Item BLACK_BRICK_WALL_STAIRS = null;
+    // 石窗
+    @GameRegistry.ObjectHolder("wooden_window")
+    public static final Item WOODEN_WINDOW = null;
 
     /* 屋顶 */
     // 黑瓦屋顶
