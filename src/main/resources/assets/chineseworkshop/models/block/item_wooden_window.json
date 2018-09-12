@@ -1,0 +1,7 @@
+{
+	"parent": "chineseworkshop:block/item_stone_window",
+	"textures": {
+		"particle": "chineseworkshop:blocks/wooden_block",
+		"texture": "chineseworkshop:blocks/wooden_block"
+    }
+}

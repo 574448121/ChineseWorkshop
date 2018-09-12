@@ -80,6 +80,7 @@ tile.chineseworkshop.thatch_tile_ridge_roof.name=Thatch Tile Ridge Roof
 tile.chineseworkshop.thatch_tile_ridge_roof_top.name=Thatch Tile Ridge Roof TOP
 tile.chineseworkshop.thatch_tile_roof_slab.name=Thatch Tile Roof Slab
 tile.chineseworkshop.thatch_tile_roof_slab_top.name=Thatch Tile Roof Slab TOP
+tile.chineseworkshop.wooden_window.name=Wooden Window
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay
