@@ -147,10 +147,7 @@ public class CWBlocks
     // 黑砖墙阶梯
     @GameRegistry.ObjectHolder("black_brick_wall_stairs")
     public static final Block BLACK_BRICK_WALL_STAIRS = Blocks.AIR;
-	// 石窗
-    @GameRegistry.ObjectHolder("wooden_window")
-    public static final Block WOODEN_WINDOW = Blocks.AIR;
-    
+
     /* 屋顶 */
     // 黑瓦屋顶
     @GameRegistry.ObjectHolder("black_tile_roof")
