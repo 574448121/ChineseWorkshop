@@ -63,6 +63,10 @@ public class BlockCWDoor extends BlockDoor
         {
             return CWItems.WOODEN_WINDOW_DOOR;
         }
+        else if (this == CWBlocks.CHINESE_OAK_DOOR)
+        {
+            return CWItems.CHINESE_OAK_DOOR;
+        }
         return null;
     }
 
