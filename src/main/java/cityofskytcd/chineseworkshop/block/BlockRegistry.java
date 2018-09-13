@@ -76,6 +76,7 @@ public class BlockRegistry
                 new BlockCWDoor("high_door", Material.WOOD, 1.0F),
                 new BlockCWUpperDoorFrame("upper_door_frame", Material.WOOD, MapColor.WOOD, 1.0F),
                 new BlockCWDoor("window_door", Material.WOOD, 1.0F),
+                new BlockCWDoor("chinese_oak_door", Material.WOOD, 1.0F),
 
                 // 墙
                 new BlockCWSmallFence("small_black_brick_wall", Material.ROCK, MapColor.STONE, 1.0F),
@@ -113,7 +114,8 @@ public class BlockRegistry
                 new BlockCWPane("stone_window", Material.ROCK, true, 1.0F),
                 new BlockCWStairs("rouge_brick_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWStairs("black_brick_wall_stairs", Blocks.STONE.getDefaultState(), 1.0F),
-                new BlockCWPane("wooden_window", Material.WOOD, true, 1.0F));
+                new BlockCWPane("wooden_window", Material.WOOD, true, 1.0F),
+                new BlockCWThreshold("wooden_threshold", Material.ROCK, 1.0F));
     }
 
     @SubscribeEvent
@@ -122,30 +124,15 @@ public class BlockRegistry
     {
         ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.WOODEN_WINDOW_DOOR,
-                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.WINDOW_DOOR,
-                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.BLACK_ROOF_TILE_RIDGE,
-                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP,
-                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.YELLOW_ROOF_TILE_RIDGE,
-                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.YELLOW_TILE_RIDGE_ROOF_TOP,
-                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.THATCH_TILE_RIDGE_ROOF,
-                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(
-                CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP,
-                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.CHINESE_OAK_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.WOODEN_WINDOW_DOOR,new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.WINDOW_DOOR,new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.BLACK_ROOF_TILE_RIDGE,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.YELLOW_ROOF_TILE_RIDGE,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.YELLOW_TILE_RIDGE_ROOF_TOP,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.THATCH_TILE_RIDGE_ROOF,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 
 }

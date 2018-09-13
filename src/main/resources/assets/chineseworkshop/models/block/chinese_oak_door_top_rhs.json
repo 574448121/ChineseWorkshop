@@ -1,0 +1,21 @@
+{
+	"__comment": "Designed by CityOfSkyTCD",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "chineseworkshop:blocks/chinese_oak_door_upper"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Element",
+			"from": [ 14, 0, -3 ],
+			"to": [ 16, 16, 13 ],
+			"faces": {
+				"up": { "uv": [ 0, 0, 16, 2 ], "texture": "#particle", "rotation": 270 },
+				"north": { "uv": [ 0, 0, 2, 16 ], "texture": "#particle" },
+				"south": { "uv": [ 14, 0, 16, 16 ], "texture": "#particle" },
+				"west": { "uv": [ 16, 0, 0, 16 ], "texture": "#particle" },
+				"east": { "uv": [ 0, 0, 16, 16 ], "texture": "#particle" }
+			}
+		}
+	]
+}

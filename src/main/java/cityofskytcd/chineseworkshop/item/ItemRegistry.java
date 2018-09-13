@@ -61,6 +61,7 @@ public class ItemRegistry
                 new ItemCWDoor("high_door", CWBlocks.HIGH_DOOR),
                 new ItemCWDoor("wooden_window_door", CWBlocks.WOODEN_WINDOW_DOOR),
                 new ItemCWDoor("window_door", CWBlocks.WINDOW_DOOR),
+                new ItemCWDoor("chinese_oak_door", CWBlocks.CHINESE_OAK_DOOR),
                 new ItemCWBlock(CWBlocks.UPPER_DOOR_FRAME),
                 new ItemCWBlock(CWBlocks.THRESHOLD),
                 new ItemCWBlock(CWBlocks.MEN_DUN),
@@ -106,7 +107,8 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.PALACE_LANTERN),
                 new ItemCWBlock(CWBlocks.ROUGE_BRICK_STAIRS),
                 new ItemCWBlock(CWBlocks.BLACK_BRICK_WALL_STAIRS),
-                new ItemCWBlock(CWBlocks.WOODEN_WINDOW));
+                new ItemCWBlock(CWBlocks.WOODEN_WINDOW),
+                new ItemCWBlock(CWBlocks.WOODEN_THRESHOLD));
     }
 
     @SubscribeEvent
@@ -134,7 +136,8 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
         ModelUtil.mapItemModel(CWItems.WOODEN_WINDOW_DOOR);
         ModelUtil.mapItemModel(CWItems.WINDOW_DOOR);
-
+        ModelUtil.mapItemModel(CWItems.CHINESE_OAK_DOOR);
+       
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL);
         ModelUtil.mapItemModel(CWItems.BLACK_CLAY_BLOCK);
         ModelUtil.mapItemModel(CWItems.ANDESITE_PAVEMENT);
@@ -223,6 +226,7 @@ public class ItemRegistry
         
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_STAIRS);
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL_STAIRS);
+        ModelUtil.mapItemModel(CWItems.WOODEN_THRESHOLD);
 
     }
 }

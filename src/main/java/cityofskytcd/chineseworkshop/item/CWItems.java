@@ -36,6 +36,9 @@ public class CWItems
     // 窗门
     @GameRegistry.ObjectHolder("window_door")
     public static final Item WINDOW_DOOR = null;
+    // 中式木门
+    @GameRegistry.ObjectHolder("chinese_oak_door")
+    public static final Item CHINESE_OAK_DOOR = null;
 
     /* 方块 */
     // 黑砖墙
@@ -165,7 +168,10 @@ public class CWItems
     // 石窗
     @GameRegistry.ObjectHolder("wooden_window")
     public static final Item WOODEN_WINDOW = null;
-
+    // 木门槛
+    @GameRegistry.ObjectHolder("wooden_threshold")
+    public static final Item WOODEN_THRESHOLD = null;
+    
     /* 屋顶 */
     // 黑瓦屋顶
     @GameRegistry.ObjectHolder("black_tile_roof")

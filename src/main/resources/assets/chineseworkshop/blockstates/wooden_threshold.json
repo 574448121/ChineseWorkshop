@@ -1,0 +1,12 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "chineseworkshop:wooden_threshold"
+  },
+  "variants": {
+    "facing": {
+      "south_north": {},
+      "east_west": { "y": 90 }
+    }
+  }
+}

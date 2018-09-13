@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "chineseworkshop:chinese_oak_door"
+    ]
+  },
+  "criteria": {
+    "has_mat": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "ore": "plankWood",
+            "type": "forge:ore_dict"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "chineseworkshop:chinese_oak_door"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mat",
+      "has_the_recipe"
+    ]
+  ]
+}

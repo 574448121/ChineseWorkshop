@@ -81,6 +81,7 @@ tile.chineseworkshop.thatch_tile_ridge_roof_top.name=茅草屋脊TOP
 tile.chineseworkshop.thatch_tile_roof_slab.name=茅草屋顶半砖
 tile.chineseworkshop.thatch_tile_roof_slab_top.name=茅草屋顶半砖TOP
 tile.chineseworkshop.wooden_window.name=木窗
+tile.chineseworkshop.wooden_threshold.name=木门槛
 
 item.chineseworkshop.logo.name=调试工具
 item.chineseworkshop.black_clay.name=黑粘土
@@ -91,3 +92,4 @@ item.chineseworkshop.wooden_window_door.name=木窗门
 item.chineseworkshop.window_door.name=窗门
 item.chineseworkshop.yellow_clay.name=黄粘土
 item.chineseworkshop.yellow_brick.name=黄砖
+item.chineseworkshop.chinese_oak_door.name=中式橡木门

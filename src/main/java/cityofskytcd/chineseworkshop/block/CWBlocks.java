@@ -114,27 +114,15 @@ public class CWBlocks
     // 橡木墙
     @GameRegistry.ObjectHolder("oak_wall")
     public static final Block OAK_WALL = Blocks.AIR;
-    // 中式木门
-    @GameRegistry.ObjectHolder("door")
-    public static final Block DOOR = Blocks.AIR;
-    // 中式大木门
-    @GameRegistry.ObjectHolder("high_door")
-    public static final Block HIGH_DOOR = Blocks.AIR;
     // 门顶框
     @GameRegistry.ObjectHolder("upper_door_frame")
-    public static final Block UPPER_DOOR_FRAME = Blocks.AIR;
-    // 木窗门
-    @GameRegistry.ObjectHolder("wooden_window_door")
-    public static final Block WOODEN_WINDOW_DOOR = Blocks.AIR;
+    public static final Block UPPER_DOOR_FRAME = Blocks.AIR; 
     // 夯土墙
     @GameRegistry.ObjectHolder("rammed_earth_wall")
     public static final Block RAMMED_EARTH_WALL = Blocks.AIR;
     // 夯土阶梯
     @GameRegistry.ObjectHolder("rammed_earth_stairs")
     public static final Block RAMMED_EARTH_STAIRS = Blocks.AIR;
-    // 窗门
-    @GameRegistry.ObjectHolder("window_door")
-    public static final Block WINDOW_DOOR = Blocks.AIR;
     // 石窗
     @GameRegistry.ObjectHolder("stone_window")
     public static final Block STONE_WINDOW = Blocks.AIR;
@@ -150,6 +138,26 @@ public class CWBlocks
 	// 石窗
     @GameRegistry.ObjectHolder("wooden_window")
     public static final Block WOODEN_WINDOW = Blocks.AIR;
+    // 木门槛
+    @GameRegistry.ObjectHolder("wooden_threshold")
+    public static final Block WOODEN_THRESHOLD = Blocks.AIR;
+    
+    /*门*/
+    // 中式木门
+    @GameRegistry.ObjectHolder("door")
+    public static final Block DOOR = Blocks.AIR;
+    // 中式大木门
+    @GameRegistry.ObjectHolder("high_door")
+    public static final Block HIGH_DOOR = Blocks.AIR;
+    // 木窗门
+    @GameRegistry.ObjectHolder("wooden_window_door")
+    public static final Block WOODEN_WINDOW_DOOR = Blocks.AIR;
+    // 窗门
+    @GameRegistry.ObjectHolder("window_door")
+    public static final Block WINDOW_DOOR = Blocks.AIR;
+    // 中式橡木门
+    @GameRegistry.ObjectHolder("chinese_oak_door")
+    public static final Block CHINESE_OAK_DOOR = Blocks.AIR;
     
     /* 屋顶 */
     // 黑瓦屋顶
