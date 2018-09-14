@@ -46,11 +46,11 @@ public class BlockRegistry
                 new BlockCWRoofTileEdgeSlab("black_roof_tile_edge_slab", Material.ROCK, 1.0F),
                 new BlockCWRoofTileRidge("black_tile_ridge_roof_top", Material.ROCK, 1.0F),
                 new BlockCWTFace("black_tile_ridge_roof_edge", Material.ROCK, 1.0F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_top", Material.ROCK, 1.0F),
                 new BlockCWTFace("black_tile_ridge_roof_j", Material.ROCK, 1.0F),
                 new BlockCWTFace("black_tile_roof_j", Material.ROCK, 1.0F),
                 new BlockCWRoofSlab("black_tile_roof_slab", Material.ROCK, 1.0F),
                 new BlockCWRoof("black_tile_roof_slab_top", Material.ROCK, 1.0F),
-                new BlockCWTFace("black_tile_ridge_roof_edge_top", Material.ROCK, 1.0F),
 
                 new BlockCWRoof("yellow_tile_roof", Material.ROCK, 1.0F),
                 new BlockCWRoofTileRidge("yellow_roof_tile_ridge", Material.ROCK, 1.0F),
@@ -69,6 +69,10 @@ public class BlockRegistry
                 new BlockCWRoofTileRidge("thatch_tile_ridge_roof_top", Material.WOOD, 0.5F),
                 new BlockCWRoofSlab("thatch_tile_roof_slab", Material.WOOD, 0.5F),
                 new BlockCWRoof("thatch_tile_roof_slab_top", Material.WOOD, 0.5F),
+                new BlockCWRoofTileEdge("thatch_roof_tile_edge", Material.WOOD, 0.5F),
+                new BlockCWRoofTileEdgeSlab("thatch_roof_tile_edge_slab", Material.WOOD, 0.5F),
+                new BlockCWTFace("thatch_tile_ridge_roof_edge", Material.WOOD, 0.5F),
+                new BlockCWTFace("thatch_tile_ridge_roof_edge_top", Material.WOOD, 0.5F),
                 
                 // 门
                 new BlockCWDoor("door", Material.WOOD, 1.0F),

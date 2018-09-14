@@ -241,6 +241,18 @@ public class CWItems
     // 茅草屋顶半砖top
     @GameRegistry.ObjectHolder("thatch_tile_roof_slab_top")
     public static final Item THATCH_TILE_ROOF_SLAB_TOP = null;
+    // 茅草屋顶边缘
+    @GameRegistry.ObjectHolder("thatch_roof_tile_edge")
+    public static final Item THATCH_ROOF_TILE_EDGE = null;
+    // 茅草屋顶半砖边缘
+    @GameRegistry.ObjectHolder("thatch_roof_tile_edge_slab")
+    public static final Item THATCH_ROOF_TILE_EDGE_SLAB = null;
+    // 茅草屋脊边缘
+    @GameRegistry.ObjectHolder("thatch_tile_ridge_roof_edge")
+    public static final Item THATCH_TILE_RIDGE_ROOF_EDGE = null;
+    // 茅草屋脊边缘
+    @GameRegistry.ObjectHolder("thatch_tile_ridge_roof_edge_top")
+    public static final Item THATCH_TILE_RIDGE_ROOF_EDGE_TOP = null;
     
     /* 薄墙 */
     // 薄白灰墙

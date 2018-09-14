@@ -1,0 +1,20 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "chineseworkshop:thatch_tile_ridge_roof_edge_top"
+  },
+  "variants": {
+    "facing": {
+      "north": {
+        "y": 90
+      },
+      "east": {
+        "y": 180
+      },
+      "south": {
+        "y": 270
+      },
+      "west": {}
+    }
+  }
+}

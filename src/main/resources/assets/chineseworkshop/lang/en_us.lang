@@ -82,6 +82,12 @@ tile.chineseworkshop.thatch_tile_roof_slab.name=Thatch Tile Roof Slab
 tile.chineseworkshop.thatch_tile_roof_slab_top.name=Thatch Tile Roof Slab TOP
 tile.chineseworkshop.wooden_window.name=Wooden Window
 tile.chineseworkshop.wooden_threshold.name=Wooden Threshold
+tile.chineseworkshop.thatch_roof_tile_edge.n.name=Thatch Roof Tile Edge
+tile.chineseworkshop.thatch_roof_tile_edge.j.name=Thatch Roof Tile Edge J
+tile.chineseworkshop.thatch_roof_tile_edge_slab.n.name=Thatch Roof Tile Edge Slab
+tile.chineseworkshop.thatch_roof_tile_edge_slab.t.name=Thatch Roof Tile Edge Slab TOP
+tile.chineseworkshop.thatch_tile_ridge_roof_edge.name=Thatch Tile Ridge Roof Edge
+tile.chineseworkshop.thatch_tile_ridge_roof_edge_top.name=Thatch Tile Ridge Roof Edge TOP
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay

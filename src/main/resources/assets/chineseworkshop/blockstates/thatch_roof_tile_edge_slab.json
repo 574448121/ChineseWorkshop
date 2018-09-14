@@ -1,0 +1,24 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "default": { "model": "chineseworkshop:thatch_roof_tile_edge_slab" }
+  },
+  "variants": {
+    "facing=north,mirrored=false,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab", "y": 270 },
+    "facing=east,mirrored=false,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab" },
+    "facing=south,mirrored=false,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab", "y": 90 },
+    "facing=west,mirrored=false,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab", "y": 180 },
+    "facing=north,mirrored=true,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_m", "y": 270 },
+    "facing=east,mirrored=true,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_m" },
+    "facing=south,mirrored=true,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_m", "y": 90 },
+    "facing=west,mirrored=true,type=0": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_m", "y": 180 },
+    "facing=north,mirrored=false,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_t", "y": 270 },
+    "facing=east,mirrored=false,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_t" },
+    "facing=south,mirrored=false,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_t", "y": 90 },
+    "facing=west,mirrored=false,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_t", "y": 180 },
+    "facing=north,mirrored=true,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_mt", "y": 270 },
+    "facing=east,mirrored=true,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_mt" },
+    "facing=south,mirrored=true,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_mt", "y": 90 },
+    "facing=west,mirrored=true,type=1": { "model": "chineseworkshop:thatch_roof_tile_edge_slab_mt", "y": 180 }
+  }
+}

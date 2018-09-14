@@ -96,6 +96,10 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.THATCH_TILE_ROOF_SLAB_TOP),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP),
+                new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_EDGE),
+                new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_EDGE_TOP),
+                new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE, new String[] { "n", "j" }),
+                new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE_SLAB, new String[] { "n", "t" }),
                 
                 new ItemCWBlock(CWBlocks.FU),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH),
@@ -223,7 +227,18 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.THATCH_TILE_ROOF_SLAB_TOP);
         ModelUtil.mapItemModel(CWItems.THATCH_TILE_RIDGE_ROOF);
         ModelUtil.mapItemModel(CWItems.THATCH_TILE_RIDGE_ROOF_TOP);
-        
+        ModelUtil.mapItemModel(CWItems.THATCH_ROOF_TILE_EDGE);
+        ModelUtil.mapItemModel(CWItems.THATCH_ROOF_TILE_EDGE_SLAB);
+        ModelUtil.mapItemModel(CWItems.THATCH_TILE_RIDGE_ROOF_EDGE);
+        ModelUtil.mapItemModel(CWItems.THATCH_TILE_RIDGE_ROOF_EDGE_TOP);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.THATCH_ROOF_TILE_EDGE_SLAB,
+                1,
+                new ModelResourceLocation(CW.MODID + ":thatch_roof_tile_edge_slab_t", "inventory"));
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.THATCH_ROOF_TILE_EDGE,
+                1,
+                new ModelResourceLocation(CW.MODID + ":thatch_roof_tile_edge_j","inventory"));
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_STAIRS);
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL_STAIRS);
         ModelUtil.mapItemModel(CWItems.WOODEN_THRESHOLD);
