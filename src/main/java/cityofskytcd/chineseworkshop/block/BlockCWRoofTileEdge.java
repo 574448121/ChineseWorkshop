@@ -50,7 +50,7 @@ public class BlockCWRoofTileEdge extends BlockCWThinWall
     @Override
     public IBlockState getStateFromMeta(int meta)
     {
-        EnumFacing facing = EnumFacing.getHorizontal(meta % 4);
+        EnumFacing facing = EnumFacing.byHorizontalIndex(meta % 4);
         return this.getDefaultState().withProperty(FACING, facing).withProperty(TYPE, meta / 8).withProperty(
                 MIRRORED,
                 (meta % 8) > 3);

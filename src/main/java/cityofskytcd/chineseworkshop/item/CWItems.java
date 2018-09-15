@@ -171,7 +171,7 @@ public class CWItems
     // 木门槛
     @GameRegistry.ObjectHolder("wooden_threshold")
     public static final Item WOODEN_THRESHOLD = null;
-    
+
     /* 屋顶 */
     // 黑瓦屋顶
     @GameRegistry.ObjectHolder("black_tile_roof")
@@ -197,11 +197,11 @@ public class CWItems
     // 黑瓦屋脊边缘top
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
     public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_TOP = null;
-    
-	// 黄瓦屋顶
+
+    // 黄瓦屋顶
     @GameRegistry.ObjectHolder("yellow_tile_roof")
     public static final Item YELLOW_TILE_ROOF = null;
-	// 黄瓦屋脊
+    // 黄瓦屋脊
     @GameRegistry.ObjectHolder("yellow_roof_tile_ridge")
     public static final Item YELLOW_ROOF_TILE_RIDGE = null;
     // 黄瓦屋脊top
@@ -225,11 +225,11 @@ public class CWItems
     // 黄瓦屋脊边缘top
     @GameRegistry.ObjectHolder("yellow_tile_ridge_roof_edge_top")
     public static final Item YELLOW_TILE_RIDGE_ROOF_EDGE_TOP = null;
-    
+
     // 茅草屋顶
     @GameRegistry.ObjectHolder("thatch_roof")
     public static final Item THATCH_ROOF = null;
-	// 茅草屋脊
+    // 茅草屋脊
     @GameRegistry.ObjectHolder("thatch_tile_ridge_roof")
     public static final Item THATCH_TILE_RIDGE_ROOF = null;
     // 茅草屋脊top
@@ -253,7 +253,7 @@ public class CWItems
     // 茅草屋脊边缘
     @GameRegistry.ObjectHolder("thatch_tile_ridge_roof_edge_top")
     public static final Item THATCH_TILE_RIDGE_ROOF_EDGE_TOP = null;
-    
+
     /* 薄墙 */
     // 薄白灰墙
     @GameRegistry.ObjectHolder("thin_white_gray_wall")
@@ -267,7 +267,7 @@ public class CWItems
     // 黑瓦屋顶边缘台阶
     @GameRegistry.ObjectHolder("black_roof_tile_edge_slab")
     public static final Item BLACK_ROOF_TILE_EDGE_SLAB = null;
-    
+
     // 黄瓦屋顶边缘
     @GameRegistry.ObjectHolder("yellow_roof_tile_edge")
     public static final Item YELLOW_ROOF_TILE_EDGE = null;

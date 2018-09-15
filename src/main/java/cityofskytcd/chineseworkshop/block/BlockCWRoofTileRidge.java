@@ -40,7 +40,7 @@ public class BlockCWRoofTileRidge extends BlockCWTFace2D
         boolean connect[] = new boolean[4];
         for (int i = 0; i < 4; i++)
         {
-            facing = EnumFacing.getHorizontal(i);
+            facing = EnumFacing.byHorizontalIndex(i);
             if (worldIn.getBlockState(pos.offset(facing)).getBlock() == this)
             {
                 connection++;

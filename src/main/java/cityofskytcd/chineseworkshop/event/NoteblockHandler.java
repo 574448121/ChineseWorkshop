@@ -28,7 +28,7 @@ public class NoteblockHandler
         }
         World world = event.getWorld();
         BlockPos pos = event.getPos();
-        if (world.getBlockState(pos.down()).getBlock().getRegistryName().getResourceDomain().equals(CW.MODID))
+        if (world.getBlockState(pos.down()).getBlock().getRegistryName().getNamespace().equals(CW.MODID))
         {
             int note = event.getVanillaNoteId();
             float f = (float) Math.pow(2.0D, (note - 12) / 12.0D);

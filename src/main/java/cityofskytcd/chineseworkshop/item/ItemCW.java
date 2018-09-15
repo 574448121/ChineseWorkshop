@@ -19,7 +19,7 @@ public class ItemCW extends Item
     {
         super();
         setRegistryName(CW.MODID, id);
-        setUnlocalizedName(CW.MODID + "." + id);
+        setTranslationKey(CW.MODID + "." + id);
         setCreativeTab(tabs);
     }
 

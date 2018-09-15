@@ -52,7 +52,7 @@ public class BlockUtil
     public static void setAttributes(Block block, String id, float hardness, CreativeTabs tabs)
     {
         block.setRegistryName(CW.MODID, id);
-        block.setUnlocalizedName(CW.MODID + "." + id);
+        block.setTranslationKey(CW.MODID + "." + id);
         block.setCreativeTab(tabs);
         block.setHardness(hardness);
     }

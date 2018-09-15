@@ -7,7 +7,7 @@ public class ItemCWBlockVariants extends ItemCWBlock
 {
     private String[] subtypeNames;
 
-    public ItemCWBlockVariants(Block block, String[] subtypeNames)
+    public ItemCWBlockVariants(Block block, String... subtypeNames)
     {
         super(block);
         setHasSubtypes(true);
@@ -26,15 +26,15 @@ public class ItemCWBlockVariants extends ItemCWBlock
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack stack)
+    public String getTranslationKey(ItemStack stack)
     {
         if (subtypeNames == null)
         {
-            return super.getUnlocalizedName(stack);
+            return super.getTranslationKey(stack);
         }
         int i = stack.getMetadata();
-        return i >= 0 && i < subtypeNames.length ? super.getUnlocalizedName(stack) + "." + this.subtypeNames[i]
-                : super.getUnlocalizedName(stack);
+        return i >= 0 && i < subtypeNames.length ? super.getTranslationKey(stack) + "." + this.subtypeNames[i]
+                : super.getTranslationKey(stack);
     }
 
 }
