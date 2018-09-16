@@ -1,6 +1,7 @@
-1.2.5
+﻿1.2.5
 Fix lag in HUD
 Fix selecting block desync
+Add thatch roof, yellow roof, chinese oak door, wooden threshold, black brick wall , rouge brick stairs, stairs, palace lantern, wooden window
 
 1.2.4
 Add wooden window door, windowed door, 福, rammed earth, rammed earth wall and rammed earth stairs

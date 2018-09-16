@@ -119,7 +119,7 @@ public class BlockRegistry
                 new BlockCWStairs("rouge_brick_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWStairs("black_brick_wall_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWPane("wooden_window", Material.WOOD, true, 1.0F),
-                new BlockCWThreshold("wooden_threshold", Material.ROCK, 1.0F));
+                new BlockCWThreshold("wooden_threshold", Material.WOOD, 1.0F));
     }
 
     @SubscribeEvent
