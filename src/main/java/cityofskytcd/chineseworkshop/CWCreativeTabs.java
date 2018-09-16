@@ -19,7 +19,7 @@ public class CWCreativeTabs
     public static final CreativeTabs BUILDING_BLOCKS = new CreativeTabs(CW.MODID + ".building_blocks")
     {
         @Override
-        public ItemStack getTabIconItem()
+        public ItemStack createIcon()
         {
             return new ItemStack(CWItems.LOGO);
         }
@@ -28,7 +28,7 @@ public class CWCreativeTabs
     public static final CreativeTabs DECORATIONS = new CreativeTabs(CW.MODID + ".decorations")
     {
         @Override
-        public ItemStack getTabIconItem()
+        public ItemStack createIcon()
         {
             return new ItemStack(CWBlocks.BRACKET_SET);
         }
@@ -37,7 +37,7 @@ public class CWCreativeTabs
     public static final CreativeTabs ITEMS = new CreativeTabs(CW.MODID + ".items")
     {
         @Override
-        public ItemStack getTabIconItem()
+        public ItemStack createIcon()
         {
             return new ItemStack(CWItems.MATERIAL, 1, 1);
         }

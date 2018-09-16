@@ -46,10 +46,9 @@ public class RegistryRemapper
 
         for (Mapping<Block> mapping : event.getAllMappings())
         {
-            if (mapping.key.getResourceDomain().equals(CW.MODID)
-                    && blockMappings.containsKey(mapping.key.getResourcePath()))
+            if (mapping.key.getNamespace().equals(CW.MODID) && blockMappings.containsKey(mapping.key.getPath()))
             {
-                mapping.remap(blockMappings.get(mapping.key.getResourcePath()));
+                mapping.remap(blockMappings.get(mapping.key.getPath()));
             }
         }
     }
@@ -86,10 +85,9 @@ public class RegistryRemapper
 
         for (Mapping<Item> mapping : event.getAllMappings())
         {
-            if (mapping.key.getResourceDomain().equals(CW.MODID)
-                    && itemMappings.containsKey(mapping.key.getResourcePath()))
+            if (mapping.key.getNamespace().equals(CW.MODID) && itemMappings.containsKey(mapping.key.getPath()))
             {
-                mapping.remap(itemMappings.get(mapping.key.getResourcePath()));
+                mapping.remap(itemMappings.get(mapping.key.getPath()));
             }
         }
     }

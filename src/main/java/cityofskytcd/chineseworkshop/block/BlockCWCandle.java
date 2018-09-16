@@ -119,8 +119,7 @@ public class BlockCWCandle extends BlockCWT
     }
 
     /**
-     * Called by ItemBlocks just before a block is actually set in the world, to
-     * allow for adjustments to the IBlockstate
+     * Called by ItemBlocks just before a block is actually set in the world, to allow for adjustments to the IBlockstate
      */
     @Override
     public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
@@ -248,7 +247,7 @@ public class BlockCWCandle extends BlockCWT
 
     @Override
     @SideOnly(Side.CLIENT)
-    public BlockRenderLayer getBlockLayer()
+    public BlockRenderLayer getRenderLayer()
     {
         return BlockRenderLayer.CUTOUT;
     }
@@ -285,8 +284,7 @@ public class BlockCWCandle extends BlockCWT
     }
 
     /**
-     * Returns the blockstate with the given rotation from the passed blockstate. If
-     * inapplicable, returns the passed blockstate.
+     * Returns the blockstate with the given rotation from the passed blockstate. If inapplicable, returns the passed blockstate.
      */
     @Override
     public IBlockState withRotation(IBlockState state, Rotation rot)
@@ -295,8 +293,7 @@ public class BlockCWCandle extends BlockCWT
     }
 
     /**
-     * Returns the blockstate with the given mirror of the passed blockstate. If
-     * inapplicable, returns the passed blockstate.
+     * Returns the blockstate with the given mirror of the passed blockstate. If inapplicable, returns the passed blockstate.
      */
     @Override
     public IBlockState withMirror(IBlockState state, Mirror mirrorIn)

@@ -72,25 +72,25 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_SLAB),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_ROOF_SLAB_TOP),
                 new ItemCWBlock(CWBlocks.BLACK_ROOF_TILE_RIDGE),
-                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE, new String[] { "n", "j" }),
-                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB, new String[] { "n", "t" }),
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE, "n", "j"),
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB, "n", "t"),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE_TOP),
-                
-	            new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF),
+
+                new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_J),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_SLAB),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_SLAB_TOP),
                 new ItemCWBlock(CWBlocks.YELLOW_ROOF_TILE_RIDGE),
-                new ItemCWBlockVariants(CWBlocks.YELLOW_ROOF_TILE_EDGE, new String[] { "n", "j" }),
-                new ItemCWBlockVariants(CWBlocks.YELLOW_ROOF_TILE_EDGE_SLAB, new String[] { "n", "t" }),
+                new ItemCWBlockVariants(CWBlocks.YELLOW_ROOF_TILE_EDGE, "n", "j"),
+                new ItemCWBlockVariants(CWBlocks.YELLOW_ROOF_TILE_EDGE_SLAB, "n", "t"),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_TOP),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_EDGE),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_J),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP),
-                
+
                 new ItemCWBlock(CWBlocks.THATCH_ROOF),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_ROOF_SLAB),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_ROOF_SLAB_TOP),
@@ -98,9 +98,9 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_EDGE),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_EDGE_TOP),
-                new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE, new String[] { "n", "j" }),
-                new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE_SLAB, new String[] { "n", "t" }),
-                
+                new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE, "n", "j"),
+                new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE_SLAB, "n", "t"),
+
                 new ItemCWBlock(CWBlocks.FU),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH_WALL),
@@ -135,13 +135,13 @@ public class ItemRegistry
         ModelLoader.setCustomModelResourceLocation(
                 CWItems.MATERIAL,
                 3,
-                new ModelResourceLocation(CW.MODID + ":yellow_brick", "inventory")); 
+                new ModelResourceLocation(CW.MODID + ":yellow_brick", "inventory"));
         ModelUtil.mapItemModel(CWItems.DOOR);
         ModelUtil.mapItemModel(CWItems.HIGH_DOOR);
         ModelUtil.mapItemModel(CWItems.WOODEN_WINDOW_DOOR);
         ModelUtil.mapItemModel(CWItems.WINDOW_DOOR);
         ModelUtil.mapItemModel(CWItems.CHINESE_OAK_DOOR);
-       
+
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL);
         ModelUtil.mapItemModel(CWItems.BLACK_CLAY_BLOCK);
         ModelUtil.mapItemModel(CWItems.ANDESITE_PAVEMENT);
@@ -201,8 +201,8 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_WALL);
         ModelUtil.mapItemModel(CWItems.PALACE_LANTERN);
         ModelUtil.mapItemModel(CWItems.WOODEN_WINDOW);
-        
-		ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF);
+
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF);
         ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF_J);
         ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF_SLAB);
         ModelUtil.mapItemModel(CWItems.YELLOW_TILE_ROOF_SLAB_TOP);
@@ -219,9 +219,9 @@ public class ItemRegistry
                 new ModelResourceLocation(CW.MODID + ":yellow_roof_tile_edge_slab_t", "inventory"));
         ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_TOP);
         ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE);
-		ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_J);
+        ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_J);
         ModelUtil.mapItemModel(CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP);
-        
+
         ModelUtil.mapItemModel(CWItems.THATCH_ROOF);
         ModelUtil.mapItemModel(CWItems.THATCH_TILE_ROOF_SLAB);
         ModelUtil.mapItemModel(CWItems.THATCH_TILE_ROOF_SLAB_TOP);
@@ -238,7 +238,7 @@ public class ItemRegistry
         ModelLoader.setCustomModelResourceLocation(
                 CWItems.THATCH_ROOF_TILE_EDGE,
                 1,
-                new ModelResourceLocation(CW.MODID + ":thatch_roof_tile_edge_j","inventory"));
+                new ModelResourceLocation(CW.MODID + ":thatch_roof_tile_edge_j", "inventory"));
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_STAIRS);
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL_STAIRS);
         ModelUtil.mapItemModel(CWItems.WOODEN_THRESHOLD);

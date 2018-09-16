@@ -23,7 +23,7 @@ public class BlockCWSlab extends BlockSlab
     {
         super(materialIn);
     }
-    
+
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
@@ -37,9 +37,9 @@ public class BlockCWSlab extends BlockSlab
     }
 
     @Override
-    public String getUnlocalizedName(int meta)
+    public String getTranslationKey(int meta)
     {
-        return super.getUnlocalizedName() + "." + EnumType.byMetadata(meta).getUnlocalizedName();
+        return super.getTranslationKey() + "." + EnumType.byMetadata(meta).getUnlocalizedName();
     }
 
     @Override

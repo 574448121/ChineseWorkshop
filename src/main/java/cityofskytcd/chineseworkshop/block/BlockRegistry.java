@@ -63,7 +63,7 @@ public class BlockRegistry
                 new BlockCWRoofSlab("yellow_tile_roof_slab", Material.ROCK, 1.0F),
                 new BlockCWRoof("yellow_tile_roof_slab_top", Material.ROCK, 1.0F),
                 new BlockCWTFace("yellow_tile_ridge_roof_edge_top", Material.ROCK, 1.0F),
-                
+
                 new BlockCWRoof("thatch_roof", Material.WOOD, 0.5F),
                 new BlockCWRoofTileRidge("thatch_tile_ridge_roof", Material.WOOD, 0.5F),
                 new BlockCWRoofTileRidge("thatch_tile_ridge_roof_top", Material.WOOD, 0.5F),
@@ -73,7 +73,7 @@ public class BlockRegistry
                 new BlockCWRoofTileEdgeSlab("thatch_roof_tile_edge_slab", Material.WOOD, 0.5F),
                 new BlockCWTFace("thatch_tile_ridge_roof_edge", Material.WOOD, 0.5F),
                 new BlockCWTFace("thatch_tile_ridge_roof_edge_top", Material.WOOD, 0.5F),
-                
+
                 // 门
                 new BlockCWDoor("door", Material.WOOD, 1.0F),
                 new BlockCWDoor("wooden_window_door", Material.WOOD, 1.0F),
@@ -128,15 +128,33 @@ public class BlockRegistry
     {
         ModelLoader.setCustomStateMapper(CWBlocks.DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(CWBlocks.HIGH_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.CHINESE_OAK_DOOR, new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.WOODEN_WINDOW_DOOR,new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.WINDOW_DOOR,new StateMap.Builder().ignore(BlockDoor.POWERED).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.BLACK_ROOF_TILE_RIDGE,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.YELLOW_ROOF_TILE_RIDGE,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.YELLOW_TILE_RIDGE_ROOF_TOP,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.THATCH_TILE_RIDGE_ROOF,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
-        ModelLoader.setCustomStateMapper(CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP,new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.CHINESE_OAK_DOOR,
+                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.WOODEN_WINDOW_DOOR,
+                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.WINDOW_DOOR,
+                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_RIDGE,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_TILE_RIDGE_ROOF_TOP,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.YELLOW_ROOF_TILE_RIDGE,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.YELLOW_TILE_RIDGE_ROOF_TOP,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.THATCH_TILE_RIDGE_ROOF,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 
 }

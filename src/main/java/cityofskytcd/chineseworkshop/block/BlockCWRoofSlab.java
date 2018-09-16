@@ -133,7 +133,9 @@ public class BlockCWRoofSlab extends BlockCWTFace
     @Override
     public IBlockState getStateFromMeta(int meta)
     {
-        IBlockState iblockstate = this.getDefaultState().withProperty(FACING, EnumFacing.getFront(5 - (meta & 3)));
+        IBlockState iblockstate = this.getDefaultState().withProperty(
+                FACING,
+                EnumFacing.byHorizontalIndex(5 - (meta & 3)));
         return iblockstate;
     }
 

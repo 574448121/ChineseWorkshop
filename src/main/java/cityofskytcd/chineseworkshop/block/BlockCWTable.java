@@ -37,6 +37,7 @@ public class BlockCWTable extends BlockCWT
     public static final PropertyBool SE = PropertyBool.create("se");
     public static final PropertyBool SW = PropertyBool.create("sw");
 
+    @SuppressWarnings("deprecation")
     @Override
     public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox, List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean isActualState)
     {
@@ -95,7 +96,7 @@ public class BlockCWTable extends BlockCWT
         boolean nw = false, ne = false, se = false, sw = false;
         for (int i = 0; i < 4; i++)
         {
-            facing = EnumFacing.getHorizontal(i);
+            facing = EnumFacing.byHorizontalIndex(i);
             if (worldIn.getBlockState(pos.offset(facing)).getBlock() == this)
             {
                 n += Math.pow(2, i);

@@ -26,8 +26,7 @@ public class PropertyDirection2D extends PropertyEnum<EnumFacing2D>
     }
 
     /**
-     * Create a new PropertyDirection with all directions that match the given
-     * Predicate
+     * Create a new PropertyDirection with all directions that match the given Predicate
      */
     public static PropertyDirection2D create(String name, Predicate<EnumFacing2D> filter)
     {

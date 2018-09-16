@@ -116,7 +116,7 @@ public class CWBlocks
     public static final Block OAK_WALL = Blocks.AIR;
     // 门顶框
     @GameRegistry.ObjectHolder("upper_door_frame")
-    public static final Block UPPER_DOOR_FRAME = Blocks.AIR; 
+    public static final Block UPPER_DOOR_FRAME = Blocks.AIR;
     // 夯土墙
     @GameRegistry.ObjectHolder("rammed_earth_wall")
     public static final Block RAMMED_EARTH_WALL = Blocks.AIR;
@@ -135,14 +135,14 @@ public class CWBlocks
     // 黑砖墙阶梯
     @GameRegistry.ObjectHolder("black_brick_wall_stairs")
     public static final Block BLACK_BRICK_WALL_STAIRS = Blocks.AIR;
-	// 石窗
+    // 石窗
     @GameRegistry.ObjectHolder("wooden_window")
     public static final Block WOODEN_WINDOW = Blocks.AIR;
     // 木门槛
     @GameRegistry.ObjectHolder("wooden_threshold")
     public static final Block WOODEN_THRESHOLD = Blocks.AIR;
-    
-    /*门*/
+
+    /* 门 */
     // 中式木门
     @GameRegistry.ObjectHolder("door")
     public static final Block DOOR = Blocks.AIR;
@@ -158,7 +158,7 @@ public class CWBlocks
     // 中式橡木门
     @GameRegistry.ObjectHolder("chinese_oak_door")
     public static final Block CHINESE_OAK_DOOR = Blocks.AIR;
-    
+
     /* 屋顶 */
     // 黑瓦屋顶
     @GameRegistry.ObjectHolder("black_tile_roof")
@@ -184,11 +184,11 @@ public class CWBlocks
     // 黑瓦屋脊边缘top
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
     public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_TOP = Blocks.AIR;
-    
+
     // 黄瓦屋顶
     @GameRegistry.ObjectHolder("yellow_tile_roof")
     public static final Block YELLOW_TILE_ROOF = Blocks.AIR;
-	// 黄瓦屋脊
+    // 黄瓦屋脊
     @GameRegistry.ObjectHolder("yellow_roof_tile_ridge")
     public static final Block YELLOW_ROOF_TILE_RIDGE = Blocks.AIR;
     // 黄瓦屋脊top
@@ -212,12 +212,11 @@ public class CWBlocks
     // 黄瓦屋脊边缘top
     @GameRegistry.ObjectHolder("yellow_tile_ridge_roof_edge_top")
     public static final Block YELLOW_TILE_RIDGE_ROOF_EDGE_TOP = Blocks.AIR;
-    
-    
+
     // 茅草屋顶
     @GameRegistry.ObjectHolder("thatch_roof")
     public static final Block THATCH_ROOF = Blocks.AIR;
-	// 茅草屋脊
+    // 茅草屋脊
     @GameRegistry.ObjectHolder("thatch_tile_ridge_roof")
     public static final Block THATCH_TILE_RIDGE_ROOF = Blocks.AIR;
     // 茅草屋脊top
@@ -241,7 +240,7 @@ public class CWBlocks
     // 茅草屋脊边缘TOP
     @GameRegistry.ObjectHolder("thatch_tile_ridge_roof_edge_top")
     public static final Block THATCH_TILE_RIDGE_ROOF_EDGE_TOP = Blocks.AIR;
-    
+
     /* 薄墙 */
     // 薄白灰墙
     @GameRegistry.ObjectHolder("thin_white_gray_wall")
@@ -255,7 +254,6 @@ public class CWBlocks
     // 黑瓦屋顶边缘台阶
     @GameRegistry.ObjectHolder("black_roof_tile_edge_slab")
     public static final Block BLACK_ROOF_TILE_EDGE_SLAB = Blocks.AIR;
-    
 
     // 黄瓦屋顶边缘
     @GameRegistry.ObjectHolder("yellow_roof_tile_edge")

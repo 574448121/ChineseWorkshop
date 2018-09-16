@@ -20,7 +20,7 @@ public class ItemCWDoor extends ItemDoor
     {
         super(blockIn);
         setRegistryName(CW.MODID, id);
-        setUnlocalizedName(CW.MODID + "." + id);
+        setTranslationKey(CW.MODID + "." + id);
         setCreativeTab(CWCreativeTabs.DECORATIONS);
     }
 }

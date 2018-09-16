@@ -57,7 +57,7 @@ public class SittingHandler
             if (seats.isEmpty())
             {
                 Vec3d v = ((ISeat) state.getBlock()).getSeat(state);
-                Seat seat = new Seat(world, v.addVector(pos.getX(), pos.getY(), pos.getZ()));
+                Seat seat = new Seat(world, v.add(pos.getX(), pos.getY(), pos.getZ()));
                 world.spawnEntity(seat);
                 event.getEntityPlayer().startRiding(seat);
             }
