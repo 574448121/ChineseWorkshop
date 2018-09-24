@@ -119,7 +119,8 @@ public class BlockRegistry
                 new BlockCWStairs("rouge_brick_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWStairs("black_brick_wall_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWPane("wooden_window", Material.WOOD, true, 1.0F),
-                new BlockCWThreshold("wooden_threshold", Material.WOOD, 1.0F));
+                new BlockCWThreshold("wooden_threshold", Material.WOOD, 1.0F),
+                new BlockCWRoofTileRidge("field_ridge", Material.WOOD, 0.5F));
     }
 
     @SubscribeEvent
@@ -154,6 +155,9 @@ public class BlockRegistry
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
         ModelLoader.setCustomStateMapper(
                 CWBlocks.THATCH_TILE_RIDGE_ROOF_TOP,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.FIELD_RIDGE,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 

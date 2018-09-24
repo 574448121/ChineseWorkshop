@@ -112,7 +112,9 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.ROUGE_BRICK_STAIRS),
                 new ItemCWBlock(CWBlocks.BLACK_BRICK_WALL_STAIRS),
                 new ItemCWBlock(CWBlocks.WOODEN_WINDOW),
-                new ItemCWBlock(CWBlocks.WOODEN_THRESHOLD));
+                new ItemCWBlock(CWBlocks.WOODEN_THRESHOLD),
+                
+                new ItemCWBlock(CWBlocks.FIELD_RIDGE));
     }
 
     @SubscribeEvent
@@ -242,6 +244,8 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.ROUGE_BRICK_STAIRS);
         ModelUtil.mapItemModel(CWItems.BLACK_BRICK_WALL_STAIRS);
         ModelUtil.mapItemModel(CWItems.WOODEN_THRESHOLD);
+        
+        ModelUtil.mapItemModel(CWItems.FIELD_RIDGE);
 
     }
 }

@@ -88,6 +88,7 @@ tile.chineseworkshop.thatch_roof_tile_edge_slab.n.name=茅草屋顶半砖边缘
 tile.chineseworkshop.thatch_roof_tile_edge_slab.t.name=茅草屋顶半砖边缘TOP
 tile.chineseworkshop.thatch_tile_ridge_roof_edge.name=茅草屋脊边缘
 tile.chineseworkshop.thatch_tile_ridge_roof_edge_top.name=茅草屋顶边缘TOP
+tile.chineseworkshop.field_ridge.name=田埂
 
 item.chineseworkshop.logo.name=调试工具
 item.chineseworkshop.black_clay.name=黑粘土

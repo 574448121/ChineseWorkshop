@@ -88,6 +88,7 @@ tile.chineseworkshop.thatch_roof_tile_edge_slab.n.name=Thatch Roof Tile Edge Sla
 tile.chineseworkshop.thatch_roof_tile_edge_slab.t.name=Thatch Roof Tile Edge Slab TOP
 tile.chineseworkshop.thatch_tile_ridge_roof_edge.name=Thatch Tile Ridge Roof Edge
 tile.chineseworkshop.thatch_tile_ridge_roof_edge_top.name=Thatch Tile Ridge Roof Edge TOP
+tile.chineseworkshop.field_ridge.name=Field Ridge
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay

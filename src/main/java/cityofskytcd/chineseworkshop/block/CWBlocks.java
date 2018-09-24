@@ -141,6 +141,9 @@ public class CWBlocks
     // 木门槛
     @GameRegistry.ObjectHolder("wooden_threshold")
     public static final Block WOODEN_THRESHOLD = Blocks.AIR;
+    // 田埂
+    @GameRegistry.ObjectHolder("field_ridge")
+    public static final Block FIELD_RIDGE = Blocks.AIR;
 
     /* 门 */
     // 中式木门

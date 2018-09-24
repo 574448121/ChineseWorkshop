@@ -171,6 +171,9 @@ public class CWItems
     // 木门槛
     @GameRegistry.ObjectHolder("wooden_threshold")
     public static final Item WOODEN_THRESHOLD = null;
+    // 田埂
+    @GameRegistry.ObjectHolder("field_ridge")
+    public static final Item FIELD_RIDGE = null;
 
     /* 屋顶 */
     // 黑瓦屋顶
