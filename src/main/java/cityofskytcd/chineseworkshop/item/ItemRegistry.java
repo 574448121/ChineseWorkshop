@@ -62,6 +62,7 @@ public class ItemRegistry
                 new ItemCWDoor("wooden_window_door", CWBlocks.WOODEN_WINDOW_DOOR),
                 new ItemCWDoor("window_door", CWBlocks.WINDOW_DOOR),
                 new ItemCWDoor("chinese_oak_door", CWBlocks.CHINESE_OAK_DOOR),
+                new ItemCWDoor("red_stained_wooden_planks_wooden_window_door", CWBlocks.RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR),
                 new ItemCWBlock(CWBlocks.UPPER_DOOR_FRAME),
                 new ItemCWBlock(CWBlocks.THRESHOLD),
                 new ItemCWBlock(CWBlocks.MEN_DUN),
@@ -114,7 +115,11 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.WOODEN_WINDOW),
                 new ItemCWBlock(CWBlocks.WOODEN_THRESHOLD),
                 
-                new ItemCWBlock(CWBlocks.FIELD_RIDGE));
+                new ItemCWBlock(CWBlocks.FIELD_RIDGE),
+                new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS),
+                new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_WALL),
+                new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_PAPER_WINDOW),
+                new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME));
     }
 
     @SubscribeEvent
@@ -246,6 +251,12 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.WOODEN_THRESHOLD);
         
         ModelUtil.mapItemModel(CWItems.FIELD_RIDGE);
+        ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS);
+        ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS_WALL);
+        ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS_PAPER_WINDOW);
+        ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME);
+        ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR);
+
 
     }
 }

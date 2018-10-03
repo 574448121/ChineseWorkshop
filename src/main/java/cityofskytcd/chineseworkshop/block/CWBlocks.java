@@ -44,6 +44,12 @@ public class CWBlocks
     // 胭脂砖
     @GameRegistry.ObjectHolder("rouge_brick")
     public static final Block ROUGE_BRICK = Blocks.AIR;
+    // 染色红木板
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks")
+    public static final Block RED_STAINED_WOODEN_PLANKS = Blocks.AIR;
+    // 染色红木板墙
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_wall")
+    public static final Block RED_STAINED_WOODEN_PLANKS_WALL = Blocks.AIR;
 
     /* 灯 */
     // 石灯塔
@@ -144,6 +150,12 @@ public class CWBlocks
     // 田埂
     @GameRegistry.ObjectHolder("field_ridge")
     public static final Block FIELD_RIDGE = Blocks.AIR;
+    // 染色红木板纸窗
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_paper_window")
+    public static final Block RED_STAINED_WOODEN_PLANKS_PAPER_WINDOW = Blocks.AIR;
+    // 染色红木板门顶框
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_upper_door_frame")
+    public static final Block RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME = Blocks.AIR;
 
     /* 门 */
     // 中式木门
@@ -161,6 +173,9 @@ public class CWBlocks
     // 中式橡木门
     @GameRegistry.ObjectHolder("chinese_oak_door")
     public static final Block CHINESE_OAK_DOOR = Blocks.AIR;
+    // 染色红木板窗门
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_wooden_window_door")
+    public static final Block RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR = Blocks.AIR;
 
     /* 屋顶 */
     // 黑瓦屋顶

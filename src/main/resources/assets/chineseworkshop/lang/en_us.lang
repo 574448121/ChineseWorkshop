@@ -89,6 +89,10 @@ tile.chineseworkshop.thatch_roof_tile_edge_slab.t.name=Thatch Roof Tile Edge Sla
 tile.chineseworkshop.thatch_tile_ridge_roof_edge.name=Thatch Tile Ridge Roof Edge
 tile.chineseworkshop.thatch_tile_ridge_roof_edge_top.name=Thatch Tile Ridge Roof Edge TOP
 tile.chineseworkshop.field_ridge.name=Field Ridge
+tile.chineseworkshop.red_stained_wooden_planks.name=Red Stained Wooden Planks
+tile.chineseworkshop.red_stained_wooden_planks_wall.name=Red Stained Wooden Planks Wall
+tile.chineseworkshop.red_stained_wooden_planks_paper_window.name=Red Stained Wooden Planks Paper Window
+tile.chineseworkshop.red_stained_wooden_planks_upper_door_frame.name=Red Stained Wooden Planks Upper Door Frame
 
 item.chineseworkshop.logo.name=Debug Tool
 item.chineseworkshop.black_clay.name=Black Clay
@@ -100,3 +104,4 @@ item.chineseworkshop.window_door.name=windowed door
 item.chineseworkshop.yellow_clay.name=Yellow Clay
 item.chineseworkshop.yellow_brick.name=Yellow Brick
 item.chineseworkshop.chinese_oak_door.name=Chinese Oak Door
+item.chineseworkshop.red_stained_wooden_planks_wooden_window_door.name=Red Stained Wooden Planks Wooden Window Door

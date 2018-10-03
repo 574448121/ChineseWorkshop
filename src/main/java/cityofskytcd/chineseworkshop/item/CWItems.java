@@ -39,6 +39,9 @@ public class CWItems
     // 中式木门
     @GameRegistry.ObjectHolder("chinese_oak_door")
     public static final Item CHINESE_OAK_DOOR = null;
+    // 染色红木板窗门
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_wooden_window_door")
+    public static final Item RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR = null;
 
     /* 方块 */
     // 黑砖墙
@@ -68,7 +71,10 @@ public class CWItems
     // 胭脂砖
     @GameRegistry.ObjectHolder("rouge_brick")
     public static final Item ROUGE_BRICK = null;
-
+    // 染色红木板
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks")
+    public static final Item RED_STAINED_WOODEN_PLANKS = null;
+    
     /* 灯 */
     // 石灯塔
     @GameRegistry.ObjectHolder("stone_tower_lamp")
@@ -82,7 +88,7 @@ public class CWItems
     // 白灯笼
     @GameRegistry.ObjectHolder("white_lantern")
     public static final Item WHITE_LANTERN = null;
-    // 白灯笼
+    // 宫灯
     @GameRegistry.ObjectHolder("palace_lantern")
     public static final Item PALACE_LANTERN = null;
 
@@ -174,6 +180,15 @@ public class CWItems
     // 田埂
     @GameRegistry.ObjectHolder("field_ridge")
     public static final Item FIELD_RIDGE = null;
+    // 染色红木板墙
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_wall")
+    public static final Item RED_STAINED_WOODEN_PLANKS_WALL = null;
+    // 染色红木板纸窗
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_paper_window")
+    public static final Item RED_STAINED_WOODEN_PLANKS_PAPER_WINDOW = null;
+    // 染色红木板门顶框
+    @GameRegistry.ObjectHolder("red_stained_wooden_planks_upper_door_frame")
+    public static final Item RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME = null;
 
     /* 屋顶 */
     // 黑瓦屋顶

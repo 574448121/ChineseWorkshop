@@ -38,6 +38,7 @@ public class BlockRegistry
                 new BlockCWRotatedPillar("red_pillar", Material.WOOD, 1.0F),
                 new BlockCWRotatedPillar("dark_green_pillar", Material.WOOD, 1.0F),
                 new BlockCWBlackClay("black_clay_block", Material.CLAY, 1.0F),
+                new BlockCW("red_stained_wooden_planks", Material.WOOD, 1.0F),
 
                 // 屋顶
                 new BlockCWRoof("black_tile_roof", Material.ROCK, 1.0F),
@@ -81,6 +82,8 @@ public class BlockRegistry
                 new BlockCWUpperDoorFrame("upper_door_frame", Material.WOOD, MapColor.WOOD, 1.0F),
                 new BlockCWDoor("window_door", Material.WOOD, 1.0F),
                 new BlockCWDoor("chinese_oak_door", Material.WOOD, 1.0F),
+                new BlockCWUpperDoorFrame("red_stained_wooden_planks_upper_door_frame", Material.WOOD, MapColor.WOOD, 1.0F),
+                new BlockCWDoor("red_stained_wooden_planks_wooden_window_door", Material.WOOD, 1.0F),
 
                 // 墙
                 new BlockCWSmallFence("small_black_brick_wall", Material.ROCK, MapColor.STONE, 1.0F),
@@ -88,6 +91,7 @@ public class BlockRegistry
                 new BlockCWSmallFence("oak_wall", Material.WOOD, MapColor.WOOD, 1.0F),
                 new BlockCWSmallFence("rammed_earth_wall", Material.ROCK, MapColor.STONE, 1.0F),
                 new BlockCWSmallFence("rouge_brick_wall", Material.ROCK, MapColor.STONE, 1.0F),
+                new BlockCWSmallFence("red_stained_wooden_planks_wall", Material.WOOD, MapColor.WOOD, 1.0F),
 
                 // 灯
                 new BlockCWLight("stone_tower_lamp", Material.ROCK, 1.0F, 1.0f),
@@ -120,7 +124,8 @@ public class BlockRegistry
                 new BlockCWStairs("black_brick_wall_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWPane("wooden_window", Material.WOOD, true, 1.0F),
                 new BlockCWThreshold("wooden_threshold", Material.WOOD, 1.0F),
-                new BlockCWRoofTileRidge("field_ridge", Material.WOOD, 0.5F));
+                new BlockCWRoofTileRidge("field_ridge", Material.WOOD, 0.5F),
+                new BlockCWPane("red_stained_wooden_planks_paper_window", Material.WOOD, true, 0.5F));
     }
 
     @SubscribeEvent
@@ -159,6 +164,9 @@ public class BlockRegistry
         ModelLoader.setCustomStateMapper(
                 CWBlocks.FIELD_RIDGE,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR,
+                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
     }
 
 }

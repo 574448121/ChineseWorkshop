@@ -1,0 +1,31 @@
+{
+	"__comment": "Designed by CityOfSkyTCD with",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "chineseworkshop:blocks/red_stained_wooden_planks_wooden_window_door_top"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Element",
+			"from": [ 14, 0, -3 ],
+			"to": [ 16, 8, 13 ],
+			"faces": {
+				"north": { "uv": [ 0, 2, 2, 11 ], "texture": "#particle" },
+				"south": { "uv": [ 0, 2, 2, 11 ], "texture": "#particle" },
+				"west": { "uv": [ 16, 8, 0, 16 ], "texture": "#particle" },
+				"east": { "uv": [ 0, 8, 16, 16 ], "texture": "#particle" }
+			}
+		},
+		{
+			"__comment": "Element",
+			"from": [ 14, 8, -3 ],
+			"to": [ 16, 24, 13 ],
+			"faces": {
+				"north": { "uv": [ 0, 1, 2, 16 ], "texture": "#particle" },
+				"south": { "uv": [ 0, 1, 2, 16 ], "texture": "#particle" },
+				"west": { "uv": [ 16, 0, 0, 16 ], "texture": "#particle" },
+				"east": { "uv": [ 0, 0, 16, 16 ], "texture": "#particle" }
+			}
+		}
+	]
+}
