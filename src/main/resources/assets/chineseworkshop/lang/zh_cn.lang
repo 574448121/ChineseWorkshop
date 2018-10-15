@@ -93,6 +93,8 @@ tile.chineseworkshop.red_stained_wooden_planks.name=染色红木板
 tile.chineseworkshop.red_stained_wooden_planks_wall.name=染色红木板墙
 tile.chineseworkshop.red_stained_wooden_planks_paper_window.name=染色红木板纸窗
 tile.chineseworkshop.red_stained_wooden_planks_upper_door_frame.name=染色红木板门顶框
+tile.chineseworkshop.architectural_painting.name=建筑彩绘
+tile.chineseworkshop.architectural_painting_wall.name=建筑彩绘墙
 
 item.chineseworkshop.logo.name=调试工具
 item.chineseworkshop.black_clay.name=黑粘土

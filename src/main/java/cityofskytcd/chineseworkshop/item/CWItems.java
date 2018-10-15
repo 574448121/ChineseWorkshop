@@ -74,6 +74,9 @@ public class CWItems
     // 染色红木板
     @GameRegistry.ObjectHolder("red_stained_wooden_planks")
     public static final Item RED_STAINED_WOODEN_PLANKS = null;
+    // 建筑彩绘
+    @GameRegistry.ObjectHolder("architectural_painting")
+    public static final Item ARCHITECTURAL_PAINTING = null;
     
     /* 灯 */
     // 石灯塔
@@ -189,6 +192,9 @@ public class CWItems
     // 染色红木板门顶框
     @GameRegistry.ObjectHolder("red_stained_wooden_planks_upper_door_frame")
     public static final Item RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME = null;
+    // 建筑彩绘
+    @GameRegistry.ObjectHolder("architectural_painting_wall")
+    public static final Item ARCHITECTURAL_PAINTING_WALL = null;
 
     /* 屋顶 */
     // 黑瓦屋顶

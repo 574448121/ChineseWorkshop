@@ -1,6 +1,7 @@
 {
 	"parent": "chineseworkshop:block/black_tile_ridge_roof_edge_top",
 	"textures": {
+		"white_gray_wall": "chineseworkshop:blocks/red_stained_wooden_planks",
 		"particle": "chineseworkshop:blocks/yellow_tile",
 		"texture": "chineseworkshop:blocks/yellow_tile"
     }

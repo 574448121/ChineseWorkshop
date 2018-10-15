@@ -39,6 +39,7 @@ public class BlockRegistry
                 new BlockCWRotatedPillar("dark_green_pillar", Material.WOOD, 1.0F),
                 new BlockCWBlackClay("black_clay_block", Material.CLAY, 1.0F),
                 new BlockCW("red_stained_wooden_planks", Material.WOOD, 1.0F),
+                new BlockCW("architectural_painting", Material.ROCK, 1.0F),
 
                 // 屋顶
                 new BlockCWRoof("black_tile_roof", Material.ROCK, 1.0F),
@@ -92,6 +93,7 @@ public class BlockRegistry
                 new BlockCWSmallFence("rammed_earth_wall", Material.ROCK, MapColor.STONE, 1.0F),
                 new BlockCWSmallFence("rouge_brick_wall", Material.ROCK, MapColor.STONE, 1.0F),
                 new BlockCWSmallFence("red_stained_wooden_planks_wall", Material.WOOD, MapColor.WOOD, 1.0F),
+                new BlockCWSmallFence("architectural_painting_wall", Material.WOOD, MapColor.WOOD, 1.0F),
 
                 // 灯
                 new BlockCWLight("stone_tower_lamp", Material.ROCK, 1.0F, 1.0f),

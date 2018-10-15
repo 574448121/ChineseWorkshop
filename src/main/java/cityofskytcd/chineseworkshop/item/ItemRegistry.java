@@ -79,7 +79,6 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_J),
                 new ItemCWBlock(CWBlocks.BLACK_TILE_RIDGE_ROOF_EDGE_TOP),
-
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_J),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_ROOF_SLAB),
@@ -91,7 +90,6 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_EDGE),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_J),
                 new ItemCWBlock(CWBlocks.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP),
-
                 new ItemCWBlock(CWBlocks.THATCH_ROOF),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_ROOF_SLAB),
                 new ItemCWBlock(CWBlocks.THATCH_TILE_ROOF_SLAB_TOP),
@@ -101,7 +99,6 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.THATCH_TILE_RIDGE_ROOF_EDGE_TOP),
                 new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE, "n", "j"),
                 new ItemCWBlockVariants(CWBlocks.THATCH_ROOF_TILE_EDGE_SLAB, "n", "t"),
-
                 new ItemCWBlock(CWBlocks.FU),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH),
                 new ItemCWBlock(CWBlocks.RAMMED_EARTH_WALL),
@@ -113,13 +110,14 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.ROUGE_BRICK_STAIRS),
                 new ItemCWBlock(CWBlocks.BLACK_BRICK_WALL_STAIRS),
                 new ItemCWBlock(CWBlocks.WOODEN_WINDOW),
-                new ItemCWBlock(CWBlocks.WOODEN_THRESHOLD),
-                
+                new ItemCWBlock(CWBlocks.WOODEN_THRESHOLD),           
                 new ItemCWBlock(CWBlocks.FIELD_RIDGE),
                 new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS),
                 new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_WALL),
                 new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_PAPER_WINDOW),
-                new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME));
+                new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME),
+                new ItemCWBlock(CWBlocks.ARCHITECTURAL_PAINTING),
+                new ItemCWBlock(CWBlocks.ARCHITECTURAL_PAINTING_WALL));
     }
 
     @SubscribeEvent
@@ -256,6 +254,8 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS_PAPER_WINDOW);
         ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME);
         ModelUtil.mapItemModel(CWItems.RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR);
+        ModelUtil.mapItemModel(CWItems.ARCHITECTURAL_PAINTING);
+        ModelUtil.mapItemModel(CWItems.ARCHITECTURAL_PAINTING_WALL);
 
 
     }
