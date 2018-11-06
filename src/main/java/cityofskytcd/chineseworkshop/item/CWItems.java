@@ -195,6 +195,9 @@ public class CWItems
     // 建筑彩绘
     @GameRegistry.ObjectHolder("architectural_painting_wall")
     public static final Item ARCHITECTURAL_PAINTING_WALL = null;
+    // 长廊
+    @GameRegistry.ObjectHolder("chang_lang")
+    public static final Item CHANG_LANG = null;
 
     /* 屋顶 */
     // 黑瓦屋顶

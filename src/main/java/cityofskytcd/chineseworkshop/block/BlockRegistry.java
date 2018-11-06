@@ -127,7 +127,8 @@ public class BlockRegistry
                 new BlockCWPane("wooden_window", Material.WOOD, true, 1.0F),
                 new BlockCWThreshold("wooden_threshold", Material.WOOD, 1.0F),
                 new BlockCWRoofTileRidge("field_ridge", Material.WOOD, 0.5F),
-                new BlockCWPane("red_stained_wooden_planks_paper_window", Material.WOOD, true, 0.5F));
+                new BlockCWPane("red_stained_wooden_planks_paper_window", Material.WOOD, true, 0.5F),
+                new BlockCWChangLang("chang_lang", Material.ROCK, 1.0F));
     }
 
     @SubscribeEvent

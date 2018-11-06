@@ -162,6 +162,9 @@ public class CWBlocks
     // 建筑彩绘墙
     @GameRegistry.ObjectHolder("architectural_painting_wall")
     public static final Block ARCHITECTURAL_PAINTING_WALL = Blocks.AIR;
+    // 长廊
+    @GameRegistry.ObjectHolder("chang_lang")
+    public static final Block CHANG_LANG = Blocks.AIR;
 
     /* 门 */
     // 中式木门
