@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shapeless",
+  "result": {
+    "item": "chineseworkshop:architectural_painting",
+    "count": 8
+  },
+  "ingredients": [
+    {
+      "item": "chineseworkshop:red_pillar"
+    },
+    {
+      "ore" : "gemLapis",
+      "type": "forge:ore_dict"
+    },
+    {
+      "ore" : "dyeYellow",
+      "type": "forge:ore_dict"
+    },
+	    {
+      "ore" : "dyeGreen",
+      "type": "forge:ore_dict"
+    }
+  ]
+}

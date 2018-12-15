@@ -1,0 +1,16 @@
+{
+  "type": "forge:ore_shaped",
+  "result": {
+    "item": "chineseworkshop:architectural_painting_wall",
+    "count": 6
+  },
+  "pattern": [
+    "***",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item" : "chineseworkshop:architectural_painting"
+    }
+  }
+}
