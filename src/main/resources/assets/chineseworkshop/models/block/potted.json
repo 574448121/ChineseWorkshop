@@ -1,0 +1,58 @@
+{
+	"__comment": "Designed by CityOfSkyTCD",
+	"textures": {
+		"particle": "chineseworkshop:blocks/plant",
+		"basin": "chineseworkshop:blocks/basin",
+		"plant": "chineseworkshop:blocks/plant"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Box1",
+			"from": [ 4, 0, 6 ],
+			"to": [ 12, 1, 10 ],
+			"faces": {
+				"down": { "uv": [ 12, 0, 16, 3.5 ], "texture": "#basin" },
+				"up": { "uv": [ 12, 0, 16, 3.5 ], "texture": "#basin" },
+				"north": { "uv": [ 12, 0, 16, 3.5 ], "texture": "#basin" },
+				"south": { "uv": [ 12, 0, 16, 3.5 ], "texture": "#basin" },
+				"west": { "uv": [ 12, 0, 16, 3.5 ], "texture": "#basin" },
+				"east": { "uv": [ 12, 0, 16, 3.5 ], "texture": "#basin" }
+			}
+		},
+		{
+			"__comment": "Box2",
+			"from": [ 3.5, 1, 5.5 ],
+			"to": [ 12.5, 3.5, 10.5 ],
+			"faces": {
+				"down": { "uv": [ 0.5, 7.5, 4, 11.5 ], "texture": "#basin" },
+				"up": { "uv": [ 0.5, 7.5, 4, 11.5 ], "texture": "#basin" },
+				"north": { "uv": [ 0.5, 7.5, 4, 11.5 ], "texture": "#basin" },
+				"south": { "uv": [ 0.5, 7.5, 4, 11.5 ], "texture": "#basin" },
+				"west": { "uv": [ 0.5, 7.5, 4, 11.5 ], "texture": "#basin" },
+				"east": { "uv": [ 0.5, 7.5, 4, 11.5 ], "texture": "#basin" }
+			}
+		},
+		{
+			"__comment": "Box3",
+			"from": [ 3, 3.5, 5 ],
+			"to": [ 13, 4.5, 11 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 1, 1 ], "texture": "#basin" },
+				"up": { "uv": [ 0, 0, 10, 6 ], "texture": "#basin" },
+				"north": { "uv": [ 0, 5, 10, 6 ], "texture": "#basin" },
+				"south": { "uv": [ 0, 0, 10, 1 ], "texture": "#basin" },
+				"west": { "uv": [ 0, 0, 6, 1 ], "texture": "#basin" },
+				"east": { "uv": [ 0, 0, 6, 1 ], "texture": "#basin" }
+			}
+		},
+		{
+			"__comment": "PlaneZ5",
+			"from": [ 3.5, 4.5, 8 ],
+			"to": [ 12, 12, 8.001 ],
+			"faces": {
+				"north": { "uv": [ 14.5, 1, 0, 16 ], "texture": "#plant" },
+				"south": { "uv": [ 0, 1, 14.5, 16 ], "texture": "#plant" }
+			}
+		}
+	]
+}

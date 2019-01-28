@@ -29,14 +29,14 @@ public class BlockCWPane extends BlockPane
         BlockUtil.setAttributes(this, id, hardness, CWCreativeTabs.DECORATIONS);
         setSoundType(BlockUtil.getDefaultSound(materialIn));
     }
-
+    
     @Override
     public BlockRenderLayer getRenderLayer()
     {
         return BlockRenderLayer.TRANSLUCENT;
     }
-
     @Override
+    
     public boolean canPlaceTorchOnTop(IBlockState state, IBlockAccess world, BlockPos pos)
     {
         return true;

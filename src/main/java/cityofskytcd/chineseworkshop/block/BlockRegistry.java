@@ -117,18 +117,19 @@ public class BlockRegistry
                 new BlockCWFence("diorite_fence", Material.ROCK, MapColor.STONE, 1.0F),
                 new BlockCWFence("oak_chinese_fence", Material.WOOD, MapColor.WOOD, 1.0F),
                 new BlockCWWall("andesite_fence", Blocks.STONE, 1.0F),
-                new BlockCWPane("lithel_deco", Material.WOOD, true, 1.0F),
+                new BlockCWSmallFence("lithel_deco", Material.WOOD, MapColor.WOOD, 1.0F),
                 new BlockCWStairs("andesite_pavement_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWThinWall("fu", Material.WOOD, 1.0F),
                 new BlockCWStairs("rammed_earth_stairs", Blocks.STONE.getDefaultState(), 1.0F),
-                new BlockCWPane("stone_window", Material.ROCK, true, 1.0F),
+                new BlockCWSmallFence("stone_window", Material.ROCK, MapColor.WOOD, 1.0F),
                 new BlockCWStairs("rouge_brick_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWStairs("black_brick_wall_stairs", Blocks.STONE.getDefaultState(), 1.0F),
-                new BlockCWPane("wooden_window", Material.WOOD, true, 1.0F),
+                new BlockCWSmallFence("wooden_window", Material.WOOD, MapColor.WOOD, 1.0F),
                 new BlockCWThreshold("wooden_threshold", Material.WOOD, 1.0F),
                 new BlockCWRoofTileRidge("field_ridge", Material.WOOD, 0.5F),
                 new BlockCWPane("red_stained_wooden_planks_paper_window", Material.WOOD, true, 0.5F),
-                new BlockCWMeiRenKao("mei_ren_kao", Material.ROCK, 1.0F));
+                new BlockCWMeiRenKao("mei_ren_kao", Material.ROCK, 1.0F),
+                new BlockCWPotted("potted", Material.ROCK, 1.0F));
     }
 
     @SubscribeEvent

@@ -165,6 +165,9 @@ public class CWBlocks
     // 美人靠
     @GameRegistry.ObjectHolder("mei_ren_kao")
     public static final Block MEI_REN_KAO = Blocks.AIR;
+    // 盆栽
+    @GameRegistry.ObjectHolder("potted")
+    public static final Block POTTED = Blocks.AIR;
 
     /* 门 */
     // 中式木门

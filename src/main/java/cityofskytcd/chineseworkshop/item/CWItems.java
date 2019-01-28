@@ -198,6 +198,9 @@ public class CWItems
     // 美人靠
     @GameRegistry.ObjectHolder("mei_ren_kao")
     public static final Item MEI_REN_KAO = null;
+    // 盆栽
+    @GameRegistry.ObjectHolder("potted")
+    public static final Item POTTED = null;
 
     /* 屋顶 */
     // 黑瓦屋顶

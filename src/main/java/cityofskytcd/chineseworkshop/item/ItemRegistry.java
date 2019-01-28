@@ -118,7 +118,8 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.RED_STAINED_WOODEN_PLANKS_UPPER_DOOR_FRAME),
                 new ItemCWBlock(CWBlocks.ARCHITECTURAL_PAINTING),
                 new ItemCWBlock(CWBlocks.ARCHITECTURAL_PAINTING_WALL),
-                new ItemCWBlock(CWBlocks.MEI_REN_KAO));
+                new ItemCWBlock(CWBlocks.MEI_REN_KAO),
+                new ItemCWBlock(CWBlocks.POTTED));
     }
 
     @SubscribeEvent
@@ -258,6 +259,7 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.ARCHITECTURAL_PAINTING);
         ModelUtil.mapItemModel(CWItems.ARCHITECTURAL_PAINTING_WALL);
         ModelUtil.mapItemModel(CWItems.MEI_REN_KAO);
+        ModelUtil.mapItemModel(CWItems.POTTED);
 
 
     }
