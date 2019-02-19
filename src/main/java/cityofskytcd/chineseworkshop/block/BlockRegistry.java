@@ -126,7 +126,7 @@ public class BlockRegistry
                 new BlockCWStairs("black_brick_wall_stairs", Blocks.STONE.getDefaultState(), 1.0F),
                 new BlockCWSmallFence("wooden_window", Material.WOOD, MapColor.WOOD, 1.0F),
                 new BlockCWThreshold("wooden_threshold", Material.WOOD, 1.0F),
-                new BlockCWRoofTileRidge("field_ridge", Material.WOOD, 0.5F),
+                new BlockCWRoofTileRidge("field_ridge", Material.GRASS, 0.5F),
                 new BlockCWPane("red_stained_wooden_planks_paper_window", Material.WOOD, true, 0.5F),
                 new BlockCWMeiRenKao("mei_ren_kao", Material.ROCK, 1.0F),
                 new BlockCWPotted("potted", Material.ROCK, 1.0F));
