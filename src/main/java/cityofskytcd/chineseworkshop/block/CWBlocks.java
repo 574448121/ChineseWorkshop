@@ -268,6 +268,16 @@ public class CWBlocks
     // 茅草屋脊边缘TOP
     @GameRegistry.ObjectHolder("thatch_tile_ridge_roof_edge_top")
     public static final Block THATCH_TILE_RIDGE_ROOF_EDGE_TOP = Blocks.AIR;
+    
+    // 黑瓦屋顶边缘-木和黑砖
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_wb")
+    public static final Block BLACK_ROOF_TILE_EDGE_WB = Blocks.AIR;
+    // 黑瓦屋顶边缘-夯土和胭脂
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_rr")
+    public static final Block BLACK_ROOF_TILE_EDGE_RR = Blocks.AIR;
+    // 黑瓦屋顶边缘-圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_cw")
+    public static final Block BLACK_ROOF_TILE_EDGE_CW = Blocks.AIR;
 
     /* 薄墙 */
     // 薄白灰墙

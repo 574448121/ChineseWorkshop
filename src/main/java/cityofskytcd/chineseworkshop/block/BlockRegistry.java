@@ -53,6 +53,10 @@ public class BlockRegistry
                 new BlockCWTFace("black_tile_roof_j", Material.ROCK, 1.0F),
                 new BlockCWRoofSlab("black_tile_roof_slab", Material.ROCK, 1.0F),
                 new BlockCWRoof("black_tile_roof_slab_top", Material.ROCK, 1.0F),
+                
+                new BlockCWRoofTileEdge("black_roof_tile_edge_wb", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_rr", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_cw", Material.ROCK, 1.0F),
 
                 new BlockCWRoof("yellow_tile_roof", Material.ROCK, 1.0F),
                 new BlockCWRoofTileRidge("yellow_roof_tile_ridge", Material.ROCK, 1.0F),
@@ -148,6 +152,10 @@ public class BlockRegistry
                 CWBlocks.WINDOW_DOOR,
                 new StateMap.Builder().ignore(BlockDoor.POWERED).build());
         ModelLoader.setCustomStateMapper(
+                CWBlocks.RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR,
+                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+        
+        ModelLoader.setCustomStateMapper(
                 CWBlocks.BLACK_ROOF_TILE_RIDGE,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
         ModelLoader.setCustomStateMapper(
@@ -168,9 +176,16 @@ public class BlockRegistry
         ModelLoader.setCustomStateMapper(
                 CWBlocks.FIELD_RIDGE,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        
         ModelLoader.setCustomStateMapper(
-                CWBlocks.RED_STAINED_WOODEN_PLANKS_WOODEN_WINDOW_DOOR,
-                new StateMap.Builder().ignore(BlockDoor.POWERED).build());
+                CWBlocks.BLACK_ROOF_TILE_EDGE_WB,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_RR,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_CW,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 
 }

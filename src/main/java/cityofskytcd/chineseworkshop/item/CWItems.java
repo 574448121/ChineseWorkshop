@@ -227,7 +227,17 @@ public class CWItems
     // 黑瓦屋脊边缘top
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
     public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_TOP = null;
-
+    
+    // 黑瓦屋脊边缘_木和黑砖墙
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_wb")
+    public static final Item BLACK_ROOF_TILE_EDGE_WB = null;
+    // 黑瓦屋脊边缘_夯土和胭脂
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_rr")
+    public static final Item BLACK_ROOF_TILE_EDGE_RR = null;
+    // 黑瓦屋脊边缘_圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_cw")
+    public static final Item BLACK_ROOF_TILE_EDGE_CW = null;
+    
     // 黄瓦屋顶
     @GameRegistry.ObjectHolder("yellow_tile_roof")
     public static final Item YELLOW_TILE_ROOF = null;

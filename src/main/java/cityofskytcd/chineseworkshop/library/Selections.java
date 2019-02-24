@@ -79,6 +79,14 @@ public class Selections
                         ItemDefinition.of(CWItems.THATCH_ROOF_TILE_EDGE, 1),
                         ItemDefinition.of(CWItems.THATCH_ROOF_TILE_EDGE_SLAB),
                         ItemDefinition.of(CWItems.THATCH_ROOF_TILE_EDGE_SLAB, 1)));
+        addSelection(
+                ImmutableList.of(
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_WB),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_WB, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_RR),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_RR, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_CW),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_CW, 1)));
     }
 
     public static void addSelection(ImmutableList<ItemDefinition> selection)

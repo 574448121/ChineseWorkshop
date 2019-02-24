@@ -119,7 +119,11 @@ public class ItemRegistry
                 new ItemCWBlock(CWBlocks.ARCHITECTURAL_PAINTING),
                 new ItemCWBlock(CWBlocks.ARCHITECTURAL_PAINTING_WALL),
                 new ItemCWBlock(CWBlocks.MEI_REN_KAO),
-                new ItemCWBlock(CWBlocks.POTTED));
+                new ItemCWBlock(CWBlocks.POTTED),
+                
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_WB, "w", "bb"),
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_RR, "rb", "re"),
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_CW, "c", "wg"));
     }
 
     @SubscribeEvent
@@ -260,7 +264,21 @@ public class ItemRegistry
         ModelUtil.mapItemModel(CWItems.ARCHITECTURAL_PAINTING_WALL);
         ModelUtil.mapItemModel(CWItems.MEI_REN_KAO);
         ModelUtil.mapItemModel(CWItems.POTTED);
-
-
+        
+        ModelUtil.mapItemModel(CWItems.BLACK_ROOF_TILE_EDGE_WB);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.BLACK_ROOF_TILE_EDGE_WB,
+                1,
+                new ModelResourceLocation(CW.MODID + ":black_roof_tile_edge_bb", "inventory"));
+        ModelUtil.mapItemModel(CWItems.BLACK_ROOF_TILE_EDGE_RR);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.BLACK_ROOF_TILE_EDGE_RR,
+                1,
+                new ModelResourceLocation(CW.MODID + ":black_roof_tile_edge_re", "inventory"));
+        ModelUtil.mapItemModel(CWItems.BLACK_ROOF_TILE_EDGE_CW);
+        ModelLoader.setCustomModelResourceLocation(
+                CWItems.BLACK_ROOF_TILE_EDGE_CW,
+                1,
+                new ModelResourceLocation(CW.MODID + ":black_roof_tile_edge_wg", "inventory"));
     }
 }

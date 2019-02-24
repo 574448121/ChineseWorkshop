@@ -98,6 +98,13 @@ tile.chineseworkshop.architectural_painting_wall.name=建筑彩绘墙
 tile.chineseworkshop.mei_ren_kao.name=美人靠
 tile.chineseworkshop.potted.name=盆栽
 
+tile.chineseworkshop.black_roof_tile_edge_wb.w.name=黑瓦屋顶边缘-木
+tile.chineseworkshop.black_roof_tile_edge_wb.bb.name=黑瓦屋顶边缘-黑砖
+tile.chineseworkshop.black_roof_tile_edge_rr.rb.name=黑瓦屋顶边缘-胭脂
+tile.chineseworkshop.black_roof_tile_edge_rr.re.name=黑瓦屋顶边缘-夯土
+tile.chineseworkshop.black_roof_tile_edge_cw.c.name=黑瓦屋顶边缘-圆石
+tile.chineseworkshop.black_roof_tile_edge_cw.wg.name=黑瓦屋顶边缘-白灰
+
 item.chineseworkshop.logo.name=调试工具
 item.chineseworkshop.black_clay.name=黑粘土
 item.chineseworkshop.black_brick.name=黑砖
