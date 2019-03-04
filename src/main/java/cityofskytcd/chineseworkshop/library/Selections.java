@@ -87,6 +87,15 @@ public class Selections
                         ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_RR, 1),
                         ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_CW),
                         ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_CW, 1)));
+        
+        addSelection(
+                ImmutableList.of(
+                        ItemDefinition.of(CWItems.THIN_WALL_W),
+                        ItemDefinition.of(CWItems.THIN_WALL_BB),
+                        ItemDefinition.of(CWItems.THIN_WALL_C),
+                        ItemDefinition.of(CWItems.THIN_WALL_RB),
+                        ItemDefinition.of(CWItems.THIN_WALL_RE),
+                        ItemDefinition.of(CWItems.THIN_WALL_WG)));
     }
 
     public static void addSelection(ImmutableList<ItemDefinition> selection)

@@ -298,4 +298,19 @@ public class CWBlocks
     // 黄瓦屋顶边缘台阶
     @GameRegistry.ObjectHolder("yellow_roof_tile_edge_slab")
     public static final Block YELLOW_ROOF_TILE_EDGE_SLAB = Blocks.AIR;
+    
+    // 薄墙-木、黑砖、圆石、胭脂砖、夯土、白灰
+    @GameRegistry.ObjectHolder("thin_wall_w")
+    public static final Block THIN_WALL_W = Blocks.AIR;
+    @GameRegistry.ObjectHolder("thin_wall_bb")
+    public static final Block THIN_WALL_BB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("thin_wall_c")
+    public static final Block THIN_WALL_C = Blocks.AIR;
+    @GameRegistry.ObjectHolder("thin_wall_rb")
+    public static final Block THIN_WALL_RB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("thin_wall_re")
+    public static final Block THIN_WALL_RE = Blocks.AIR;
+    @GameRegistry.ObjectHolder("thin_wall_wg")
+    public static final Block THIN_WALL_WG = Blocks.AIR;
+
 }

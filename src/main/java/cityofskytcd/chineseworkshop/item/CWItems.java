@@ -228,13 +228,13 @@ public class CWItems
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
     public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_TOP = null;
     
-    // 黑瓦屋脊边缘_木和黑砖墙
+    // 黑瓦屋顶边缘_木和黑砖墙
     @GameRegistry.ObjectHolder("black_roof_tile_edge_wb")
     public static final Item BLACK_ROOF_TILE_EDGE_WB = null;
-    // 黑瓦屋脊边缘_夯土和胭脂
+    // 黑瓦屋顶边缘_夯土和胭脂
     @GameRegistry.ObjectHolder("black_roof_tile_edge_rr")
     public static final Item BLACK_ROOF_TILE_EDGE_RR = null;
-    // 黑瓦屋脊边缘_圆石和白灰
+    // 黑瓦屋顶边缘_圆石和白灰
     @GameRegistry.ObjectHolder("black_roof_tile_edge_cw")
     public static final Item BLACK_ROOF_TILE_EDGE_CW = null;
     
@@ -314,4 +314,18 @@ public class CWItems
     // 黄瓦屋顶边缘台阶
     @GameRegistry.ObjectHolder("yellow_roof_tile_edge_slab")
     public static final Item YELLOW_ROOF_TILE_EDGE_SLAB = null;
+    
+    // 薄墙-木、黑砖、圆石、胭脂砖、夯土、白灰
+    @GameRegistry.ObjectHolder("thin_wall_w")
+    public static final Item THIN_WALL_W = null;
+    @GameRegistry.ObjectHolder("thin_wall_bb")
+    public static final Item THIN_WALL_BB = null;
+    @GameRegistry.ObjectHolder("thin_wall_c")
+    public static final Item THIN_WALL_C = null;
+    @GameRegistry.ObjectHolder("thin_wall_rb")
+    public static final Item THIN_WALL_RB = null;
+    @GameRegistry.ObjectHolder("thin_wall_re")
+    public static final Item THIN_WALL_RE = null;
+    @GameRegistry.ObjectHolder("thin_wall_wg")
+    public static final Item THIN_WALL_WG = null;
 }

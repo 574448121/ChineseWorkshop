@@ -123,7 +123,14 @@ public class ItemRegistry
                 
                 new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_WB, "w", "bb"),
                 new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_RR, "rb", "re"),
-                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_CW, "c", "wg"));
+                new ItemCWBlockVariants(CWBlocks.BLACK_ROOF_TILE_EDGE_CW, "c", "wg"),
+                
+                new ItemCWBlock(CWBlocks.THIN_WALL_W),
+                new ItemCWBlock(CWBlocks.THIN_WALL_BB),
+                new ItemCWBlock(CWBlocks.THIN_WALL_C),
+                new ItemCWBlock(CWBlocks.THIN_WALL_RB),
+                new ItemCWBlock(CWBlocks.THIN_WALL_RE),
+                new ItemCWBlock(CWBlocks.THIN_WALL_WG));
     }
 
     @SubscribeEvent
@@ -280,5 +287,12 @@ public class ItemRegistry
                 CWItems.BLACK_ROOF_TILE_EDGE_CW,
                 1,
                 new ModelResourceLocation(CW.MODID + ":black_roof_tile_edge_wg", "inventory"));
+        
+        ModelUtil.mapItemModel(CWItems.THIN_WALL_W);
+        ModelUtil.mapItemModel(CWItems.THIN_WALL_BB);
+        ModelUtil.mapItemModel(CWItems.THIN_WALL_C);
+        ModelUtil.mapItemModel(CWItems.THIN_WALL_RB);
+        ModelUtil.mapItemModel(CWItems.THIN_WALL_RE);
+        ModelUtil.mapItemModel(CWItems.THIN_WALL_WG);
     }
 }

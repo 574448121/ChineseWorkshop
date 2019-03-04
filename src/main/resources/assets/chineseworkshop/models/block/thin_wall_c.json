@@ -1,0 +1,6 @@
+{
+	"parent": "chineseworkshop:block/thin_wall_w",
+	"textures": {
+		"particle": "minecraft:blocks/cobblestone"
+    }
+}

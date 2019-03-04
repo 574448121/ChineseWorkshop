@@ -133,7 +133,14 @@ public class BlockRegistry
                 new BlockCWRoofTileRidge("field_ridge", Material.GRASS, 0.5F),
                 new BlockCWPane("red_stained_wooden_planks_paper_window", Material.WOOD, true, 0.5F),
                 new BlockCWMeiRenKao("mei_ren_kao", Material.ROCK, 1.0F),
-                new BlockCWPotted("potted", Material.ROCK, 1.0F));
+                new BlockCWPotted("potted", Material.ROCK, 1.0F),
+                
+                new BlockCWThinWall("thin_wall_w", Material.WOOD, 0.3F),
+                new BlockCWThinWall("thin_wall_bb", Material.WOOD, 0.3F),
+                new BlockCWThinWall("thin_wall_c", Material.WOOD, 0.3F),
+                new BlockCWThinWall("thin_wall_rb", Material.WOOD, 0.3F),
+                new BlockCWThinWall("thin_wall_re", Material.WOOD, 0.3F),
+                new BlockCWThinWall("thin_wall_wg", Material.WOOD, 0.3F));
     }
 
     @SubscribeEvent
