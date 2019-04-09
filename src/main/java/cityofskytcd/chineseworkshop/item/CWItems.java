@@ -209,9 +209,12 @@ public class CWItems
     // 黑瓦屋脊top
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_top")
     public static final Item BLACK_TILE_RIDGE_ROOF_TOP = null;
-    // 黑瓦屋脊边缘
+    //黑瓦屋脊边缘
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge")
     public static final Item BLACK_TILE_RIDGE_ROOF_EDGE = null;
+    // 黑瓦屋脊边缘top
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_TOP = null;
     // 黑瓦屋脊飞檐
     @GameRegistry.ObjectHolder("black_tile_ridge_roof_j")
     public static final Item BLACK_TILE_RIDGE_ROOF_J = null;
@@ -224,19 +227,36 @@ public class CWItems
     // 黑瓦屋顶半砖top
     @GameRegistry.ObjectHolder("black_tile_roof_slab_top")
     public static final Item BLACK_TILE_ROOF_SLAB_TOP = null;
-    // 黑瓦屋脊边缘top
-    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_top")
-    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_TOP = null;
+
     
-    // 黑瓦屋顶边缘_木和黑砖墙
+	// 黑瓦屋顶边缘-木和黑砖、夯土和胭脂、圆石和白灰
     @GameRegistry.ObjectHolder("black_roof_tile_edge_wb")
     public static final Item BLACK_ROOF_TILE_EDGE_WB = null;
-    // 黑瓦屋顶边缘_夯土和胭脂
     @GameRegistry.ObjectHolder("black_roof_tile_edge_rr")
     public static final Item BLACK_ROOF_TILE_EDGE_RR = null;
-    // 黑瓦屋顶边缘_圆石和白灰
     @GameRegistry.ObjectHolder("black_roof_tile_edge_cw")
     public static final Item BLACK_ROOF_TILE_EDGE_CW = null;
+    //	黑瓦屋顶边缘半砖-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_wb")
+    public static final Item BLACK_ROOF_TILE_EDGE_SLAB_WB = null;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_rr")
+    public static final Item BLACK_ROOF_TILE_EDGE_SLAB_RR = null;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_cw")
+    public static final Item BLACK_ROOF_TILE_EDGE_SLAB_CW = null;
+    //	黑瓦屋顶边缘上半砖-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_t_wb")
+    public static final Item BLACK_ROOF_TILE_EDGE_SLAB_T_WB = null;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_t_rr")
+    public static final Item BLACK_ROOF_TILE_EDGE_SLAB_T_RR = null;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_t_cw")
+    public static final Item BLACK_ROOF_TILE_EDGE_SLAB_T_CW = null;
+    //	黑瓦屋顶边缘飞檐-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_j_wb")
+    public static final Item BLACK_ROOF_TILE_EDGE_J_WB = null;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_j_rr")
+    public static final Item BLACK_ROOF_TILE_EDGE_J_RR = null;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_j_cw")
+    public static final Item BLACK_ROOF_TILE_EDGE_J_CW = null;
     
     // 黄瓦屋顶
     @GameRegistry.ObjectHolder("yellow_tile_roof")
@@ -328,4 +348,30 @@ public class CWItems
     public static final Item THIN_WALL_RE = null;
     @GameRegistry.ObjectHolder("thin_wall_wg")
     public static final Item THIN_WALL_WG = null;
+    
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_w")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_W = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_bb")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_BB = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_c")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_C = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_rb")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_RB = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_re")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_RE = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_wg")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_WG = null;
+    
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_w")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_T_W = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_bb")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_T_BB = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_c")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_T_C = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_rb")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_T_RB = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_re")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_T_RE = null;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_wg")
+    public static final Item BLACK_TILE_RIDGE_ROOF_EDGE_T_WG = null;
 }

@@ -27,10 +27,8 @@ public class Selections
         addSelection(
                 ImmutableList.of(
                         ItemDefinition.of(CWItems.BLACK_ROOF_TILE_RIDGE),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE),
                         ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_J),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_TOP),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_TOP)));
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_TOP)));
 
         addSelection(
                 ImmutableList.of(
@@ -96,6 +94,51 @@ public class Selections
                         ItemDefinition.of(CWItems.THIN_WALL_RB),
                         ItemDefinition.of(CWItems.THIN_WALL_RE),
                         ItemDefinition.of(CWItems.THIN_WALL_WG)));
+        
+        addSelection(
+                ImmutableList.of(
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_W),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_BB),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_C),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_RB),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_RE),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_WG)));
+        
+        addSelection(
+                ImmutableList.of(
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_W),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_BB),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_C),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_RB),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_RE),
+                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_WG)));
+        
+        addSelection(
+                ImmutableList.of(
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_WB),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_WB, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_RR),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_RR, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_CW),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_CW, 1)));
+        
+        addSelection(
+                ImmutableList.of(
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_WB),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_WB, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_RR),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_RR, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_CW),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_CW, 1)));
+        
+        addSelection(
+                ImmutableList.of(
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_WB),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_WB, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_RR),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_RR, 1),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_CW),
+                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_CW, 1)));
     }
 
     public static void addSelection(ImmutableList<ItemDefinition> selection)

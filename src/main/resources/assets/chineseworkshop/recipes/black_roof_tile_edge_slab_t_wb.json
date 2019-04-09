@@ -1,13 +1,14 @@
 {
   "type": "forge:ore_shaped",
   "result": {
-    "item": "chineseworkshop:black_roof_tile_edge",
+    "item": "chineseworkshop:black_roof_tile_edge_slab_t_wb",
     "data": 0,
-    "count": 2
+    "count": 10
   },
   "pattern": [
-    "* ",
-    "#*"
+    "** ",
+    "##*",
+	"## "
   ],
   "key": {
     "*": {
@@ -15,7 +16,8 @@
       "data": 1
     },
     "#": {
-      "item": "chineseworkshop:thin_white_gray_wall"
+      "ore": "stickWood",
+      "type": "forge:ore_dict"
     }
   }
 }

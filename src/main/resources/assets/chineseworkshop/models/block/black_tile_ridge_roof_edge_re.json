@@ -1,0 +1,6 @@
+{
+	"parent": "chineseworkshop:block/black_tile_ridge_roof_edge_w",
+	"textures": {
+		"wall": "chineseworkshop:blocks/rammed_earth"
+    }
+}

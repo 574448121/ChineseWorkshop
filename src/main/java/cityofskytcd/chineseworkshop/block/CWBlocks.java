@@ -269,15 +269,34 @@ public class CWBlocks
     @GameRegistry.ObjectHolder("thatch_tile_ridge_roof_edge_top")
     public static final Block THATCH_TILE_RIDGE_ROOF_EDGE_TOP = Blocks.AIR;
     
-    // 黑瓦屋顶边缘-木和黑砖
+    // 黑瓦屋顶边缘-木和黑砖、夯土和胭脂、圆石和白灰
     @GameRegistry.ObjectHolder("black_roof_tile_edge_wb")
     public static final Block BLACK_ROOF_TILE_EDGE_WB = Blocks.AIR;
-    // 黑瓦屋顶边缘-夯土和胭脂
     @GameRegistry.ObjectHolder("black_roof_tile_edge_rr")
     public static final Block BLACK_ROOF_TILE_EDGE_RR = Blocks.AIR;
-    // 黑瓦屋顶边缘-圆石和白灰
     @GameRegistry.ObjectHolder("black_roof_tile_edge_cw")
     public static final Block BLACK_ROOF_TILE_EDGE_CW = Blocks.AIR;
+	//	黑瓦屋顶边缘半砖-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_wb")
+    public static final Block BLACK_ROOF_TILE_EDGE_SLAB_WB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_rr")
+    public static final Block BLACK_ROOF_TILE_EDGE_SLAB_RR = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_cw")
+    public static final Block BLACK_ROOF_TILE_EDGE_SLAB_CW = Blocks.AIR;
+	//	黑瓦屋顶边缘上半砖-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_t_wb")
+    public static final Block BLACK_ROOF_TILE_EDGE_SLAB_T_WB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_t_rr")
+    public static final Block BLACK_ROOF_TILE_EDGE_SLAB_T_RR = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_slab_t_cw")
+    public static final Block BLACK_ROOF_TILE_EDGE_SLAB_T_CW = Blocks.AIR;
+	//	黑瓦屋顶边缘飞檐-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_j_wb")
+    public static final Block BLACK_ROOF_TILE_EDGE_J_WB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_j_rr")
+    public static final Block BLACK_ROOF_TILE_EDGE_J_RR = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_roof_tile_edge_j_cw")
+    public static final Block BLACK_ROOF_TILE_EDGE_J_CW = Blocks.AIR;
 
     /* 薄墙 */
     // 薄白灰墙
@@ -312,5 +331,32 @@ public class CWBlocks
     public static final Block THIN_WALL_RE = Blocks.AIR;
     @GameRegistry.ObjectHolder("thin_wall_wg")
     public static final Block THIN_WALL_WG = Blocks.AIR;
+    
+	//	黑瓦屋脊-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_w")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_W = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_bb")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_BB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_c")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_C = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_rb")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_RB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_re")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_RE = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_wg")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_WG = Blocks.AIR;
+	//	黑瓦屋脊TOP-木和黑砖、夯土和胭脂、圆石和白灰
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_w")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_T_W = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_bb")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_T_BB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_c")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_T_C = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_rb")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_T_RB = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_re")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_T_RE = Blocks.AIR;
+    @GameRegistry.ObjectHolder("black_tile_ridge_roof_edge_t_wg")
+    public static final Block BLACK_TILE_RIDGE_ROOF_EDGE_T_WG = Blocks.AIR;
 
 }

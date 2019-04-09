@@ -41,22 +41,32 @@ public class BlockRegistry
                 new BlockCW("red_stained_wooden_planks", Material.WOOD, 1.0F),
                 new BlockCW("architectural_painting", Material.ROCK, 1.0F),
 
-                // 屋顶
+                // 屋顶         
+				new BlockCWRoofTileEdge("black_roof_tile_edge", Material.ROCK, 1.0F),
+				new BlockCWRoofTileEdgeSlab("black_roof_tile_edge_slab", Material.ROCK, 1.0F),
+				new BlockCWTFace("black_tile_ridge_roof_j", Material.ROCK, 1.0F),
+				new BlockCWTFace("black_tile_ridge_roof_edge_top", Material.ROCK, 1.0F),
                 new BlockCWRoof("black_tile_roof", Material.ROCK, 1.0F),
                 new BlockCWRoofTileRidge("black_roof_tile_ridge", Material.ROCK, 1.0F),
-                new BlockCWRoofTileEdge("black_roof_tile_edge", Material.ROCK, 1.0F),
-                new BlockCWRoofTileEdgeSlab("black_roof_tile_edge_slab", Material.ROCK, 1.0F),
                 new BlockCWRoofTileRidge("black_tile_ridge_roof_top", Material.ROCK, 1.0F),
                 new BlockCWTFace("black_tile_ridge_roof_edge", Material.ROCK, 1.0F),
-                new BlockCWTFace("black_tile_ridge_roof_edge_top", Material.ROCK, 1.0F),
-                new BlockCWTFace("black_tile_ridge_roof_j", Material.ROCK, 1.0F),
                 new BlockCWTFace("black_tile_roof_j", Material.ROCK, 1.0F),
                 new BlockCWRoofSlab("black_tile_roof_slab", Material.ROCK, 1.0F),
                 new BlockCWRoof("black_tile_roof_slab_top", Material.ROCK, 1.0F),
                 
                 new BlockCWRoofTileEdge("black_roof_tile_edge_wb", Material.ROCK, 1.0F),
                 new BlockCWRoofTileEdge("black_roof_tile_edge_rr", Material.ROCK, 1.0F),
-                new BlockCWRoofTileEdge("black_roof_tile_edge_cw", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_cw", Material.ROCK, 1.0F),   
+                new BlockCWRoofTileEdge("black_roof_tile_edge_slab_wb", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_slab_rr", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_slab_cw", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_slab_t_wb", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_slab_t_rr", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_slab_t_cw", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_j_wb", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_j_rr", Material.ROCK, 1.0F),
+                new BlockCWRoofTileEdge("black_roof_tile_edge_j_cw", Material.ROCK, 1.0F),
+                
 
                 new BlockCWRoof("yellow_tile_roof", Material.ROCK, 1.0F),
                 new BlockCWRoofTileRidge("yellow_roof_tile_ridge", Material.ROCK, 1.0F),
@@ -135,6 +145,20 @@ public class BlockRegistry
                 new BlockCWMeiRenKao("mei_ren_kao", Material.ROCK, 1.0F),
                 new BlockCWPotted("potted", Material.ROCK, 1.0F),
                 
+                new BlockCWTFace("black_tile_ridge_roof_edge_w", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_bb", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_c", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_rb", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_re", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_wg", Material.WOOD, 0.3F),
+                
+                new BlockCWTFace("black_tile_ridge_roof_edge_t_w", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_t_bb", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_t_c", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_t_rb", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_t_re", Material.WOOD, 0.3F),
+                new BlockCWTFace("black_tile_ridge_roof_edge_t_wg", Material.WOOD, 0.3F),
+                
                 new BlockCWThinWall("thin_wall_w", Material.WOOD, 0.3F),
                 new BlockCWThinWall("thin_wall_bb", Material.WOOD, 0.3F),
                 new BlockCWThinWall("thin_wall_c", Material.WOOD, 0.3F),
@@ -184,6 +208,7 @@ public class BlockRegistry
                 CWBlocks.FIELD_RIDGE,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
         
+        // 黑瓦屋顶边缘-木和黑砖、夯土和胭脂、圆石和白灰
         ModelLoader.setCustomStateMapper(
                 CWBlocks.BLACK_ROOF_TILE_EDGE_WB,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
@@ -192,6 +217,39 @@ public class BlockRegistry
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
         ModelLoader.setCustomStateMapper(
                 CWBlocks.BLACK_ROOF_TILE_EDGE_CW,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        
+        // 黑瓦屋顶边缘半砖-木和黑砖、夯土和胭脂、圆石和白灰
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB_WB,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB_RR,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB_CW,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        
+        //	黑瓦屋顶边缘上半砖-木和黑砖、夯土和胭脂、圆石和白灰
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB_T_WB,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB_T_RR,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_SLAB_T_CW,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        
+        //	黑瓦屋顶边缘飞檐-木和黑砖、夯土和胭脂、圆石和白灰
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_J_WB,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_J_RR,
+                new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
+        ModelLoader.setCustomStateMapper(
+                CWBlocks.BLACK_ROOF_TILE_EDGE_J_CW,
                 new StateMap.Builder().ignore(BlockCWTFace2D.FACING).build());
     }
 
