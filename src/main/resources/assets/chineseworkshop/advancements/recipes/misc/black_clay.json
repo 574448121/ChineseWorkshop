@@ -20,9 +20,8 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          {
-            "type": "forge:ore_dict",
-            "ore": "dyeBlack"
+          {,
+            "tag": "dyeBlack"
           }
         ]
       }

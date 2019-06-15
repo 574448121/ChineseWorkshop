@@ -1,7 +1,7 @@
 {
 	"parent": "chineseworkshop:block/black_tile_roof_slab",
 	"textures": {
-		"particle": "chineseworkshop:blocks/yellow_tile",
-		"texture": "chineseworkshop:blocks/yellow_tile"
+		"particle": "chineseworkshop:block/yellow_tile",
+		"texture": "chineseworkshop:block/yellow_tile"
     }
 }

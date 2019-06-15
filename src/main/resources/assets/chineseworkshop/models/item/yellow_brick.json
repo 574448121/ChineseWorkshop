@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "chineseworkshop:items/yellow_brick"
+        "layer0": "chineseworkshop:item/yellow_brick"
     }
 }

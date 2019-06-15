@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:thatch_tile_ridge_roof",
+    "count": 6
+  },
+  "pattern": [
+    " * ",
+    "*/*"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:wheat"
+    },
+	"/": {
+      "tag" : "forge:rods/wooden",
+    }
+  }
+}

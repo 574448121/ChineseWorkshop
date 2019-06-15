@@ -1,7 +1,7 @@
 {
 	"ambientocclusion": false,
     "textures": {
-        "particle": "chineseworkshop:blocks/black_tile_roof"
+        "particle": "chineseworkshop:block/black_tile_roof"
     },
     "elements": [
         {

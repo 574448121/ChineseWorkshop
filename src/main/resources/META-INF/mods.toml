@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[26,)"
+[[mods]]
+modId="chineseworkshop"
+version="${file.jarVersion}"
+displayName="ChineseWorkshop"
+authors="CityOfSkyTCD, Snownee"
+displayURL="https://minecraft.curseforge.com/projects/chineseworkshop"
+logoFile="logo.png"
+description='''
+'''

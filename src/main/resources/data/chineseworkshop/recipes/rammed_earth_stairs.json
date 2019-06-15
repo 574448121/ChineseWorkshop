@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:rammed_earth_stairs",
+    "count": 4
+  },
+  "pattern": [
+    "*  ",
+    "** ",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:rammed_earth"
+    }
+  }
+}

@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "stickWood",
-            "type": "forge:ore_dict"
+            "tag": "forge:rods/wooden",
           }
         ]
       }

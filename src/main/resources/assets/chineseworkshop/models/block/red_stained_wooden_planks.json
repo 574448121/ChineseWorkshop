@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "chineseworkshop:blocks/red_stained_wooden_planks"
+        "all": "chineseworkshop:block/red_stained_wooden_planks"
     }
 }

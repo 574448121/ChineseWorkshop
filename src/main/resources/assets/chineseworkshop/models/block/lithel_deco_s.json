@@ -2,8 +2,8 @@
 "ambientocclusion": false,
 "parent": "minecraft:block/block",
 "textures": {
-    "particle": "minecraft:blocks/planks_oak",
-    "log": "minecraft:blocks/log_oak"
+    "particle": "minecraft:block/planks_oak",
+    "log": "minecraft:block/log_oak"
 },
 "elements": [
 {

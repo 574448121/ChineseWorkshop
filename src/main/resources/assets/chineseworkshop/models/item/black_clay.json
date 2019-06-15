@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "chineseworkshop:items/black_clay"
+        "layer0": "chineseworkshop:item/black_clay"
     }
 }

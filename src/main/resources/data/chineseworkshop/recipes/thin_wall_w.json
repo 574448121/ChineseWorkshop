@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:thin_wall_w",
+    "count": 18
+  },
+  "pattern": [
+    "*",
+    "*",
+    "*"
+  ],
+  "key": {
+    "*": {
+      "tag" : "plankWood",
+    }
+  }
+}

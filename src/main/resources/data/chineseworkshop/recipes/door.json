@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:door"
+  },
+  "pattern": [
+    "*"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:spruce_door"
+    }
+  }
+}

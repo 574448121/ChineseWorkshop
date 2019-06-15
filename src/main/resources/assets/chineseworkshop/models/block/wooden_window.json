@@ -1,7 +1,7 @@
 {
 	"parent": "chineseworkshop:block/stone_window",
 	"textures": {
-		"particle": "chineseworkshop:blocks/wooden_block",
-		"texture": "chineseworkshop:blocks/wooden_block"
+		"particle": "chineseworkshop:block/wooden_block",
+		"texture": "chineseworkshop:block/wooden_block"
     }
 }

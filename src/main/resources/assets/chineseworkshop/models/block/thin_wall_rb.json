@@ -1,6 +1,6 @@
 {
 	"parent": "chineseworkshop:block/thin_wall_w",
 	"textures": {
-		"particle": "chineseworkshop:blocks/rouge_brick"
+		"particle": "chineseworkshop:block/rouge_brick"
     }
 }

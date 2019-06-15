@@ -2,7 +2,7 @@
 	"__comment": "Designed by CityOfSkyTCD",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/chinese_oak_door_upper"
+		"particle": "chineseworkshop:block/chinese_oak_door_upper"
 	},
 	"elements": [ 	 
 		{

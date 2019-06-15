@@ -1,193 +1,98 @@
 package cityofskytcd.chineseworkshop.library;
 
-import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Sets;
 
+import cityofskytcd.chineseworkshop.BlockModule;
 import cityofskytcd.chineseworkshop.CW;
-import cityofskytcd.chineseworkshop.item.CWItems;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.IItemProvider;
 
 public class Selections
 {
-    private static Set<ImmutableList<ItemDefinition>> selections = new HashSet<>();
+    private static Set<Item> allItems = Sets.newHashSet();
+    private static Set<List<Item>> selections = Sets.newHashSet();
 
     public static void init()
     {
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_TILE_ROOF),
-                        ItemDefinition.of(CWItems.BLACK_TILE_ROOF_J),
-                        ItemDefinition.of(CWItems.BLACK_TILE_ROOF_SLAB),
-                        ItemDefinition.of(CWItems.BLACK_TILE_ROOF_SLAB_TOP)));
+        //        addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, CWItems.BLACK_TILE_ROOF_SLAB, CWItems.BLACK_TILE_ROOF_SLAB_TOP);
 
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_RIDGE),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_J),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_TOP)));
+        addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, BlockModule.BLACK_TILE_ROOF_RIDGE);
 
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB, 1)));
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.YELLOW_TILE_ROOF),
-                        ItemDefinition.of(CWItems.YELLOW_TILE_ROOF_J),
-                        ItemDefinition.of(CWItems.YELLOW_TILE_ROOF_SLAB),
-                        ItemDefinition.of(CWItems.YELLOW_TILE_ROOF_SLAB_TOP)));
-
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.YELLOW_ROOF_TILE_RIDGE),
-                        ItemDefinition.of(CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE),
-                        ItemDefinition.of(CWItems.YELLOW_TILE_RIDGE_ROOF_J),
-                        ItemDefinition.of(CWItems.YELLOW_TILE_RIDGE_ROOF_TOP),
-                        ItemDefinition.of(CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP)));
-
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.YELLOW_ROOF_TILE_EDGE),
-                        ItemDefinition.of(CWItems.YELLOW_ROOF_TILE_EDGE, 1),
-                        ItemDefinition.of(CWItems.YELLOW_ROOF_TILE_EDGE_SLAB),
-                        ItemDefinition.of(CWItems.YELLOW_ROOF_TILE_EDGE_SLAB, 1)));
-
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.THATCH_ROOF),
-                        ItemDefinition.of(CWItems.THATCH_TILE_ROOF_SLAB),
-                        ItemDefinition.of(CWItems.THATCH_TILE_ROOF_SLAB_TOP)));
-
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.THATCH_TILE_RIDGE_ROOF),
-                        ItemDefinition.of(CWItems.THATCH_TILE_RIDGE_ROOF_TOP),
-                        ItemDefinition.of(CWItems.THATCH_TILE_RIDGE_ROOF_EDGE),
-                        ItemDefinition.of(CWItems.THATCH_TILE_RIDGE_ROOF_EDGE_TOP)));
-
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.THATCH_ROOF_TILE_EDGE),
-                        ItemDefinition.of(CWItems.THATCH_ROOF_TILE_EDGE, 1),
-                        ItemDefinition.of(CWItems.THATCH_ROOF_TILE_EDGE_SLAB),
-                        ItemDefinition.of(CWItems.THATCH_ROOF_TILE_EDGE_SLAB, 1)));
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_WB),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_WB, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_RR),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_RR, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_CW),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_CW, 1)));
-        
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.THIN_WALL_W),
-                        ItemDefinition.of(CWItems.THIN_WALL_BB),
-                        ItemDefinition.of(CWItems.THIN_WALL_C),
-                        ItemDefinition.of(CWItems.THIN_WALL_RB),
-                        ItemDefinition.of(CWItems.THIN_WALL_RE),
-                        ItemDefinition.of(CWItems.THIN_WALL_WG)));
-        
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_W),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_BB),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_C),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_RB),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_RE),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_WG)));
-        
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_W),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_BB),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_C),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_RB),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_RE),
-                        ItemDefinition.of(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_WG)));
-        
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_WB),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_WB, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_RR),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_RR, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_CW),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_CW, 1)));
-        
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_WB),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_WB, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_RR),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_RR, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_CW),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_CW, 1)));
-        
-        addSelection(
-                ImmutableList.of(
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_WB),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_WB, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_RR),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_RR, 1),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_CW),
-                        ItemDefinition.of(CWItems.BLACK_ROOF_TILE_EDGE_J_CW, 1)));
+        //        addSelection(CWItems.BLACK_ROOF_TILE_RIDGE), CWItems.BLACK_TILE_RIDGE_ROOF_J), CWItems.BLACK_TILE_RIDGE_ROOF_TOP)));
+        //
+        //        addSelection(CWItems.BLACK_ROOF_TILE_EDGE), CWItems.BLACK_ROOF_TILE_EDGE, 1), CWItems.BLACK_ROOF_TILE_EDGE_SLAB), CWItems.BLACK_ROOF_TILE_EDGE_SLAB, 1)));
+        //        addSelection(CWItems.YELLOW_TILE_ROOF), CWItems.YELLOW_TILE_ROOF_J), CWItems.YELLOW_TILE_ROOF_SLAB), CWItems.YELLOW_TILE_ROOF_SLAB_TOP)));
+        //
+        //        addSelection(CWItems.YELLOW_ROOF_TILE_RIDGE), CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE), CWItems.YELLOW_TILE_RIDGE_ROOF_J), CWItems.YELLOW_TILE_RIDGE_ROOF_TOP), CWItems.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP)));
+        //
+        //        addSelection(CWItems.YELLOW_ROOF_TILE_EDGE), CWItems.YELLOW_ROOF_TILE_EDGE, 1), CWItems.YELLOW_ROOF_TILE_EDGE_SLAB), CWItems.YELLOW_ROOF_TILE_EDGE_SLAB, 1)));
+        //
+        //        addSelection(CWItems.THATCH_ROOF), CWItems.THATCH_TILE_ROOF_SLAB), CWItems.THATCH_TILE_ROOF_SLAB_TOP)));
+        //
+        //        addSelection(CWItems.THATCH_TILE_RIDGE_ROOF), CWItems.THATCH_TILE_RIDGE_ROOF_TOP), CWItems.THATCH_TILE_RIDGE_ROOF_EDGE), CWItems.THATCH_TILE_RIDGE_ROOF_EDGE_TOP)));
+        //
+        //        addSelection(CWItems.THATCH_ROOF_TILE_EDGE), CWItems.THATCH_ROOF_TILE_EDGE, 1), CWItems.THATCH_ROOF_TILE_EDGE_SLAB), CWItems.THATCH_ROOF_TILE_EDGE_SLAB, 1)));
+        //        addSelection(CWItems.BLACK_ROOF_TILE_EDGE_WB), CWItems.BLACK_ROOF_TILE_EDGE_WB, 1), CWItems.BLACK_ROOF_TILE_EDGE_RR), CWItems.BLACK_ROOF_TILE_EDGE_RR, 1), CWItems.BLACK_ROOF_TILE_EDGE_CW), CWItems.BLACK_ROOF_TILE_EDGE_CW, 1)));
+        //
+        //        addSelection(CWItems.THIN_WALL_W), CWItems.THIN_WALL_BB), CWItems.THIN_WALL_C), CWItems.THIN_WALL_RB), CWItems.THIN_WALL_RE), CWItems.THIN_WALL_WG)));
+        //
+        //        addSelection(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_W), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_BB), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_C), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_RB), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_RE), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_WG)));
+        //
+        //        addSelection(CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_W), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_BB), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_C), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_RB), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_RE), CWItems.BLACK_TILE_RIDGE_ROOF_EDGE_T_WG)));
+        //
+        //        addSelection(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_WB), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_WB, 1), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_RR), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_RR, 1), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_CW), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_CW, 1)));
+        //
+        //        addSelection(CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_WB), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_WB, 1), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_RR), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_RR, 1), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_CW), CWItems.BLACK_ROOF_TILE_EDGE_SLAB_T_CW, 1)));
+        //
+        //        addSelection(CWItems.BLACK_ROOF_TILE_EDGE_J_WB), CWItems.BLACK_ROOF_TILE_EDGE_J_WB, 1), CWItems.BLACK_ROOF_TILE_EDGE_J_RR), CWItems.BLACK_ROOF_TILE_EDGE_J_RR, 1), CWItems.BLACK_ROOF_TILE_EDGE_J_CW), CWItems.BLACK_ROOF_TILE_EDGE_J_CW, 1)));
     }
 
-    public static void addSelection(ImmutableList<ItemDefinition> selection)
+    public static void addSelection(IItemProvider... providers)
     {
-        if (containElement(selection))
+        List<Item> items = ImmutableList.copyOf(providers).stream().map(IItemProvider::asItem).collect(Collectors.toList());
+        if (items.stream().anyMatch(allItems::contains))
         {
-            CW.logger.error("Try to add an existent ItemDefinition, skipped");
+            CW.logger.error("Try to add an existent IItemProvider to selections, skipped");
         }
         else
         {
-            selections.add(selection);
+            selections.add(items);
+            allItems.addAll(items);
         }
     }
 
     @Nullable
-    public static ImmutableList<ItemDefinition> findSelection(ItemStack stack)
+    public static List<Item> find(ItemStack stack)
     {
-        return findSelection(ItemDefinition.of(stack));
+        return find(stack.getItem());
     }
 
     @Nullable
-    public static ImmutableList<ItemDefinition> findSelection(ItemDefinition definition)
+    public static List<Item> find(IItemProvider provider)
     {
-        for (ImmutableList<ItemDefinition> selection : selections)
+        Item item = provider.asItem();
+        if (allItems.contains(item))
         {
-            if (selection.contains(definition))
+            Optional<List<Item>> result = selections.stream().filter(s -> s.contains(item)).findFirst();
+            if (result.isPresent())
             {
-                return selection;
+                return result.get();
             }
         }
-
         return null;
     }
 
-    private static boolean containElement(ImmutableList<ItemDefinition> list)
+    public static boolean contains(Item item)
     {
-        for (ImmutableList<ItemDefinition> selection : selections)
-        {
-            for (ItemDefinition definition : selection)
-            {
-                for (ItemDefinition e : list)
-                {
-                    if (e.equals(definition))
-                    {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
+        return allItems.contains(item);
     }
 }

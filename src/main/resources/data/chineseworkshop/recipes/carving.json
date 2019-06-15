@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:carving",
+    "count": 4
+  },
+  "pattern": [
+    "sfs",
+    "sfs"
+  ],
+  "key": {
+    "s": {
+      "tag" : "forge:rods/wooden",
+    },
+    "f": {
+      "tag" : "forge:fences/wooden"
+    }
+  }
+}

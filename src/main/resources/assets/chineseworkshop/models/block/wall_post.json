@@ -1,0 +1,21 @@
+{
+	"__comment": "Designed by CityOfSkyTCD",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"particle": "chineseworkshop:block/black_brick"
+	},
+	"elements": [
+		{
+			"from": [ 4, 0, 4 ],
+			"to": [ 12, 16, 12 ],
+			"faces": {
+				"down": { "uv": [ 13, 13, 3, 3 ], "texture": "#particle" },
+				"up": { "uv": [ 3, 3, 13, 13 ], "texture": "#particle" },
+				"north": { "uv": [ 4, 0, 12, 16 ], "texture": "#particle" },
+				"south": { "uv": [ 4, 0, 12, 16 ], "texture": "#particle" },
+				"west": { "uv": [ 4, 0, 12, 16 ], "texture": "#particle" },
+				"east": { "uv": [ 4, 0, 12, 16 ], "texture": "#particle" }
+			}
+		}
+	]
+}

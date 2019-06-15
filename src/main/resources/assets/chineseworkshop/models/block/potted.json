@@ -1,9 +1,9 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
 	"textures": {
-		"particle": "chineseworkshop:blocks/plant",
-		"basin": "chineseworkshop:blocks/basin",
-		"plant": "chineseworkshop:blocks/plant"
+		"particle": "chineseworkshop:block/plant",
+		"basin": "chineseworkshop:block/basin",
+		"plant": "chineseworkshop:block/plant"
 	},
 	"elements": [ 	 
 		{

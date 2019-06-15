@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:wooden_threshold",
+	"count": 2
+  },
+  "pattern": [
+    "*",
+    "#"
+  ],
+  "key": {
+    "*": {
+      "tag": "slabWood",
+    },
+    "#": {
+      "tag": "logWood",
+    }
+  }
+}

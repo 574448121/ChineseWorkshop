@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "chineseworkshop:blocks/rammed_earth"
+        "all": "chineseworkshop:block/rammed_earth"
     }
 }

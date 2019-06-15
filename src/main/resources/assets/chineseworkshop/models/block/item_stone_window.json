@@ -1,8 +1,8 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
 	"textures": {
-		"particle": "chineseworkshop:blocks/refined_diorite",
-		"texture": "chineseworkshop:blocks/refined_diorite"
+		"particle": "chineseworkshop:block/refined_diorite",
+		"texture": "chineseworkshop:block/refined_diorite"
 	},
 	"display": {
         "gui": {

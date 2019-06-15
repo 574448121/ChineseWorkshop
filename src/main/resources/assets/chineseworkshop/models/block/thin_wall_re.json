@@ -1,6 +1,6 @@
 {
 	"parent": "chineseworkshop:block/thin_wall_w",
 	"textures": {
-		"particle": "chineseworkshop:blocks/rammed_earth"
+		"particle": "chineseworkshop:block/rammed_earth"
     }
 }

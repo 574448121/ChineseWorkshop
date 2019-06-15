@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "chineseworkshop:tree_altar" }
+        "": { "model": "chineseworkshop:block/tree_altar" }
     }
 }

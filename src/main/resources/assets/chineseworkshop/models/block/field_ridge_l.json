@@ -1,9 +1,9 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
 	"textures": {
-		"particle": "chineseworkshop:blocks/grass_block_side",
-		"texture": "chineseworkshop:blocks/field_ridge",
-		"texture1": "chineseworkshop:blocks/field_ridge_l"
+		"particle": "chineseworkshop:block/grass_block_side",
+		"texture": "chineseworkshop:block/field_ridge",
+		"texture1": "chineseworkshop:block/field_ridge_l"
 	},
 	"elements": [ 	 
 		{

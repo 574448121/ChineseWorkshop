@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:red_stained_wooden_planks_upper_door_frame",
+	"count": 4
+  },
+  "pattern": [
+    "**"
+  ],
+  "key": {
+    "*": {
+      "item" : "chineseworkshop:red_stained_wooden_planks_wall"
+    }
+  }
+}

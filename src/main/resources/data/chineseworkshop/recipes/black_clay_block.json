@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:black_clay_block"
+  },
+  "pattern": [
+    "cc",
+    "cc"
+  ],
+  "key": {
+    "c": {
+      "item": "chineseworkshop:black_clay"
+    }
+  }
+}

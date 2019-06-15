@@ -1,7 +1,7 @@
 {
 	"ambientocclusion": false,
     "textures": {
-        "particle": "chineseworkshop:blocks/doors_lower"
+        "particle": "chineseworkshop:block/doors_lower"
     },
     "elements": [
         {

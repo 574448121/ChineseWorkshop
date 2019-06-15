@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:small_white_ash_block",
+    "count": 6
+  },
+  "pattern": [
+    "***",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:white_ash_block"
+    }
+  }
+}

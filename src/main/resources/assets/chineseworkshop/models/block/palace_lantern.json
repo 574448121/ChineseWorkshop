@@ -1,8 +1,8 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
 	"textures": {
-		"particle": "chineseworkshop:blocks/palace_lantern",
-		"texture": "chineseworkshop:blocks/palace_lantern"
+		"particle": "chineseworkshop:block/palace_lantern",
+		"texture": "chineseworkshop:block/palace_lantern"
 	},
 		"display": {
         "gui": {

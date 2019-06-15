@@ -1,21 +1,21 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "chineseworkshop:thatch_tile_ridge_roof_top"
+    "model": "chineseworkshop:block/thatch_tile_ridge_roof_top"
   },
   "variants": {
     "variant": {
-      "i": { "model": "chineseworkshop:thatch_tile_ridge_roof_top", "y": 90 },
-      "i_90": { "model": "chineseworkshop:thatch_tile_ridge_roof_top" },
-      "l": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_l", "y": 90 },
-      "l_90": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_l", "y": 180 },
-      "l_180": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_l", "y": 270 },
-      "l_270": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_l" },
-      "t": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_t", "y": 180 },
-      "t_90": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_t", "y": 270 },
-      "t_180": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_t" },
-      "t_270": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_t", "y": 90 },
-      "x": { "model": "chineseworkshop:thatch_tile_ridge_roof_top_x" }
+      "i": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top", "y": 90 },
+      "i_90": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top" },
+      "l": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_l", "y": 90 },
+      "l_90": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_l", "y": 180 },
+      "l_180": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_l", "y": 270 },
+      "l_270": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_l" },
+      "t": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_t", "y": 180 },
+      "t_90": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_t", "y": 270 },
+      "t_180": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_t" },
+      "t_270": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_t", "y": 90 },
+      "x": { "model": "chineseworkshop:block/thatch_tile_ridge_roof_top_x" }
     }
   }
 }

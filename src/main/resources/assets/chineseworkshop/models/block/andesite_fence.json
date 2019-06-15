@@ -2,7 +2,7 @@
 "ambientocclusion": false,
 "parent": "minecraft:block/block",
 "textures": {
-    "particle": "chineseworkshop:blocks/andesite"
+    "particle": "chineseworkshop:block/andesite"
 },
 "elements": [
 {

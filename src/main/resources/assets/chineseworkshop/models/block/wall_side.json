@@ -1,12 +1,10 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
-	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/black_brick_wall"
+		"particle": "chineseworkshop:block/black_brick"
 	},
-	"elements": [ 	 
+	"elements": [
 		{
-			"__comment": "Element",
 			"from": [ 4, 0, 0 ],
 			"to": [ 12, 16, 4 ],
 			"faces": {

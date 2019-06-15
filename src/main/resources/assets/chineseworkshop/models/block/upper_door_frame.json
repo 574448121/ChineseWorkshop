@@ -2,7 +2,7 @@
 "ambientocclusion": false,
 "parent": "minecraft:block/block",
 "textures": {
-    "particle": "chineseworkshop:blocks/oak_wall"
+    "particle": "chineseworkshop:block/oak_wall"
 },
 "elements": [
 {

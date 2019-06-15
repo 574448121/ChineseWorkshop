@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:wooden_window",
+	"count": 3
+  },
+  "pattern": [
+    "d d",
+    "d d",
+    "d d"
+  ],
+  "key": {
+    "d": {
+      "tag" : "plankWood",
+    }
+  }
+}

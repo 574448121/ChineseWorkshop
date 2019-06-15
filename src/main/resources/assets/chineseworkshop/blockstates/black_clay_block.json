@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "chineseworkshop:black_clay_block" }
+        "": { "model": "chineseworkshop:block/black_clay_block" }
     }
 }

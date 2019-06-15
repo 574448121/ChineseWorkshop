@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "chineseworkshop:stone_tower_lamp" }
+        "": { "model": "chineseworkshop:block/stone_tower_lamp" }
     }
 }

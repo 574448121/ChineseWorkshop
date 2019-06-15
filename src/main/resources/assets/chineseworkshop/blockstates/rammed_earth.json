@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "chineseworkshop:rammed_earth" }
+        "": { "model": "chineseworkshop:block/rammed_earth" }
     }
 }

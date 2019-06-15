@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:lithel_deco",
+    "count": 2
+  },
+  "pattern": [
+    "*#*"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:oak_chinese_fence"
+    },
+    "#": {
+      "item": "chineseworkshop:carving"
+    }
+  }
+}

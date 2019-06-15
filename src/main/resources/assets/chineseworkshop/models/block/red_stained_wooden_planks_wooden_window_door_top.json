@@ -2,7 +2,7 @@
 	"__comment": "Designed by CityOfSkyTCD with",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/red_stained_wooden_planks_wooden_window_door_top"
+		"particle": "chineseworkshop:block/red_stained_wooden_planks_wooden_window_door_top"
 	},
 	"elements": [ 	 
 		{

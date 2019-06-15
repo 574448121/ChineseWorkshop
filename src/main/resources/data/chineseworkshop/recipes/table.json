@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:table"
+  },
+  "pattern": [
+    "***",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:wooden_pressure_plate"
+    },
+    "#": {
+      "tag": "forge:rods/wooden",
+    }
+  }
+}

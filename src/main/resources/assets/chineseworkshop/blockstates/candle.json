@@ -1,9 +1,5 @@
 {
     "variants": {
-        "facing=up": { "model": "ChineseWorkshop:candle_up" },
-        "facing=east": { "model": "ChineseWorkshop:candle", "y": 90 },
-        "facing=south": { "model": "ChineseWorkshop:candle", "y": 180 },
-        "facing=west": { "model": "ChineseWorkshop:candle", "y": 270 },
-        "facing=north": { "model": "ChineseWorkshop:candle" }
+        "": { "model": "chineseworkshop:block/candle_up" }
     }
 }

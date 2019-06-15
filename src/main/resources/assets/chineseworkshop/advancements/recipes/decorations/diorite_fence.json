@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "stoneDiorite",
-            "type": "forge:ore_dict"
+            "tag": "stoneDiorite",
           }
         ]
       }

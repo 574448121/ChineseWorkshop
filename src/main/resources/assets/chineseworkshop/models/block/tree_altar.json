@@ -2,10 +2,10 @@
 "ambientocclusion": false,
 "parent": "minecraft:block/block",
 "textures": {
-    "particle": "chineseworkshop:blocks/black_tile_roof",
-    "grass": "minecraft:blocks/grass_top",
-    "log_top": "minecraft:blocks/log_oak_top",
-    "log": "minecraft:blocks/log_oak"
+    "particle": "chineseworkshop:block/black_tile_roof",
+    "grass": "minecraft:block/grass_top",
+    "log_top": "minecraft:block/log_oak_top",
+    "log": "minecraft:block/log_oak"
 },
 "display": {
     "gui": {

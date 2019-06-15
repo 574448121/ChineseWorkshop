@@ -1,0 +1,6 @@
+{
+	"parent": "chineseworkshop:block/wall_side",
+	"textures": {
+		"particle": "chineseworkshop:block/white_ash"
+    }
+}

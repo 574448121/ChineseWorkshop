@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:rammed_earth"
+  },
+  "pattern": [
+    "*"
+  ],
+  "key": {
+    "*": {
+      "tag" : "dirt",
+    }
+  }
+}

@@ -2,7 +2,7 @@
 	"ambientocclusion": false,
 	"parent": "minecraft:block/block",
 	"textures": {
-    "particle": "chineseworkshop:blocks/refined_diorite"
+    "particle": "chineseworkshop:block/refined_diorite"
 },
 "elements": [
 {

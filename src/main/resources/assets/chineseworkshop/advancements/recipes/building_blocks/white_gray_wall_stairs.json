@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "chineseworkshop:white_gray_wall_stairs"
+      "chineseworkshop:white_ash_block_stairs"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "item": "chineseworkshop:white_gray_wall"
+            "item": "chineseworkshop:white_ash_block"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "chineseworkshop:white_gray_wall_stairs"
+        "recipe": "chineseworkshop:white_ash_block_stairs"
       }
     }
   },

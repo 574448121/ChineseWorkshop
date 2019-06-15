@@ -2,7 +2,7 @@
 	"ambientocclusion": false,
     "parent": "minecraft:block/block",
     "textures": {
-        "particle": "chineseworkshop:blocks/white_lantern"
+        "particle": "chineseworkshop:block/white_lantern"
     },
     "elements": [
         {

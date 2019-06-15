@@ -1,8 +1,8 @@
 {
 	"parent": "chineseworkshop:block/black_tile_ridge_roof_j",
 	"textures": {
-		"particle": "chineseworkshop:blocks/yellow_tile",
-		"texture": "chineseworkshop:blocks/yellow_tile_s",
-		"black_tile": "chineseworkshop:blocks/yellow_tile"
+		"particle": "chineseworkshop:block/yellow_tile",
+		"texture": "chineseworkshop:block/yellow_tile_s",
+		"black_tile": "chineseworkshop:block/yellow_tile"
     }
 }

@@ -1,0 +1,24 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:red_lantern",
+    "count": 2
+  },
+  "pattern": [
+    "***",
+    "STS",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:carpet",
+      "data": 14
+    },
+    "S": {
+      "tag" : "forge:rods/wooden",
+    },
+    "T": {
+      "tag" : "torch",
+    }
+  }
+}

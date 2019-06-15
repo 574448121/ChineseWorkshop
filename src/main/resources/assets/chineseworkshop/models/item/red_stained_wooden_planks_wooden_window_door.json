@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "chineseworkshop:items/red_stained_wooden_planks_wooden_window_door"
+        "layer0": "chineseworkshop:item/red_stained_wooden_planks_wooden_window_door"
     }
 }

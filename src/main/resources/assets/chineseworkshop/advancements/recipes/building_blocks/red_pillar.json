@@ -10,9 +10,8 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          {
-            "type": "forge:ore_dict",
-            "ore": "dyeRed"
+          {,
+            "tag": "dyeRed"
           }
         ]
       }
@@ -21,9 +20,8 @@
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
-          {
-            "type": "forge:ore_dict",
-            "ore": "logWood"
+          {,
+            "tag": "logWood"
           }
         ]
       }

@@ -2,9 +2,9 @@
 	"__comment": "Designed by CityOfSkyTCD with %",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/black_tile",
-		"texture": "chineseworkshop:blocks/black_tile",
-		"white_gray_wall": "chineseworkshop:blocks/white_gray_wall"
+		"particle": "chineseworkshop:block/black_tile",
+		"texture": "chineseworkshop:block/black_tile",
+		"white_ash_block": "chineseworkshop:block/white_ash_block"
 	},
 	"elements": [ 	 
 		{
@@ -81,12 +81,12 @@
 			"from": [ 15, 8, 1.5 ],
 			"to": [ 15.98, 10, 14.5 ],
 			"faces": {
-				"down": { "uv": [ 0.9375, 14.5, 0, 1.5 ], "texture": "#white_gray_wall" },
-				"up": { "uv": [ 15.0625, 1.5, 16, 14.5 ], "texture": "#white_gray_wall" },
+				"down": { "uv": [ 0.9375, 14.5, 0, 1.5 ], "texture": "#white_ash_block" },
+				"up": { "uv": [ 15.0625, 1.5, 16, 14.5 ], "texture": "#white_ash_block" },
 				"north": { "uv": [ 0, 14, 0.9375, 16 ], "texture": "#texture" },
-				"south": { "uv": [ 15.0625, 14, 16, 16 ], "texture": "#white_gray_wall" },
-				"west": { "uv": [ 1.5, 14, 14.5, 16 ], "texture": "#white_gray_wall" },
-				"east": { "uv": [ 1.5, 14, 14.5, 16 ], "texture": "#white_gray_wall" }
+				"south": { "uv": [ 15.0625, 14, 16, 16 ], "texture": "#white_ash_block" },
+				"west": { "uv": [ 1.5, 14, 14.5, 16 ], "texture": "#white_ash_block" },
+				"east": { "uv": [ 1.5, 14, 14.5, 16 ], "texture": "#white_ash_block" }
 			}
 		},
 		{
@@ -122,12 +122,12 @@
 			"from": [ 15, 0, 0 ],
 			"to": [ 15.98, 8, 16 ],
 			"faces": {
-				"down": { "uv": [ 15, 0, 15.9998, 16 ], "texture": "#white_gray_wall" },
-				"up": { "uv": [ 15, 0, 15.9998, 16 ], "texture": "#white_gray_wall" },
-				"north": { "uv": [ 0.000199974, 8, 1, 16 ], "texture": "#white_gray_wall" },
-				"south": { "uv": [ 15, 8, 15.9998, 16 ], "texture": "#white_gray_wall" },
-				"west": { "uv": [ 0, 8, 16, 16 ], "texture": "#white_gray_wall" },
-				"east": { "uv": [ 0, 8, 16, 16 ], "texture": "#white_gray_wall" }
+				"down": { "uv": [ 15, 0, 15.9998, 16 ], "texture": "#white_ash_block" },
+				"up": { "uv": [ 15, 0, 15.9998, 16 ], "texture": "#white_ash_block" },
+				"north": { "uv": [ 0.000199974, 8, 1, 16 ], "texture": "#white_ash_block" },
+				"south": { "uv": [ 15, 8, 15.9998, 16 ], "texture": "#white_ash_block" },
+				"west": { "uv": [ 0, 8, 16, 16 ], "texture": "#white_ash_block" },
+				"east": { "uv": [ 0, 8, 16, 16 ], "texture": "#white_ash_block" }
 			}
 		}
 	],

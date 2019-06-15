@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:black_roof_tile_edge_slab_wb",
+    "data": 0,
+    "count": 8
+  },
+  "pattern": [
+    "** ",
+    "##*"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:material",
+      "data": 1
+    },
+    "#": {
+      "tag": "forge:rods/wooden",
+    }
+  }
+}

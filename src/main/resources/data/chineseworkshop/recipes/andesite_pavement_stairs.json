@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:andesite_pavement_stairs",
+    "count": 4
+  },
+  "pattern": [
+    "*  ",
+    "** ",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:andesite_pavement"
+    }
+  }
+}

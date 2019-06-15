@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:rouge_brick",
+	"count": 16
+  },
+  "pattern": [
+    "ccc",
+    "cdc",
+    "ccc"
+  ],
+  "key": {
+    "d": {
+      "tag" : "dyeBlack",
+    },
+    "c": {
+      "item": "minecraft:brick_block"
+    }
+  }
+}

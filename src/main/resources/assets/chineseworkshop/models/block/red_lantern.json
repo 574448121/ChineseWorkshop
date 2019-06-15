@@ -1,8 +1,7 @@
 {
-	"ambientocclusion": false,
     "parent": "minecraft:block/block",
     "textures": {
-        "particle": "chineseworkshop:blocks/red_lantern"
+        "particle": "chineseworkshop:block/red_lantern"
     },
     "elements": [
         {

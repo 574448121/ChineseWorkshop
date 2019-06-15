@@ -1,9 +1,9 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
 	"textures": {
-		"particle": "chineseworkshop:blocks/thatch",
-		"texture": "chineseworkshop:blocks/thatch",
-		"wood": "minecraft:blocks/planks_oak"
+		"particle": "chineseworkshop:block/thatch",
+		"texture": "chineseworkshop:block/thatch",
+		"wood": "minecraft:block/oak_planks"
 	},
 	"elements": [ 	 
 		{

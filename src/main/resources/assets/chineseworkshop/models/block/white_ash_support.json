@@ -1,0 +1,53 @@
+{
+	"ambientocclusion": false,
+    "textures": {
+        "particle": "chineseworkshop:block/white_ash"
+    },
+    "elements": [
+        {
+            "from": [0,0,0],
+            "to": [16,8,8],
+            "faces": {
+                "down": {
+                    "texture": "#particle"
+                },
+                "west": {
+                    "texture": "#particle"
+                },
+                "east": {
+                    "texture": "#particle"
+                },
+                "north": {
+                    "texture": "#particle"
+                },
+                "south": {
+                    "texture": "#particle"
+                }
+            }
+        },
+        {
+            "from": [0,8,0],
+            "to": [16,16,16],
+            "faces": {
+                "up": {
+                    "texture": "#particle"
+                },
+                "down": {
+                    "texture": "#particle"
+                },
+                "west": {
+                    "texture": "#particle"
+                },
+                "east": {
+                    "texture": "#particle"
+                },
+                "north": {
+                    "texture": "#particle"
+                },
+                "south": {
+                    "texture": "#particle"
+                }
+            }
+        }
+    ]
+}

@@ -2,7 +2,7 @@
 	"ambientocclusion": false,
     "parent": "minecraft:block/block",
     "textures": {
-        "particle": "chineseworkshop:blocks/dark_green_pillar"
+        "particle": "chineseworkshop:block/dark_green_pillar"
     },
     "elements": [
         {

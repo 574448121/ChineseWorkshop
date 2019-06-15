@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "chineseworkshop:white_gray_wall_cheap"
+      "chineseworkshop:white_ash_block_cheap"
     ]
   },
   "criteria": {
@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "sand",
-            "type": "forge:ore_dict"
+            "tag": "sand",
           }
         ]
       }
@@ -20,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "chineseworkshop:white_gray_wall_cheap"
+        "recipe": "chineseworkshop:white_ash_block_cheap"
       }
     }
   },

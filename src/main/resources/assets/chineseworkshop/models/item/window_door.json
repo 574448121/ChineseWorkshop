@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "chineseworkshop:items/window_door"
+        "layer0": "chineseworkshop:item/window_door"
     }
 }

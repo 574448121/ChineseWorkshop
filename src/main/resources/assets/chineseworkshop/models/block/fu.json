@@ -2,7 +2,7 @@
 	"__comment": "Designed by CityOfSkyTCD",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/fu"
+		"particle": "chineseworkshop:block/fu"
 	},
 	"elements": [ 	 
 		{

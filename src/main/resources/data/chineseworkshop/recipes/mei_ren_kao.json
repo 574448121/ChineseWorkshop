@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:mei_ren_kao",
+    "count": 2
+  },
+  "pattern": [
+    "*",
+    "#"
+  ],
+  "key": {
+    "*": {
+      "tag" : "fenceWood",
+    },
+    "#": {
+      "item" : "chineseworkshop:bench"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:candle"
+  },
+  "pattern": [
+    "*",
+    "#"
+  ],
+  "key": {
+    "*": {
+      "item" : "minecraft:torch"
+     },
+    "#": {
+      "item": "chineseworkshop:black_brick"
+    }
+  }
+}

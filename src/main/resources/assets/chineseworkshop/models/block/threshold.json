@@ -2,7 +2,7 @@
 	"ambientocclusion": false,
     "parent": "minecraft:block/thin_block",
     "textures": {
-        "particle": "chineseworkshop:blocks/threshold"
+        "particle": "chineseworkshop:block/threshold"
     },
     "elements": [
         {

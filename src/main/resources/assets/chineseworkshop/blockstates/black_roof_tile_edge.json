@@ -1,24 +1,24 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "default": { "model": "chineseworkshop:black_roof_tile_edge" }
+    "default": { "model": "chineseworkshop:block/black_roof_tile_edge" }
   },
   "variants": {
-    "facing=north,mirrored=false,type=0": { "model": "chineseworkshop:black_roof_tile_edge", "y": 270 },
-    "facing=east,mirrored=false,type=0": { "model": "chineseworkshop:black_roof_tile_edge" },
-    "facing=south,mirrored=false,type=0": { "model": "chineseworkshop:black_roof_tile_edge", "y": 90 },
-    "facing=west,mirrored=false,type=0": { "model": "chineseworkshop:black_roof_tile_edge", "y": 180 },
-    "facing=north,mirrored=true,type=0": { "model": "chineseworkshop:black_roof_tile_edge_m", "y": 270 },
-    "facing=east,mirrored=true,type=0": { "model": "chineseworkshop:black_roof_tile_edge_m" },
-    "facing=south,mirrored=true,type=0": { "model": "chineseworkshop:black_roof_tile_edge_m", "y": 90 },
-    "facing=west,mirrored=true,type=0": { "model": "chineseworkshop:black_roof_tile_edge_m", "y": 180 },
-    "facing=north,mirrored=false,type=1": { "model": "chineseworkshop:black_roof_tile_edge_j", "y": 270 },
-    "facing=east,mirrored=false,type=1": { "model": "chineseworkshop:black_roof_tile_edge_j" },
-    "facing=south,mirrored=false,type=1": { "model": "chineseworkshop:black_roof_tile_edge_j", "y": 90 },
-    "facing=west,mirrored=false,type=1": { "model": "chineseworkshop:black_roof_tile_edge_j", "y": 180 },
-    "facing=north,mirrored=true,type=1": { "model": "chineseworkshop:black_roof_tile_edge_mj", "y": 270 },
-    "facing=east,mirrored=true,type=1": { "model": "chineseworkshop:black_roof_tile_edge_mj" },
-    "facing=south,mirrored=true,type=1": { "model": "chineseworkshop:black_roof_tile_edge_mj", "y": 90 },
-    "facing=west,mirrored=true,type=1": { "model": "chineseworkshop:black_roof_tile_edge_mj", "y": 180 }
+    "facing=north,mirrored=false,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge", "y": 270 },
+    "facing=east,mirrored=false,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge" },
+    "facing=south,mirrored=false,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge", "y": 90 },
+    "facing=west,mirrored=false,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge", "y": 180 },
+    "facing=north,mirrored=true,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge_m", "y": 270 },
+    "facing=east,mirrored=true,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge_m" },
+    "facing=south,mirrored=true,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge_m", "y": 90 },
+    "facing=west,mirrored=true,type=0": { "model": "chineseworkshop:block/black_roof_tile_edge_m", "y": 180 },
+    "facing=north,mirrored=false,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_j", "y": 270 },
+    "facing=east,mirrored=false,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_j" },
+    "facing=south,mirrored=false,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_j", "y": 90 },
+    "facing=west,mirrored=false,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_j", "y": 180 },
+    "facing=north,mirrored=true,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_mj", "y": 270 },
+    "facing=east,mirrored=true,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_mj" },
+    "facing=south,mirrored=true,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_mj", "y": 90 },
+    "facing=west,mirrored=true,type=1": { "model": "chineseworkshop:block/black_roof_tile_edge_mj", "y": 180 }
   }
 }

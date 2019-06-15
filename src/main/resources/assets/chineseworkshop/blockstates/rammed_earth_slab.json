@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "chineseworkshop:block/rammed_earth_slab" },
+    "type=top": { "model": "chineseworkshop:block/rammed_earth_slab_top" },
+    "type=double": { "model": "chineseworkshop:block/rammed_earth" }
+  }
+}

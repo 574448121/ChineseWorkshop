@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "dirt",
-            "type": "forge:ore_dict"
+            "tag": "dirt",
           }
         ]
       }

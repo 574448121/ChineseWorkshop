@@ -3,8 +3,8 @@
 	"parent": "minecraft:block/block",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/stone_tower_lamp",
-		"texture": "chineseworkshop:blocks/candle_s"
+		"particle": "chineseworkshop:block/stone_tower_lamp",
+		"texture": "chineseworkshop:block/candle_s"
 	},
 	"elements": [ 	 
 		{

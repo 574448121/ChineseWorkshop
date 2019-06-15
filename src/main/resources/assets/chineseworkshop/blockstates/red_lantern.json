@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "chineseworkshop:red_lantern" }
+        "": { "model": "chineseworkshop:block/red_lantern" }
     }
 }

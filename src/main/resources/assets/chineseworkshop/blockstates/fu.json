@@ -1,8 +1,8 @@
 {
     "variants": {
-        "facing=north": { "model": "chineseworkshop:fu" },
-        "facing=east":  { "model": "chineseworkshop:fu", "y": 90 },
-        "facing=south": { "model": "chineseworkshop:fu", "y": 180 },
-        "facing=west":  { "model": "chineseworkshop:fu", "y": 270 }
+        "facing=north": { "model": "chineseworkshop:block/fu" },
+        "facing=east":  { "model": "chineseworkshop:block/fu", "y": 90 },
+        "facing=south": { "model": "chineseworkshop:block/fu", "y": 180 },
+        "facing=west":  { "model": "chineseworkshop:block/fu", "y": 270 }
     }
 }

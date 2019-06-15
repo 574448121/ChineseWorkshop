@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:block/block",
     "textures": {
-        "pane": "chineseworkshop:blocks/red_stained_wooden_planks_paper_window"
+        "pane": "chineseworkshop:block/red_stained_wooden_planks_paper_window"
     },
     "elements": [
         {   "from": [ 7, 0, 0 ],

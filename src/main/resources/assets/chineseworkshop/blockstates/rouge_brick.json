@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "chineseworkshop:rouge_brick" }
+        "": { "model": "chineseworkshop:block/rouge_brick" }
     }
 }

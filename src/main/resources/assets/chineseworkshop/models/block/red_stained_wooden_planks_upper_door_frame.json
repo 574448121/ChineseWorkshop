@@ -2,7 +2,7 @@
 "ambientocclusion": false,
 "parent": "minecraft:block/block",
 "textures": {
-    "particle": "chineseworkshop:blocks/red_stained_wooden_planks"
+    "particle": "chineseworkshop:block/red_stained_wooden_planks"
 },
 "elements": [
 {

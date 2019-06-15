@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:yellow_tile_roof",
+    "count": 12
+  },
+  "pattern": [
+    "*  ",
+    "** ",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:material",
+      "data": 3
+    }
+  }
+}

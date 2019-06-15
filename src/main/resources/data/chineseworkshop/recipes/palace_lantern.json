@@ -1,0 +1,30 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:palace_lantern",
+    "count": 1
+  },
+  "pattern": [
+    "/+/",
+    ".-.",
+    "/*/"
+  ],
+  "key": {
+    "/": {
+      "tag" : "forge:rods/wooden",
+    },
+	"*": {
+      "item": "minecraft:carpet",
+      "data": 14
+    },
+	"-": {
+      "tag" : "torch",
+    },
+	"+": {
+      "tag" : "slabWood",
+    },
+    ".": {
+      "tag" : "paper",
+    }
+  }
+}

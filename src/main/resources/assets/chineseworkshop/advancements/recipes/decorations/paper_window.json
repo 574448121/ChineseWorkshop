@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "paper",
-            "type": "forge:ore_dict"
+            "tag": "paper",
           }
         ]
       }

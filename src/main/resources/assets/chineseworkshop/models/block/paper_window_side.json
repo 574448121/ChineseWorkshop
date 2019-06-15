@@ -1,7 +1,7 @@
 {
-"parent": "minecraft:block/pane_side",
-"textures": {
-    "pane": "chineseworkshop:blocks/paper_window",
-    "edge": "chineseworkshop:blocks/paper_window"
-}
+    "parent": "block/template_glass_pane_side",
+    "textures": {
+        "edge": "chineseworkshop:block/paper_window",
+        "pane": "chineseworkshop:block/paper_window"
+    }
 }

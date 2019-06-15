@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:black_tile_roof_slab",
+    "count": 8
+  },
+  "pattern": [
+    "*  ",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:black_brick"
+    }
+  }
+}

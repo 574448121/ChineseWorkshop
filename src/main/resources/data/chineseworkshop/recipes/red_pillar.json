@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shapeless",
+  "result": {
+    "item": "chineseworkshop:red_pillar",
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:clay_ball"
+    },
+    {
+      "tag" : "logs"
+    },
+    {
+      "tag" : "forge:dyes/red"
+    }
+  ]
+}

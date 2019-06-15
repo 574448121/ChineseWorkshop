@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "stoneAndesite",
-            "type": "forge:ore_dict"
+            "tag": "stoneAndesite",
           }
         ]
       }

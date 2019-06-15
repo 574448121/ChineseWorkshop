@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:red_stained_wooden_planks_paper_window",
+    "count": 8
+  },
+  "pattern": [
+    "#*#",
+    "*-*",
+    "#*#"
+  ],
+  "key": {
+    "*": {
+      "tag" : "forge:rods/wooden",
+    },
+	"-": {
+      "tag" : "dyeRed",
+    },
+    "#": {
+      "tag" : "paper",
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:small_black_brick",
+    "count": 6
+  },
+  "pattern": [
+    "***",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:black_brick"
+    }
+  }
+}

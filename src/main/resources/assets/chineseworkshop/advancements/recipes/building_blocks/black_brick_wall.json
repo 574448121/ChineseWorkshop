@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "chineseworkshop:black_brick_wall"
+      "chineseworkshop:black_brick"
     ]
   },
   "criteria": {
@@ -20,7 +20,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "chineseworkshop:black_brick_wall"
+        "recipe": "chineseworkshop:black_brick"
       }
     }
   },

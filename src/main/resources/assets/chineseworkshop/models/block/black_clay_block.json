@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "chineseworkshop:blocks/black_clay_block"
+        "all": "chineseworkshop:block/black_clay_block"
     }
 }

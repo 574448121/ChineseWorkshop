@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:threshold"
+  },
+  "pattern": [
+    "*",
+    "#"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:stone_slab",
+      "data": 0
+    },
+    "#": {
+      "item": "minecraft:stone_slab",
+      "data": 5
+    }
+  }
+}

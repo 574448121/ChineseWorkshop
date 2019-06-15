@@ -1,67 +1,66 @@
 package cityofskytcd.chineseworkshop.event;
 
-import java.util.Locale;
+import java.util.List;
 
-import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.GL11;
 
-import com.google.common.collect.ImmutableList;
+import com.mojang.blaze3d.platform.GlStateManager;
 
 import cityofskytcd.chineseworkshop.CW;
-import cityofskytcd.chineseworkshop.library.ItemDefinition;
 import cityofskytcd.chineseworkshop.library.Selections;
-import cityofskytcd.chineseworkshop.network.CWNetworkChannel;
 import cityofskytcd.chineseworkshop.network.WheelMovePacket;
-import cityofskytcd.chineseworkshop.proxy.ClientProxy;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.client.gui.ScaledResolution;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.block.model.IBakedModel;
-import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
+import net.minecraft.client.renderer.model.IBakedModel;
+import net.minecraft.client.renderer.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.crash.CrashReport;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Util;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.World;
-import net.minecraftforge.client.event.MouseEvent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.GuiScreenEvent;
+import net.minecraftforge.client.event.InputEvent.KeyInputEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-@EventBusSubscriber(Side.CLIENT)
+@EventBusSubscriber(Dist.CLIENT)
+@OnlyIn(Dist.CLIENT)
 public class HudHandler
 {
+    public static KeyBinding kbSelect = new KeyBinding(CW.MODID + ".keybind.select", 342, CW.MODID + ".gui.keygroup");
     private static boolean showGui = false;
     private static boolean animating = false;
     private static float animationTick = 0;
     private static float[] badgeProcess = new float[0];
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
     public static void onKeyInput(@SuppressWarnings("unused") KeyInputEvent event)
     {
-        Minecraft mc = Minecraft.getMinecraft();
+        Minecraft mc = Minecraft.getInstance();
 
-        if (!showGui && mc.inGameHasFocus)
+        if (!showGui && mc.player != null && mc.isGameFocused())
         {
-            if (ClientProxy.kbSelect.isKeyDown() && Selections.findSelection(mc.player.getHeldItemMainhand()) != null)
+            ItemStack stack = mc.player.getHeldItemMainhand();
+            if (kbSelect.isKeyDown() && !stack.isEmpty() && Selections.contains(stack.getItem()))
             {
                 showGui = true;
                 animating = true;
             }
 
         }
-        else if (showGui && !ClientProxy.kbSelect.isKeyDown())
+        else if (showGui && !kbSelect.isKeyDown())
         {
             showGui = false;
             animating = true;
@@ -69,22 +68,18 @@ public class HudHandler
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
-    public static void onMouseInput(MouseEvent event)
+    public static void onMouseInput(GuiScreenEvent.MouseScrollEvent.Pre event)
     {
-        if (event.isCanceled())
-            return;
-
-        if (showGui && event.getDwheel() != 0)
+        if (showGui && event.getScrollDelta() != 0)
         {
-            if (!Minecraft.getMinecraft().inGameHasFocus)
+            if (!Minecraft.getInstance().isGameFocused())
             {
                 showGui = false;
                 animating = false;
                 animationTick = 0;
                 return;
             }
-            EntityPlayer player = Minecraft.getMinecraft().player;
+            PlayerEntity player = Minecraft.getInstance().player;
             ItemStack held = player.getHeldItemMainhand();
             if (held.isEmpty())
             {
@@ -93,20 +88,20 @@ public class HudHandler
                 animationTick = 0;
                 return;
             }
-            ImmutableList<ItemDefinition> selection = Selections.findSelection(held);
+            List<Item> selection = Selections.find(held);
             if (selection != null)
             {
-                ItemDefinition definition = ItemDefinition.of(held);
+                Item item = held.getItem();
                 for (int i = 0; i < selection.size(); i++)
                 {
-                    if (definition.equals(selection.get(i)))
+                    if (item.equals(selection.get(i)))
                     {
-                        i = (i + selection.size() + ((event.getDwheel() < 0) ? 1 : -1)) % selection.size();
-                        CWNetworkChannel.INSTANCE.sendToServer(new WheelMovePacket(i));
-                        ItemStack stack = selection.get(i).getItemStack();
+                        i = (i + selection.size() + ((event.getScrollDelta() < 0) ? 1 : -1)) % selection.size();
+                        new WheelMovePacket(i).send();
+                        ItemStack stack = new ItemStack(selection.get(i));
                         stack.setCount(held.getCount());
-                        stack.setTagCompound(held.getTagCompound());
-                        player.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, stack);
+                        stack.setTag(held.getTag());
+                        player.setItemStackToSlot(EquipmentSlotType.MAINHAND, stack);
                         break;
                     }
                 }
@@ -116,29 +111,27 @@ public class HudHandler
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
     public static void drawHudPost(RenderGameOverlayEvent.Post event)
     {
         if ((showGui || animating) && event.getType() == ElementType.HOTBAR)
         {
-            Minecraft mc = Minecraft.getMinecraft();
+            Minecraft mc = Minecraft.getInstance();
             ItemStack held = mc.player.getHeldItemMainhand();
             if (held.isEmpty())
             {
                 return;
             }
-            ImmutableList<ItemDefinition> selection = Selections.findSelection(held);
+            List<Item> selection = Selections.find(held);
             if (selection == null)
             {
                 return;
             }
 
-            ScaledResolution res = event.getResolution();
-            float xStart = res.getScaledWidth() / 2;
-            float yStart = res.getScaledHeight() / 2;
+            float xStart = mc.mainWindow.getScaledWidth() / 2;
+            float yStart = mc.mainWindow.getScaledHeight() / 2;
 
             GlStateManager.pushMatrix();
-            GlStateManager.translate(xStart, yStart, 0);
+            GlStateManager.translatef(xStart, yStart, 0);
             if (animating)
             {
                 animationTick += mc.getRenderPartialTicks() * (showGui ? 1 : -1);
@@ -156,7 +149,7 @@ public class HudHandler
                 else
                 {
                     double scale = Math.sqrt(animationTick) / 3;
-                    GlStateManager.scale(scale, scale, scale);
+                    GlStateManager.scaled(scale, scale, scale);
                 }
             }
 
@@ -176,17 +169,17 @@ public class HudHandler
             }
             for (int i = 0; i < selection.size(); i++)
             {
-                ItemDefinition definition = selection.get(i);
+                Item item = selection.get(i);
                 GlStateManager.pushMatrix();
                 float rad = (float) (((i + (selection.size() % 2 == 0 ? 0.5F : 0)) * degPer + 180) / 180F * Math.PI);
-                GlStateManager.translate(Math.sin(rad) * 60, Math.cos(rad) * 60, 0);
-                GlStateManager.scale(0.618, 0.618, 0.618);
+                GlStateManager.translated(Math.sin(rad) * 60, Math.cos(rad) * 60, 0);
+                GlStateManager.scaled(0.618, 0.618, 0.618);
 
-                boolean match = !matched && definition.equals(ItemDefinition.of(held));
+                boolean match = !matched && item == held.getItem();
                 matched = matched || match;
                 badgeProcess[i] += match ? mc.getRenderPartialTicks() : -mc.getRenderPartialTicks();
                 badgeProcess[i] = MathHelper.clamp(badgeProcess[i], 0, 10);
-                drawBadge(mc, definition.getItemStack(), badgeProcess[i], false);
+                drawBadge(mc, new ItemStack(item), badgeProcess[i], false);
                 GlStateManager.popMatrix();
             }
             if (!matched)
@@ -208,9 +201,9 @@ public class HudHandler
     {
         GlStateManager.enableBlend();
         GlStateManager.shadeModel(GL11.GL_SMOOTH);
-        GlStateManager.disableTexture2D();
+        GlStateManager.disableTexture();
         color = (float) (Math.sin((color - 5) / 5F) + 0.5F);
-        GlStateManager.color(color * 0.1F, color * 0.5F, color * 0.9F, 0.3F);
+        GlStateManager.color4f(color * 0.1F, color * 0.5F, color * 0.9F, 0.3F);
         GL11.glBegin(GL11.GL_TRIANGLE_FAN);
         GL11.glVertex2f(0, -30);
         GL11.glVertex2f(-26, -15);
@@ -219,41 +212,38 @@ public class HudHandler
         GL11.glVertex2f(26, 15);
         GL11.glVertex2f(26, -15);
         GL11.glEnd();
-        GlStateManager.enableTexture2D();
+        GlStateManager.enableTexture();
         GlStateManager.disableBlend();
         GlStateManager.shadeModel(GL11.GL_FLAT);
 
-        drawCenteredString(mc.fontRenderer, stack.getDisplayName(), 0, 8);
+        drawCenteredString(mc.fontRenderer, stack.getDisplayName().getFormattedText(), 0, 8);
 
         GlStateManager.pushMatrix();
-        GlStateManager.scale(1.5, 1.5, 1.5);
+        GlStateManager.scaled(1.5, 1.5, 1.5);
 
         // TODO: Directly render
-        IBakedModel bakedModel = mc.getRenderItem().getItemModelWithOverrides(
-                stack,
-                (World) null,
-                (EntityLivingBase) null);
+        IBakedModel bakedModel = mc.getItemRenderer().getModelWithOverrides(stack, null, null);
         if (rotation && bakedModel.isGui3d())
         {
             RenderHelper.enableGUIStandardItemLighting();
-            GlStateManager.translate(0, -5, 150);
-            GlStateManager.scale(10, -10, 10);
+            GlStateManager.translatef(0, -5, 150);
+            GlStateManager.scalef(10, -10, 10);
             GlStateManager.alphaFunc(516, 0.1F);
             GlStateManager.pushMatrix();
             GlStateManager.enableRescaleNormal();
-            GlStateManager.enableAlpha();
-            GlStateManager.rotate(30F, 1F, 0, 0F);
-            GlStateManager.rotate(Minecraft.getSystemTime() % 3600 / 10, 0, 1, 0F);
+            GlStateManager.enableAlphaTest();
+            GlStateManager.rotatef(30F, 1F, 0, 0F);
+            GlStateManager.rotatef(Util.milliTime() % 3600 / 10, 0, 1, 0F);
             RenderHelper.enableStandardItemLighting();
-            mc.getRenderItem().renderItem(stack, TransformType.NONE);
-            GlStateManager.disableAlpha();
+            mc.getItemRenderer().renderItem(stack, TransformType.NONE);
+            GlStateManager.disableAlphaTest();
             GlStateManager.disableRescaleNormal();
             GlStateManager.popMatrix();
         }
         else
         {
             RenderHelper.enableGUIStandardItemLighting();
-            mc.getRenderItem().renderItemAndEffectIntoGUI(stack, -8, -12);
+            mc.getItemRenderer().renderItemAndEffectIntoGUI(stack, -8, -12);
         }
 
         RenderHelper.disableStandardItemLighting();
@@ -261,7 +251,6 @@ public class HudHandler
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
     public static void drawHudPre(RenderGameOverlayEvent.Pre event)
     {
         if ((showGui || animating) && event.getType() == ElementType.CROSSHAIRS)
@@ -271,33 +260,16 @@ public class HudHandler
     }
 
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
     public static void onTooltip(ItemTooltipEvent event)
     {
-        if (Selections.findSelection(ItemDefinition.of(event.getItemStack())) != null)
+        if (event.getItemStack().isEmpty())
         {
-            String key;
-            if (ClientProxy.kbSelect.getKeyCode() == Keyboard.KEY_LMENU)
-            {
-                String os = System.getProperty("os.name").toLowerCase(Locale.ENGLISH);
-                if (os.startsWith("win"))
-                {
-                    key = "LAlt";
-                }
-                else if (os.startsWith("mac"))
-                {
-                    key = "Option";
-                }
-                else
-                {
-                    key = ClientProxy.kbSelect.getDisplayName();
-                }
-            }
-            else
-            {
-                key = ClientProxy.kbSelect.getDisplayName();
-            }
-            event.getToolTip().add(I18n.format(CW.MODID + ".tip.selectable", key));
+            return;
+        }
+        Item item = event.getItemStack().getItem();
+        if (Selections.contains(item))
+        {
+            event.getToolTip().add(new StringTextComponent(TextFormatting.GRAY + I18n.format(CW.MODID + ".tip.selectable", kbSelect.getLocalizedName())));
         }
     }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "chineseworkshop:white_gray_wall"
+      "chineseworkshop:white_ash_block"
     ]
   },
   "criteria": {
@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "gemQuartz",
-            "type": "forge:ore_dict"
+            "tag": "gemQuartz",
           }
         ]
       }
@@ -20,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "chineseworkshop:white_gray_wall"
+        "recipe": "chineseworkshop:white_ash_block"
       }
     }
   },

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "chineseworkshop:architectural_painting" }
+        "": { "model": "chineseworkshop:block/architectural_painting" }
     }
 }

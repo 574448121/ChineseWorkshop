@@ -2,8 +2,8 @@
 	"__comment": "Designed by CityOfSkyTCD with %",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "chineseworkshop:blocks/wooden_window_door_bottom",
-		"texture": "chineseworkshop:blocks/wooden_window_door"
+		"particle": "chineseworkshop:block/wooden_window_door_bottom",
+		"texture": "chineseworkshop:block/wooden_window_door"
 	},
 	"elements": [ 	 
 		{

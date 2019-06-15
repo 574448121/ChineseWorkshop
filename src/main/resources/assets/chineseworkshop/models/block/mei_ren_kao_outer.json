@@ -1,8 +1,8 @@
 {
 	"__comment": "Designed by CityOfSkyTCD",
 	"textures": {
-		"particle": "chineseworkshop:blocks/chinese_oak_door_upper",
-		"texture": "chineseworkshop:blocks/chinese_oak_door_upper"
+		"particle": "chineseworkshop:block/chinese_oak_door_upper",
+		"texture": "chineseworkshop:block/chinese_oak_door_upper"
 	},
 	"elements": [ 	 
 		{

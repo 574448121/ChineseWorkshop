@@ -1,9 +1,9 @@
 {
 "ambientocclusion": false,
 "textures": {
-    "particle": "chineseworkshop:blocks/black_tile",
-    "texture": "chineseworkshop:blocks/black_tile",
-    "wood": "minecraft:blocks/planks_oak"
+    "particle": "chineseworkshop:block/black_tile",
+    "texture": "chineseworkshop:block/black_tile",
+    "wood": "minecraft:block/oak_planks"
 },
 "elements": [ 
 {

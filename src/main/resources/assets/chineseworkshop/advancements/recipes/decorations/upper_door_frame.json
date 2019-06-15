@@ -11,8 +11,7 @@
       "conditions": {
         "items": [
           {
-            "ore": "plankWood",
-            "type": "forge:ore_dict"
+            "tag": "plankWood",
           }
         ]
       }

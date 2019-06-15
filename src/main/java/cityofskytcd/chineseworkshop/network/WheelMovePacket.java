@@ -1,69 +1,65 @@
 package cityofskytcd.chineseworkshop.network;
 
-import com.google.common.collect.ImmutableList;
+import java.util.List;
+import java.util.function.Supplier;
 
-import cityofskytcd.chineseworkshop.library.ItemDefinition;
 import cityofskytcd.chineseworkshop.library.Selections;
-import io.netty.buffer.ByteBuf;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraft.network.PacketBuffer;
+import net.minecraftforge.fml.network.NetworkEvent.Context;
+import snownee.kiwi.network.ClientPacket;
 
-public class WheelMovePacket implements CWPacket
+public class WheelMovePacket extends ClientPacket
 {
     private int index;
-
-    public WheelMovePacket()
-    {
-    }
 
     public WheelMovePacket(int index)
     {
         this.index = index;
     }
 
-    @Override
-    public void writeDataTo(ByteBuf buffer)
+    public static class Handler extends PacketHandler<WheelMovePacket>
     {
-        buffer.writeInt(index);
-    }
 
-    @Override
-    public void readDataFrom(ByteBuf buffer)
-    {
-        index = buffer.readInt();
-    }
+        @Override
+        public WheelMovePacket decode(PacketBuffer buf)
+        {
+            return new WheelMovePacket(buf.readInt());
+        }
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void handleClient(EntityPlayerSP player)
-    {
-    }
+        @Override
+        public void encode(WheelMovePacket pkt, PacketBuffer buf)
+        {
+            buf.writeInt(pkt.index);
+        }
 
-    @Override
-    public void handleServer(EntityPlayerMP player)
-    {
-        ItemStack held = player.getHeldItemMainhand();
-        if (held.isEmpty() || index < 0)
+        @Override
+        public void handle(WheelMovePacket pkt, Supplier<Context> ctx)
         {
-            return;
+            ServerPlayerEntity player = ctx.get().getSender();
+            ItemStack held = player.getHeldItemMainhand();
+            if (held.isEmpty() || pkt.index < 0)
+            {
+                return;
+            }
+            Item item = held.getItem();
+            List<Item> selection = Selections.find(item);
+            if (selection == null)
+            {
+                return;
+            }
+            if (selection.contains(item))
+            {
+                ItemStack stack = new ItemStack(selection.get(pkt.index % selection.size()));
+                stack.setCount(held.getCount());
+                stack.setTag(held.getTag());
+                player.setItemStackToSlot(EquipmentSlotType.MAINHAND, stack);
+            }
         }
-        ImmutableList<ItemDefinition> selection = Selections.findSelection(held);
-        if (selection == null)
-        {
-            return;
-        }
-        ItemDefinition definition = ItemDefinition.of(held);
-        if (selection.contains(definition))
-        {
-            ItemStack stack = selection.get(index % selection.size()).getItemStack();
-            stack.setCount(held.getCount());
-            stack.setTagCompound(held.getTagCompound());
-            player.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, stack);
-        }
+
     }
 
 }

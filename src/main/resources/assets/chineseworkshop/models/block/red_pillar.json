@@ -2,7 +2,7 @@
 	"ambientocclusion": false,
     "parent": "minecraft:block/block",
     "textures": {
-        "particle": "chineseworkshop:blocks/red_pillar"
+        "particle": "chineseworkshop:block/red_pillar"
     },
     "elements": [
         {

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "chineseworkshop:block/dougong" },
+        "facing=east":  { "model": "chineseworkshop:block/dougong", "y": 90 },
+        "facing=south": { "model": "chineseworkshop:block/dougong", "y": 180 },
+        "facing=west":  { "model": "chineseworkshop:block/dougong", "y": 270 }
+    }
+}

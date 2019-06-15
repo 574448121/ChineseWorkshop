@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:andesite_pavement",
+    "count": 8
+  },
+  "pattern": [
+    "***",
+    "* *",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item": "minecraft:polished_andesite"
+    }
+  }
+}

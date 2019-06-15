@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:white_lantern",
+    "count": 2
+  },
+  "pattern": [
+    "***",
+    "STS",
+    "***"
+  ],
+  "key": {
+    "*": {
+      "item" : "minecraft:paper"
+    },
+    "S": {
+      "tag" : "forge:rods/wooden"
+    },
+    "T": {
+      "item" : "minecraft:orch"
+    }
+  }
+}

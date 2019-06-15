@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:oak_chinese_fence",
+    "count": 12
+  },
+  "pattern": [
+    "lsl",
+    "lsl"
+  ],
+  "key": {
+    "s": {
+      "tag" : "forge:rods/wooden",
+    },
+    "l": {
+      "tag" : "logWood",
+    }
+  }
+}

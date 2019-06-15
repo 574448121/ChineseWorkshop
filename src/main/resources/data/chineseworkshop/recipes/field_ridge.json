@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:field_ridge",
+	"count": 4
+  },
+  "pattern": [
+    "**"
+  ],
+  "key": {
+    "*": {
+      "tag" : "dirt",
+    }
+  }
+}
