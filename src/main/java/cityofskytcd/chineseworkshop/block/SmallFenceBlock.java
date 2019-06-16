@@ -20,17 +20,20 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import snownee.kiwi.block.ModBlock;
 
 public class SmallFenceBlock extends FourWayBlock
 {
     public SmallFenceBlock(Block.Properties builder)
     {
         super(4, 4, 16, 16, 16, builder);
+        ModBlock.deduceSoundAndHardness(this);
     }
 
     public SmallFenceBlock(Block.Properties builder, float nodeWidth, float extensionWidth, float p_i48420_3_, float p_i48420_4_, float collisionY)
     {
         super(nodeWidth, extensionWidth, p_i48420_3_, p_i48420_4_, collisionY, builder);
+        ModBlock.deduceSoundAndHardness(this);
     }
 
     public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)

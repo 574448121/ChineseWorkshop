@@ -1,8 +1,7 @@
 {
   "type": "crafting_shaped",
   "result": {
-    "item": "chineseworkshop:mei_ren_kao",
-    "count": 2
+    "item": "chineseworkshop:stone_threshold"
   },
   "pattern": [
     "*",
@@ -10,10 +9,10 @@
   ],
   "key": {
     "*": {
-      "tag" : "fenceWood",
+      "item": "minecraft:smooth_stone_slab"
     },
     "#": {
-      "item" : "chineseworkshop:bench"
+      "item": "minecraft:stone_brick_slab"
     }
   }
 }

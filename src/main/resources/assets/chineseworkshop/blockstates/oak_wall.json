@@ -1,6 +1,6 @@
 {
     "multipart": [
-        {   "apply": { "model": "chineseworkshop:block/oak_wall" }},
+        {   "apply": { "model": "chineseworkshop:block/oak_wall_post" }},
         {   "when": { "north": "true" },
             "apply": { "model": "chineseworkshop:block/oak_wall_side", "uvlock": true }
         },

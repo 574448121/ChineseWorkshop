@@ -75,9 +75,9 @@ public class BlockModule extends AbstractModule
 
     public static final RotatedPillarBlock DARK_GREEN_PILLAR = new RotatedPillarBlock(blockProp(Material.WOOD));
 
-    public static final RoofTileBlock BLACK_TILE_ROOF = init(new RoofTileBlock(blockProp(Material.ROCK)));
+    public static final RoofTileBlock BLACK_TILE_ROOF = new RoofTileBlock(blockProp(Material.ROCK));
 
-    public static final RoofTileJBlock BLACK_TILE_ROOF_J = init(new RoofTileJBlock(blockProp(Material.ROCK)));
+    public static final RoofTileJBlock BLACK_TILE_ROOF_J = new RoofTileJBlock(blockProp(Material.ROCK));
 
     public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.ROCK));
 

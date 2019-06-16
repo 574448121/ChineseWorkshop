@@ -1,7 +1,7 @@
 {
 	"ambientocclusion": false,
     "textures": {
-        "particle": "chineseworkshop:block/men_dun"
+        "particle": "chineseworkshop:block/mendun"
     },
 	"display": {
         "gui": {

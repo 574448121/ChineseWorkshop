@@ -17,7 +17,7 @@
       "tag" : "forge:rods/wooden"
     },
     "T": {
-      "item" : "minecraft:orch"
+      "item" : "minecraft:torch"
     }
   }
 }

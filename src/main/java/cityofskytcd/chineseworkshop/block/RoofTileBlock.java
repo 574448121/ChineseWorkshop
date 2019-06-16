@@ -34,6 +34,7 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import snownee.kiwi.block.ModBlock;
 
 /**
  * 屋顶类
@@ -90,6 +91,7 @@ public class RoofTileBlock extends HorizontalBlock implements IWaterLoggable
     public RoofTileBlock(Block.Properties builder)
     {
         super(builder);
+        ModBlock.deduceSoundAndHardness(this);
     }
 
     @Override

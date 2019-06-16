@@ -66,6 +66,8 @@ public class DecorationModule extends AbstractModule
 
     public static final ModHorizontalBlock STONE_THRESHOLD = new ModHorizontalBlock(blockProp(Material.WOOD), VoxelShapes.or(Block.makeCuboidShape(0, 0, 3, 16, 5, 12), Block.makeCuboidShape(0, 5, 2, 16, 7.5, 13)));
 
+    public static final ModHorizontalBlock MENDUN = new ModHorizontalBlock(blockProp(Material.ROCK), Block.makeCuboidShape(1, 0, 0, 15, 16, 16));
+
     public static final BenchBlock BENCH = new BenchBlock(blockProp(Material.WOOD));
 
     public static final Direction2Block CARVING = new Direction2Block(blockProp(Material.WOOD), Block.makeCuboidShape(0, 4, 5, 16, 16, 11));
@@ -80,7 +82,11 @@ public class DecorationModule extends AbstractModule
 
     public static final SmallFenceBlock BLACK_BRICK_WALL = new SmallFenceBlock(blockProp(Material.ROCK));
 
-    public static final SmallFenceBlock OAK_CHINESE_FENCE = new SmallFenceBlock(blockProp(Material.ROCK), 1.5F, 1F, 19, 14, 24);
+    public static final SmallFenceBlock OAK_WALL = new SmallFenceBlock(blockProp(Material.WOOD));
 
-    public static final PaneBlock PAPER_WINDOW = new StainedGlassPaneBlock(DyeColor.WHITE, blockProp(Material.WOOL));
+    public static final SmallFenceBlock OAK_CHINESE_FENCE = new SmallFenceBlock(blockProp(Material.WOOD), 1.5F, 1F, 19, 14, 24);
+
+    public static final SmallFenceBlock DIORITE_FENCE = new SmallFenceBlock(blockProp(Material.ROCK), 2F, 1F, 19, 14, 24);
+
+    public static final PaneBlock PAPER_WINDOW = init(new StainedGlassPaneBlock(DyeColor.WHITE, blockProp(Material.WOOL)));
 }

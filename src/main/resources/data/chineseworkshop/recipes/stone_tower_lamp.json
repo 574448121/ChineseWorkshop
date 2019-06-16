@@ -11,18 +11,16 @@
   ],
   "key": {
     "*": {
-      "item": "chineseworkshop:material",
-      "data": 1
+      "item": "chineseworkshop:black_brick"
     },
     "L": {
       "item": "minecraft:redstone_lamp"
     },
     "#": {
-      "item": "minecraft:stone_slab",
-      "data": 0
+      "item": "minecraft:smooth_stone_slab"
     },
     "R": {
-      "tag" : "dustRedstone",
+      "tag" : "forge:dusts/redstone",
     }
   }
 }

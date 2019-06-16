@@ -1,7 +1,7 @@
 {
   "type": "crafting_shaped",
   "result": {
-    "item": "chineseworkshop:men_dun",
+    "item": "chineseworkshop:mendun",
     "count": 2
   },
   "pattern": [
@@ -10,8 +10,7 @@
   ],
   "key": {
     "*": {
-      "item": "chineseworkshop:material",
-      "data": 0
+      "item": "chineseworkshop:black_clay"
     },
     "#": {
       "item": "chineseworkshop:black_clay_block"

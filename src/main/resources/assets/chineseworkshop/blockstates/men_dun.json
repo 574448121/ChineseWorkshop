@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "chineseworkshop:block/men_dun", "y": 180 },
-        "facing=east":  { "model": "chineseworkshop:block/men_dun", "y": 270 },
-        "facing=south": { "model": "chineseworkshop:block/men_dun" },
-        "facing=west":  { "model": "chineseworkshop:block/men_dun", "y": 90 }
-    }
-}

@@ -10,10 +10,10 @@
   ],
   "key": {
     "*": {
-      "tag": "slabWood",
+      "tag": "wooden_slabs",
     },
     "#": {
-      "tag": "logWood",
+      "tag": "logs",
     }
   }
 }

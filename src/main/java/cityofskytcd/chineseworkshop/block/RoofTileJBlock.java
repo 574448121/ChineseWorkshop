@@ -23,6 +23,7 @@ import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import snownee.kiwi.block.ModBlock;
 
 /**
  * 屋顶类
@@ -35,6 +36,7 @@ public class RoofTileJBlock extends HorizontalBlock implements IWaterLoggable
     public RoofTileJBlock(Block.Properties builder)
     {
         super(builder);
+        ModBlock.deduceSoundAndHardness(this);
     }
 
     @Override
