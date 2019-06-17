@@ -1,7 +1,0 @@
-{
-    "parent": "chineseworkshop:block/wood",
-    "textures": {
-        "bottom": "chineseworkshop:block/wood",
-        "top": "chineseworkshop:block/wood"
-    }
-}

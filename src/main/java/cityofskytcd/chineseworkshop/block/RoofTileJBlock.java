@@ -10,8 +10,6 @@ package cityofskytcd.chineseworkshop.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
@@ -19,9 +17,10 @@ import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import snownee.kiwi.block.ModBlock;
 
@@ -29,20 +28,19 @@ import snownee.kiwi.block.ModBlock;
  * 屋顶类
  */
 
-public class RoofTileJBlock extends HorizontalBlock implements IWaterLoggable
+public class RoofTileJBlock extends ModHorizontalBlock
 {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     public RoofTileJBlock(Block.Properties builder)
     {
-        super(builder);
-        ModBlock.deduceSoundAndHardness(this);
+        this(builder, VoxelShapes.fullCube());
     }
 
-    @Override
-    public BlockRenderLayer getRenderLayer()
+    public RoofTileJBlock(Block.Properties builder, VoxelShape shape)
     {
-        return BlockRenderLayer.CUTOUT_MIPPED;
+        super(builder, shape);
+        ModBlock.deduceSoundAndHardness(this);
     }
 
     @Override
@@ -59,12 +57,6 @@ public class RoofTileJBlock extends HorizontalBlock implements IWaterLoggable
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
     {
         builder.add(HORIZONTAL_FACING, WATERLOGGED);
-    }
-
-    @Override
-    public IFluidState getFluidState(BlockState state)
-    {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
 
     @Override

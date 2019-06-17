@@ -3,6 +3,7 @@ package cityofskytcd.chineseworkshop.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
@@ -15,9 +16,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
 import snownee.kiwi.util.VoxelUtil;
 
-public class ModHorizontalBlock extends HorizontalBlock
+public class ModHorizontalBlock extends HorizontalBlock implements IWaterLoggable
 {
     private VoxelShape[] shapes = new VoxelShape[4];
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -28,11 +30,11 @@ public class ModHorizontalBlock extends HorizontalBlock
         for (int i = 0; i < shapes.length; i++)
         {
             Direction direction = Direction.byHorizontalIndex(i);
-//            if (direction == Direction.NORTH)
-//            {
-//                shapes[i] = shape;
-//            }
-//            else
+            if (direction == Direction.SOUTH)
+            {
+                shapes[i] = shape;
+            }
+            else
             {
                 shapes[i] = VoxelUtil.rotate(shape, direction);
             }
@@ -49,6 +51,22 @@ public class ModHorizontalBlock extends HorizontalBlock
     protected void fillStateContainer(Builder<Block, BlockState> builder)
     {
         builder.add(HORIZONTAL_FACING, WATERLOGGED);
+    }
+
+    @Override
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
+    {
+        if (stateIn.get(WATERLOGGED))
+        {
+            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+        }
+        return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+    }
+
+    @Override
+    public IFluidState getFluidState(BlockState state)
+    {
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
 
     @Override

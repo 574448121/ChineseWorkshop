@@ -10,10 +10,10 @@
   ],
   "key": {
     "s": {
-      "tag" : "forge:rods/wooden",
+      "tag" : "forge:rods/wooden"
     },
     "l": {
-      "tag" : "logWood",
+      "tag" : "logs"
     }
   }
 }

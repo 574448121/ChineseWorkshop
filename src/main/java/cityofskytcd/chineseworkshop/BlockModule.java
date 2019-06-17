@@ -79,7 +79,11 @@ public class BlockModule extends AbstractModule
 
     public static final RoofTileJBlock BLACK_TILE_ROOF_J = new RoofTileJBlock(blockProp(Material.ROCK));
 
-    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.ROCK));
+    public static final RoofTileJBlock BLACK_TILE_ROOF_RIDGE_J = new RoofTileJBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16));
+
+    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16));
+
+    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE_TOP = new RoofTileRidgeBlock(blockProp(Material.ROCK), VoxelShapes.fullCube());
 
     public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB = new SlabRoofTileBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 8, 16));
 

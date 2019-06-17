@@ -36,6 +36,7 @@ public class SmallFenceBlock extends FourWayBlock
         ModBlock.deduceSoundAndHardness(this);
     }
 
+    @Override
     public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
     {
         return false;
@@ -47,6 +48,7 @@ public class SmallFenceBlock extends FourWayBlock
         return (!cannotAttach(thatBlock) && p_220111_2_) || (thatBlock.getClass() == this.getClass() && thatState.getMaterial() == material);
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockItemUseContext context)
     {
         IBlockReader iblockreader = context.getWorld();
@@ -63,6 +65,7 @@ public class SmallFenceBlock extends FourWayBlock
         return super.getStateForPlacement(context).with(NORTH, Boolean.valueOf(this.func_220111_a(blockstate, Block.func_220056_d(blockstate, iblockreader, blockpos1, Direction.SOUTH), Direction.SOUTH))).with(EAST, Boolean.valueOf(this.func_220111_a(blockstate1, Block.func_220056_d(blockstate1, iblockreader, blockpos2, Direction.WEST), Direction.WEST))).with(SOUTH, Boolean.valueOf(this.func_220111_a(blockstate2, Block.func_220056_d(blockstate2, iblockreader, blockpos3, Direction.NORTH), Direction.NORTH))).with(WEST, Boolean.valueOf(this.func_220111_a(blockstate3, Block.func_220056_d(blockstate3, iblockreader, blockpos4, Direction.EAST), Direction.EAST))).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
     }
 
+    @Override
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
     {
         if (stateIn.get(WATERLOGGED))
@@ -73,6 +76,7 @@ public class SmallFenceBlock extends FourWayBlock
         return facing.getAxis().getPlane() == Direction.Plane.HORIZONTAL ? stateIn.with(FACING_TO_PROPERTY_MAP.get(facing), Boolean.valueOf(this.func_220111_a(facingState, Block.func_220056_d(facingState, worldIn, facingPos, facing.getOpposite()), facing.getOpposite()))) : super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
+    @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
     {
         builder.add(NORTH, EAST, WEST, SOUTH, WATERLOGGED);

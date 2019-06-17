@@ -1,6 +1,0 @@
-{
-	"parent": "chineseworkshop:block/wall",
-	"textures": {
-		"particle": "chineseworkshop:block/architectural_painting"
-    }
-}

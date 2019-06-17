@@ -20,7 +20,7 @@
       "item": "minecraft:smooth_stone_slab"
     },
     "R": {
-      "tag" : "forge:dusts/redstone",
+      "tag" : "forge:dusts/redstone"
     }
   }
 }

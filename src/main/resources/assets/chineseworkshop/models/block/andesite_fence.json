@@ -1,5 +1,4 @@
 {
-"ambientocclusion": false,
 "parent": "minecraft:block/block",
 "textures": {
     "particle": "chineseworkshop:block/andesite"

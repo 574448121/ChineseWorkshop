@@ -1,41 +1,17 @@
 {
-    "forge_marker": 1,
-    "defaults": {
-        "model": "chineseworkshop:block/table_top",
-        "uvlock": false
-    },
-    "variants": {
-        "nw": {
-            "true": {
-                "submodel": {
-                    "leg1": { "model": "chineseworkshop:block/table_leg1", "y": 180 }
-                }
-            },
-            "false": {}
+    "multipart": [
+        {   "apply": { "model": "chineseworkshop:block/table_top" }},
+        {   "when": { "se": "true" },
+            "apply": { "model": "chineseworkshop:block/table_leg1", "uvlock": true }
         },
-        "ne": {
-            "true": {
-                "submodel": {
-                    "leg2": { "model": "chineseworkshop:block/table_leg1", "y": 270 }
-                }
-            },
-            "false": {}
+        {   "when": { "sw": "true" },
+            "apply": { "model": "chineseworkshop:block/table_leg1", "y": 90, "uvlock": true }
         },
-        "se": {
-            "true": {
-                "submodel": {
-                    "leg3": { "model": "chineseworkshop:block/table_leg1", "y": 0 }
-                }
-            },
-            "false": {}
+        {   "when": { "nw": "true" },
+            "apply": { "model": "chineseworkshop:block/table_leg1", "y": 180, "uvlock": true }
         },
-        "sw": {
-            "true": {
-                "submodel": {
-                    "leg4": { "model": "chineseworkshop:block/table_leg1", "y": 90 }
-                }
-            },
-            "false": {}
+        {   "when": { "ne": "true" },
+            "apply": { "model": "chineseworkshop:block/table_leg1", "y": 270, "uvlock": true }
         }
-    }
+    ]
 }

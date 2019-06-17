@@ -11,14 +11,13 @@
   ],
   "key": {
     "*": {
-      "item": "minecraft:carpet",
-      "data": 14
+      "item": "minecraft:red_carpet"
     },
     "S": {
-      "tag" : "forge:rods/wooden",
+      "tag" : "forge:rods/wooden"
     },
     "T": {
-      "tag" : "torch",
+      "item": "minecraft:torch"
     }
   }
 }

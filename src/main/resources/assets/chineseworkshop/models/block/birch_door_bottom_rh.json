@@ -1,7 +1,0 @@
-{
-    "parent": "minecraft:block/block",
-    "textures": {
-        "bottom": "minecraft:block/planks_oak",
-        "top": "minecraft:block/planks_oak"
-    }
-}

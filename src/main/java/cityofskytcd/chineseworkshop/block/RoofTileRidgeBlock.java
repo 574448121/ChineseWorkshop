@@ -4,7 +4,6 @@ import java.util.Locale;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.IWaterLoggable;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
@@ -22,28 +21,29 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 
-public class RoofTileRidgeBlock extends Direction2Block implements IWaterLoggable
+public class RoofTileRidgeBlock extends Direction2Block
 {
-    public static final VoxelShape AABB = Block.makeCuboidShape(0, 0, 0, 16, 9, 16);
+    public final VoxelShape SHAPE;
     public static final EnumProperty<Variant> VARIANT = EnumProperty.create("variant", Variant.class);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public RoofTileRidgeBlock(Block.Properties builder)
+    public RoofTileRidgeBlock(Block.Properties builder, VoxelShape shape)
     {
         super(builder);
+        SHAPE = shape;
         setDefaultState(this.stateContainer.getBaseState().with(VARIANT, Variant.I).with(FACING, Direction2.SOUTH_NORTH));
     }
 
     @Override
     public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_)
     {
-        return AABB;
+        return SHAPE;
     }
 
     @Override
     public BlockRenderLayer getRenderLayer()
     {
-        return BlockRenderLayer.CUTOUT_MIPPED;
+        return BlockRenderLayer.CUTOUT;
     }
 
     @Override
@@ -58,6 +58,10 @@ public class RoofTileRidgeBlock extends Direction2Block implements IWaterLoggabl
     @Override
     public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
     {
+        if (state.get(WATERLOGGED))
+        {
+            worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
+        }
         return state.with(VARIANT, getVariantProperty(state, worldIn, currentPos));
     }
 

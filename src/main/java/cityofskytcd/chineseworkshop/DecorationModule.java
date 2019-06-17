@@ -1,10 +1,12 @@
 package cityofskytcd.chineseworkshop;
 
+import cityofskytcd.chineseworkshop.block.AndesiteFenceBlock;
 import cityofskytcd.chineseworkshop.block.BenchBlock;
 import cityofskytcd.chineseworkshop.block.CandleBlock;
 import cityofskytcd.chineseworkshop.block.Direction2Block;
 import cityofskytcd.chineseworkshop.block.ModHorizontalBlock;
 import cityofskytcd.chineseworkshop.block.SmallFenceBlock;
+import cityofskytcd.chineseworkshop.block.TableBlock;
 import cityofskytcd.chineseworkshop.block.WallCandleBlock;
 import cityofskytcd.chineseworkshop.library.ISeat;
 import net.minecraft.block.Block;
@@ -70,6 +72,8 @@ public class DecorationModule extends AbstractModule
 
     public static final BenchBlock BENCH = new BenchBlock(blockProp(Material.WOOD));
 
+    public static final TableBlock TABLE = new TableBlock(blockProp(Material.WOOD));
+
     public static final Direction2Block CARVING = new Direction2Block(blockProp(Material.WOOD), Block.makeCuboidShape(0, 4, 5, 16, 16, 11));
 
     public static final EntityType<?> SEAT = EntityType.Builder.create(EntityClassification.MISC).setCustomClientFactory((
@@ -88,5 +92,9 @@ public class DecorationModule extends AbstractModule
 
     public static final SmallFenceBlock DIORITE_FENCE = new SmallFenceBlock(blockProp(Material.ROCK), 2F, 1F, 19, 14, 24);
 
+    public static final AndesiteFenceBlock ANDESITE_FENCE = init(new AndesiteFenceBlock(blockProp(Material.ROCK)));
+
     public static final PaneBlock PAPER_WINDOW = init(new StainedGlassPaneBlock(DyeColor.WHITE, blockProp(Material.WOOL)));
+
+    public static final SmallFenceBlock LITHEL_DECO = new SmallFenceBlock(blockProp(Material.WOOD), 1.0F, 1.0F, 16.0F, 16.0F, 16.0F);
 }

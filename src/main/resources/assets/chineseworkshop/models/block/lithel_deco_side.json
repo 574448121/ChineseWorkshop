@@ -1,8 +1,7 @@
 {
-	"ambientocclusion": false,
 	"textures": {
-    "particle": "minecraft:block/planks_oak",
-    "log_oak": "minecraft:block/log_oak"
+    "particle": "minecraft:block/oak_planks",
+    "log_oak": "minecraft:block/oak_log"
 },
 "elements": [
 {

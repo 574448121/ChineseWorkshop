@@ -11,10 +11,10 @@
   ],
   "key": {
     "*": {
-      "tag" : "forge:rods/wooden",
+      "tag" : "forge:rods/wooden"
     },
     "#": {
-      "tag" : "paper",
+      "item" : "minecraft:paper"
     }
   }
 }

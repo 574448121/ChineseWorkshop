@@ -10,7 +10,7 @@
   ],
   "key": {
     "*": {
-      "tag" : "minecraft:diorite"
+      "item": "minecraft:diorite"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "type": "forge:ore_shapeless",
+  "type": "crafting_shapeless",
   "result": {
     "item": "chineseworkshop:dark_green_pillar",
     "count": 3

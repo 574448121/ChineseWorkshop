@@ -1,6 +1,5 @@
 {
-	"ambientocclusion": false,
-	"textures": {
+"textures": {
     "particle": "chineseworkshop:block/andesite"
 },
 "elements": [

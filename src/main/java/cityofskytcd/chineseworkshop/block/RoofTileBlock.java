@@ -12,8 +12,6 @@ import java.util.stream.IntStream;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.IWaterLoggable;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
@@ -24,7 +22,6 @@ import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.StairsShape;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
@@ -40,7 +37,7 @@ import snownee.kiwi.block.ModBlock;
  * 屋顶类
  */
 
-public class RoofTileBlock extends HorizontalBlock implements IWaterLoggable
+public class RoofTileBlock extends ModHorizontalBlock
 {
     public static final EnumProperty<StairsShape> SHAPE = StairsBlock.SHAPE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -90,14 +87,8 @@ public class RoofTileBlock extends HorizontalBlock implements IWaterLoggable
 
     public RoofTileBlock(Block.Properties builder)
     {
-        super(builder);
+        super(builder, VoxelShapes.fullCube());
         ModBlock.deduceSoundAndHardness(this);
-    }
-
-    @Override
-    public BlockRenderLayer getRenderLayer()
-    {
-        return BlockRenderLayer.CUTOUT_MIPPED;
     }
 
     @Override
@@ -161,12 +152,6 @@ public class RoofTileBlock extends HorizontalBlock implements IWaterLoggable
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
     {
         builder.add(HORIZONTAL_FACING, SHAPE, WATERLOGGED);
-    }
-
-    @Override
-    public IFluidState getFluidState(BlockState state)
-    {
-        return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
 
     @Override

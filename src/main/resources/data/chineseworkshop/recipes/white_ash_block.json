@@ -2,7 +2,7 @@
   "type": "crafting_shaped",
   "result": {
     "item": "chineseworkshop:white_ash_block",
-    "count": 2
+    "count": 4
   },
   "pattern": [
     "**",
@@ -10,10 +10,10 @@
   ],
   "key": {
     "*": {
-      "tag" : "sand",
+      "tag": "sand"
     },
     "#": {
-      "tag" : "dyeWhite",
+      "tag": "forge:gems/quartz"
     }
   }
 }

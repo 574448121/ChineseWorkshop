@@ -8,7 +8,7 @@
   ],
   "key": {
     "*": {
-      "tag" : "dirt",
+      "item" : "minecraft:dirt"
     }
   }
 }

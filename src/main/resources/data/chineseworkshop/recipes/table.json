@@ -10,10 +10,10 @@
   ],
   "key": {
     "*": {
-      "item": "minecraft:wooden_pressure_plate"
+      "tag": "wooden_pressure_plates"
     },
     "#": {
-      "tag": "forge:rods/wooden",
+      "tag": "forge:rods/wooden"
     }
   }
 }
