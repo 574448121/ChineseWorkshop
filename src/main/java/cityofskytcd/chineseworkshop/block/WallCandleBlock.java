@@ -112,24 +112,4 @@ public class WallCandleBlock extends CandleBlock
         }
     }
 
-    //    @Override
-    //    @OnlyIn(Dist.CLIENT)
-    //    public void randomDisplayTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand)
-    //    {
-    //        EnumFacing enumfacing = stateIn.getValue(FACING);
-    //        double d0 = pos.getX() + 0.5D;
-    //        double d1 = pos.getY() + 0.5D;
-    //        double d2 = pos.getZ() + 0.5D;
-    //        if (enumfacing.getAxis().isHorizontal())
-    //        {
-    //            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1 + 0.4D, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-    //            worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1 + 0.4D, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-    //        }
-    //        else
-    //        {
-    //            worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1 + 0.1D, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-    //            worldIn.spawnParticle(EnumParticleTypes.FLAME, d0, d1 + 0.1D, d2, 0.0D, 0.0D, 0.0D, new int[0]);
-    //        }
-    //    }
-
 }
