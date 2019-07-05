@@ -1,15 +1,20 @@
 {
-  "type": "forge:ore_shapeless",
+  "type": "crafting_shaped",
   "result": {
     "item": "chineseworkshop:red_stained_wooden_planks",
-    "count": 4
+    "count": 8
   },
-  "ingredients": [
-    {
+  "pattern": [
+    "***",
+    "*#*",
+    "***"
+  ],
+  "key": {
+    "#": {
       "tag": "forge:dyes/red"
     },
-    {
+    "*": {
       "tag": "logs"
     }
-  ]
+  }
 }

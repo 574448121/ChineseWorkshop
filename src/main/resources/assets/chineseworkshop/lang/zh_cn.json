@@ -2,7 +2,7 @@
   "chineseworkshop.mod": "中式工坊",
   "itemGroup.chineseworkshop.blocks": "中式工坊 | 建筑方块",
   "itemGroup.chineseworkshop.decorations": "中式工坊 | 装饰方块",
-  "chineseworkshop.tip.selectable": "按住 %s并滚动滚轮选择物品",
+  "chineseworkshop.tip.selectable": "按住%s并滚动滚轮选择物品",
   "chineseworkshop.gui.keygroup": "中式工坊",
   "chineseworkshop.keybind.select": "选择",
   "block.chineseworkshop.black_brick_block": "黑砖块",

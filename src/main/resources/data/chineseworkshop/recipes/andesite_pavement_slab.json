@@ -1,16 +1,15 @@
 {
   "type": "crafting_shaped",
   "result": {
-    "item": "chineseworkshop:black_brick_wall",
+    "item": "chineseworkshop:andesite_pavement_slab",
     "count": 6
   },
   "pattern": [
-    "***",
     "***"
   ],
   "key": {
     "*": {
-      "item": "chineseworkshop:black_brick_block"
+      "item": "chineseworkshop:andesite_pavement"
     }
   }
 }

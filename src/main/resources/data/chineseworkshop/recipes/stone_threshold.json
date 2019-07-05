@@ -1,7 +1,8 @@
 {
   "type": "crafting_shaped",
   "result": {
-    "item": "chineseworkshop:stone_threshold"
+    "item": "chineseworkshop:stone_threshold",
+    "count": 2
   },
   "pattern": [
     "*",
