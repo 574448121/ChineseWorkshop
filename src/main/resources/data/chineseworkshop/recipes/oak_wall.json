@@ -2,7 +2,7 @@
   "type": "crafting_shaped",
   "result": {
     "item": "chineseworkshop:oak_wall",
-    "count": 3
+    "count": 6
   },
   "pattern": [
     "***",
@@ -10,7 +10,7 @@
   ],
   "key": {
     "*": {
-      "item" : "chineseworkshop:upper_door_frame"
+      "item" : "minecraft:oak_fence"
     }
   }
 }

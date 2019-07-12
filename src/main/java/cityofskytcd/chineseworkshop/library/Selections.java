@@ -22,6 +22,10 @@ public class Selections
     private static final Set<Item> allItems = Sets.newHashSet();
     public static final List<Selection> SELECTIONS = Lists.newLinkedList();
 
+    private Selections()
+    {
+    }
+
     public static void init()
     {
         addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, BlockModule.BLACK_TILE_ROOF_SLAB, BlockModule.BLACK_TILE_ROOF_SLAB_TOP);
