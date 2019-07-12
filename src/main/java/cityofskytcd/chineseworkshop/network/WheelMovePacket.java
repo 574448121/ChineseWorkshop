@@ -1,8 +1,8 @@
 package cityofskytcd.chineseworkshop.network;
 
-import java.util.List;
 import java.util.function.Supplier;
 
+import cityofskytcd.chineseworkshop.library.Selection;
 import cityofskytcd.chineseworkshop.library.Selections;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -46,12 +46,12 @@ public class WheelMovePacket extends ClientPacket
                 return;
             }
             Item item = held.getItem();
-            List<Item> selection = Selections.find(item);
+            Selection selection = Selections.find(item);
             if (selection == null)
             {
                 return;
             }
-            if (selection.contains(item))
+            if (selection.matches(item))
             {
                 ItemStack stack = new ItemStack(selection.get(pkt.index % selection.size()));
                 stack.setCount(held.getCount());

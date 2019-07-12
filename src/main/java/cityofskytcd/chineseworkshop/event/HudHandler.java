@@ -1,12 +1,11 @@
 package cityofskytcd.chineseworkshop.event;
 
-import java.util.List;
-
 import org.lwjgl.opengl.GL11;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 
 import cityofskytcd.chineseworkshop.CW;
+import cityofskytcd.chineseworkshop.library.Selection;
 import cityofskytcd.chineseworkshop.library.Selections;
 import cityofskytcd.chineseworkshop.network.WheelMovePacket;
 import net.minecraft.client.Minecraft;
@@ -88,7 +87,7 @@ public class HudHandler
                 animationTick = 0;
                 return;
             }
-            List<Item> selection = Selections.find(held);
+            Selection selection = Selections.find(held);
             if (selection != null)
             {
                 Item item = held.getItem();
@@ -121,7 +120,7 @@ public class HudHandler
             {
                 return;
             }
-            List<Item> selection = Selections.find(held);
+            Selection selection = Selections.find(held);
             if (selection == null)
             {
                 return;
