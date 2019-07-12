@@ -9,3 +9,9 @@ displayURL="https://minecraft.curseforge.com/projects/chineseworkshop"
 logoFile="logo.png"
 description='''
 '''
+[[dependencies.chineseworkshop]]
+    modId="kiwi"
+    mandatory=true
+    versionRange="[2.1,2.3)"
+    ordering="BEFORE"
+    side="BOTH"
