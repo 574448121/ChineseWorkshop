@@ -17,6 +17,8 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
 version = "${version_major}.${version_minor}.${version_patch}"
 group = "cityofskytcd"
 archivesBaseName = "ChineseWorkshop-${minecraft_version}"

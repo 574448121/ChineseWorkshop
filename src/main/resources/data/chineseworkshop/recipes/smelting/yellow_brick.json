@@ -3,5 +3,6 @@
   "result": "chineseworkshop:yellow_brick",
   "ingredient": {
     "item" : "chineseworkshop:yellow_clay"
-  }
+  },
+  "experience": 0.3
 }

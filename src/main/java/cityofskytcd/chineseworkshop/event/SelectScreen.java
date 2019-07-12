@@ -16,26 +16,23 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
+@OnlyIn(Dist.CLIENT)
 public class SelectScreen extends Screen
 {
-    private static float animationTick = 0;
-    private static float[] badgeProcess = new float[0];
+    private float animationTick = 0;
+    private float[] badgeProcess = new float[0];
 
     protected SelectScreen()
     {
         super(new StringTextComponent("select"));
-        System.out.println("hi");
     }
 
     @Override
     protected void init()
     {
-        if (!Minecraft.IS_RUNNING_ON_MAC)
-        {
-            KeyBinding.updateKeyBindState();
-        }
-
         Minecraft mc = Minecraft.getInstance();
         InputMappings.func_216504_a(this.minecraft.mainWindow.getHandle(), 212995, mc.mainWindow.getWidth() / 2, mc.mainWindow.getHeight() / 2);
     }
@@ -49,7 +46,7 @@ public class SelectScreen extends Screen
     @Override
     public boolean shouldCloseOnEsc()
     {
-        return false;
+        return true;
     }
 
     @Override
@@ -62,12 +59,14 @@ public class SelectScreen extends Screen
     @Override
     public void render(int x, int y, float pTicks)
     {
-        System.out.println(animationTick);
-        System.out.println(HudHandler.kbSelect.isKeyDown());
-        if (HudHandler.showGui && !HudHandler.kbSelect.isKeyDown())
+        KeyBinding.updateKeyBindState();
+        if (!HudHandler.kbSelect.isKeyDown())
         {
             HudHandler.showGui = false;
-            HudHandler.animating = true;
+            if (animationTick >= 0.01f)
+            {
+                HudHandler.animating = true;
+            }
         }
         if (HudHandler.showGui || HudHandler.animating)
         {
@@ -133,7 +132,7 @@ public class SelectScreen extends Screen
 
                 boolean match = !matched && item == held.getItem();
                 matched = matched || match;
-                badgeProcess[i] += match ? mc.getRenderPartialTicks() : -mc.getRenderPartialTicks();
+                badgeProcess[i] += match ? pTicks : -pTicks;
                 badgeProcess[i] = MathHelper.clamp(badgeProcess[i], 0, 10);
                 HudHandler.drawBadge(mc, new ItemStack(item), badgeProcess[i], false);
                 GlStateManager.popMatrix();

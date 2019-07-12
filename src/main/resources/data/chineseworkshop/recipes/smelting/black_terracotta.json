@@ -1,7 +1,8 @@
 {
   "type": "smelting",
-  "result": "item": "chineseworkshop:black_terracotta",
+  "result": "minecraft:black_terracotta",
   "ingredient": {
     "item" : "chineseworkshop:black_clay_block"
-  }
+  },
+  "experience": 0.1
 }

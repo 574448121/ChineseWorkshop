@@ -35,17 +35,37 @@ public class HudHandler
     protected static boolean showGui = false;
     protected static boolean animating = false;
     //protected static float animationTick = 0;
-    private static float[] badgeProcess = new float[0];
+    //private static float[] badgeProcess = new float[0];
+    private static boolean[] keyMap = new boolean[8];
 
     @SubscribeEvent
     public static void onKeyInput(KeyInputEvent event)
     {
         Minecraft mc = Minecraft.getInstance();
-        if (mc.player != null && mc.isGameFocused())
+        if (event.getKey() >= 340 && event.getKey() <= 347 && event.getAction() < 2)
         {
-            showGui = false;
+            keyMap[event.getKey() - 340] = event.getAction() == 1;
+        }
+        if (mc.currentScreen == null && mc.player != null && mc.isGameFocused() && kbSelect.isKeyDown())
+        {
+            int code = kbSelect.getKey().getKeyCode();
+            boolean f = code < 340 || code > 347;
+            for (boolean pressed : keyMap)
+            {
+                if (pressed)
+                {
+                    if (f)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        f = true;
+                    }
+                }
+            }
             ItemStack stack = mc.player.getHeldItemMainhand();
-            if (kbSelect.isKeyDown() && !stack.isEmpty() && Selections.contains(stack.getItem()))
+            if (!stack.isEmpty() && Selections.contains(stack.getItem()))
             {
                 showGui = true;
                 animating = true;
