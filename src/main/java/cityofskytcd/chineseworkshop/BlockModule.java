@@ -89,6 +89,16 @@ public class BlockModule extends AbstractModule
 
     public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_TOP = new SlabRoofTileBlock(blockProp(Material.ROCK), VoxelShapes.fullCube());
 
+    public static final RoofTileBlock THATCH_ROOF = new RoofTileBlock(blockProp(Material.WOOD));
+
+    public static final RoofTileRidgeBlock THATCH_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 0, 0, 16, 9, 16));
+
+    public static final RoofTileRidgeBlock THATCH_ROOF_RIDGE_TOP = new RoofTileRidgeBlock(blockProp(Material.WOOD), VoxelShapes.fullCube());
+
+    public static final SlabRoofTileBlock THATCH_ROOF_SLAB = new SlabRoofTileBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 0, 0, 16, 8, 16));
+
+    public static final SlabRoofTileBlock THATCH_ROOF_SLAB_TOP = new SlabRoofTileBlock(blockProp(Material.WOOD), VoxelShapes.fullCube());
+
     public static final ModBlock BLACK_CLAY_BLOCK = new ModBlock(blockProp(Material.CLAY));
 
     public static final ModBlock PAINTED_BLOCK = new ModBlock(blockProp(Material.ROCK));

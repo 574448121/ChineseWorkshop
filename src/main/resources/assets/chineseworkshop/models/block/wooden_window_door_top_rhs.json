@@ -6,7 +6,6 @@
 	},
 	"elements": [ 	 
 		{
-			"__comment": "Element",
 			"from": [ 14, 0, -3 ],
 			"to": [ 16, 8, 13 ],
 			"faces": {
@@ -17,7 +16,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 14, 8, -3 ],
 			"to": [ 16, 24, 13 ],
 			"faces": {

@@ -38,7 +38,6 @@
 },
 	"elements": [ 	 
 		{
-			"__comment": "Box1",
 			"from": [ 8, 0.5, 1 ],
 			"to": [ 18, 12.5, 11 ],
 			"rotation": { "origin": [ 8, 0.5, 1 ], "axis": "y", "angle": -45 },
@@ -52,7 +51,6 @@
 			}
 		},
 		{
-			"__comment": "Box2",
 			"from": [ 7, 11.5, 0 ],
 			"to": [ 19, 12.5, 1 ],
 			"rotation": { "origin": [ 8, 0.5, 1 ], "axis": "y", "angle": -45 },
@@ -66,7 +64,6 @@
 			}
 		},
 		{
-			"__comment": "Box2",
 			"from": [ 7, 11.5, 11 ],
 			"to": [ 19, 12.5, 12 ],
 			"rotation": { "origin": [ 8, 0.5, 1 ], "axis": "y", "angle": -45 },
@@ -80,7 +77,6 @@
 			}
 		},
 		{
-			"__comment": "Box4",
 			"from": [ 7, 11.5, 1 ],
 			"to": [ 8, 12.5, 11 ],
 			"rotation": { "origin": [ 8, 0.5, 1 ], "axis": "y", "angle": -45 },
@@ -94,7 +90,6 @@
 			}
 		},
 		{
-			"__comment": "Box4",
 			"from": [ 18, 11.5, 1 ],
 			"to": [ 19, 12.5, 11 ],
 			"rotation": { "origin": [ 8, 0.5, 1 ], "axis": "y", "angle": -45 },
@@ -108,7 +103,6 @@
 			}
 		},
 		{
-			"__comment": "Box6",
 			"from": [ 9, 12.5, 1.5 ],
 			"to": [ 17, 13.5, 10 ],
 			"rotation": { "origin": [ 8, 0.5, 1 ], "axis": "y", "angle": -45 },
@@ -132,7 +126,6 @@
 			}
 		},
 		{
-			"__comment": "Box9",
 			"from": [ 10, -0.5, 3 ],
 			"to": [ 16, 0.5, 9 ],
 			"rotation": { "origin": [ 8, 0.5, 1 ], "axis": "y", "angle": -45 },
@@ -176,7 +169,6 @@
 			}
 		},
 		{
-			"__comment": "Box13",
 			"from": [ 8, 13.5, 7.5 ],
 			"to": [ 9, 20, 8.5 ],
 			"rotation": { "origin": [ 8, 13.5, 7.5 ], "axis": "y", "angle": -45 },

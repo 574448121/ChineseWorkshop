@@ -6,7 +6,6 @@
 	},
 	"elements": [ 	 
 		{
-			"__comment": "Box6",
 			"from": [ 7, 2, 7 ],
 			"to": [ 9, 14, 9 ],
 			"faces": {

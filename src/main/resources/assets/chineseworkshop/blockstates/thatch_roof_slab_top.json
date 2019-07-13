@@ -1,0 +1,24 @@
+{
+    "variants": {
+        "facing=east,shape=straight":  { "model": "chineseworkshop:block/thatch_roof_slab_top", "y": 90 },
+        "facing=west,shape=straight":  { "model": "chineseworkshop:block/thatch_roof_slab_top", "y": 270 },
+        "facing=south,shape=straight": { "model": "chineseworkshop:block/thatch_roof_slab_top", "y": 180 },
+        "facing=north,shape=straight": { "model": "chineseworkshop:block/thatch_roof_slab_top" },
+        "facing=east,shape=outer_right":  { "model": "chineseworkshop:block/thatch_roof_slab_top_l" },
+        "facing=west,shape=outer_right":  { "model": "chineseworkshop:block/thatch_roof_slab_top_l", "y": 180 },
+        "facing=south,shape=outer_right": { "model": "chineseworkshop:block/thatch_roof_slab_top_l", "y": 90 },
+        "facing=north,shape=outer_right": { "model": "chineseworkshop:block/thatch_roof_slab_top_l", "y": 270 },
+        "facing=east,shape=outer_left":  { "model": "chineseworkshop:block/thatch_roof_slab_top_l", "y": 270 },
+        "facing=west,shape=outer_left":  { "model": "chineseworkshop:block/thatch_roof_slab_top_l", "y": 90 },
+        "facing=south,shape=outer_left": { "model": "chineseworkshop:block/thatch_roof_slab_top_l" },
+        "facing=north,shape=outer_left": { "model": "chineseworkshop:block/thatch_roof_slab_top_l", "y": 180 },
+        "facing=east,shape=inner_right":  { "model": "chineseworkshop:block/thatch_roof_slab_top_ls", "y": 270 },
+        "facing=west,shape=inner_right":  { "model": "chineseworkshop:block/thatch_roof_slab_top_ls", "y": 90 },
+        "facing=south,shape=inner_right": { "model": "chineseworkshop:block/thatch_roof_slab_top_ls" },
+        "facing=north,shape=inner_right": { "model": "chineseworkshop:block/thatch_roof_slab_top_ls", "y": 180 },
+        "facing=east,shape=inner_left":  { "model": "chineseworkshop:block/thatch_roof_slab_top_ls", "y": 180 },
+        "facing=west,shape=inner_left":  { "model": "chineseworkshop:block/thatch_roof_slab_top_ls" },
+        "facing=south,shape=inner_left": { "model": "chineseworkshop:block/thatch_roof_slab_top_ls", "y": 270 },
+        "facing=north,shape=inner_left": { "model": "chineseworkshop:block/thatch_roof_slab_top_ls", "y": 90 }
+    }
+}

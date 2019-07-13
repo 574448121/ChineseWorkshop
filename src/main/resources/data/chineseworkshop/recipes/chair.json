@@ -1,0 +1,19 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:chair",
+    "count": 2
+  },
+  "pattern": [
+    "*",
+    "#"
+  ],
+  "key": {
+    "*": {
+      "tag" : "forge:fences/wooden"
+    },
+    "#": {
+      "item" : "chineseworkshop:bench"
+    }
+  }
+}

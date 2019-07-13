@@ -8,7 +8,6 @@
 	},
 	"elements": [ 	 
 		{
-			"__comment": "Element",
 			"from": [ 0, 8.8125, 8 ],
 			"to": [ 4, 11.8125, 17 ],
 			"rotation": { "origin": [ 0, 11.8125, 8 ], "axis": "x", "angle": -22.5 },
@@ -22,7 +21,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 0, 3.5, 3 ],
 			"to": [ 4, 6.5, 13.5 ],
 			"rotation": { "origin": [ 0, 6.5, 3 ], "axis": "x", "angle": -22.5 },
@@ -36,7 +34,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 0, -2.1875, -3 ],
 			"to": [ 4, 0.8125, 8 ],
 			"rotation": { "origin": [ 0, 0.8125, -3 ], "axis": "x", "angle": -22.5 },
@@ -50,7 +47,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 0.0625, 0, 10 ],
 			"to": [ 1.0625, 12.5, 16 ],
 			"faces": {
@@ -63,7 +59,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 0.0625, 0, 4.5 ],
 			"to": [ 1.0625, 7, 10 ],
 			"faces": {
@@ -76,7 +71,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 0.0625, 0, 2 ],
 			"to": [ 1.0625, 1.5, 4.5 ],
 			"faces": {

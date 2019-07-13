@@ -1,5 +1,5 @@
 {
-	"parent": "chineseworkshop:block/black_tile_ridge_roof_edge_t_w",
+	"parent": "chineseworkshop:block/black_tile_roof_ridge_edge_t_w",
 	"textures": {
 		"wall": "chineseworkshop:block/white_ash_block"
     }

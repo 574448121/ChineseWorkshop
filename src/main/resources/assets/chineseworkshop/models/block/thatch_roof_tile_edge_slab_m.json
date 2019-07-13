@@ -8,7 +8,6 @@
 	},
 	"elements": [ 	 
 		{
-			"__comment": "Element",
 			"from": [ 0, 3, 0 ],
 			"to": [ 4, 6, 9.5 ],
 			"faces": {
@@ -21,7 +20,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 0.0267, 1.8126, 9 ],
 			"to": [ 4.0267, 4.8126, 20 ],
 			"rotation": { "origin": [ 0, 4.8125, 9 ], "axis": "x", "angle": 22.5 },
@@ -35,7 +33,6 @@
 			}
 		},
 		{
-			"__comment": "Element",
 			"from": [ 0.0625, 0, 0 ],
 			"to": [ 1.0625, 3, 13 ],
 			"faces": {

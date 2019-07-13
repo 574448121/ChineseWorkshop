@@ -32,19 +32,17 @@ public class Selections
 
         addSelection(BlockModule.BLACK_TILE_ROOF_RIDGE, BlockModule.BLACK_TILE_ROOF_RIDGE_J, BlockModule.BLACK_TILE_ROOF_RIDGE_TOP);
 
-        //addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, BlockModule.BLACK_TILE_ROOF_RIDGE);
-
         //        addSelection(BlockModule.BLACK_ROOF_TILE_EDGE), BlockModule.BLACK_ROOF_TILE_EDGE, 1), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB, 1)));
         //        addSelection(BlockModule.YELLOW_TILE_ROOF), BlockModule.YELLOW_TILE_ROOF_J), BlockModule.YELLOW_TILE_ROOF_SLAB), BlockModule.YELLOW_TILE_ROOF_SLAB_TOP)));
         //
         //        addSelection(BlockModule.YELLOW_ROOF_TILE_RIDGE), BlockModule.YELLOW_TILE_RIDGE_ROOF_EDGE), BlockModule.YELLOW_TILE_RIDGE_ROOF_J), BlockModule.YELLOW_TILE_RIDGE_ROOF_TOP), BlockModule.YELLOW_TILE_RIDGE_ROOF_EDGE_TOP)));
         //
         //        addSelection(BlockModule.YELLOW_ROOF_TILE_EDGE), BlockModule.YELLOW_ROOF_TILE_EDGE, 1), BlockModule.YELLOW_ROOF_TILE_EDGE_SLAB), BlockModule.YELLOW_ROOF_TILE_EDGE_SLAB, 1)));
-        //
-        //        addSelection(BlockModule.THATCH_ROOF), BlockModule.THATCH_TILE_ROOF_SLAB), BlockModule.THATCH_TILE_ROOF_SLAB_TOP)));
-        //
-        //        addSelection(BlockModule.THATCH_TILE_RIDGE_ROOF), BlockModule.THATCH_TILE_RIDGE_ROOF_TOP), BlockModule.THATCH_TILE_RIDGE_ROOF_EDGE), BlockModule.THATCH_TILE_RIDGE_ROOF_EDGE_TOP)));
-        //
+
+        addSelection(BlockModule.THATCH_ROOF, BlockModule.THATCH_ROOF_SLAB, BlockModule.THATCH_ROOF_SLAB_TOP);
+
+        addSelection(BlockModule.THATCH_ROOF_RIDGE, BlockModule.THATCH_ROOF_RIDGE_TOP);
+
         //        addSelection(BlockModule.THATCH_ROOF_TILE_EDGE), BlockModule.THATCH_ROOF_TILE_EDGE, 1), BlockModule.THATCH_ROOF_TILE_EDGE_SLAB), BlockModule.THATCH_ROOF_TILE_EDGE_SLAB, 1)));
         //        addSelection(BlockModule.BLACK_ROOF_TILE_EDGE_WB), BlockModule.BLACK_ROOF_TILE_EDGE_WB, 1), BlockModule.BLACK_ROOF_TILE_EDGE_RR), BlockModule.BLACK_ROOF_TILE_EDGE_RR, 1), BlockModule.BLACK_ROOF_TILE_EDGE_CW), BlockModule.BLACK_ROOF_TILE_EDGE_CW, 1)));
         //

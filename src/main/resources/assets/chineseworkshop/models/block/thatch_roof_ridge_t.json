@@ -1,0 +1,112 @@
+{
+	"__comment": "Designed by CityOfSkyTCD",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "chineseworkshop:block/thatch",
+		"texture": "chineseworkshop:block/thatch",
+		"wood": "minecraft:block/oak_planks"
+	},
+	"elements": [ 	 
+		{
+			"from": [ 11, 1.9375, 8.9375 ],
+			"to": [ 16, 4.9375, 19.9375 ],
+			"rotation": { "origin": [ 11, 4.9375, 8.9375 ], "axis": "x", "angle": 22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 5, 10 ], "texture": "#texture" },
+				"up": { "uv": [ 0, 0, 5, 10 ], "texture": "#texture" },
+				"north": { "uv": [ 0, 5, 5, 8 ], "texture": "#texture" },
+				"south": { "uv": [ 0, 5, 5, 8 ], "texture": "#texture" },
+				"west": { "uv": [ 1, 0, 4, 16 ], "texture": "#texture", "rotation": 270 },
+				"east": { "uv": [ 1, 0, 4, 16 ], "texture": "#texture" }
+			}
+		},
+		{
+			"from": [ 0, 2, 5 ],
+			"to": [ 16, 8.5, 11 ],
+			"faces": {
+				"down": { "uv": [ 0, 3, 16, 8 ], "texture": "#wood" },
+				"up": { "uv": [ 0, 3, 16, 8 ], "texture": "#wood" },
+				"north": { "uv": [ 0, 3, 16, 7 ], "texture": "#wood" },
+				"south": { "uv": [ 0, 3, 16, 7 ], "texture": "#wood" },
+				"west": { "uv": [ 0, 3, 5, 7 ], "texture": "#wood" },
+				"east": { "uv": [ 0, 3, 5, 7 ], "texture": "#wood" }
+			}
+		},
+		{
+			"from": [ 5, 2, 11 ],
+			"to": [ 11, 8.5, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood", "rotation": 90 },
+				"up": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood", "rotation": 90 },
+				"north": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
+				"south": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
+				"west": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
+				"east": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" }
+			}
+		},
+		{
+			"from": [ 9, 1.875, 11 ],
+			"to": [ 20, 4.875, 16 ],
+			"rotation": { "origin": [ 9, 4.875, 11 ], "axis": "z", "angle": -22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 5, 9 ], "texture": "#texture", "rotation": 90 },
+				"up": { "uv": [ 0, 0, 5, 9 ], "texture": "#texture", "rotation": 90 },
+				"north": { "uv": [ 0, 3, 3, 12 ], "texture": "#texture", "rotation": 90 },
+				"south": { "uv": [ 0, 4, 3, 13 ], "texture": "#texture", "rotation": 90 },
+				"west": { "uv": [ 0, 5, 5, 8 ], "texture": "#texture" },
+				"east": { "uv": [ 0, 8, 5, 11 ], "texture": "#texture" }
+			}
+		},
+		{
+			"from": [ 1, -2.5, -3.125 ],
+			"to": [ 16, 0.5, 7.875 ],
+			"rotation": { "origin": [ 1, 0.5, -3.125 ], "axis": "x", "angle": -22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 11 ], "texture": "#texture" },
+				"up": { "uv": [ 0, 0, 16, 11 ], "texture": "#texture" },
+				"north": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" },
+				"south": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" },
+				"west": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" },
+				"east": { "uv": [ 0, 0, 16, 3 ], "texture": "#texture" }
+			}
+		},
+		{
+			"from": [ 1, 0, 1 ],
+			"to": [ 16, 2, 16 ],
+			"faces": {
+				"down": { "uv": [ 1, 1, 16, 16 ], "texture": "#wood" },
+				"up": { "uv": [ 1, 1, 16, 16 ], "texture": "#wood" },
+				"north": { "uv": [ 1, 14, 16, 16 ], "texture": "#particle" },
+				"south": { "uv": [ 1, 14, 16, 16 ], "texture": "#wood" },
+				"west": { "uv": [ 1, 14, 16, 16 ], "texture": "#wood" },
+				"east": { "uv": [ 1, 14, 16, 16 ], "texture": "#wood" }
+			}
+		},
+		{
+			"from": [ -3.1875, -2.375, 11 ],
+			"to": [ 7.8125, 0.625, 16 ],
+			"rotation": { "origin": [ -3.1875, 0.625, 11 ], "axis": "z", "angle": 22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 5, 9 ], "texture": "#texture", "rotation": 90 },
+				"up": { "uv": [ 0, 0, 5, 9 ], "texture": "#texture", "rotation": 90 },
+				"north": { "uv": [ 4, 1, 7, 10 ], "texture": "#texture", "rotation": 90 },
+				"south": { "uv": [ 4, 1, 7, 10 ], "texture": "#texture", "rotation": 90 },
+				"west": { "uv": [ 8, 6, 13, 9 ], "texture": "#texture" },
+				"east": { "uv": [ 4, 6, 9, 9 ], "texture": "#texture" }
+			}
+		},
+		{
+			"from": [ 0, 1.9375, 8.9375 ],
+			"to": [ 5, 4.9375, 19.9375 ],
+			"rotation": { "origin": [ 0, 4.9375, 8.9375 ], "axis": "x", "angle": 22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 5, 10 ], "texture": "#texture" },
+				"up": { "uv": [ 0, 0, 5, 10 ], "texture": "#texture" },
+				"north": { "uv": [ 0, 4, 5, 7 ], "texture": "#texture" },
+				"south": { "uv": [ 0, 4, 5, 7 ], "texture": "#texture" },
+				"west": { "uv": [ 0, 0, 3, 16 ], "texture": "#texture", "rotation": 270 },
+				"east": { "uv": [ 1, 0, 4, 16 ], "texture": "#texture" }
+			}
+		}
+	]
+}

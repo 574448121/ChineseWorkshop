@@ -14,7 +14,7 @@
       "item": "minecraft:wheat"
     },
 	"/": {
-      "tag" : "forge:rods/wooden",
+      "tag" : "forge:rods/wooden"
     }
   }
 }
