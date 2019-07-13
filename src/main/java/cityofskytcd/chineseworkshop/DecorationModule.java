@@ -3,6 +3,7 @@ package cityofskytcd.chineseworkshop;
 import cityofskytcd.chineseworkshop.block.AndesiteFenceBlock;
 import cityofskytcd.chineseworkshop.block.BenchBlock;
 import cityofskytcd.chineseworkshop.block.CandleBlock;
+import cityofskytcd.chineseworkshop.block.ChairBlock;
 import cityofskytcd.chineseworkshop.block.Direction2Block;
 import cityofskytcd.chineseworkshop.block.ModHorizontalBlock;
 import cityofskytcd.chineseworkshop.block.SmallFenceBlock;
@@ -72,6 +73,8 @@ public class DecorationModule extends AbstractModule
 
     public static final BenchBlock BENCH = new BenchBlock(blockProp(Material.WOOD));
 
+    public static final ChairBlock CHAIR = new ChairBlock(blockProp(Material.WOOD));
+
     public static final TableBlock TABLE = new TableBlock(blockProp(Material.WOOD));
 
     public static final Direction2Block CARVING = new Direction2Block(blockProp(Material.WOOD), Block.makeCuboidShape(0, 4, 5, 16, 16, 11));
@@ -97,4 +100,6 @@ public class DecorationModule extends AbstractModule
     public static final PaneBlock PAPER_WINDOW = init(new StainedGlassPaneBlock(DyeColor.WHITE, blockProp(Material.WOOL)));
 
     public static final SmallFenceBlock LITHEL_DECO = new SmallFenceBlock(blockProp(Material.WOOD), 1.0F, 1.0F, 16.0F, 16.0F, 16.0F);
+
+    public static final SmallFenceBlock PAINTED_WALL = new SmallFenceBlock(blockProp(Material.ROCK));
 }

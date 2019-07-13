@@ -91,6 +91,8 @@ public class BlockModule extends AbstractModule
 
     public static final ModBlock BLACK_CLAY_BLOCK = new ModBlock(blockProp(Material.CLAY));
 
+    public static final ModBlock PAINTED_BLOCK = new ModBlock(blockProp(Material.ROCK));
+
     @Override
     protected void init(FMLCommonSetupEvent event)
     {
