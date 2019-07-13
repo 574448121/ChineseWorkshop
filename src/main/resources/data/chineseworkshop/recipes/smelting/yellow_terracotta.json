@@ -1,0 +1,8 @@
+{
+  "type": "smelting",
+  "result": "minecraft:yellow_terracotta",
+  "ingredient": {
+    "item" : "chineseworkshop:yellow_clay_block"
+  },
+  "experience": 0.1
+}
