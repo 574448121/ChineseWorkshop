@@ -1,12 +1,16 @@
 package cityofskytcd.chineseworkshop.block;
 
+import java.util.List;
 import java.util.Locale;
 
+import cityofskytcd.chineseworkshop.TextureModule;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.EnumProperty;
@@ -18,8 +22,11 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class RoofTileRidgeBlock extends Direction2Block
 {
@@ -32,6 +39,17 @@ public class RoofTileRidgeBlock extends Direction2Block
         super(builder, retexture);
         SHAPE = shape;
         setDefaultState(this.stateContainer.getBaseState().with(VARIANT, Variant.I).with(FACING, Direction2.SOUTH_NORTH));
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    @Override
+    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    {
+        if (isTextureable())
+        {
+            TextureModule.addTooltip(stack, tooltip, "frame");
+        }
+        super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
     @Override
@@ -129,7 +147,7 @@ public class RoofTileRidgeBlock extends Direction2Block
         builder.add(FACING, VARIANT, WATERLOGGED);
     }
 
-    private static enum Variant implements IStringSerializable
+    public static enum Variant implements IStringSerializable
     {
         I, I_90, L, L_90, L_180, L_270, T, T_90, T_180, T_270, X;
 

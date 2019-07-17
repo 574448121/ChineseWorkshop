@@ -104,19 +104,19 @@ public class TextureModule extends AbstractModule
         TextureModel.register(event, block, state);
 
         block = BLACK_TILE_ROOF_J_DYN;
-        state = block.getDefaultState().with(HorizontalBlock.HORIZONTAL_FACING, Direction.SOUTH);
+        state = block.getDefaultState().with(HorizontalBlock.HORIZONTAL_FACING, Direction.NORTH);
         TextureModel.register(event, block, state);
 
         block = BLACK_TILE_ROOF_RIDGE_J_DYN;
-        state = block.getDefaultState().with(HorizontalBlock.HORIZONTAL_FACING, Direction.SOUTH);
+        state = block.getDefaultState().with(HorizontalBlock.HORIZONTAL_FACING, Direction.NORTH);
         TextureModel.register(event, block, state);
 
         block = BLACK_TILE_ROOF_RIDGE_DYN;
-        state = block.getDefaultState();
+        state = block.getDefaultState().with(RoofTileRidgeBlock.VARIANT, RoofTileRidgeBlock.Variant.I_90);
         TextureModel.register(event, block, state);
 
         block = BLACK_TILE_ROOF_RIDGE_TOP_DYN;
-        state = block.getDefaultState();
+        state = block.getDefaultState().with(RoofTileRidgeBlock.VARIANT, RoofTileRidgeBlock.Variant.I_90);
         TextureModel.register(event, block, state);
 
         block = BLACK_TILE_ROOF_SLAB_DYN;
@@ -128,11 +128,12 @@ public class TextureModule extends AbstractModule
         TextureModel.register(event, block, state);
     }
 
+    @OnlyIn(Dist.CLIENT)
     public static void addTooltip(ItemStack stack, List<ITextComponent> tooltip, String langKey)
     {
         NBTHelper data = NBTHelper.of(stack);
         String rl = data.getString("BlockEntityTag.Items.main");
-        if (rl != null)
+        if (rl != null && ResourceLocation.func_217855_b(rl))
         {
             Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(rl));
             if (item != null)
