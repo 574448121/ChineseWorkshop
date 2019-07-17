@@ -1,0 +1,35 @@
+{
+  "type": "kiwi:texture_block",
+  "conditions": [
+    {
+      "type": "kiwi:is_loaded",
+      "module": "chineseworkshop:retexture"
+    }
+  ],
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "chineseworkshop:black_tile_roof"
+      },
+      {
+        "item": "chineseworkshop:black_tile_roof_dyn"
+      }
+    ],
+    "*": {
+      "type": "kiwi:full_block"
+    }
+  },
+  "texture": {
+    "*": "main"
+  },
+  "mark": [ "main" ],
+  "result": {
+    "item": "chineseworkshop:black_tile_roof_dyn",
+    "count": 8
+  }
+}

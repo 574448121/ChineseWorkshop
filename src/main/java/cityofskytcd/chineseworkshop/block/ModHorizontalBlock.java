@@ -1,32 +1,40 @@
 package cityofskytcd.chineseworkshop.block;
 
+import cityofskytcd.chineseworkshop.tile.CWTextureTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.IWaterLoggable;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
+import snownee.kiwi.block.ModBlock;
 import snownee.kiwi.util.VoxelUtil;
 
 public class ModHorizontalBlock extends HorizontalBlock implements IWaterLoggable
 {
+    private final boolean retexture;
     private VoxelShape[] shapes = new VoxelShape[4];
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public ModHorizontalBlock(Properties builder, VoxelShape shape)
+    public ModHorizontalBlock(Properties builder, VoxelShape shape, boolean retexture)
     {
         super(builder);
+        this.retexture = retexture;
         for (int i = 0; i < shapes.length; i++)
         {
             Direction direction = Direction.byHorizontalIndex(i);
@@ -39,6 +47,29 @@ public class ModHorizontalBlock extends HorizontalBlock implements IWaterLoggabl
                 shapes[i] = VoxelUtil.rotate(shape, direction);
             }
         }
+    }
+
+    public boolean isTextureable()
+    {
+        return retexture;
+    }
+
+    @Override
+    public boolean hasTileEntity(BlockState state)
+    {
+        return retexture;
+    }
+
+    @Override
+    public TileEntity createTileEntity(BlockState state, IBlockReader world)
+    {
+        return retexture ? new CWTextureTile() : null;
+    }
+
+    @Override
+    public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player)
+    {
+        return ModBlock.pickBlock(state, target, world, pos, player);
     }
 
     @Override

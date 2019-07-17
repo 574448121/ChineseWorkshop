@@ -1,20 +1,25 @@
 package cityofskytcd.chineseworkshop.block;
 
+import cityofskytcd.chineseworkshop.tile.CWTextureTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.IWaterLoggable;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
@@ -24,21 +29,47 @@ import snownee.kiwi.util.VoxelUtil;
 
 public class Direction2Block extends ModBlock implements IWaterLoggable
 {
+    private final boolean retexture;
     public static final EnumProperty<Direction2> FACING = EnumProperty.create("facing", Direction2.class);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private final VoxelShape[] shapes = new VoxelShape[2];
 
-    public Direction2Block(Properties builder)
+    public Direction2Block(Properties builder, boolean retexture)
     {
         super(builder);
+        this.retexture = retexture;
         shapes[0] = shapes[1] = VoxelShapes.fullCube();
     }
 
-    public Direction2Block(Properties builder, VoxelShape shape)
+    public Direction2Block(Properties builder, VoxelShape shape, boolean retexture)
     {
         super(builder);
+        this.retexture = retexture;
         shapes[0] = shape;
         shapes[1] = VoxelUtil.rotate(shape, Direction.WEST);
+    }
+
+    public boolean isTextureable()
+    {
+        return retexture;
+    }
+
+    @Override
+    public boolean hasTileEntity(BlockState state)
+    {
+        return retexture;
+    }
+
+    @Override
+    public TileEntity createTileEntity(BlockState state, IBlockReader world)
+    {
+        return retexture ? new CWTextureTile() : null;
+    }
+
+    @Override
+    public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player)
+    {
+        return ModBlock.pickBlock(state, target, world, pos, player);
     }
 
     @Override

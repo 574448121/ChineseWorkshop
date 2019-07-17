@@ -10,7 +10,7 @@ public class ChairBlock extends RoofTileBlock implements ISeat
 {
     public ChairBlock(Properties builder)
     {
-        super(builder);
+        super(builder, false);
     }
 
     @Override

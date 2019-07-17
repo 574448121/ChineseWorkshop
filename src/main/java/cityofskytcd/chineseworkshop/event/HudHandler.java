@@ -255,7 +255,7 @@ public class HudHandler
         else
         {
             RenderHelper.enableGUIStandardItemLighting();
-            mc.getItemRenderer().renderItemAndEffectIntoGUI(stack, -8, -12);
+            mc.getItemRenderer().renderItemAndEffectIntoGUI(null, stack, -8, -12);
         }
 
         RenderHelper.disableStandardItemLighting();

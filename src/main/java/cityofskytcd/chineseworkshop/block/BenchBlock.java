@@ -11,7 +11,7 @@ public class BenchBlock extends Direction2Block implements ISeat
 
     public BenchBlock(Properties builder)
     {
-        super(builder, makeCuboidShape(1, 0, 3, 15, 10, 13));
+        super(builder, makeCuboidShape(1, 0, 3, 15, 10, 13), false);
     }
 
     @Override

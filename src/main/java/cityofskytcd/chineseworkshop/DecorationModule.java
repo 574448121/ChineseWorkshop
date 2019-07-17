@@ -63,13 +63,13 @@ public class DecorationModule extends AbstractModule
         };
     };
 
-    public static final ModHorizontalBlock DOUGONG = new ModHorizontalBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 11, 0, 16, 16, 13));
+    public static final ModHorizontalBlock DOUGONG = new ModHorizontalBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 11, 0, 16, 16, 13), false);
 
-    public static final ModHorizontalBlock WOODEN_THRESHOLD = new ModHorizontalBlock(blockProp(Material.WOOD), VoxelShapes.or(Block.makeCuboidShape(0, 0, 3, 16, 5, 12), Block.makeCuboidShape(0, 5, 2, 16, 7.5, 13)));
+    public static final ModHorizontalBlock WOODEN_THRESHOLD = new ModHorizontalBlock(blockProp(Material.WOOD), VoxelShapes.or(Block.makeCuboidShape(0, 0, 3, 16, 5, 12), Block.makeCuboidShape(0, 5, 2, 16, 7.5, 13)), false);
 
-    public static final ModHorizontalBlock STONE_THRESHOLD = new ModHorizontalBlock(blockProp(Material.WOOD), VoxelShapes.or(Block.makeCuboidShape(0, 0, 3, 16, 5, 12), Block.makeCuboidShape(0, 5, 2, 16, 7.5, 13)));
+    public static final ModHorizontalBlock STONE_THRESHOLD = new ModHorizontalBlock(blockProp(Material.WOOD), VoxelShapes.or(Block.makeCuboidShape(0, 0, 3, 16, 5, 12), Block.makeCuboidShape(0, 5, 2, 16, 7.5, 13)), false);
 
-    public static final ModHorizontalBlock MENDUN = new ModHorizontalBlock(blockProp(Material.ROCK), Block.makeCuboidShape(1, 0, 0, 15, 16, 16));
+    public static final ModHorizontalBlock MENDUN = new ModHorizontalBlock(blockProp(Material.ROCK), Block.makeCuboidShape(1, 0, 0, 15, 16, 16), false);
 
     public static final BenchBlock BENCH = new BenchBlock(blockProp(Material.WOOD));
 
@@ -77,7 +77,7 @@ public class DecorationModule extends AbstractModule
 
     public static final TableBlock TABLE = new TableBlock(blockProp(Material.WOOD));
 
-    public static final Direction2Block CARVING = new Direction2Block(blockProp(Material.WOOD), Block.makeCuboidShape(0, 4, 5, 16, 16, 11));
+    public static final Direction2Block CARVING = new Direction2Block(blockProp(Material.WOOD), Block.makeCuboidShape(0, 4, 5, 16, 16, 11), false);
 
     public static final EntityType<?> SEAT = EntityType.Builder.create(EntityClassification.MISC).setCustomClientFactory((
             spawnEntity, world

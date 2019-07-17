@@ -9,11 +9,13 @@ public class Selection
 {
     private final Item mainItem;
     private final List<Item> subItems;
+    private final boolean hide;
 
-    public Selection(Item mainItem, List<Item> subItems)
+    public Selection(Item mainItem, List<Item> subItems, boolean hide)
     {
         this.mainItem = mainItem;
         this.subItems = subItems;
+        this.hide = hide;
     }
 
     public boolean matches(Item item)
@@ -29,6 +31,11 @@ public class Selection
     public List<Item> getSubItems()
     {
         return subItems;
+    }
+
+    public boolean show()
+    {
+        return !hide;
     }
 
     public int size()

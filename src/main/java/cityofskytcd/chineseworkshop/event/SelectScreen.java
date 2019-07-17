@@ -53,6 +53,8 @@ public class SelectScreen extends Screen
     public void onClose()
     {
         HudHandler.showGui = false;
+        Minecraft mc = Minecraft.getInstance();
+        InputMappings.func_216504_a(this.minecraft.mainWindow.getHandle(), 212993, mc.mainWindow.getWidth() / 2, mc.mainWindow.getHeight() / 2);
         super.onClose();
     }
 
@@ -134,7 +136,9 @@ public class SelectScreen extends Screen
                 matched = matched || match;
                 badgeProcess[i] += match ? pTicks : -pTicks;
                 badgeProcess[i] = MathHelper.clamp(badgeProcess[i], 0, 10);
-                HudHandler.drawBadge(mc, new ItemStack(item), badgeProcess[i], false);
+                ItemStack stack = new ItemStack(item);
+                stack.setTag(held.getTag());
+                HudHandler.drawBadge(mc, stack, badgeProcess[i], false);
                 GlStateManager.popMatrix();
             }
             if (!matched)

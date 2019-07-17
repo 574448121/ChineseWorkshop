@@ -19,9 +19,9 @@ public class SlabRoofTileBlock extends RoofTileBlock
 {
     private final VoxelShape shape;
 
-    public SlabRoofTileBlock(Block.Properties builder, VoxelShape shape)
+    public SlabRoofTileBlock(Block.Properties builder, VoxelShape shape, boolean retexture)
     {
-        super(builder);
+        super(builder, retexture);
         this.shape = shape;
     }
 

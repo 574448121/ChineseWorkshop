@@ -2,7 +2,7 @@
 "textures": {
     "particle": "chineseworkshop:block/stone_tower_lamp",
     "black_tile": "chineseworkshop:block/black_tile",
-    "wood": "minecraft:block/oak_planks"
+    "main": "minecraft:block/oak_planks"
 },
 "display": {
         "gui": {
@@ -64,12 +64,12 @@
     "from": [ 1, 10, 1 ],
     "to": [ 15, 11, 15 ],
     "faces": {
-        "down":  { "uv": [ 15, 15, 1, 1 ], "texture": "#wood" },
-        "up":    { "uv": [ 1, 1, 15, 15 ], "texture": "#wood" },
-        "north": { "uv": [ 1, 5, 15, 6 ], "texture": "#wood" },
-        "south": { "uv": [ 1, 5, 15, 6 ], "texture": "#wood" },
-        "west":  { "uv": [ 1, 5, 15, 6 ], "texture": "#wood" },
-        "east":  { "uv": [ 1, 5, 15, 6 ], "texture": "#wood" }
+        "down":  { "uv": [ 15, 15, 1, 1 ], "texture": "#main" },
+        "up":    { "uv": [ 1, 1, 15, 15 ], "texture": "#main" },
+        "north": { "uv": [ 1, 5, 15, 6 ], "texture": "#main" },
+        "south": { "uv": [ 1, 5, 15, 6 ], "texture": "#main" },
+        "west":  { "uv": [ 1, 5, 15, 6 ], "texture": "#main" },
+        "east":  { "uv": [ 1, 5, 15, 6 ], "texture": "#main" }
     }
 },
 {

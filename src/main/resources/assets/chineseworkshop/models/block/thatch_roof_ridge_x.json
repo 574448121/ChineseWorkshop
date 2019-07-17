@@ -4,7 +4,7 @@
 	"textures": {
 		"particle": "chineseworkshop:block/thatch",
 		"texture": "chineseworkshop:block/thatch",
-		"wood": "minecraft:block/oak_planks"
+		"main": "minecraft:block/oak_planks"
 	},
 	"elements": [ 	 
 		{
@@ -24,24 +24,24 @@
 			"from": [ 0, 2, 5 ],
 			"to": [ 16, 8.5, 11 ],
 			"faces": {
-				"down": { "uv": [ 0, 3, 16, 8 ], "texture": "#wood", "rotation": 180 },
-				"up": { "uv": [ 0, 3, 16, 8 ], "texture": "#wood", "rotation": 180 },
-				"north": { "uv": [ 0, 3, 16, 7 ], "texture": "#wood" },
-				"south": { "uv": [ 0, 3, 16, 7 ], "texture": "#wood" },
-				"west": { "uv": [ 0, 7, 5, 11 ], "texture": "#wood" },
-				"east": { "uv": [ 0, 7, 5, 11 ], "texture": "#wood" }
+				"down": { "uv": [ 0, 3, 16, 8 ], "texture": "#main", "rotation": 180 },
+				"up": { "uv": [ 0, 3, 16, 8 ], "texture": "#main", "rotation": 180 },
+				"north": { "uv": [ 0, 3, 16, 7 ], "texture": "#main" },
+				"south": { "uv": [ 0, 3, 16, 7 ], "texture": "#main" },
+				"west": { "uv": [ 0, 7, 5, 11 ], "texture": "#main" },
+				"east": { "uv": [ 0, 7, 5, 11 ], "texture": "#main" }
 			}
 		},
 		{
 			"from": [ 5, 2, 11 ],
 			"to": [ 11, 8.5, 16 ],
 			"faces": {
-				"down": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood", "rotation": 90 },
-				"up": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood", "rotation": 90 },
-				"north": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
-				"south": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
-				"west": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
-				"east": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" }
+				"down": { "uv": [ 0, 11, 5, 16 ], "texture": "#main", "rotation": 90 },
+				"up": { "uv": [ 0, 11, 5, 16 ], "texture": "#main", "rotation": 90 },
+				"north": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" },
+				"south": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" },
+				"west": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" },
+				"east": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" }
 			}
 		},
 		{
@@ -61,12 +61,12 @@
 			"from": [ 0, 0, 0 ],
 			"to": [ 16, 2, 16 ],
 			"faces": {
-				"down": { "uv": [ 1, 1, 16, 16 ], "texture": "#wood" },
-				"up": { "uv": [ 1, 1, 16, 16 ], "texture": "#wood" },
+				"down": { "uv": [ 1, 1, 16, 16 ], "texture": "#main" },
+				"up": { "uv": [ 1, 1, 16, 16 ], "texture": "#main" },
 				"north": { "uv": [ 1, 14, 16, 16 ], "texture": "#particle" },
-				"south": { "uv": [ 1, 14, 16, 16 ], "texture": "#wood" },
-				"west": { "uv": [ 1, 14, 16, 16 ], "texture": "#wood" },
-				"east": { "uv": [ 1, 14, 16, 16 ], "texture": "#wood" }
+				"south": { "uv": [ 1, 14, 16, 16 ], "texture": "#main" },
+				"west": { "uv": [ 1, 14, 16, 16 ], "texture": "#main" },
+				"east": { "uv": [ 1, 14, 16, 16 ], "texture": "#main" }
 			}
 		},
 		{
@@ -99,12 +99,12 @@
 			"from": [ 5, 2, 0 ],
 			"to": [ 11, 8.5, 5 ],
 			"faces": {
-				"down": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood", "rotation": 90 },
-				"up": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood", "rotation": 90 },
-				"north": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
-				"south": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
-				"west": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" },
-				"east": { "uv": [ 0, 11, 5, 16 ], "texture": "#wood" }
+				"down": { "uv": [ 0, 11, 5, 16 ], "texture": "#main", "rotation": 90 },
+				"up": { "uv": [ 0, 11, 5, 16 ], "texture": "#main", "rotation": 90 },
+				"north": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" },
+				"south": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" },
+				"west": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" },
+				"east": { "uv": [ 0, 11, 5, 16 ], "texture": "#main" }
 			}
 		},
 		{

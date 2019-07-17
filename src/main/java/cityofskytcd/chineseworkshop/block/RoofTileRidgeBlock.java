@@ -27,9 +27,9 @@ public class RoofTileRidgeBlock extends Direction2Block
     public static final EnumProperty<Variant> VARIANT = EnumProperty.create("variant", Variant.class);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public RoofTileRidgeBlock(Block.Properties builder, VoxelShape shape)
+    public RoofTileRidgeBlock(Block.Properties builder, VoxelShape shape, boolean retexture)
     {
-        super(builder);
+        super(builder, retexture);
         SHAPE = shape;
         setDefaultState(this.stateContainer.getBaseState().with(VARIANT, Variant.I).with(FACING, Direction2.SOUTH_NORTH));
     }

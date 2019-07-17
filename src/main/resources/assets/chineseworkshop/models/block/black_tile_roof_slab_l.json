@@ -3,7 +3,7 @@
 "textures": {
     "particle": "chineseworkshop:block/black_tile",
     "texture": "chineseworkshop:block/black_tile",
-    "wood": "minecraft:block/oak_planks"
+    "main": "minecraft:block/oak_planks"
 },
 "elements": [ 
 {
@@ -111,12 +111,12 @@
     "from": [ 0.5, 0, 0 ],
     "to": [ 16, 1.5, 16 ],
     "faces": {
-        "down":  { "uv": [ 0, 0, 16, 16 ], "rotation": 270, "texture": "#wood" },
-        "up":    { "uv": [ 0, 0, 16, 16 ], "rotation": 90, "texture": "#wood" },
-        "north": { "uv": [ 0, 14, 16, 16 ], "texture": "#wood" },
-        "south": { "uv": [ 0, 14, 16, 16 ], "texture": "#wood" },
-        "west":  { "uv": [ 0, 14, 16, 16 ], "texture": "#wood" },
-        "east":  { "uv": [ 0, 14, 16, 16 ], "texture": "#wood" }
+        "down":  { "uv": [ 0, 0, 16, 16 ], "rotation": 270, "texture": "#main" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "rotation": 90, "texture": "#main" },
+        "north": { "uv": [ 0, 14, 16, 16 ], "texture": "#main" },
+        "south": { "uv": [ 0, 14, 16, 16 ], "texture": "#main" },
+        "west":  { "uv": [ 0, 14, 16, 16 ], "texture": "#main" },
+        "east":  { "uv": [ 0, 14, 16, 16 ], "texture": "#main" }
     }
 },
 {
@@ -199,12 +199,12 @@
     "from": [ 13, 2, 13 ],
     "to": [ 16, 3, 16 ],
     "faces": {
-        "down":  { "uv": [ 13, 13, 16, 16 ], "texture": "#wood" },
-        "up":    { "uv": [ 13, 13, 16, 16 ], "texture": "#wood" },
-        "north": { "uv": [ 13, 13, 16, 14 ], "texture": "#wood" },
-        "south": { "uv": [ 13, 13, 16, 14 ], "texture": "#wood" },
-        "west":  { "uv": [ 13, 13, 16, 14 ], "texture": "#wood" },
-        "east":  { "uv": [ 13, 13, 16, 14 ], "texture": "#wood" }
+        "down":  { "uv": [ 13, 13, 16, 16 ], "texture": "#main" },
+        "up":    { "uv": [ 13, 13, 16, 16 ], "texture": "#main" },
+        "north": { "uv": [ 13, 13, 16, 14 ], "texture": "#main" },
+        "south": { "uv": [ 13, 13, 16, 14 ], "texture": "#main" },
+        "west":  { "uv": [ 13, 13, 16, 14 ], "texture": "#main" },
+        "east":  { "uv": [ 13, 13, 16, 14 ], "texture": "#main" }
     }
 }
 ]

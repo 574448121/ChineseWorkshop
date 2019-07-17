@@ -8,11 +8,16 @@
 
 package cityofskytcd.chineseworkshop.block;
 
+import java.util.List;
+
+import cityofskytcd.chineseworkshop.TextureModule;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
@@ -21,7 +26,10 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockReader;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import snownee.kiwi.block.ModBlock;
 
 /**
@@ -32,15 +40,26 @@ public class RoofTileJBlock extends ModHorizontalBlock
 {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public RoofTileJBlock(Block.Properties builder)
+    public RoofTileJBlock(Block.Properties builder, boolean retexture)
     {
-        this(builder, VoxelShapes.fullCube());
+        this(builder, VoxelShapes.fullCube(), retexture);
     }
 
-    public RoofTileJBlock(Block.Properties builder, VoxelShape shape)
+    public RoofTileJBlock(Block.Properties builder, VoxelShape shape, boolean retexture)
     {
-        super(builder, shape);
+        super(builder, shape, retexture);
         ModBlock.deduceSoundAndHardness(this);
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    @Override
+    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+    {
+        if (isTextureable())
+        {
+            TextureModule.addTooltip(stack, tooltip, "frame");
+        }
+        super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
     @Override

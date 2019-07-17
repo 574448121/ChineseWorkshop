@@ -75,29 +75,29 @@ public class BlockModule extends AbstractModule
 
     public static final RotatedPillarBlock DARK_GREEN_PILLAR = new RotatedPillarBlock(blockProp(Material.WOOD));
 
-    public static final RoofTileBlock BLACK_TILE_ROOF = new RoofTileBlock(blockProp(Material.ROCK));
+    public static final RoofTileBlock BLACK_TILE_ROOF = new RoofTileBlock(blockProp(Material.ROCK), false);
 
-    public static final RoofTileJBlock BLACK_TILE_ROOF_J = new RoofTileJBlock(blockProp(Material.ROCK));
+    public static final RoofTileJBlock BLACK_TILE_ROOF_J = new RoofTileJBlock(blockProp(Material.ROCK), false);
 
-    public static final RoofTileJBlock BLACK_TILE_ROOF_RIDGE_J = new RoofTileJBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16));
+    public static final RoofTileJBlock BLACK_TILE_ROOF_RIDGE_J = new RoofTileJBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16), false);
 
-    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16));
+    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16), false);
 
-    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE_TOP = new RoofTileRidgeBlock(blockProp(Material.ROCK), VoxelShapes.fullCube());
+    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE_TOP = new RoofTileRidgeBlock(blockProp(Material.ROCK), VoxelShapes.fullCube(), false);
 
-    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB = new SlabRoofTileBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 8, 16));
+    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB = new SlabRoofTileBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 8, 16), false);
 
-    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_TOP = new SlabRoofTileBlock(blockProp(Material.ROCK), VoxelShapes.fullCube());
+    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_TOP = new SlabRoofTileBlock(blockProp(Material.ROCK), VoxelShapes.fullCube(), false);
 
-    public static final RoofTileBlock THATCH_ROOF = new RoofTileBlock(blockProp(Material.WOOD));
+    public static final RoofTileBlock THATCH_ROOF = new RoofTileBlock(blockProp(Material.WOOD), false);
 
-    public static final RoofTileRidgeBlock THATCH_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 0, 0, 16, 9, 16));
+    public static final RoofTileRidgeBlock THATCH_ROOF_RIDGE = new RoofTileRidgeBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 0, 0, 16, 9, 16), false);
 
-    public static final RoofTileRidgeBlock THATCH_ROOF_RIDGE_TOP = new RoofTileRidgeBlock(blockProp(Material.WOOD), VoxelShapes.fullCube());
+    public static final RoofTileRidgeBlock THATCH_ROOF_RIDGE_TOP = new RoofTileRidgeBlock(blockProp(Material.WOOD), VoxelShapes.fullCube(), false);
 
-    public static final SlabRoofTileBlock THATCH_ROOF_SLAB = new SlabRoofTileBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 0, 0, 16, 8, 16));
+    public static final SlabRoofTileBlock THATCH_ROOF_SLAB = new SlabRoofTileBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 0, 0, 16, 8, 16), false);
 
-    public static final SlabRoofTileBlock THATCH_ROOF_SLAB_TOP = new SlabRoofTileBlock(blockProp(Material.WOOD), VoxelShapes.fullCube());
+    public static final SlabRoofTileBlock THATCH_ROOF_SLAB_TOP = new SlabRoofTileBlock(blockProp(Material.WOOD), VoxelShapes.fullCube(), false);
 
     public static final ModBlock BLACK_CLAY_BLOCK = new ModBlock(blockProp(Material.CLAY));
 
@@ -118,4 +118,5 @@ public class BlockModule extends AbstractModule
     {
         ClientRegistry.registerKeyBinding(HudHandler.kbSelect);
     }
+
 }

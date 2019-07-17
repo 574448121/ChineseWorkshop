@@ -13,9 +13,12 @@ import com.google.common.collect.Sets;
 
 import cityofskytcd.chineseworkshop.BlockModule;
 import cityofskytcd.chineseworkshop.CW;
+import cityofskytcd.chineseworkshop.TextureModule;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IItemProvider;
+import net.minecraft.util.ResourceLocation;
+import snownee.kiwi.Kiwi;
 
 public class Selections
 {
@@ -28,10 +31,16 @@ public class Selections
 
     public static void init()
     {
-        addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, BlockModule.BLACK_TILE_ROOF_SLAB, BlockModule.BLACK_TILE_ROOF_SLAB_TOP);
+        boolean retexture = Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"));
 
+        addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, BlockModule.BLACK_TILE_ROOF_SLAB, BlockModule.BLACK_TILE_ROOF_SLAB_TOP);
         addSelection(BlockModule.BLACK_TILE_ROOF_RIDGE, BlockModule.BLACK_TILE_ROOF_RIDGE_J, BlockModule.BLACK_TILE_ROOF_RIDGE_TOP);
 
+        if (retexture)
+        {
+            addSelection(true, TextureModule.BLACK_TILE_ROOF_DYN, TextureModule.BLACK_TILE_ROOF_J_DYN, TextureModule.BLACK_TILE_ROOF_SLAB_DYN, TextureModule.BLACK_TILE_ROOF_SLAB_TOP_DYN);
+            addSelection(true, TextureModule.BLACK_TILE_ROOF_RIDGE_DYN, TextureModule.BLACK_TILE_ROOF_RIDGE_J_DYN, TextureModule.BLACK_TILE_ROOF_RIDGE_TOP_DYN);
+        }
         //        addSelection(BlockModule.BLACK_ROOF_TILE_EDGE), BlockModule.BLACK_ROOF_TILE_EDGE, 1), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB, 1)));
         //        addSelection(BlockModule.YELLOW_TILE_ROOF), BlockModule.YELLOW_TILE_ROOF_J), BlockModule.YELLOW_TILE_ROOF_SLAB), BlockModule.YELLOW_TILE_ROOF_SLAB_TOP)));
         //
@@ -40,7 +49,6 @@ public class Selections
         //        addSelection(BlockModule.YELLOW_ROOF_TILE_EDGE), BlockModule.YELLOW_ROOF_TILE_EDGE, 1), BlockModule.YELLOW_ROOF_TILE_EDGE_SLAB), BlockModule.YELLOW_ROOF_TILE_EDGE_SLAB, 1)));
 
         addSelection(BlockModule.THATCH_ROOF, BlockModule.THATCH_ROOF_SLAB, BlockModule.THATCH_ROOF_SLAB_TOP);
-
         addSelection(BlockModule.THATCH_ROOF_RIDGE, BlockModule.THATCH_ROOF_RIDGE_TOP);
 
         //        addSelection(BlockModule.THATCH_ROOF_TILE_EDGE), BlockModule.THATCH_ROOF_TILE_EDGE, 1), BlockModule.THATCH_ROOF_TILE_EDGE_SLAB), BlockModule.THATCH_ROOF_TILE_EDGE_SLAB, 1)));
@@ -61,6 +69,11 @@ public class Selections
 
     public static void addSelection(IItemProvider mainItem, IItemProvider... subItems)
     {
+        addSelection(false, mainItem, subItems);
+    }
+
+    public static void addSelection(boolean hide, IItemProvider mainItem, IItemProvider... subItems)
+    {
         Item main = mainItem.asItem();
         List<Item> items = ImmutableList.copyOf(subItems).stream().map(IItemProvider::asItem).collect(Collectors.toList());
         if (allItems.contains(main) || items.stream().anyMatch(allItems::contains))
@@ -69,7 +82,7 @@ public class Selections
         }
         else
         {
-            SELECTIONS.add(new Selection(main, items));
+            SELECTIONS.add(new Selection(main, items, hide));
             allItems.add(main);
             allItems.addAll(items);
         }
