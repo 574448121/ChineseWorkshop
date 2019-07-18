@@ -1,5 +1,10 @@
 {
   "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ],
   "result": {
     "item": "chineseworkshop:stone_window",
 	"count": 3
@@ -11,7 +16,7 @@
   ],
   "key": {
     "d": {
-      "tag" : "stoneDiorite",
+      "tag" : "stoneDiorite"
     }
   }
 }

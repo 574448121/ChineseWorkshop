@@ -2,6 +2,10 @@ package cityofskytcd.chineseworkshop;
 
 import java.util.List;
 
+import cityofskytcd.chineseworkshop.block.BenchBlock;
+import cityofskytcd.chineseworkshop.block.ChairBlock;
+import cityofskytcd.chineseworkshop.block.Direction2;
+import cityofskytcd.chineseworkshop.block.Direction2Block;
 import cityofskytcd.chineseworkshop.block.RoofTileBlock;
 import cityofskytcd.chineseworkshop.block.RoofTileJBlock;
 import cityofskytcd.chineseworkshop.block.RoofTileRidgeBlock;
@@ -54,6 +58,10 @@ public class TextureModule extends AbstractModule
 
     public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_TOP_DYN = new SlabRoofTileBlock(blockProp(Material.ROCK), VoxelShapes.fullCube(), true);
 
+    public static final BenchBlock BENCH_DYN = new BenchBlock(blockProp(Material.WOOD), true);
+
+    public static final ChairBlock CHAIR_DYN = new ChairBlock(blockProp(Material.WOOD), true);
+
     /* off */
     public static final TileEntityType<?> RETEXTURE = TileEntityType.Builder.create(CWTextureTile::new,
             BLACK_TILE_ROOF_DYN,
@@ -62,7 +70,9 @@ public class TextureModule extends AbstractModule
             BLACK_TILE_ROOF_RIDGE_DYN,
             BLACK_TILE_ROOF_RIDGE_TOP_DYN,
             BLACK_TILE_ROOF_SLAB_DYN,
-            BLACK_TILE_ROOF_SLAB_TOP_DYN
+            BLACK_TILE_ROOF_SLAB_TOP_DYN,
+            BENCH_DYN,
+            CHAIR_DYN
     ).build(null);
     /* on */
 
@@ -76,6 +86,8 @@ public class TextureModule extends AbstractModule
         BLACK_TILE_ROOF_RIDGE_TOP_DYN.translationKey = BlockModule.BLACK_TILE_ROOF_RIDGE_TOP.getTranslationKey();
         BLACK_TILE_ROOF_SLAB_DYN.translationKey = BlockModule.BLACK_TILE_ROOF_SLAB.getTranslationKey();
         BLACK_TILE_ROOF_SLAB_TOP_DYN.translationKey = BlockModule.BLACK_TILE_ROOF_SLAB_TOP.getTranslationKey();
+        BENCH_DYN.translationKey = DecorationModule.BENCH.getTranslationKey();
+        CHAIR_DYN.translationKey = DecorationModule.CHAIR.getTranslationKey();
     }
 
     @SubscribeEvent
@@ -88,6 +100,8 @@ public class TextureModule extends AbstractModule
         event.add(BlockModule.BLACK_TILE_ROOF_RIDGE_TOP);
         event.add(BlockModule.BLACK_TILE_ROOF_SLAB);
         event.add(BlockModule.BLACK_TILE_ROOF_SLAB_TOP);
+        event.add(DecorationModule.BENCH);
+        event.add(DecorationModule.CHAIR);
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -125,6 +139,14 @@ public class TextureModule extends AbstractModule
 
         block = BLACK_TILE_ROOF_SLAB_TOP_DYN;
         state = block.getDefaultState();
+        TextureModel.register(event, block, state);
+
+        block = BENCH_DYN;
+        state = block.getDefaultState().with(Direction2Block.FACING, Direction2.SOUTH_NORTH);
+        TextureModel.register(event, block, state);
+
+        block = CHAIR_DYN;
+        state = block.getDefaultState().with(HorizontalBlock.HORIZONTAL_FACING, Direction.SOUTH);
         TextureModel.register(event, block, state);
     }
 

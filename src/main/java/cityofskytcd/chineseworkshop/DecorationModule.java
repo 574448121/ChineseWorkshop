@@ -71,9 +71,9 @@ public class DecorationModule extends AbstractModule
 
     public static final ModHorizontalBlock MENDUN = new ModHorizontalBlock(blockProp(Material.ROCK), Block.makeCuboidShape(1, 0, 0, 15, 16, 16), false);
 
-    public static final BenchBlock BENCH = new BenchBlock(blockProp(Material.WOOD));
+    public static final BenchBlock BENCH = new BenchBlock(blockProp(Material.WOOD), false);
 
-    public static final ChairBlock CHAIR = new ChairBlock(blockProp(Material.WOOD));
+    public static final ChairBlock CHAIR = new ChairBlock(blockProp(Material.WOOD), false);
 
     public static final TableBlock TABLE = new TableBlock(blockProp(Material.WOOD));
 

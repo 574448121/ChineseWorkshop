@@ -27,7 +27,7 @@
   "texture": {
     "*": "main"
   },
-  "mark": [ "main" ],
+  "mark": "main",
   "result": {
     "item": "chineseworkshop:black_tile_roof_slab_top_dyn",
     "count": 8

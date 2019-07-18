@@ -9,9 +9,9 @@ import net.minecraft.world.IWorldReader;
 public class BenchBlock extends Direction2Block implements ISeat
 {
 
-    public BenchBlock(Properties builder)
+    public BenchBlock(Properties builder, boolean retexture)
     {
-        super(builder, makeCuboidShape(1, 0, 3, 15, 10, 13), false);
+        super(builder, makeCuboidShape(1, 0, 3, 15, 10, 13), retexture);
     }
 
     @Override

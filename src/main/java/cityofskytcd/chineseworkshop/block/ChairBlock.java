@@ -8,9 +8,9 @@ import net.minecraft.world.IWorldReader;
 
 public class ChairBlock extends RoofTileBlock implements ISeat
 {
-    public ChairBlock(Properties builder)
+    public ChairBlock(Properties builder, boolean retexture)
     {
-        super(builder, false);
+        super(builder, retexture);
     }
 
     @Override

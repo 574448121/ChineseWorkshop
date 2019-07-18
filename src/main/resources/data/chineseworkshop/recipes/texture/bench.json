@@ -14,10 +14,10 @@
   "key": {
     "#": [
       {
-        "item": "chineseworkshop:black_tile_roof_ridge_j"
+        "item": "chineseworkshop:bench"
       },
       {
-        "item": "chineseworkshop:black_tile_roof_ridge_j_dyn"
+        "item": "chineseworkshop:bench_dyn"
       }
     ],
     "*": {
@@ -29,7 +29,7 @@
   },
   "mark": "main",
   "result": {
-    "item": "chineseworkshop:black_tile_roof_ridge_j_dyn",
+    "item": "chineseworkshop:bench_dyn",
     "count": 8
   }
 }

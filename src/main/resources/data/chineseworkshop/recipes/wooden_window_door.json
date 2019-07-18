@@ -1,5 +1,10 @@
 {
   "type": "forge:ore_shapeless",
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ],
   "result": {
     "item": "chineseworkshop:wooden_window_door"
   },
