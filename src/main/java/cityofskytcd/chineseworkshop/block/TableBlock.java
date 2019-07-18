@@ -72,6 +72,7 @@ public class TableBlock extends ModBlock implements IWaterLoggable
     {
         super(builder);
         shapes = makeShapes();
+        setDefaultState(stateContainer.getBaseState().with(NW, false).with(NE, false).with(SW, false).with(SE, false).with(WATERLOGGED, false));
     }
 
     @Override
