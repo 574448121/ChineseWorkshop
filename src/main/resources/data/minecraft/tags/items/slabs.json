@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "chineseworkshop:black_brick_slab",
+    "chineseworkshop:white_ash_slab",
+    "chineseworkshop:rammed_earth_slab",
+    "chineseworkshop:andesite_pavement_slab"
+  ]
+}

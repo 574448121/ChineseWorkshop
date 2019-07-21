@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "chineseworkshop:black_brick_stairs",
+    "chineseworkshop:white_ash_stairs",
+    "chineseworkshop:rammed_earth_stairs",
+    "chineseworkshop:andesite_pavement_stairs"
+  ]
+}
