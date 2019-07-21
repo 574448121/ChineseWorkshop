@@ -10,7 +10,7 @@
   ],
   "key": {
     "*": {
-      "item" : "minecraft:andesite"
+      "item" : "minecraft:andesite_wall"
     }
   }
 }
