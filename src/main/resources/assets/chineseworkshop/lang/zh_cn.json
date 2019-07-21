@@ -111,5 +111,7 @@
   "item.chineseworkshop.yellow_clay": "黄粘土",
   "item.chineseworkshop.yellow_brick": "黄砖",
   "item.chineseworkshop.chinese_oak_door": "中式橡木门",
-  "item.chineseworkshop.red_stained_wooden_planks_wooden_window_door": "染色红木板木窗门"
+  "item.chineseworkshop.red_stained_wooden_planks_wooden_window_door": "染色红木板木窗门",
+  "item.chineseworkshop.safe_debug_stick": "调整棒",
+  "item.chineseworkshop.safe_debug_stick.unsupported": "不支持调整这个方块"
 }

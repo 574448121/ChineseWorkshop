@@ -11,7 +11,9 @@ package cityofskytcd.chineseworkshop;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 
 @Mod(CW.MODID)
 public class CW
@@ -20,4 +22,9 @@ public class CW
     public static final String NAME = "ChineseWorkshop";
 
     public static Logger logger = LogManager.getLogger(CW.NAME);
+
+    public CW()
+    {
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CWConfig.spec, MODID + ".toml");
+    }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "kiwi:is_loaded",
+      "module": "chineseworkshop:debug_stick"
+    }
+  ],
+  "result": {
+    "item": "chineseworkshop:safe_debug_stick"
+  },
+  "pattern": [
+    "*",
+    "*"
+  ],
+  "key": {
+    "*": {
+      "item": "chineseworkshop:black_brick"
+    }
+  }
+}

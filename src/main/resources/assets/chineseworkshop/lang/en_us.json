@@ -109,5 +109,7 @@
   "item.chineseworkshop.yellow_clay": "Yellow Clay",
   "item.chineseworkshop.yellow_brick": "Yellow Brick",
   "item.chineseworkshop.chinese_oak_door": "Chinese Oak Door",
-  "item.chineseworkshop.red_stained_wooden_planks_wooden_window_door": "Red Stained Wooden Planks Wooden Window Door"
+  "item.chineseworkshop.red_stained_wooden_planks_wooden_window_door": "Red Stained Wooden Planks Wooden Window Door",
+  "item.chineseworkshop.safe_debug_stick": "Adjustment Stick",
+  "item.chineseworkshop.safe_debug_stick.unsupported": "Adjusting this block is unsupported"
 }
