@@ -1,0 +1,8 @@
+{
+  "type": "stonecutting",
+  "ingredient": {
+    "item": "chineseworkshop:black_brick_block"
+  },
+  "result": "chineseworkshop:black_brick_wall",
+  "count": 1
+}

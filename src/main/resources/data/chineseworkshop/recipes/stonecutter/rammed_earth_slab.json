@@ -1,0 +1,8 @@
+{
+  "type": "stonecutting",
+  "ingredient": {
+    "item": "chineseworkshop:rammed_earth"
+  },
+  "result": "chineseworkshop:rammed_earth_slab",
+  "count": 2
+}

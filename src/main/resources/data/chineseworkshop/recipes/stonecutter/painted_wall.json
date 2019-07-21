@@ -1,0 +1,8 @@
+{
+  "type": "stonecutting",
+  "ingredient": {
+    "item": "chineseworkshop:painted_block"
+  },
+  "result": "chineseworkshop:painted_wall",
+  "count": 1
+}

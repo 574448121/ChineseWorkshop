@@ -1,0 +1,8 @@
+{
+  "type": "stonecutting",
+  "ingredient": {
+    "item": "chineseworkshop:white_ash_block"
+  },
+  "result": "chineseworkshop:white_ash_wall",
+  "count": 1
+}

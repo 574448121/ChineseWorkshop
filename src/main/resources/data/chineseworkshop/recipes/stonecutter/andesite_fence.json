@@ -1,0 +1,8 @@
+{
+  "type": "stonecutting",
+  "ingredient": {
+    "item": "minecraft:andesite_wall"
+  },
+  "result": "chineseworkshop:andesite_fence",
+  "count": 1
+}
