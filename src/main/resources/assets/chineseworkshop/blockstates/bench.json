@@ -1,7 +1,7 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "chineseworkshop:bench"
+    "model": "chineseworkshop:block/bench"
   },
   "variants": {
     "facing": {
