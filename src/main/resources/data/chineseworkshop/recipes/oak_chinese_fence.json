@@ -10,7 +10,7 @@
   ],
   "key": {
     "s": {
-      "tag" : "forge:rods/wooden"
+      "item" : "minecraft:oak_fence"
     },
     "l": {
       "tag" : "logs"
