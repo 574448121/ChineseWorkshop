@@ -158,10 +158,4 @@ public class TableBlock extends ModBlock implements IWaterLoggable
         }
         return getState(stateIn, worldIn, currentPos);
     }
-
-    @Override
-    public boolean isSolid(net.minecraft.block.BlockState state)
-    {
-        return false;
-    }
 }

@@ -5,6 +5,7 @@ import cityofskytcd.chineseworkshop.block.BenchBlock;
 import cityofskytcd.chineseworkshop.block.CandleBlock;
 import cityofskytcd.chineseworkshop.block.ChairBlock;
 import cityofskytcd.chineseworkshop.block.Direction2Block;
+import cityofskytcd.chineseworkshop.block.LoggableBlock;
 import cityofskytcd.chineseworkshop.block.ModHorizontalBlock;
 import cityofskytcd.chineseworkshop.block.SmallFenceBlock;
 import cityofskytcd.chineseworkshop.block.TableBlock;
@@ -54,14 +55,7 @@ public class DecorationModule extends AbstractModule
 
     public static final ModBlock WHITE_LANTERN = new ModBlock(blockProp(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0).lightValue(15).sound(SoundType.PLANT));
 
-    public static final ModBlock STONE_TOWER_LAMP = new ModBlock(blockProp(Material.MISCELLANEOUS).lightValue(14).sound(SoundType.GLASS))
-    {
-        @Override
-        public boolean isSolid(net.minecraft.block.BlockState state)
-        {
-            return false;
-        };
-    };
+    public static final LoggableBlock STONE_TOWER_LAMP = new LoggableBlock(blockProp(Material.MISCELLANEOUS).lightValue(14).sound(SoundType.GLASS));
 
     public static final ModHorizontalBlock DOUGONG = new ModHorizontalBlock(blockProp(Material.WOOD), Block.makeCuboidShape(0, 11, 0, 16, 16, 13), false);
 
