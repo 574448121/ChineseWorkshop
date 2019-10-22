@@ -146,7 +146,7 @@ public class TableBlock extends ModBlock implements IWaterLoggable
             nw = sw = true;
             break;
         }
-        return getDefaultState().with(NW, nw).with(NE, ne).with(SE, se).with(SW, sw);
+        return state.with(NW, nw).with(NE, ne).with(SE, se).with(SW, sw);
     }
 
     @Override
