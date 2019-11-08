@@ -5,6 +5,7 @@ import cityofskytcd.chineseworkshop.block.BenchBlock;
 import cityofskytcd.chineseworkshop.block.CandleBlock;
 import cityofskytcd.chineseworkshop.block.ChairBlock;
 import cityofskytcd.chineseworkshop.block.Direction2Block;
+import cityofskytcd.chineseworkshop.block.HighDoorBlock;
 import cityofskytcd.chineseworkshop.block.LoggableBlock;
 import cityofskytcd.chineseworkshop.block.ModHorizontalBlock;
 import cityofskytcd.chineseworkshop.block.SmallFenceBlock;
@@ -22,6 +23,7 @@ import net.minecraft.item.DyeColor;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.WallOrFloorItem;
+import net.minecraft.tags.Tag;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import snownee.kiwi.AbstractModule;
 import snownee.kiwi.KiwiModule;
@@ -31,13 +33,10 @@ import snownee.kiwi.block.ModBlock;
 
 @KiwiModule(modid = CW.MODID, name = "decorations")
 @KiwiModule.Group
-public class DecorationModule extends AbstractModule
-{
-    public static final ItemGroup GROUP = new ItemGroup(CW.MODID + ".decorations")
-    {
+public class DecorationModule extends AbstractModule {
+    public static final ItemGroup GROUP = new ItemGroup(CW.MODID + ".decorations") {
         @Override
-        public ItemStack createIcon()
-        {
+        public ItemStack createIcon() {
             return new ItemStack(DOUGONG);
         }
     };
@@ -96,4 +95,9 @@ public class DecorationModule extends AbstractModule
     public static final SmallFenceBlock LITHEL_DECO = new SmallFenceBlock(blockProp(Material.WOOD), 1.0F, 1.0F, 16.0F, 16.0F, 16.0F);
 
     public static final SmallFenceBlock PAINTED_WALL = new SmallFenceBlock(blockProp(Material.ROCK));
+
+    public static final HighDoorBlock HIGH_DOOR = init(new HighDoorBlock(blockProp(Material.WOOD)));
+
+    public static final Tag<Block> THRESHOLD = blockTag(CW.MODID, "threshold");
+
 }

@@ -38,6 +38,7 @@ import snownee.kiwi.KiwiModule.Subscriber.Bus;
 import snownee.kiwi.client.model.TextureModel;
 import snownee.kiwi.item.ModBlockItem;
 import snownee.kiwi.util.NBTHelper;
+import snownee.kiwi.util.Util;
 
 @KiwiModule(modid = CW.MODID, name = "retexture")
 @KiwiModule.Optional
@@ -154,10 +155,10 @@ public class TextureModule extends AbstractModule
     public static void addTooltip(ItemStack stack, List<ITextComponent> tooltip, String langKey)
     {
         NBTHelper data = NBTHelper.of(stack);
-        String rl = data.getString("BlockEntityTag.Items.main");
-        if (rl != null && ResourceLocation.func_217855_b(rl))
+        ResourceLocation rl = Util.RL(data.getString("BlockEntityTag.Items.main"));
+        if (rl != null)
         {
-            Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(rl));
+            Item item = ForgeRegistries.ITEMS.getValue(rl);
             if (item != null)
             {
                 String name = I18n.format(item.getTranslationKey());
