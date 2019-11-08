@@ -1,0 +1,16 @@
+{
+  "type": "crafting_shaped",
+  "result": {
+    "item": "chineseworkshop:high_door",
+	"count": 2
+  },
+  "pattern": [
+    "d",
+    "d"
+  ],
+  "key": {
+    "d": {
+      "item": "spruce_door"
+    }
+  }
+}

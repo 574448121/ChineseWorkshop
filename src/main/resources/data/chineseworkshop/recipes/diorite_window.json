@@ -1,7 +1,7 @@
 {
   "type": "crafting_shaped",
   "result": {
-    "item": "chineseworkshop:wooden_window",
+    "item": "chineseworkshop:diorite_window",
 	"count": 4
   },
   "pattern": [
@@ -10,7 +10,7 @@
   ],
   "key": {
     "d": {
-      "item": "chineseworkshop:oak_chinese_fence"
+      "item" : "chineseworkshop:diorite_fence"
     }
   }
 }

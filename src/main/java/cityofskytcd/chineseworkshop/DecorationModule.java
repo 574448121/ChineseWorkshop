@@ -96,6 +96,10 @@ public class DecorationModule extends AbstractModule {
 
     public static final SmallFenceBlock PAINTED_WALL = new SmallFenceBlock(blockProp(Material.ROCK));
 
+    public static final SmallFenceBlock WOODEN_WINDOW = new SmallFenceBlock(blockProp(Material.WOOD), 1.5F, 1.5F, 16.0F, 16.0F, 16.0F);
+
+    public static final SmallFenceBlock DIORITE_WINDOW = new SmallFenceBlock(blockProp(Material.ROCK), 1.5F, 1.5F, 16.0F, 16.0F, 16.0F);
+
     public static final HighDoorBlock HIGH_DOOR = init(new HighDoorBlock(blockProp(Material.WOOD)));
 
     public static final Tag<Block> THRESHOLD = blockTag(CW.MODID, "threshold");

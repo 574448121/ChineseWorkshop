@@ -1,7 +1,6 @@
 {
-	"parent": "chineseworkshop:block/stone_window_side",
+	"parent": "chineseworkshop:block/diorite_window_side",
 	"textures": {
-		"particle": "chineseworkshop:block/wooden_block",
-		"texture": "chineseworkshop:block/wooden_block"
+		"particle": "chineseworkshop:block/wooden_block"
     }
 }
