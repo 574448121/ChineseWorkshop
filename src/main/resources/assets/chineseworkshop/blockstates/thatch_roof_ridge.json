@@ -1,21 +1,15 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "chineseworkshop:block/thatch_roof_ridge"
-  },
   "variants": {
-    "variant": {
-      "i": { "model": "chineseworkshop:block/thatch_roof_ridge", "y": 90 },
-      "i_90": { "model": "chineseworkshop:block/thatch_roof_ridge" },
-      "l": { "model": "chineseworkshop:block/thatch_roof_ridge_l", "y": 90 },
-      "l_90": { "model": "chineseworkshop:block/thatch_roof_ridge_l", "y": 180 },
-      "l_180": { "model": "chineseworkshop:block/thatch_roof_ridge_l", "y": 270 },
-      "l_270": { "model": "chineseworkshop:block/thatch_roof_ridge_l" },
-      "t": { "model": "chineseworkshop:block/thatch_roof_ridge_t", "y": 180 },
-      "t_90": { "model": "chineseworkshop:block/thatch_roof_ridge_t", "y": 270 },
-      "t_180": { "model": "chineseworkshop:block/thatch_roof_ridge_t" },
-      "t_270": { "model": "chineseworkshop:block/thatch_roof_ridge_t", "y": 90 },
-      "x": { "model": "chineseworkshop:block/thatch_roof_ridge_x" }
-    }
+    "variant=i": { "model": "chineseworkshop:block/thatch_roof_ridge", "y": 90 },
+    "variant=i_90": { "model": "chineseworkshop:block/thatch_roof_ridge" },
+    "variant=l": { "model": "chineseworkshop:block/thatch_roof_ridge_l", "y": 90 },
+    "variant=l_90": { "model": "chineseworkshop:block/thatch_roof_ridge_l", "y": 180 },
+    "variant=l_180": { "model": "chineseworkshop:block/thatch_roof_ridge_l", "y": 270 },
+    "variant=l_270": { "model": "chineseworkshop:block/thatch_roof_ridge_l" },
+    "variant=t": { "model": "chineseworkshop:block/thatch_roof_ridge_t", "y": 180 },
+    "variant=t_90": { "model": "chineseworkshop:block/thatch_roof_ridge_t", "y": 270 },
+    "variant=t_180": { "model": "chineseworkshop:block/thatch_roof_ridge_t" },
+    "variant=t_270": { "model": "chineseworkshop:block/thatch_roof_ridge_t", "y": 90 },
+    "variant=x": { "model": "chineseworkshop:block/thatch_roof_ridge_x" }
   }
 }

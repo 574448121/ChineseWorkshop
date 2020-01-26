@@ -1,11 +1,10 @@
 {
-"ambientocclusion": false,
 "textures": {
     "particle": "chineseworkshop:block/black_tile",
     "texture": "chineseworkshop:block/black_tile",
     "main": "minecraft:block/oak_planks"
 },
-"elements": [ 
+"elements": [
 {
     "from": [ 9.5, 8.3125, -4.125 ],
     "to": [ 14.5, 11.3125, 6.875 ],

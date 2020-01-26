@@ -41,7 +41,7 @@ public interface ISeat {
 
         @Override
         public void tick() {
-            if (this.posY < -64.0D) {
+            if (this.getPosY() < -64.0D) {
                 this.outOfWorld();
             }
 
@@ -57,7 +57,7 @@ public interface ISeat {
             if (passangers.isEmpty())
                 remove();
             for (Entity e : passangers)
-                if (e.isSneaking())
+                if (e.isShiftKeyDown())
                     remove();
         }
 

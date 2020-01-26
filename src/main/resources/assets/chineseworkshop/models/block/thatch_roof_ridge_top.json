@@ -1,6 +1,5 @@
 {
 	"__comment": "Designed by CityOfSkyTCD with %",
-	"ambientocclusion": false,
 	"textures": {
 		"particle": "chineseworkshop:block/thatch",
 		"texture": "chineseworkshop:block/thatch",

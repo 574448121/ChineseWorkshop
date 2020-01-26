@@ -1,14 +1,8 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "chineseworkshop:block/threshold"
-  },
   "variants": {
-    "facing": {
-      "south": {},
-      "west": { "y": 90 },
-      "north": { "y": 180 },
-      "east": { "y": 270 }
-    }
+    "facing=south": { "model": "chineseworkshop:block/threshold" },
+    "facing=west": { "model": "chineseworkshop:block/threshold", "y": 90 },
+    "facing=north": { "model": "chineseworkshop:block/threshold", "y": 180 },
+    "facing=east": { "model": "chineseworkshop:block/threshold", "y": 270 }
   }
 }

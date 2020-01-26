@@ -2,7 +2,9 @@ package cityofskytcd.chineseworkshop.event;
 
 import org.lwjgl.opengl.GL11;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.platform.GlStateManager;
+import com.mojang.blaze3d.systems.RenderSystem;
 
 import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.library.Selection;
@@ -10,9 +12,13 @@ import cityofskytcd.chineseworkshop.library.Selections;
 import cityofskytcd.chineseworkshop.network.WheelMovePacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.Matrix4f;
 import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.Vector3f;
 import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.client.renderer.model.ItemCameraTransforms.TransformType;
+import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.crash.CrashReport;
@@ -115,12 +121,14 @@ public class HudHandler {
                 return;
             }
 
-            float xStart = mc.mainWindow.getScaledWidth() / 2;
-            float yStart = mc.mainWindow.getScaledHeight() / 2;
+            float xStart = event.getWindow().getScaledWidth() / 2;
+            float yStart = event.getWindow().getScaledHeight() / 2;
             float pTicks = event.getPartialTicks();
 
-            GlStateManager.pushMatrix();
-            GlStateManager.translatef(xStart, yStart, 0);
+            MatrixStack matrixstack = new MatrixStack();
+            IRenderTypeBuffer.Impl buffer = mc.getRenderTypeBuffers().getBufferSource();
+            RenderSystem.pushMatrix();
+            RenderSystem.translatef(xStart, yStart, 0);
             if (HudHandler.animating) {
                 animationTick += pTicks * (HudHandler.showGui ? 1 : -2);
                 animationTick = MathHelper.clamp(animationTick, 0, 9);
@@ -128,15 +136,16 @@ public class HudHandler {
                     HudHandler.animating = false;
                 } else if (!HudHandler.showGui && animationTick < 0.01) {
                     HudHandler.animating = false;
-                    GlStateManager.popMatrix();
+                    RenderSystem.popMatrix();
+                    buffer.finish();
                     return;
                 } else {
                     double scale = Math.sqrt(animationTick) / 3;
-                    GlStateManager.scaled(scale, scale, scale);
+                    RenderSystem.scaled(scale, scale, scale);
                 }
             }
 
-            HudHandler.drawBadge(mc, held, 0, true);
+            HudHandler.drawBadge(mc, held, 0, true, matrixstack, buffer);
 
             if (selection.size() < 2) {
                 CrashReport crash = CrashReport.makeCrashReport(new Exception(), "Number of options smaller than 2");
@@ -150,10 +159,10 @@ public class HudHandler {
             }
             for (int i = 0; i < selection.size(); i++) {
                 Item item = selection.get(i);
-                GlStateManager.pushMatrix();
+                RenderSystem.pushMatrix();
                 float rad = (float) (((i + (selection.size() % 2 == 0 ? 0.5F : 0)) * degPer + 180) / 180F * Math.PI);
-                GlStateManager.translated(Math.sin(rad) * 60, Math.cos(rad) * 60, 0);
-                GlStateManager.scaled(0.618, 0.618, 0.618);
+                RenderSystem.translated(Math.sin(rad) * 60, Math.cos(rad) * 60, 0);
+                RenderSystem.scaled(0.618, 0.618, 0.618);
 
                 boolean match = !matched && item == held.getItem();
                 matched = matched || match;
@@ -161,15 +170,15 @@ public class HudHandler {
                 badgeProcess[i] = MathHelper.clamp(badgeProcess[i], 0, 10);
                 ItemStack stack = new ItemStack(item);
                 stack.setTag(held.getTag());
-                HudHandler.drawBadge(mc, stack, badgeProcess[i], false);
-                GlStateManager.popMatrix();
+                HudHandler.drawBadge(mc, stack, badgeProcess[i], false, matrixstack, buffer);
+                RenderSystem.popMatrix();
             }
             if (!matched) {
                 CrashReport crash = CrashReport.makeCrashReport(new Exception(), "Options do not contain item itself");
                 mc.crashed(crash);
             }
 
-            GlStateManager.popMatrix();
+            RenderSystem.popMatrix();
         }
     }
 
@@ -177,12 +186,12 @@ public class HudHandler {
         fontRendererIn.drawStringWithShadow(text, x - fontRendererIn.getStringWidth(text) / 2, y, 0xFFFFFF);
     }
 
-    protected static void drawBadge(Minecraft mc, ItemStack stack, float color, boolean rotation) {
-        GlStateManager.enableBlend();
-        GlStateManager.shadeModel(GL11.GL_SMOOTH);
-        GlStateManager.disableTexture();
+    protected static void drawBadge(Minecraft mc, ItemStack stack, float color, boolean rotation, MatrixStack matrixstack, IRenderTypeBuffer.Impl buffer) {
+        RenderSystem.enableBlend();
+        RenderSystem.shadeModel(GL11.GL_SMOOTH);
+        RenderSystem.disableTexture();
         color = (float) (Math.sin((color - 5) / 5F) + 0.5F);
-        GlStateManager.color4f(color * 0.1F, color * 0.5F, color * 0.9F, 0.3F);
+        RenderSystem.color4f(color * 0.1F, color * 0.5F, color * 0.9F, 0.3F);
         GL11.glBegin(GL11.GL_TRIANGLE_FAN);
         GL11.glVertex2f(0, -30);
         GL11.glVertex2f(-26, -15);
@@ -191,39 +200,62 @@ public class HudHandler {
         GL11.glVertex2f(26, 15);
         GL11.glVertex2f(26, -15);
         GL11.glEnd();
-        GlStateManager.enableTexture();
-        GlStateManager.disableBlend();
-        GlStateManager.shadeModel(GL11.GL_FLAT);
+        RenderSystem.enableTexture();
+        RenderSystem.disableBlend();
+        RenderSystem.shadeModel(GL11.GL_FLAT);
 
         drawCenteredString(mc.fontRenderer, stack.getDisplayName().getFormattedText(), 0, 8);
 
-        GlStateManager.pushMatrix();
-        GlStateManager.scaled(1.5, 1.5, 1.5);
+        RenderSystem.pushMatrix();
+        RenderSystem.scaled(1.5, 1.5, 1.5);
 
         // TODO: Directly render
-        IBakedModel bakedModel = mc.getItemRenderer().getModelWithOverrides(stack, null, null);
-        if (rotation && bakedModel.isGui3d()) {
-            RenderHelper.enableGUIStandardItemLighting();
-            GlStateManager.translatef(0, -5, 150);
-            GlStateManager.scalef(10, -10, 10);
-            GlStateManager.alphaFunc(516, 0.1F);
-            GlStateManager.pushMatrix();
-            GlStateManager.enableRescaleNormal();
-            GlStateManager.enableAlphaTest();
-            GlStateManager.rotatef(30F, 1F, 0, 0F);
-            GlStateManager.rotatef(Util.milliTime() % 3600 / 10, 0, 1, 0F);
-            RenderHelper.enableStandardItemLighting();
-            mc.getItemRenderer().renderItem(stack, TransformType.NONE);
-            GlStateManager.disableAlphaTest();
-            GlStateManager.disableRescaleNormal();
-            GlStateManager.popMatrix();
+        IBakedModel bakedModel = mc.getItemRenderer().getItemModelWithOverrides(stack, null, null);
+        boolean flag = !bakedModel.func_230044_c_();
+        if (flag) {
+            RenderSystem.setupGuiFlatDiffuseLighting();
+        }
+        // FIXME
+        if (false && rotation && bakedModel.isGui3d()) {
+            //            RenderSystem.pushMatrix();
+            //            RenderSystem.rotatef(-30.0F, 0.0F, 1.0F, 0.0F);
+            //            RenderSystem.rotatef(165.0F, 1.0F, 0.0F, 0.0F);
+            //            RenderHelper.enableStandardItemLighting();
+            //            RenderSystem.popMatrix();
+
+            // RenderSystem.setupGui3DDiffuseLighting();
+
+            //            Matrix4f matrix4f = new Matrix4f();
+            //            matrix4f.identity();
+            //            matrix4f.multiply(Vector3f.YP.rotationDegrees(62.0F));
+            //            matrix4f.multiply(Vector3f.XP.rotationDegrees(185.5F));
+            //            matrix4f.multiply(Matrix4f.makeScale(1.0F, -1.0F, 1.0F));
+            //            matrix4f.multiply(Vector3f.YP.rotationDegrees(-22.5F));
+            //            matrix4f.multiply(Vector3f.XP.rotationDegrees(135.0F));
+            //            GlStateManager.setupWorldDiffuseLighting(matrix4f);
+
+            RenderSystem.translatef(0, -5, 150);
+            RenderSystem.scalef(10, -10, 10);
+            RenderSystem.defaultAlphaFunc();
+            RenderSystem.enableRescaleNormal();
+            RenderSystem.enableAlphaTest();
+            RenderSystem.rotatef(30F, 1F, 0, 0F);
+            RenderSystem.rotatef(Util.milliTime() % 3600 / 10, 0, 1, 0F);
+
+            mc.getItemRenderer().renderItem(stack, TransformType.NONE, 15728880, OverlayTexture.DEFAULT_LIGHT, matrixstack, buffer);
+
+            RenderSystem.disableAlphaTest();
+            RenderSystem.disableRescaleNormal();
         } else {
-            RenderHelper.enableGUIStandardItemLighting();
             mc.getItemRenderer().renderItemAndEffectIntoGUI(null, stack, -8, -12);
+        }
+        if (flag) {
+            RenderSystem.setupGui3DDiffuseLighting();
         }
 
         RenderHelper.disableStandardItemLighting();
-        GlStateManager.popMatrix();
+        buffer.finish();
+        RenderSystem.popMatrix();
     }
 
     @SubscribeEvent

@@ -53,7 +53,7 @@ public class HighDoorBlock extends DoorBlock {
         BlockPos blockpos = pos.down();
         BlockState blockstate = worldIn.getBlockState(blockpos);
         if (state.get(HALF) == DoubleBlockHalf.LOWER) {
-            return DecorationModule.THRESHOLD.contains(blockstate.getBlock()) || blockstate.func_224755_d(worldIn, blockpos, Direction.UP);
+            return DecorationModule.THRESHOLD.contains(blockstate.getBlock()) || blockstate.isSolidSide(worldIn, blockpos, Direction.UP);
         } else {
             return blockstate.getBlock() == this;
         }

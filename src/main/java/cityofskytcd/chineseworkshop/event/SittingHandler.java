@@ -33,7 +33,7 @@ public class SittingHandler {
             return;
         }
 
-        PlayerEntity player = event.getEntityPlayer();
+        PlayerEntity player = event.getPlayer();
         if (player instanceof FakePlayer || player.getRidingEntity() != null)
             return;
 
@@ -48,7 +48,7 @@ public class SittingHandler {
         Vec3d vec = new Vec3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
         double maxDist = 2;
-        if ((vec.x - player.posX) * (vec.x - player.posX) + (vec.y - player.posY) * (vec.y - player.posY) + (vec.z - player.posZ) * (vec.z - player.posZ) > maxDist * maxDist)
+        if ((vec.x - player.getPosX()) * (vec.x - player.getPosX()) + (vec.y - player.getPosY()) * (vec.y - player.getPosY()) + (vec.z - player.getPosZ()) * (vec.z - player.getPosZ()) > maxDist * maxDist)
             return;
 
         BlockState state = world.getBlockState(pos);

@@ -16,7 +16,6 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer.Builder;
 import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
@@ -27,7 +26,10 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import snownee.kiwi.RenderLayer;
+import snownee.kiwi.RenderLayer.Layer;
 
+@RenderLayer(Layer.CUTOUT)
 public class RoofTileRidgeBlock extends Direction2Block {
     public final VoxelShape SHAPE;
     public static final EnumProperty<Variant> VARIANT = EnumProperty.create("variant", Variant.class);
@@ -51,11 +53,6 @@ public class RoofTileRidgeBlock extends Direction2Block {
     @Override
     public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
         return SHAPE;
-    }
-
-    @Override
-    public BlockRenderLayer getRenderLayer() {
-        return BlockRenderLayer.CUTOUT;
     }
 
     @Override

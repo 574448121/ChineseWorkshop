@@ -11,6 +11,7 @@ import cityofskytcd.chineseworkshop.block.ModHorizontalBlock;
 import cityofskytcd.chineseworkshop.block.SmallFenceBlock;
 import cityofskytcd.chineseworkshop.block.TableBlock;
 import cityofskytcd.chineseworkshop.block.WallCandleBlock;
+import cityofskytcd.chineseworkshop.library.EmptyEntityRenderer;
 import cityofskytcd.chineseworkshop.library.ISeat;
 import net.minecraft.block.Block;
 import net.minecraft.block.PaneBlock;
@@ -25,6 +26,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.WallOrFloorItem;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import snownee.kiwi.AbstractModule;
 import snownee.kiwi.KiwiModule;
 import snownee.kiwi.Name;
@@ -102,4 +105,8 @@ public class DecorationModule extends AbstractModule {
 
     public static final Tag<Block> THRESHOLD = blockTag(CW.MODID, "threshold");
 
+    @Override
+    protected void clientInit(FMLClientSetupEvent event) {
+        RenderingRegistry.registerEntityRenderingHandler(SEAT, EmptyEntityRenderer::new);
+    }
 }

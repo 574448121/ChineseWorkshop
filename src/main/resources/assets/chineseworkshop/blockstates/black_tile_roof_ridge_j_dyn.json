@@ -1,20 +1,8 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "chineseworkshop:block/black_tile_roof_ridge_j"
-  },
   "variants": {
-    "facing": {
-      "north": {},
-      "east": {
-        "y": 90
-      },
-      "south": {
-        "y": 180
-      },
-      "west": {
-        "y": 270
-      }
-    }
+    "facing=north": { "model": "chineseworkshop:block/black_tile_roof_ridge_j" },
+    "facing=east": { "model": "chineseworkshop:block/black_tile_roof_ridge_j", "y": 90 },
+    "facing=south": { "model": "chineseworkshop:block/black_tile_roof_ridge_j", "y": 180 },
+    "facing=west": { "model": "chineseworkshop:block/black_tile_roof_ridge_j", "y": 270 }
   }
 }

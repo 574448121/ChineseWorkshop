@@ -79,11 +79,11 @@ public class SafeDebugStickItem extends DebugStickItem {
                         iproperty = collection.iterator().next();
                     }
 
-                    BlockState blockstate = cycleProperty(state, iproperty, player.isSneaking());
+                    BlockState blockstate = cycleProperty(state, iproperty, player.func_226563_dT_/*isSneaking*/());
                     worldIn.setBlockState(pos, blockstate, 18);
                     sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".update", iproperty.getName(), func_195957_a(blockstate, iproperty)));
                 } else {
-                    iproperty = getAdjacentValue(collection, iproperty, player.isSneaking());
+                    iproperty = getAdjacentValue(collection, iproperty, player.func_226563_dT_/*isSneaking*/());
                     String s2 = iproperty.getName();
                     compoundnbt.putString(s, s2);
                     sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".select", s2, func_195957_a(state, iproperty)));
