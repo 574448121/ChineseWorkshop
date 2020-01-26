@@ -29,13 +29,10 @@ import snownee.kiwi.network.NetworkChannel;
 
 @KiwiModule(modid = CW.MODID, name = "blocks")
 @KiwiModule.Group
-public class BlockModule extends AbstractModule
-{
-    public static final ItemGroup GROUP = new ItemGroup(CW.MODID + ".blocks")
-    {
+public class BlockModule extends AbstractModule {
+    public static final ItemGroup GROUP = new ItemGroup(CW.MODID + ".blocks") {
         @Override
-        public ItemStack createIcon()
-        {
+        public ItemStack createIcon() {
             return new ItemStack(LOGO);
         }
     };
@@ -106,16 +103,14 @@ public class BlockModule extends AbstractModule
     public static final ModBlock PAINTED_BLOCK = new ModBlock(blockProp(Material.ROCK));
 
     @Override
-    protected void init(FMLCommonSetupEvent event)
-    {
+    protected void init(FMLCommonSetupEvent event) {
         NetworkChannel.register(WheelMovePacket.class, new WheelMovePacket.Handler());
         Selections.init();
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    protected void clientInit(FMLClientSetupEvent event)
-    {
+    protected void clientInit(FMLClientSetupEvent event) {
         ClientRegistry.registerKeyBinding(HudHandler.kbSelect);
     }
 

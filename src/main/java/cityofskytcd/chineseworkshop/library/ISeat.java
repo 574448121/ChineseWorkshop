@@ -21,42 +21,34 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
 
-public interface ISeat
-{
-    default boolean hasSeat(BlockState state, IWorldReader world, BlockPos pos)
-    {
+public interface ISeat {
+    default boolean hasSeat(BlockState state, IWorldReader world, BlockPos pos) {
         return world.getBlockState(pos.up()).isAir(world, pos);
     }
 
     Vec3d getSeat(BlockState state, IWorldReader world, BlockPos pos);
 
-    public static class Seat extends Entity
-    {
+    public static class Seat extends Entity {
 
-        public Seat(World world, Vec3d pos)
-        {
+        public Seat(World world, Vec3d pos) {
             this(world);
             setPosition(pos.x, pos.y + 0.001, pos.z);
         }
 
-        public Seat(World world)
-        {
+        public Seat(World world) {
             super(DecorationModule.SEAT, world);
         }
 
         @Override
-        public void tick()
-        {
-            if (this.posY < -64.0D)
-            {
+        public void tick() {
+            if (this.posY < -64.0D) {
                 this.outOfWorld();
             }
 
             this.firstUpdate = false;
 
             BlockPos pos = getPosition();
-            if (pos == null || !(getEntityWorld().getBlockState(pos).getBlock() instanceof ISeat))
-            {
+            if (pos == null || !(getEntityWorld().getBlockState(pos).getBlock() instanceof ISeat)) {
                 remove();
                 return;
             }
@@ -70,23 +62,16 @@ public interface ISeat
         }
 
         @Override
-        protected void registerData()
-        {
-        }
+        protected void registerData() {}
 
         @Override
-        protected void readAdditional(CompoundNBT compound)
-        {
-        }
+        protected void readAdditional(CompoundNBT compound) {}
 
         @Override
-        protected void writeAdditional(CompoundNBT p_213281_1_)
-        {
-        }
+        protected void writeAdditional(CompoundNBT p_213281_1_) {}
 
         @Override
-        public IPacket<?> createSpawnPacket()
-        {
+        public IPacket<?> createSpawnPacket() {
             return NetworkHooks.getEntitySpawningPacket(this);
         }
     }

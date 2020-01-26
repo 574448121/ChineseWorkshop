@@ -35,18 +35,14 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import snownee.kiwi.item.ModItem;
 
-public class SafeDebugStickItem extends DebugStickItem
-{
-    public SafeDebugStickItem(Properties builder)
-    {
+public class SafeDebugStickItem extends DebugStickItem {
+    public SafeDebugStickItem(Properties builder) {
         super(builder);
     }
 
     @Override
-    public boolean canPlayerBreakBlockWhileHolding(BlockState state, World worldIn, BlockPos pos, PlayerEntity player)
-    {
-        if (!worldIn.isRemote)
-        {
+    public boolean canPlayerBreakBlockWhileHolding(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
+        if (!worldIn.isRemote) {
             this.handleClick(player, state, worldIn, pos, false, player.getHeldItem(Hand.MAIN_HAND));
         }
 
@@ -54,12 +50,10 @@ public class SafeDebugStickItem extends DebugStickItem
     }
 
     @Override
-    public ActionResultType onItemUse(ItemUseContext context)
-    {
+    public ActionResultType onItemUse(ItemUseContext context) {
         PlayerEntity playerentity = context.getPlayer();
         World world = context.getWorld();
-        if (!world.isRemote && playerentity != null)
-        {
+        if (!world.isRemote && playerentity != null) {
             BlockPos blockpos = context.getPos();
             this.handleClick(playerentity, world.getBlockState(blockpos), world, blockpos, true, context.getItem());
         }
@@ -67,60 +61,46 @@ public class SafeDebugStickItem extends DebugStickItem
         return ActionResultType.SUCCESS;
     }
 
-    private void handleClick(PlayerEntity player, BlockState state, IWorld worldIn, BlockPos pos, boolean rightClick, ItemStack stack)
-    {
-        if (canApplyOn(state))
-        {
+    private void handleClick(PlayerEntity player, BlockState state, IWorld worldIn, BlockPos pos, boolean rightClick, ItemStack stack) {
+        if (canApplyOn(state)) {
             Block block = state.getBlock();
             StateContainer<Block, BlockState> statecontainer = block.getStateContainer();
             Collection<IProperty<?>> collection = Lists.newArrayList(statecontainer.getProperties());
             collection.remove(BlockStateProperties.WATERLOGGED);
             String s = Registry.BLOCK.getKey(block).toString();
-            if (collection.isEmpty())
-            {
+            if (collection.isEmpty()) {
                 sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".empty", s));
-            }
-            else
-            {
+            } else {
                 CompoundNBT compoundnbt = stack.getOrCreateChildTag("DebugProperty");
                 String s1 = compoundnbt.getString(s);
                 IProperty<?> iproperty = statecontainer.getProperty(s1);
-                if (rightClick)
-                {
-                    if (iproperty == null)
-                    {
+                if (rightClick) {
+                    if (iproperty == null) {
                         iproperty = collection.iterator().next();
                     }
 
                     BlockState blockstate = cycleProperty(state, iproperty, player.isSneaking());
                     worldIn.setBlockState(pos, blockstate, 18);
                     sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".update", iproperty.getName(), func_195957_a(blockstate, iproperty)));
-                }
-                else
-                {
+                } else {
                     iproperty = getAdjacentValue(collection, iproperty, player.isSneaking());
                     String s2 = iproperty.getName();
                     compoundnbt.putString(s, s2);
                     sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".select", s2, func_195957_a(state, iproperty)));
                 }
             }
-        }
-        else
-        {
+        } else {
             sendMessage(player, new TranslationTextComponent(this.getTranslationKey() + ".unsupported"));
         }
     }
 
-    public static boolean canApplyOn(BlockState state)
-    {
+    public static boolean canApplyOn(BlockState state) {
         Block block = state.getBlock();
-        if (CWConfig.allowedMods.get().contains(block.getRegistryName().getNamespace()))
-        {
+        if (CWConfig.allowedMods.get().contains(block.getRegistryName().getNamespace())) {
             return true;
         }
         String className = block.getClass().getName();
-        if (CWConfig.allowedClasses.get().contains(className))
-        {
+        if (CWConfig.allowedClasses.get().contains(className)) {
             return true;
         }
         return false;
@@ -128,28 +108,23 @@ public class SafeDebugStickItem extends DebugStickItem
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
-    {
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         ModItem.addTip(stack, worldIn, tooltip, flagIn);
     }
 
-    private static <T extends Comparable<T>> BlockState cycleProperty(BlockState state, IProperty<T> propertyIn, boolean backwards)
-    {
+    private static <T extends Comparable<T>> BlockState cycleProperty(BlockState state, IProperty<T> propertyIn, boolean backwards) {
         return state.with(propertyIn, (getAdjacentValue(propertyIn.getAllowedValues(), state.get(propertyIn), backwards)));
     }
 
-    private static <T> T getAdjacentValue(Iterable<T> p_195959_0_, @Nullable T p_195959_1_, boolean p_195959_2_)
-    {
+    private static <T> T getAdjacentValue(Iterable<T> p_195959_0_, @Nullable T p_195959_1_, boolean p_195959_2_) {
         return p_195959_2_ ? Util.getElementBefore(p_195959_0_, p_195959_1_) : Util.getElementAfter(p_195959_0_, p_195959_1_);
     }
 
-    private static void sendMessage(PlayerEntity player, ITextComponent text)
-    {
+    private static void sendMessage(PlayerEntity player, ITextComponent text) {
         ((ServerPlayerEntity) player).sendMessage(text, ChatType.GAME_INFO);
     }
 
-    private static <T extends Comparable<T>> String func_195957_a(BlockState state, IProperty<T> propertyIn)
-    {
+    private static <T extends Comparable<T>> String func_195957_a(BlockState state, IProperty<T> propertyIn) {
         return propertyIn.getName(state.get(propertyIn));
     }
 }

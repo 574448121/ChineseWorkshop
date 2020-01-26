@@ -20,8 +20,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
-public class SelectionCategory implements IRecipeCategory<Selection>
-{
+public class SelectionCategory implements IRecipeCategory<Selection> {
     public static final ResourceLocation UID = new ResourceLocation(CW.MODID, "selection");
     public static final int recipeWidth = 160;
     public static final int recipeHeight = 125;
@@ -30,8 +29,7 @@ public class SelectionCategory implements IRecipeCategory<Selection>
     private final IDrawable slotBackground;
     private final String localizedName;
 
-    public SelectionCategory(IGuiHelper guiHelper)
-    {
+    public SelectionCategory(IGuiHelper guiHelper) {
         icon = guiHelper.createDrawableIngredient(new ItemStack(BlockModule.LOGO));
         background = guiHelper.createBlankDrawable(recipeWidth, recipeHeight);
         slotBackground = guiHelper.getSlotDrawable();
@@ -39,38 +37,32 @@ public class SelectionCategory implements IRecipeCategory<Selection>
     }
 
     @Override
-    public IDrawable getBackground()
-    {
+    public IDrawable getBackground() {
         return background;
     }
 
     @Override
-    public IDrawable getIcon()
-    {
+    public IDrawable getIcon() {
         return icon;
     }
 
     @Override
-    public Class getRecipeClass()
-    {
+    public Class getRecipeClass() {
         return Selection.class;
     }
 
     @Override
-    public String getTitle()
-    {
+    public String getTitle() {
         return localizedName;
     }
 
     @Override
-    public ResourceLocation getUid()
-    {
+    public ResourceLocation getUid() {
         return UID;
     }
 
     @Override
-    public void setIngredients(Selection selection, IIngredients ingredients)
-    {
+    public void setIngredients(Selection selection, IIngredients ingredients) {
         ingredients.setInput(VanillaTypes.ITEM, new ItemStack(selection.getMainItem()));
         List<Item> items = Lists.newLinkedList(selection.getSubItems());
         items.add(selection.getMainItem());
@@ -79,8 +71,7 @@ public class SelectionCategory implements IRecipeCategory<Selection>
     }
 
     @Override
-    public void setRecipe(IRecipeLayout layout, Selection selection, IIngredients ingredients)
-    {
+    public void setRecipe(IRecipeLayout layout, Selection selection, IIngredients ingredients) {
         IGuiItemStackGroup guiItemStacks = layout.getItemStacks();
 
         int count = ingredients.getOutputs(VanillaTypes.ITEM).size();
@@ -93,11 +84,9 @@ public class SelectionCategory implements IRecipeCategory<Selection>
 
         int j = 0;
         y += 36;
-        while (count > 0)
-        {
+        while (count > 0) {
             x = (recipeWidth - 6 * 18) / 2;
-            for (int i = 0; i < 6; i++)
-            {
+            for (int i = 0; i < 6; i++) {
                 ++j;
                 guiItemStacks.init(j, false, x, y);
                 guiItemStacks.setBackground(j, slotBackground);

@@ -24,26 +24,22 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class CandleBlock extends TorchBlock
-{
+public class CandleBlock extends TorchBlock {
     public static final VoxelShape SHAPE = Block.makeCuboidShape(4.8, 0, 4.8, 11.2, 11.2, 11.2);
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
-    public CandleBlock(Block.Properties builder)
-    {
+    public CandleBlock(Block.Properties builder) {
         super(builder);
     }
 
     @Override
-    public VoxelShape getShape(net.minecraft.block.BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_)
-    {
+    public VoxelShape getShape(net.minecraft.block.BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
         return SHAPE;
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand)
-    {
+    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
         double d0 = pos.getX() + 0.5D;
         double d1 = pos.getY() + 0.55D;
         double d2 = pos.getZ() + 0.5D;

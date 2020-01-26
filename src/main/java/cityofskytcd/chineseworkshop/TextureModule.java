@@ -43,8 +43,7 @@ import snownee.kiwi.util.Util;
 @KiwiModule(modid = CW.MODID, name = "retexture")
 @KiwiModule.Optional
 @KiwiModule.Subscriber({ Bus.MOD, Bus.FORGE })
-public class TextureModule extends AbstractModule
-{
+public class TextureModule extends AbstractModule {
     public static final RoofTileBlock BLACK_TILE_ROOF_DYN = new RoofTileBlock(blockProp(Material.ROCK), true);
 
     public static final RoofTileJBlock BLACK_TILE_ROOF_J_DYN = new RoofTileJBlock(blockProp(Material.ROCK), true);
@@ -78,8 +77,7 @@ public class TextureModule extends AbstractModule
     /* on */
 
     @Override
-    protected void init(FMLCommonSetupEvent event)
-    {
+    protected void init(FMLCommonSetupEvent event) {
         BLACK_TILE_ROOF_DYN.translationKey = BlockModule.BLACK_TILE_ROOF.getTranslationKey();
         BLACK_TILE_ROOF_J_DYN.translationKey = BlockModule.BLACK_TILE_ROOF_J.getTranslationKey();
         BLACK_TILE_ROOF_RIDGE_J_DYN.translationKey = BlockModule.BLACK_TILE_ROOF_RIDGE_J.getTranslationKey();
@@ -92,8 +90,7 @@ public class TextureModule extends AbstractModule
     }
 
     @SubscribeEvent
-    public void onRetextureIngredient(RetextureIngredientEvent event)
-    {
+    public void onRetextureIngredient(RetextureIngredientEvent event) {
         event.add(BlockModule.BLACK_TILE_ROOF);
         event.add(BlockModule.BLACK_TILE_ROOF_J);
         event.add(BlockModule.BLACK_TILE_ROOF_RIDGE_J);
@@ -107,8 +104,7 @@ public class TextureModule extends AbstractModule
 
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
-    public void onModelBake(ModelBakeEvent event)
-    {
+    public void onModelBake(ModelBakeEvent event) {
         ModBlockItem.INSTANT_UPDATE_TILES.add(RETEXTURE);
 
         Block block;
@@ -152,15 +148,12 @@ public class TextureModule extends AbstractModule
     }
 
     @OnlyIn(Dist.CLIENT)
-    public static void addTooltip(ItemStack stack, List<ITextComponent> tooltip, String langKey)
-    {
+    public static void addTooltip(ItemStack stack, List<ITextComponent> tooltip, String langKey) {
         NBTHelper data = NBTHelper.of(stack);
         ResourceLocation rl = Util.RL(data.getString("BlockEntityTag.Items.main"));
-        if (rl != null)
-        {
+        if (rl != null) {
             Item item = ForgeRegistries.ITEMS.getValue(rl);
-            if (item != null)
-            {
+            if (item != null) {
                 String name = I18n.format(item.getTranslationKey());
                 tooltip.add(new TranslationTextComponent("chineseworkshop.tip." + langKey, name).applyTextStyle(TextFormatting.GRAY));
             }

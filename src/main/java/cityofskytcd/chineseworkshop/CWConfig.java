@@ -11,22 +11,19 @@ import com.google.common.base.Predicates;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 
-public class CWConfig
-{
+public class CWConfig {
 
     static final ForgeConfigSpec spec;
 
     public static ConfigValue<List<? extends String>> allowedClasses;
     public static ConfigValue<List<? extends String>> allowedMods;
 
-    static
-    {
+    static {
         final Pair<CWConfig, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(CWConfig::new);
         spec = specPair.getRight();
     }
 
-    private CWConfig(ForgeConfigSpec.Builder builder)
-    {
+    private CWConfig(ForgeConfigSpec.Builder builder) {
         builder.push("adjustmentStick");
 
         allowedMods = builder.defineList("allowedMods", () -> Collections.singletonList(CW.MODID), Predicates.alwaysTrue());

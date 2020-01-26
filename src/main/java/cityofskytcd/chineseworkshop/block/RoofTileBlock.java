@@ -44,8 +44,7 @@ import snownee.kiwi.block.ModBlock;
  * 屋顶类
  */
 
-public class RoofTileBlock extends ModHorizontalBlock
-{
+public class RoofTileBlock extends ModHorizontalBlock {
     public static final EnumProperty<StairsShape> SHAPE = StairsBlock.SHAPE;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
@@ -57,8 +56,7 @@ public class RoofTileBlock extends ModHorizontalBlock
     protected static final VoxelShape[] SLAB_BOTTOM_SHAPES = makeShapes(AABB_SLAB_BOTTOM, NWU_CORNER, NEU_CORNER, SWU_CORNER, SEU_CORNER);
     private static final int[] field_196522_K = new int[] { 12, 5, 3, 10, 14, 13, 7, 11, 13, 7, 11, 14, 8, 4, 1, 2, 4, 1, 2, 8 };
 
-    private static VoxelShape[] makeShapes(VoxelShape slabShape, VoxelShape nwCorner, VoxelShape neCorner, VoxelShape swCorner, VoxelShape seCorner)
-    {
+    private static VoxelShape[] makeShapes(VoxelShape slabShape, VoxelShape nwCorner, VoxelShape neCorner, VoxelShape swCorner, VoxelShape seCorner) {
         return IntStream.range(0, 16).mapToObj((p_199780_5_) -> {
             return combineShapes(p_199780_5_, slabShape, nwCorner, neCorner, swCorner, seCorner);
         }).toArray((p_199778_0_) -> {
@@ -66,52 +64,43 @@ public class RoofTileBlock extends ModHorizontalBlock
         });
     }
 
-    private static VoxelShape combineShapes(int bitfield, VoxelShape slabShape, VoxelShape nwCorner, VoxelShape neCorner, VoxelShape swCorner, VoxelShape seCorner)
-    {
+    private static VoxelShape combineShapes(int bitfield, VoxelShape slabShape, VoxelShape nwCorner, VoxelShape neCorner, VoxelShape swCorner, VoxelShape seCorner) {
         VoxelShape voxelshape = slabShape;
-        if ((bitfield & 1) != 0)
-        {
+        if ((bitfield & 1) != 0) {
             voxelshape = VoxelShapes.or(slabShape, nwCorner);
         }
 
-        if ((bitfield & 2) != 0)
-        {
+        if ((bitfield & 2) != 0) {
             voxelshape = VoxelShapes.or(voxelshape, neCorner);
         }
 
-        if ((bitfield & 4) != 0)
-        {
+        if ((bitfield & 4) != 0) {
             voxelshape = VoxelShapes.or(voxelshape, swCorner);
         }
 
-        if ((bitfield & 8) != 0)
-        {
+        if ((bitfield & 8) != 0) {
             voxelshape = VoxelShapes.or(voxelshape, seCorner);
         }
 
         return voxelshape;
     }
 
-    public RoofTileBlock(Block.Properties builder, boolean retexture)
-    {
+    public RoofTileBlock(Block.Properties builder, boolean retexture) {
         super(builder, VoxelShapes.fullCube(), retexture);
         ModBlock.deduceSoundAndHardness(this);
     }
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
-    {
-        if (isTextureable())
-        {
+    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        if (isTextureable()) {
             TextureModule.addTooltip(stack, tooltip, "frame");
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context)
-    {
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
         Direction direction = context.getFace();
         BlockPos blockpos = context.getPos();
         IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
@@ -119,17 +108,13 @@ public class RoofTileBlock extends ModHorizontalBlock
         return blockstate.with(SHAPE, getShapeProperty(blockstate, context.getWorld(), blockpos));
     }
 
-    private static StairsShape getShapeProperty(BlockState state, IBlockReader worldIn, BlockPos pos)
-    {
+    private static StairsShape getShapeProperty(BlockState state, IBlockReader worldIn, BlockPos pos) {
         Direction direction = state.get(HORIZONTAL_FACING);
         BlockState blockstate = worldIn.getBlockState(pos.offset(direction));
-        if (blockstate.getBlock() == state.getBlock())
-        {
+        if (blockstate.getBlock() == state.getBlock()) {
             Direction direction1 = blockstate.get(HORIZONTAL_FACING);
-            if (direction1.getAxis() != state.get(HORIZONTAL_FACING).getAxis())
-            {
-                if (direction1 == direction.rotateYCCW())
-                {
+            if (direction1.getAxis() != state.get(HORIZONTAL_FACING).getAxis()) {
+                if (direction1 == direction.rotateYCCW()) {
                     return StairsShape.OUTER_LEFT;
                 }
 
@@ -138,13 +123,10 @@ public class RoofTileBlock extends ModHorizontalBlock
         }
 
         BlockState blockstate1 = worldIn.getBlockState(pos.offset(direction.getOpposite()));
-        if (blockstate1.getBlock() == state.getBlock())
-        {
+        if (blockstate1.getBlock() == state.getBlock()) {
             Direction direction2 = blockstate1.get(HORIZONTAL_FACING);
-            if (direction2.getAxis() != state.get(HORIZONTAL_FACING).getAxis())
-            {
-                if (direction2 == direction.rotateYCCW())
-                {
+            if (direction2.getAxis() != state.get(HORIZONTAL_FACING).getAxis()) {
+                if (direction2 == direction.rotateYCCW()) {
                     return StairsShape.INNER_LEFT;
                 }
 
@@ -156,10 +138,8 @@ public class RoofTileBlock extends ModHorizontalBlock
     }
 
     @Override
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
-    {
-        if (stateIn.get(WATERLOGGED))
-        {
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+        if (stateIn.get(WATERLOGGED)) {
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
         }
 
@@ -167,41 +147,33 @@ public class RoofTileBlock extends ModHorizontalBlock
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
-    {
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING, SHAPE, WATERLOGGED);
     }
 
     @Override
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
-    {
+    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
         return false;
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_)
-    {
+    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
         return SLAB_BOTTOM_SHAPES[field_196522_K[this.func_196511_x(p_220053_1_)]];
     }
 
-    private int func_196511_x(BlockState state)
-    {
+    private int func_196511_x(BlockState state) {
         return state.get(SHAPE).ordinal() * 4 + state.get(HORIZONTAL_FACING).getHorizontalIndex();
     }
 
     @SuppressWarnings("incomplete-switch")
     @Override
-    public BlockState mirror(BlockState state, Mirror mirrorIn)
-    {
+    public BlockState mirror(BlockState state, Mirror mirrorIn) {
         Direction direction = state.get(HORIZONTAL_FACING);
         StairsShape stairsshape = state.get(SHAPE);
-        switch (mirrorIn)
-        {
+        switch (mirrorIn) {
         case LEFT_RIGHT:
-            if (direction.getAxis() == Direction.Axis.Z)
-            {
-                switch (stairsshape)
-                {
+            if (direction.getAxis() == Direction.Axis.Z) {
+                switch (stairsshape) {
                 case INNER_LEFT:
                     return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.INNER_RIGHT);
                 case INNER_RIGHT:
@@ -216,10 +188,8 @@ public class RoofTileBlock extends ModHorizontalBlock
             }
             break;
         case FRONT_BACK:
-            if (direction.getAxis() == Direction.Axis.X)
-            {
-                switch (stairsshape)
-                {
+            if (direction.getAxis() == Direction.Axis.X) {
+                switch (stairsshape) {
                 case INNER_LEFT:
                     return state.rotate(Rotation.CLOCKWISE_180).with(SHAPE, StairsShape.INNER_LEFT);
                 case INNER_RIGHT:
@@ -238,8 +208,7 @@ public class RoofTileBlock extends ModHorizontalBlock
     }
 
     @Override
-    public BlockState rotate(BlockState state, Rotation rot)
-    {
+    public BlockState rotate(BlockState state, Rotation rot) {
         return state.with(HORIZONTAL_FACING, rot.rotate(state.get(HORIZONTAL_FACING)));
     }
 }

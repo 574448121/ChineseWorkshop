@@ -33,8 +33,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class WallCandleBlock extends CandleBlock
-{
+public class WallCandleBlock extends CandleBlock {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
     protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(3.2, 3.2, 4.8, 12.8, 0.8, 16);
@@ -42,53 +41,45 @@ public class WallCandleBlock extends CandleBlock
     protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(4.8, 3.2, 3.2, 16, 12.8, 12.8);
     protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(0, 3.2, 3.2, 11.2, 12.8, 12.8);
 
-    public WallCandleBlock(Block.Properties builder)
-    {
+    public WallCandleBlock(Block.Properties builder) {
         super(builder);
     }
 
     @Override
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos)
-    {
+    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
         return Blocks.WALL_TORCH.isValidPosition(state, worldIn, pos);
     }
 
     @Override
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
-    {
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
         return Blocks.WALL_TORCH.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
     }
 
     @Override
     @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext context)
-    {
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockState blockstate = Blocks.WALL_TORCH.getStateForPlacement(context);
         return blockstate == null ? null : this.getDefaultState().with(FACING, blockstate.get(FACING));
     }
 
     @Override
-    public BlockState rotate(BlockState state, Rotation rot)
-    {
+    public BlockState rotate(BlockState state, Rotation rot) {
         return Blocks.WALL_TORCH.rotate(state, rot);
     }
 
     @Override
-    public BlockState mirror(BlockState state, Mirror mirrorIn)
-    {
+    public BlockState mirror(BlockState state, Mirror mirrorIn) {
         return Blocks.WALL_TORCH.mirror(state, mirrorIn);
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
-    {
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand)
-    {
+    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
         double d0 = pos.getX() + 0.5D;
         double d1 = pos.getY() + 0.85D;
         double d2 = pos.getZ() + 0.5D;
@@ -97,10 +88,8 @@ public class WallCandleBlock extends CandleBlock
     }
 
     @Override
-    public VoxelShape getShape(net.minecraft.block.BlockState state, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_)
-    {
-        switch (state.get(FACING))
-        {
+    public VoxelShape getShape(net.minecraft.block.BlockState state, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
+        switch (state.get(FACING)) {
         default:
             return EAST_SHAPE;
         case WEST:

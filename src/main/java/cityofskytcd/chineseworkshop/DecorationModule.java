@@ -72,9 +72,7 @@ public class DecorationModule extends AbstractModule {
 
     public static final Direction2Block CARVING = new Direction2Block(blockProp(Material.WOOD), Block.makeCuboidShape(0, 4, 5, 16, 16, 11), false);
 
-    public static final EntityType<?> SEAT = EntityType.Builder.create(EntityClassification.MISC).setCustomClientFactory((
-            spawnEntity, world
-    ) -> new ISeat.Seat(world)).size(0.0001F, 0.0001F).setTrackingRange(16).setUpdateInterval(20).build(CW.MODID + ".seat");
+    public static final EntityType<?> SEAT = EntityType.Builder.create(EntityClassification.MISC).setCustomClientFactory((spawnEntity, world) -> new ISeat.Seat(world)).size(0.0001F, 0.0001F).setTrackingRange(16).setUpdateInterval(20).build(CW.MODID + ".seat");
 
     public static final SmallFenceBlock WHITE_ASH_WALL = new SmallFenceBlock(blockProp(Material.ROCK));
 

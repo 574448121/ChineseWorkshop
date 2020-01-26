@@ -36,35 +36,29 @@ import snownee.kiwi.block.ModBlock;
  * 屋顶类
  */
 
-public class RoofTileJBlock extends ModHorizontalBlock
-{
+public class RoofTileJBlock extends ModHorizontalBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public RoofTileJBlock(Block.Properties builder, boolean retexture)
-    {
+    public RoofTileJBlock(Block.Properties builder, boolean retexture) {
         this(builder, VoxelShapes.fullCube(), retexture);
     }
 
-    public RoofTileJBlock(Block.Properties builder, VoxelShape shape, boolean retexture)
-    {
+    public RoofTileJBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
         super(builder, shape, retexture);
         ModBlock.deduceSoundAndHardness(this);
     }
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
-    {
-        if (isTextureable())
-        {
+    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        if (isTextureable()) {
             TextureModule.addTooltip(stack, tooltip, "frame");
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context)
-    {
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();
         IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         Direction direction = Direction.fromAngle(context.getPlacementYaw() + 45);
@@ -73,14 +67,12 @@ public class RoofTileJBlock extends ModHorizontalBlock
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
-    {
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING, WATERLOGGED);
     }
 
     @Override
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
-    {
+    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
         return false;
     }
 }

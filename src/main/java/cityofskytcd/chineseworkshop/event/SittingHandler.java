@@ -26,13 +26,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
-public class SittingHandler
-{
+public class SittingHandler {
     @SubscribeEvent
-    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event)
-    {
-        if (event.getWorld().isRemote)
-        {
+    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+        if (event.getWorld().isRemote) {
             return;
         }
 
@@ -56,17 +53,14 @@ public class SittingHandler
 
         BlockState state = world.getBlockState(pos);
 
-        if (state.getBlock() instanceof ISeat)
-        {
+        if (state.getBlock() instanceof ISeat) {
             ISeat iseat = (ISeat) state.getBlock();
-            if (!iseat.hasSeat(state, world, pos))
-            {
+            if (!iseat.hasSeat(state, world, pos)) {
                 return;
             }
             List<Seat> seats = world.getEntitiesWithinAABB(Seat.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)));
 
-            if (seats.isEmpty())
-            {
+            if (seats.isEmpty()) {
                 Vec3d v = iseat.getSeat(state, world, pos);
                 Seat seat = new Seat(world, v.add(pos.getX(), pos.getY(), pos.getZ()));
                 world.addEntity(seat);

@@ -28,14 +28,12 @@ import net.minecraft.world.IWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class RoofTileRidgeBlock extends Direction2Block
-{
+public class RoofTileRidgeBlock extends Direction2Block {
     public final VoxelShape SHAPE;
     public static final EnumProperty<Variant> VARIANT = EnumProperty.create("variant", Variant.class);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    public RoofTileRidgeBlock(Block.Properties builder, VoxelShape shape, boolean retexture)
-    {
+    public RoofTileRidgeBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
         super(builder, retexture);
         SHAPE = shape;
         setDefaultState(this.stateContainer.getBaseState().with(VARIANT, Variant.I).with(FACING, Direction2.SOUTH_NORTH));
@@ -43,30 +41,25 @@ public class RoofTileRidgeBlock extends Direction2Block
 
     @OnlyIn(Dist.CLIENT)
     @Override
-    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
-    {
-        if (isTextureable())
-        {
+    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        if (isTextureable()) {
             TextureModule.addTooltip(stack, tooltip, "frame");
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_)
-    {
+    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
         return SHAPE;
     }
 
     @Override
-    public BlockRenderLayer getRenderLayer()
-    {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.CUTOUT;
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context)
-    {
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();
         IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         BlockState state = super.getStateForPlacement(context).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
@@ -74,86 +67,75 @@ public class RoofTileRidgeBlock extends Direction2Block
     }
 
     @Override
-    public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
-    {
-        if (state.get(WATERLOGGED))
-        {
+    public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+        if (state.get(WATERLOGGED)) {
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
         }
         return state.with(VARIANT, getVariantProperty(state, worldIn, currentPos));
     }
 
     @Override
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
-    {
+    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
         return false;
     }
 
-    private Variant getVariantProperty(BlockState state, IBlockReader worldIn, BlockPos pos)
-    {
+    private Variant getVariantProperty(BlockState state, IBlockReader worldIn, BlockPos pos) {
         Direction facing;
         int connection = 0;
         boolean connect[] = new boolean[4];
-        for (int i = 0; i < 4; i++)
-        {
+        for (int i = 0; i < 4; i++) {
             facing = Direction.byHorizontalIndex(i);
-            if (worldIn.getBlockState(pos.offset(facing)).getBlock() == this)
-            {
+            if (worldIn.getBlockState(pos.offset(facing)).getBlock() == this) {
                 connection++;
                 connect[i] = true;
             }
         }
-        if (connection == 4)
-        {
+        if (connection == 4) {
             return Variant.X;
-        }
-        else if (connection == 3)
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                if (!connect[i])
-                {
+        } else if (connection == 3) {
+            for (int i = 0; i < 4; i++) {
+                if (!connect[i]) {
                     return Variant.values()[Variant.T.ordinal() + i];
                 }
             }
-        }
-        else if (connection == 2)
-        {
-            if (connect[0] && connect[2] || connect[1] && connect[3])
-            {
+        } else if (connection == 2) {
+            if (connect[0] && connect[2] || connect[1] && connect[3]) {
                 return connect[0] ? Variant.I : Variant.I_90;
             }
             Variant variant = Variant.L_270;
-            for (int i = 0; i < 3; i++)
-            {
-                if (connect[i] && connect[i + 1])
-                {
+            for (int i = 0; i < 3; i++) {
+                if (connect[i] && connect[i + 1]) {
                     variant = Variant.values()[Variant.L.ordinal() + i];
                     break;
                 }
             }
             return variant;
-        }
-        else if (connection == 1)
-        {
+        } else if (connection == 1) {
             return (connect[0] || connect[2]) ? Variant.I : Variant.I_90;
         }
         return state.get(FACING) == Direction2.EAST_WEST ? Variant.I : Variant.I_90;
     }
 
     @Override
-    protected void fillStateContainer(Builder<Block, BlockState> builder)
-    {
+    protected void fillStateContainer(Builder<Block, BlockState> builder) {
         builder.add(FACING, VARIANT, WATERLOGGED);
     }
 
-    public static enum Variant implements IStringSerializable
-    {
-        I, I_90, L, L_90, L_180, L_270, T, T_90, T_180, T_270, X;
+    public static enum Variant implements IStringSerializable {
+        I,
+        I_90,
+        L,
+        L_90,
+        L_180,
+        L_270,
+        T,
+        T_90,
+        T_180,
+        T_270,
+        X;
 
         @Override
-        public String getName()
-        {
+        public String getName() {
             return toString().toLowerCase(Locale.ENGLISH);
         }
     }

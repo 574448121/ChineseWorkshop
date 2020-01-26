@@ -18,46 +18,39 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 
-public class AndesiteFenceBlock extends FourWayBlock
-{
+public class AndesiteFenceBlock extends FourWayBlock {
     public static final BooleanProperty UP = BlockStateProperties.UP;
     private final VoxelShape[] wallShapes;
     private final VoxelShape[] wallCollisionShapes;
 
-    public AndesiteFenceBlock(Properties properties)
-    {
+    public AndesiteFenceBlock(Properties properties) {
         super(0, 1.5F, 16, 16, 24, properties);
         this.wallShapes = this.makeShapes(2F, 1.5F, 18.0F, 0.0F, 16.0F);
         this.wallCollisionShapes = this.makeShapes(2F, 1.5F, 24.0F, 0.0F, 24.0F);
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_)
-    {
+    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
         return p_220053_1_.get(UP) ? this.wallShapes[this.getIndex(p_220053_1_)] : super.getShape(p_220053_1_, p_220053_2_, p_220053_3_, p_220053_4_);
     }
 
     @Override
-    public VoxelShape getCollisionShape(BlockState p_220071_1_, IBlockReader p_220071_2_, BlockPos p_220071_3_, ISelectionContext p_220071_4_)
-    {
+    public VoxelShape getCollisionShape(BlockState p_220071_1_, IBlockReader p_220071_2_, BlockPos p_220071_3_, ISelectionContext p_220071_4_) {
         return p_220071_1_.get(UP) ? this.wallCollisionShapes[this.getIndex(p_220071_1_)] : super.getCollisionShape(p_220071_1_, p_220071_2_, p_220071_3_, p_220071_4_);
     }
 
     @Override
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type)
-    {
+    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
         return false;
     }
 
-    private boolean func_220113_a(BlockState p_220113_1_, boolean p_220113_2_, Direction p_220113_3_)
-    {
+    private boolean func_220113_a(BlockState p_220113_1_, boolean p_220113_2_, Direction p_220113_3_) {
         Block block = p_220113_1_.getBlock();
         return !cannotAttach(block) && p_220113_2_ || block == this;
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context)
-    {
+    public BlockState getStateForPlacement(BlockItemUseContext context) {
         IWorldReader iworldreader = context.getWorld();
         BlockPos blockpos = context.getPos();
         IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
@@ -84,19 +77,14 @@ public class AndesiteFenceBlock extends FourWayBlock
      * Note that this method should ideally consider only the specific face passed in.
      */
     @Override
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos)
-    {
-        if (stateIn.get(WATERLOGGED))
-        {
+    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+        if (stateIn.get(WATERLOGGED)) {
             worldIn.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
         }
 
-        if (facing == Direction.DOWN)
-        {
+        if (facing == Direction.DOWN) {
             return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
-        }
-        else
-        {
+        } else {
             Direction direction = facing.getOpposite();
             boolean flag = facing == Direction.NORTH ? this.func_220113_a(facingState, Block.hasSolidSide(facingState, worldIn, facingPos, direction), direction) : stateIn.get(NORTH);
             boolean flag1 = facing == Direction.EAST ? this.func_220113_a(facingState, Block.hasSolidSide(facingState, worldIn, facingPos, direction), direction) : stateIn.get(EAST);
@@ -108,8 +96,7 @@ public class AndesiteFenceBlock extends FourWayBlock
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
-    {
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(UP, NORTH, EAST, WEST, SOUTH, WATERLOGGED);
     }
 }
