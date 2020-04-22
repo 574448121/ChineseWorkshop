@@ -13,6 +13,6 @@ description='''
 [[dependencies.chineseworkshop]]
     modId="kiwi"
     mandatory=true
-    versionRange="[2.6.4, 2.10)"
+    versionRange="[2.6.4, 2.11)"
     ordering="BEFORE"
     side="BOTH"

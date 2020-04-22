@@ -242,7 +242,7 @@ public class HudHandler {
             RenderSystem.rotatef(30F, 1F, 0, 0F);
             RenderSystem.rotatef(Util.milliTime() % 3600 / 10, 0, 1, 0F);
 
-            mc.getItemRenderer().renderItem(stack, TransformType.NONE, 15728880, OverlayTexture.DEFAULT_LIGHT, matrixstack, buffer);
+            mc.getItemRenderer().renderItem(stack, TransformType.NONE, 15728880, OverlayTexture.NO_OVERLAY, matrixstack, buffer);
 
             RenderSystem.disableAlphaTest();
             RenderSystem.disableRescaleNormal();

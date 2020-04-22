@@ -34,7 +34,8 @@ public class CWConfig {
                     "net.minecraft.block.FenceBlock",
                     "net.minecraft.block.WallBlock",
                     "net.minecraft.block.PaneBlock",
-                    "net.minecraft.block.StainedGlassPaneBlock"
+                    "net.minecraft.block.StainedGlassPaneBlock",
+                    "net.minecraft.block.StairsBlock"
             );
             /* on */
         }, Predicates.alwaysTrue());

@@ -103,8 +103,12 @@ public class BlockModule extends AbstractModule {
     public static final ModBlock PAINTED_BLOCK = new ModBlock(blockProp(Material.ROCK));
 
     @Override
-    protected void init(FMLCommonSetupEvent event) {
+    protected void preInit() {
         NetworkChannel.register(WheelMovePacket.class, new WheelMovePacket.Handler());
+    }
+
+    @Override
+    protected void init(FMLCommonSetupEvent event) {
         Selections.init();
     }
 
