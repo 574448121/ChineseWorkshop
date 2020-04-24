@@ -15,7 +15,6 @@ import cityofskytcd.chineseworkshop.tile.CWTextureTile;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -44,23 +43,23 @@ import snownee.kiwi.util.Util;
 @KiwiModule.Optional
 @KiwiModule.Subscriber({ Bus.MOD, Bus.FORGE })
 public class TextureModule extends AbstractModule {
-    public static final RoofTileBlock BLACK_TILE_ROOF_DYN = new RoofTileBlock(blockProp(Material.ROCK), true);
+    public static final RoofTileBlock BLACK_TILE_ROOF_DYN = new RoofTileBlock(blockProp(BlockModule.BLACK_TILE_ROOF), true);
 
-    public static final RoofTileJBlock BLACK_TILE_ROOF_J_DYN = new RoofTileJBlock(blockProp(Material.ROCK), true);
+    public static final RoofTileJBlock BLACK_TILE_ROOF_J_DYN = new RoofTileJBlock(blockProp(BlockModule.BLACK_TILE_ROOF_J), true);
 
-    public static final RoofTileJBlock BLACK_TILE_ROOF_RIDGE_J_DYN = new RoofTileJBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16), true);
+    public static final RoofTileJBlock BLACK_TILE_ROOF_RIDGE_J_DYN = new RoofTileJBlock(blockProp(BlockModule.BLACK_TILE_ROOF_RIDGE_J), Block.makeCuboidShape(0, 0, 0, 16, 9, 16), true);
 
-    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE_DYN = new RoofTileRidgeBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 9, 16), true);
+    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE_DYN = new RoofTileRidgeBlock(blockProp(BlockModule.BLACK_TILE_ROOF_RIDGE), Block.makeCuboidShape(0, 0, 0, 16, 9, 16), true);
 
-    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE_TOP_DYN = new RoofTileRidgeBlock(blockProp(Material.ROCK), VoxelShapes.fullCube(), true);
+    public static final RoofTileRidgeBlock BLACK_TILE_ROOF_RIDGE_TOP_DYN = new RoofTileRidgeBlock(blockProp(BlockModule.BLACK_TILE_ROOF_RIDGE_TOP), VoxelShapes.fullCube(), true);
 
-    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_DYN = new SlabRoofTileBlock(blockProp(Material.ROCK), Block.makeCuboidShape(0, 0, 0, 16, 8, 16), true);
+    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_DYN = new SlabRoofTileBlock(blockProp(BlockModule.BLACK_TILE_ROOF_SLAB), Block.makeCuboidShape(0, 0, 0, 16, 8, 16), true);
 
-    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_TOP_DYN = new SlabRoofTileBlock(blockProp(Material.ROCK), VoxelShapes.fullCube(), true);
+    public static final SlabRoofTileBlock BLACK_TILE_ROOF_SLAB_TOP_DYN = new SlabRoofTileBlock(blockProp(BlockModule.BLACK_TILE_ROOF_SLAB_TOP), VoxelShapes.fullCube(), true);
 
-    public static final BenchBlock BENCH_DYN = new BenchBlock(blockProp(Material.WOOD), true);
+    public static final BenchBlock BENCH_DYN = new BenchBlock(blockProp(DecorationModule.BENCH), true);
 
-    public static final ChairBlock CHAIR_DYN = new ChairBlock(blockProp(Material.WOOD), true);
+    public static final ChairBlock CHAIR_DYN = new ChairBlock(blockProp(DecorationModule.CHAIR), true);
 
     /* off */
     public static final TileEntityType<?> RETEXTURE = TileEntityType.Builder.create(CWTextureTile::new,

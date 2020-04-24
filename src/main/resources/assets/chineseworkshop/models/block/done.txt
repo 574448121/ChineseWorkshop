@@ -1,0 +1,3 @@
+thatch_roof
+thatch_roof_l
+black_tile_roof
