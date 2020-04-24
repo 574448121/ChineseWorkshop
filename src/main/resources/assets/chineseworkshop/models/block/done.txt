@@ -1,3 +1,13 @@
 thatch_roof
 thatch_roof_l
 black_tile_roof
+black_tile_roof_j
+roof_inner
+roof_outer
+bench
+black_tile_roof_ridge_j
+dougong
+threshold
+diorite_fence
+thatch_roof_slab_ls
+black_tile_roof_slab_ls
