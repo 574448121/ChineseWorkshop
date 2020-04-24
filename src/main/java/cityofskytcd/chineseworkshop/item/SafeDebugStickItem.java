@@ -67,6 +67,7 @@ public class SafeDebugStickItem extends DebugStickItem {
             StateContainer<Block, BlockState> statecontainer = block.getStateContainer();
             Collection<IProperty<?>> collection = Lists.newArrayList(statecontainer.getProperties());
             collection.remove(BlockStateProperties.WATERLOGGED);
+            @SuppressWarnings("deprecation")
             String s = Registry.BLOCK.getKey(block).toString();
             if (collection.isEmpty()) {
                 sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".empty", s));

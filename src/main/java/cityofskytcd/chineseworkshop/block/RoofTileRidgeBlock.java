@@ -12,10 +12,8 @@ import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer.Builder;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
@@ -33,7 +31,6 @@ import snownee.kiwi.RenderLayer.Layer;
 public class RoofTileRidgeBlock extends Direction2Block {
     public final VoxelShape SHAPE;
     public static final EnumProperty<Variant> VARIANT = EnumProperty.create("variant", Variant.class);
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     public RoofTileRidgeBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
         super(builder, retexture);

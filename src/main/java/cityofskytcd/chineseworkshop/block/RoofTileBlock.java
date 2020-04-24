@@ -21,10 +21,8 @@ import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
-import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.StairsShape;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
@@ -40,13 +38,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import snownee.kiwi.block.ModBlock;
 
-/**
- * 屋顶类
- */
-
 public class RoofTileBlock extends ModHorizontalBlock {
     public static final EnumProperty<StairsShape> SHAPE = StairsBlock.SHAPE;
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
     protected static final VoxelShape AABB_SLAB_BOTTOM = Block.makeCuboidShape(0.0D, 0.1D, 0.0D, 16.0D, 8.0D, 16.0D);
     protected static final VoxelShape NWU_CORNER = Block.makeCuboidShape(0.0D, 8.0D, 0.0D, 8.0D, 16.0D, 8.0D);
@@ -101,7 +94,6 @@ public class RoofTileBlock extends ModHorizontalBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
-        Direction direction = context.getFace();
         BlockPos blockpos = context.getPos();
         IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         BlockState blockstate = this.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
@@ -165,7 +157,7 @@ public class RoofTileBlock extends ModHorizontalBlock {
         return state.get(SHAPE).ordinal() * 4 + state.get(HORIZONTAL_FACING).getHorizontalIndex();
     }
 
-    @SuppressWarnings("incomplete-switch")
+    @SuppressWarnings({ "incomplete-switch", "deprecation" })
     @Override
     public BlockState mirror(BlockState state, Mirror mirrorIn) {
         Direction direction = state.get(HORIZONTAL_FACING);

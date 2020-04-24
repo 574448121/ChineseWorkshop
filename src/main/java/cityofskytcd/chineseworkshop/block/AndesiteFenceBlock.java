@@ -83,7 +83,7 @@ public class AndesiteFenceBlock extends FourWayBlock {
         }
 
         if (facing == Direction.DOWN) {
-            return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+            return stateIn;
         } else {
             Direction direction = facing.getOpposite();
             boolean flag = facing == Direction.NORTH ? this.func_220113_a(facingState, Block.hasSolidSide(facingState, worldIn, facingPos, direction), direction) : stateIn.get(NORTH);

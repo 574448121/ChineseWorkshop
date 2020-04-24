@@ -15,10 +15,8 @@ import javax.annotation.Nullable;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.HorizontalBlock;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.particles.ParticleTypes;
-import net.minecraft.state.DirectionProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
@@ -34,8 +32,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class WallCandleBlock extends CandleBlock {
-    public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
-
     protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(3.2, 3.2, 4.8, 12.8, 0.8, 16);
     protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(3.2, 1.6, 0, 12.8, 12.8, 11.2);
     protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(4.8, 3.2, 3.2, 16, 12.8, 12.8);
@@ -45,11 +41,13 @@ public class WallCandleBlock extends CandleBlock {
         super(builder);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
         return Blocks.WALL_TORCH.isValidPosition(state, worldIn, pos);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
         return Blocks.WALL_TORCH.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
@@ -62,11 +60,13 @@ public class WallCandleBlock extends CandleBlock {
         return blockstate == null ? null : this.getDefaultState().with(FACING, blockstate.get(FACING));
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public BlockState rotate(BlockState state, Rotation rot) {
         return Blocks.WALL_TORCH.rotate(state, rot);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public BlockState mirror(BlockState state, Mirror mirrorIn) {
         return Blocks.WALL_TORCH.mirror(state, mirrorIn);

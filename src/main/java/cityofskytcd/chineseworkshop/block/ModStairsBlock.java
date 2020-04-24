@@ -7,7 +7,7 @@ import net.minecraft.block.StairsBlock;
 public class ModStairsBlock extends StairsBlock {
 
     public ModStairsBlock(BlockState state) {
-        super(state, Block.Properties.from(state.getBlock()));
+        super(() -> state, Block.Properties.from(state.getBlock()));
     }
 
 }
