@@ -5,6 +5,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.block.IWaterLoggable;
+import net.minecraft.entity.EntitySpawnPlacementRegistry.PlacementType;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.IFluidState;
@@ -93,5 +95,10 @@ public class ModHorizontalBlock extends HorizontalBlock implements IWaterLoggabl
         IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         BlockState blockstate = this.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing().getOpposite()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
         return blockstate;
+    }
+
+    @Override
+    public boolean canCreatureSpawn(BlockState state, IBlockReader world, BlockPos pos, PlacementType type, EntityType<?> entityType) {
+        return false;
     }
 }
