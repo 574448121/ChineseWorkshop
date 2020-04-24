@@ -36,6 +36,7 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.InputEvent.KeyInputEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
+import net.minecraftforge.client.model.animation.Animation;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -123,14 +124,14 @@ public class HudHandler {
 
             float xStart = event.getWindow().getScaledWidth() / 2;
             float yStart = event.getWindow().getScaledHeight() / 2;
-            float pTicks = event.getPartialTicks();
+            float pTicks = Animation.getWorldTime(mc.world, event.getPartialTicks());
 
             MatrixStack matrixstack = new MatrixStack();
             IRenderTypeBuffer.Impl buffer = mc.getRenderTypeBuffers().getBufferSource();
             RenderSystem.pushMatrix();
             RenderSystem.translatef(xStart, yStart, 0);
             if (HudHandler.animating) {
-                animationTick += pTicks * (HudHandler.showGui ? 1 : -2);
+                animationTick += pTicks * (HudHandler.showGui ? 0.005 : -0.01);
                 animationTick = MathHelper.clamp(animationTick, 0, 9);
                 if (animationTick == 9) {
                     HudHandler.animating = false;
