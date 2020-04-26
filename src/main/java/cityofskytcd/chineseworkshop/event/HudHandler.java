@@ -3,7 +3,6 @@ package cityofskytcd.chineseworkshop.event;
 import org.lwjgl.opengl.GL11;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
-import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import cityofskytcd.chineseworkshop.CW;
@@ -13,9 +12,7 @@ import cityofskytcd.chineseworkshop.network.WheelMovePacket;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
-import net.minecraft.client.renderer.Matrix4f;
 import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.Vector3f;
 import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.client.renderer.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.renderer.texture.OverlayTexture;
@@ -36,7 +33,6 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.InputEvent.KeyInputEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
-import net.minecraftforge.client.model.animation.Animation;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -124,14 +120,14 @@ public class HudHandler {
 
             float xStart = event.getWindow().getScaledWidth() / 2;
             float yStart = event.getWindow().getScaledHeight() / 2;
-            float pTicks = Animation.getWorldTime(mc.world, event.getPartialTicks());
+            float pTicks = mc.getTickLength();
 
             MatrixStack matrixstack = new MatrixStack();
             IRenderTypeBuffer.Impl buffer = mc.getRenderTypeBuffers().getBufferSource();
             RenderSystem.pushMatrix();
             RenderSystem.translatef(xStart, yStart, 0);
             if (HudHandler.animating) {
-                animationTick += pTicks * (HudHandler.showGui ? 0.005 : -0.01);
+                animationTick += pTicks * (HudHandler.showGui ? 1 : -2);
                 animationTick = MathHelper.clamp(animationTick, 0, 9);
                 if (animationTick == 9) {
                     HudHandler.animating = false;
