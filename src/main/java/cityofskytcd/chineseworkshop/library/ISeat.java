@@ -45,8 +45,6 @@ public interface ISeat {
                 this.outOfWorld();
             }
 
-            this.firstUpdate = false;
-
             BlockPos pos = getPosition();
             if (pos == null || !(getEntityWorld().getBlockState(pos).getBlock() instanceof ISeat)) {
                 remove();
@@ -54,11 +52,13 @@ public interface ISeat {
             }
 
             List<Entity> passangers = getPassengers();
+            for (Entity e : passangers)
+                if (!e.isAlive() || e.isShiftKeyDown())
+                    e.stopRiding();
             if (passangers.isEmpty())
                 remove();
-            for (Entity e : passangers)
-                if (e.isShiftKeyDown())
-                    remove();
+
+            this.firstUpdate = false;
         }
 
         @Override
