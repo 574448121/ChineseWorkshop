@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import cityofskytcd.chineseworkshop.CW;
+import cityofskytcd.chineseworkshop.CWConfig;
 import cityofskytcd.chineseworkshop.event.RetextureIngredientEvent;
 import cityofskytcd.chineseworkshop.library.Selection;
 import cityofskytcd.chineseworkshop.library.Selections;
@@ -29,15 +30,19 @@ public class JEICompat implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        registration.addRecipeCategories(new SelectionCategory(registration.getJeiHelpers().getGuiHelper()));
+        if (CWConfig.showConversionJei.get()) {
+            registration.addRecipeCategories(new SelectionCategory(registration.getJeiHelpers().getGuiHelper()));
+        }
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        List<Selection> recipes = Selections.SELECTIONS.stream().filter(Selection::show).collect(Collectors.toList());
-        registration.addRecipes(recipes, SelectionCategory.UID);
+        if (CWConfig.showConversionJei.get()) {
+            List<Selection> recipes = Selections.SELECTIONS.stream().filter(Selection::show).collect(Collectors.toList());
+            registration.addRecipes(recipes, SelectionCategory.UID);
+        }
 
-        if (Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"))) {
+        if (CWConfig.showRetextureJei.get() && Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"))) {
             NonNullList<ItemStack> ingredients = NonNullList.create();
             MinecraftForge.EVENT_BUS.post(new RetextureIngredientEvent(ingredients));
             if (!ingredients.isEmpty()) {

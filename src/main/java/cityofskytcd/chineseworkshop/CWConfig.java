@@ -10,6 +10,7 @@ import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.google.common.base.Predicates;
 
 import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.config.ModConfig;
@@ -20,6 +21,8 @@ public class CWConfig {
 
     public static ConfigValue<List<? extends String>> allowedClasses;
     public static ConfigValue<List<? extends String>> allowedMods;
+    public static BooleanValue showConversionJei;
+    public static BooleanValue showRetextureJei;
 
     static {
         final Pair<CWConfig, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(CWConfig::new);
@@ -42,6 +45,12 @@ public class CWConfig {
             );
             /* on */
         }, Predicates.alwaysTrue());
+
+        builder.pop();
+        builder.push("gui");
+
+        showConversionJei = builder.define("showConversionJei", true);
+        showRetextureJei = builder.define("showRetextureJei", true);
 
         builder.pop();
     }
