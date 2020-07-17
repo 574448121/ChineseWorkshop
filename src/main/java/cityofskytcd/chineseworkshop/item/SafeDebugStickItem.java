@@ -110,7 +110,7 @@ public class SafeDebugStickItem extends DebugStickItem {
     @Override
     @OnlyIn(Dist.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        ModItem.addTip(stack, worldIn, tooltip, flagIn);
+        ModItem.addTip(stack, tooltip, flagIn);
     }
 
     private static <T extends Comparable<T>> BlockState cycleProperty(BlockState state, IProperty<T> propertyIn, boolean backwards) {

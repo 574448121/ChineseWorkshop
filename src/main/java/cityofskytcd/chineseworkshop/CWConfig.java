@@ -6,10 +6,13 @@ import java.util.List;
 
 import org.apache.commons.lang3.tuple.Pair;
 
+import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.google.common.base.Predicates;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.config.ModConfig;
 
 public class CWConfig {
 
@@ -41,6 +44,11 @@ public class CWConfig {
         }, Predicates.alwaysTrue());
 
         builder.pop();
+    }
+
+    @SubscribeEvent
+    public static void onConfigReload(ModConfig.Reloading event) {
+        ((CommentedFileConfig) event.getConfig().getConfigData()).load();
     }
 
 }

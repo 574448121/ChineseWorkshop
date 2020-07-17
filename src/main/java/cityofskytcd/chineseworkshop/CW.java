@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(CW.MODID)
 public class CW {
@@ -24,5 +25,6 @@ public class CW {
 
     public CW() {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CWConfig.spec, MODID + ".toml");
+        FMLJavaModLoadingContext.get().getModEventBus().register(CWConfig.class);
     }
 }
