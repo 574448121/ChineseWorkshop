@@ -21,9 +21,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
+import net.minecraftforge.event.TickEvent.Phase;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
+import snownee.kiwi.schedule.Scheduler;
+import snownee.kiwi.schedule.impl.SimpleGlobalTask;
 
 @Mod.EventBusSubscriber
 public class SittingHandler {
@@ -64,7 +68,13 @@ public class SittingHandler {
                 Vec3d v = iseat.getSeat(state, world, pos);
                 Seat seat = new Seat(world, v.add(pos.getX(), pos.getY(), pos.getZ()));
                 world.addEntity(seat);
-                player.startRiding(seat);
+                Scheduler.add(new SimpleGlobalTask(LogicalSide.SERVER, Phase.END, i -> {
+                    if (i > 3) {
+                        player.startRiding(seat);
+                        return true;
+                    }
+                    return false;
+                }));
                 event.setCanceled(true);
                 event.setCancellationResult(ActionResultType.SUCCESS);
             }

@@ -55,8 +55,13 @@ public interface ISeat {
             for (Entity e : passangers)
                 if (!e.isAlive() || e.isShiftKeyDown())
                     e.stopRiding();
-            if (passangers.isEmpty())
-                remove();
+            if (passangers.isEmpty()) {
+                if (++portalCounter > 5) {
+                    remove();
+                }
+            } else {
+                portalCounter = 0;
+            }
 
             this.firstUpdate = false;
         }
