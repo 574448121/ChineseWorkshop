@@ -12,27 +12,27 @@ import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.network.NetworkEvent.Context;
 import snownee.kiwi.network.ClientPacket;
 
-public class WheelMovePacket extends ClientPacket {
+public class ConvertItemPacket extends ClientPacket {
     private int index;
 
-    public WheelMovePacket(int index) {
+    public ConvertItemPacket(int index) {
         this.index = index;
     }
 
-    public static class Handler extends PacketHandler<WheelMovePacket> {
+    public static class Handler extends PacketHandler<ConvertItemPacket> {
 
         @Override
-        public WheelMovePacket decode(PacketBuffer buf) {
-            return new WheelMovePacket(buf.readInt());
+        public ConvertItemPacket decode(PacketBuffer buf) {
+            return new ConvertItemPacket(buf.readInt());
         }
 
         @Override
-        public void encode(WheelMovePacket pkt, PacketBuffer buf) {
+        public void encode(ConvertItemPacket pkt, PacketBuffer buf) {
             buf.writeInt(pkt.index);
         }
 
         @Override
-        public void handle(WheelMovePacket pkt, Supplier<Context> ctx) {
+        public void handle(ConvertItemPacket pkt, Supplier<Context> ctx) {
             ctx.get().enqueueWork(() -> {
                 ServerPlayerEntity player = ctx.get().getSender();
                 ItemStack held = player.getHeldItemMainhand();

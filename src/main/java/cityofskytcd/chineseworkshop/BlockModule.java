@@ -5,9 +5,8 @@ import cityofskytcd.chineseworkshop.block.RoofTileBlock;
 import cityofskytcd.chineseworkshop.block.RoofTileJBlock;
 import cityofskytcd.chineseworkshop.block.RoofTileRidgeBlock;
 import cityofskytcd.chineseworkshop.block.SlabRoofTileBlock;
-import cityofskytcd.chineseworkshop.event.HudHandler;
-import cityofskytcd.chineseworkshop.library.Selections;
-import cityofskytcd.chineseworkshop.network.WheelMovePacket;
+import cityofskytcd.chineseworkshop.client.ClientHandler;
+import cityofskytcd.chineseworkshop.network.ConvertItemPacket;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RotatedPillarBlock;
@@ -20,7 +19,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import snownee.kiwi.AbstractModule;
 import snownee.kiwi.KiwiModule;
 import snownee.kiwi.NoGroup;
@@ -105,18 +103,13 @@ public class BlockModule extends AbstractModule {
 
     @Override
     protected void preInit() {
-        NetworkChannel.register(WheelMovePacket.class, new WheelMovePacket.Handler());
-    }
-
-    @Override
-    protected void init(FMLCommonSetupEvent event) {
-        Selections.init();
+        NetworkChannel.register(ConvertItemPacket.class, new ConvertItemPacket.Handler());
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
     protected void clientInit(FMLClientSetupEvent event) {
-        ClientRegistry.registerKeyBinding(HudHandler.kbSelect);
+        ClientRegistry.registerKeyBinding(ClientHandler.kbSelect);
     }
 
 }

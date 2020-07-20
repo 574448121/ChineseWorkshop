@@ -33,7 +33,7 @@ public class SelectionCategory implements IRecipeCategory<Selection> {
         icon = guiHelper.createDrawableIngredient(new ItemStack(BlockModule.LOGO));
         background = guiHelper.createBlankDrawable(recipeWidth, recipeHeight);
         slotBackground = guiHelper.getSlotDrawable();
-        localizedName = I18n.format(CW.MODID + ".gui.jei.selection");
+        localizedName = I18n.format("chineseworkshop.gui.convert");
     }
 
     @Override

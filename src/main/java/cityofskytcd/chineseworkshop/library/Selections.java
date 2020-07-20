@@ -14,27 +14,34 @@ import com.google.common.collect.Sets;
 import cityofskytcd.chineseworkshop.BlockModule;
 import cityofskytcd.chineseworkshop.CW;
 import cityofskytcd.chineseworkshop.TextureModule;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.TagsUpdatedEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import snownee.kiwi.Kiwi;
 
+@EventBusSubscriber
 public class Selections {
     private static final Set<Item> allItems = Sets.newHashSet();
     public static final List<Selection> SELECTIONS = Lists.newLinkedList();
 
     private Selections() {}
 
-    public static void init() {
+    @SubscribeEvent
+    public static void init(TagsUpdatedEvent event) {
+        allItems.clear();
+        SELECTIONS.clear();
         boolean retexture = Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"));
 
-        addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, BlockModule.BLACK_TILE_ROOF_SLAB, BlockModule.BLACK_TILE_ROOF_SLAB_TOP);
-        addSelection(BlockModule.BLACK_TILE_ROOF_RIDGE, BlockModule.BLACK_TILE_ROOF_RIDGE_J, BlockModule.BLACK_TILE_ROOF_RIDGE_TOP);
+        addSelection(BlockModule.BLACK_TILE_ROOF, BlockModule.BLACK_TILE_ROOF_J, BlockModule.BLACK_TILE_ROOF_SLAB, BlockModule.BLACK_TILE_ROOF_SLAB_TOP, BlockModule.BLACK_TILE_ROOF_RIDGE, BlockModule.BLACK_TILE_ROOF_RIDGE_J, BlockModule.BLACK_TILE_ROOF_RIDGE_TOP);
 
         if (retexture) {
-            addSelection(true, TextureModule.BLACK_TILE_ROOF_DYN, TextureModule.BLACK_TILE_ROOF_J_DYN, TextureModule.BLACK_TILE_ROOF_SLAB_DYN, TextureModule.BLACK_TILE_ROOF_SLAB_TOP_DYN);
-            addSelection(true, TextureModule.BLACK_TILE_ROOF_RIDGE_DYN, TextureModule.BLACK_TILE_ROOF_RIDGE_J_DYN, TextureModule.BLACK_TILE_ROOF_RIDGE_TOP_DYN);
+            addSelection(true, TextureModule.BLACK_TILE_ROOF_DYN, TextureModule.BLACK_TILE_ROOF_J_DYN, TextureModule.BLACK_TILE_ROOF_SLAB_DYN, TextureModule.BLACK_TILE_ROOF_SLAB_TOP_DYN, TextureModule.BLACK_TILE_ROOF_RIDGE_DYN, TextureModule.BLACK_TILE_ROOF_RIDGE_J_DYN, TextureModule.BLACK_TILE_ROOF_RIDGE_TOP_DYN);
         }
         //        addSelection(BlockModule.BLACK_ROOF_TILE_EDGE), BlockModule.BLACK_ROOF_TILE_EDGE, 1), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB, 1)));
         //        addSelection(BlockModule.YELLOW_TILE_ROOF), BlockModule.YELLOW_TILE_ROOF_J), BlockModule.YELLOW_TILE_ROOF_SLAB), BlockModule.YELLOW_TILE_ROOF_SLAB_TOP)));
@@ -43,8 +50,7 @@ public class Selections {
         //
         //        addSelection(BlockModule.YELLOW_ROOF_TILE_EDGE), BlockModule.YELLOW_ROOF_TILE_EDGE, 1), BlockModule.YELLOW_ROOF_TILE_EDGE_SLAB), BlockModule.YELLOW_ROOF_TILE_EDGE_SLAB, 1)));
 
-        addSelection(BlockModule.THATCH_ROOF, BlockModule.THATCH_ROOF_SLAB, BlockModule.THATCH_ROOF_SLAB_TOP);
-        addSelection(BlockModule.THATCH_ROOF_RIDGE, BlockModule.THATCH_ROOF_RIDGE_TOP);
+        addSelection(BlockModule.THATCH_ROOF, BlockModule.THATCH_ROOF_SLAB, BlockModule.THATCH_ROOF_SLAB_TOP, BlockModule.THATCH_ROOF_RIDGE, BlockModule.THATCH_ROOF_RIDGE_TOP);
 
         //        addSelection(BlockModule.THATCH_ROOF_TILE_EDGE), BlockModule.THATCH_ROOF_TILE_EDGE, 1), BlockModule.THATCH_ROOF_TILE_EDGE_SLAB), BlockModule.THATCH_ROOF_TILE_EDGE_SLAB, 1)));
         //        addSelection(BlockModule.BLACK_ROOF_TILE_EDGE_WB), BlockModule.BLACK_ROOF_TILE_EDGE_WB, 1), BlockModule.BLACK_ROOF_TILE_EDGE_RR), BlockModule.BLACK_ROOF_TILE_EDGE_RR, 1), BlockModule.BLACK_ROOF_TILE_EDGE_CW), BlockModule.BLACK_ROOF_TILE_EDGE_CW, 1)));
@@ -60,6 +66,8 @@ public class Selections {
         //        addSelection(BlockModule.BLACK_ROOF_TILE_EDGE_SLAB_T_WB), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB_T_WB, 1), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB_T_RR), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB_T_RR, 1), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB_T_CW), BlockModule.BLACK_ROOF_TILE_EDGE_SLAB_T_CW, 1)));
         //
         //        addSelection(BlockModule.BLACK_ROOF_TILE_EDGE_J_WB), BlockModule.BLACK_ROOF_TILE_EDGE_J_WB, 1), BlockModule.BLACK_ROOF_TILE_EDGE_J_RR), BlockModule.BLACK_ROOF_TILE_EDGE_J_RR, 1), BlockModule.BLACK_ROOF_TILE_EDGE_J_CW), BlockModule.BLACK_ROOF_TILE_EDGE_J_CW, 1)));
+
+        //addSelection(Blocks.DIAMOND_BLOCK, ItemTags.WOOL.getAllElements().toArray(new IItemProvider[0]));
     }
 
     public static void addSelection(IItemProvider mainItem, IItemProvider... subItems) {

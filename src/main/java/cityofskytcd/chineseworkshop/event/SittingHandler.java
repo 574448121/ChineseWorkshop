@@ -69,6 +69,9 @@ public class SittingHandler {
                 Seat seat = new Seat(world, v.add(pos.getX(), pos.getY(), pos.getZ()));
                 world.addEntity(seat);
                 Scheduler.add(new SimpleGlobalTask(LogicalSide.SERVER, Phase.END, i -> {
+                    if (player.isPassenger()) {
+                        return true;
+                    }
                     if (i > 3) {
                         player.startRiding(seat);
                         return true;
