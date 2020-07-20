@@ -11,8 +11,8 @@ package cityofskytcd.chineseworkshop.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.IWaterLoggable;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer.Builder;
@@ -73,7 +73,7 @@ public class TableBlock extends ModBlock implements IWaterLoggable {
     }
 
     @Override
-    public IFluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : Fluids.EMPTY.getDefaultState();
     }
 
@@ -87,7 +87,7 @@ public class TableBlock extends ModBlock implements IWaterLoggable {
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         IBlockReader iblockreader = context.getWorld();
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
         return getState(getDefaultState(), iblockreader, blockpos).with(WATERLOGGED, ifluidstate.getFluid() == Fluids.WATER);
     }
 

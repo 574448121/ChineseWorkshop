@@ -14,8 +14,8 @@ import cityofskytcd.chineseworkshop.TextureModule;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
@@ -28,7 +28,6 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import snownee.kiwi.block.ModBlock;
 
 public class RoofTileJBlock extends ModHorizontalBlock {
     public RoofTileJBlock(Block.Properties builder, boolean retexture) {
@@ -37,7 +36,6 @@ public class RoofTileJBlock extends ModHorizontalBlock {
 
     public RoofTileJBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
         super(builder, shape, retexture);
-        ModBlock.deduceSoundAndHardness(this);
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -52,7 +50,7 @@ public class RoofTileJBlock extends ModHorizontalBlock {
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         Direction direction = Direction.fromAngle(context.getPlacementYaw() + 45);
         BlockState blockstate = this.getDefaultState().with(HORIZONTAL_FACING, direction.getOpposite()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
         return blockstate;

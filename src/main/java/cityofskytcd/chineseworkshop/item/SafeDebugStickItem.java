@@ -18,7 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.state.IProperty;
+import net.minecraft.state.Property;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
@@ -65,7 +65,7 @@ public class SafeDebugStickItem extends DebugStickItem {
         if (canApplyOn(state)) {
             Block block = state.getBlock();
             StateContainer<Block, BlockState> statecontainer = block.getStateContainer();
-            Collection<IProperty<?>> collection = Lists.newArrayList(statecontainer.getProperties());
+            Collection<Property<?>> collection = Lists.newArrayList(statecontainer.getProperties());
             collection.remove(BlockStateProperties.WATERLOGGED);
             @SuppressWarnings("deprecation")
             String s = Registry.BLOCK.getKey(block).toString();
@@ -74,17 +74,17 @@ public class SafeDebugStickItem extends DebugStickItem {
             } else {
                 CompoundNBT compoundnbt = stack.getOrCreateChildTag("DebugProperty");
                 String s1 = compoundnbt.getString(s);
-                IProperty<?> iproperty = statecontainer.getProperty(s1);
+                Property<?> iproperty = statecontainer.getProperty(s1);
                 if (rightClick) {
                     if (iproperty == null) {
                         iproperty = collection.iterator().next();
                     }
 
-                    BlockState blockstate = cycleProperty(state, iproperty, player.func_226563_dT_/*isSneaking*/());
+                    BlockState blockstate = cycleProperty(state, iproperty, player.isSecondaryUseActive());
                     worldIn.setBlockState(pos, blockstate, 18);
                     sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".update", iproperty.getName(), func_195957_a(blockstate, iproperty)));
                 } else {
-                    iproperty = getAdjacentValue(collection, iproperty, player.func_226563_dT_/*isSneaking*/());
+                    iproperty = getAdjacentValue(collection, iproperty, player.isSecondaryUseActive());
                     String s2 = iproperty.getName();
                     compoundnbt.putString(s, s2);
                     sendMessage(player, new TranslationTextComponent(Items.DEBUG_STICK.getTranslationKey() + ".select", s2, func_195957_a(state, iproperty)));
@@ -97,11 +97,11 @@ public class SafeDebugStickItem extends DebugStickItem {
 
     public static boolean canApplyOn(BlockState state) {
         Block block = state.getBlock();
-        if (CWConfig.allowedMods.get().contains(block.getRegistryName().getNamespace())) {
+        if (CWConfig.allowedMods.contains(block.getRegistryName().getNamespace())) {
             return true;
         }
         String className = block.getClass().getName();
-        if (CWConfig.allowedClasses.get().contains(className)) {
+        if (CWConfig.allowedClasses.contains(className)) {
             return true;
         }
         return false;
@@ -113,7 +113,7 @@ public class SafeDebugStickItem extends DebugStickItem {
         ModItem.addTip(stack, tooltip, flagIn);
     }
 
-    private static <T extends Comparable<T>> BlockState cycleProperty(BlockState state, IProperty<T> propertyIn, boolean backwards) {
+    private static <T extends Comparable<T>> BlockState cycleProperty(BlockState state, Property<T> propertyIn, boolean backwards) {
         return state.with(propertyIn, (getAdjacentValue(propertyIn.getAllowedValues(), state.get(propertyIn), backwards)));
     }
 
@@ -122,10 +122,10 @@ public class SafeDebugStickItem extends DebugStickItem {
     }
 
     private static void sendMessage(PlayerEntity player, ITextComponent text) {
-        ((ServerPlayerEntity) player).sendMessage(text, ChatType.GAME_INFO);
+        ((ServerPlayerEntity) player)./*sendMessage*/func_241151_a_(text, ChatType.GAME_INFO, Util.DUMMY_UUID);
     }
 
-    private static <T extends Comparable<T>> String func_195957_a(BlockState state, IProperty<T> propertyIn) {
+    private static <T extends Comparable<T>> String func_195957_a(BlockState state, Property<T> propertyIn) {
         return propertyIn.getName(state.get(propertyIn));
     }
 }

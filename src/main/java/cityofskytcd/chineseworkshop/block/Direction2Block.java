@@ -7,8 +7,8 @@ import net.minecraft.block.IWaterLoggable;
 import net.minecraft.entity.EntitySpawnPlacementRegistry.PlacementType;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.BooleanProperty;
@@ -77,7 +77,7 @@ public class Direction2Block extends ModBlock implements IWaterLoggable {
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         return getDefaultState().with(FACING, Direction2.fromEnumFacing(context.getPlacementHorizontalFacing())).with(WATERLOGGED, ifluidstate.getFluid() == Fluids.WATER);
     }
 
@@ -87,7 +87,7 @@ public class Direction2Block extends ModBlock implements IWaterLoggable {
     }
 
     @Override
-    public IFluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : Fluids.EMPTY.getDefaultState();
     }
 

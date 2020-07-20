@@ -30,19 +30,19 @@ public class JEICompat implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
-        if (CWConfig.showConversionJei.get()) {
+        if (CWConfig.showConversionJei) {
             registration.addRecipeCategories(new SelectionCategory(registration.getJeiHelpers().getGuiHelper()));
         }
     }
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
-        if (CWConfig.showConversionJei.get()) {
+        if (CWConfig.showConversionJei) {
             List<Selection> recipes = Selections.SELECTIONS.stream().filter(Selection::show).collect(Collectors.toList());
             registration.addRecipes(recipes, SelectionCategory.UID);
         }
 
-        if (CWConfig.showRetextureJei.get() && Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"))) {
+        if (CWConfig.showRetextureJei && Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"))) {
             NonNullList<ItemStack> ingredients = NonNullList.create();
             MinecraftForge.EVENT_BUS.post(new RetextureIngredientEvent(ingredients));
             if (!ingredients.isEmpty()) {

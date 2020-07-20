@@ -12,7 +12,7 @@ public enum Direction2 implements IStringSerializable {
     SOUTH_NORTH;
 
     @Override
-    public String getName() {
+    public String getString() {
         return toString().toLowerCase(Locale.ENGLISH);
     }
 
@@ -30,4 +30,5 @@ public enum Direction2 implements IStringSerializable {
     public Direction2 mirror(Mirror mirror) {
         return this;
     }
+
 }

@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[32,)"
 [[mods]]
 modId="chineseworkshop"
 version="${file.jarVersion}"
@@ -13,6 +13,6 @@ description='''
 [[dependencies.chineseworkshop]]
     modId="kiwi"
     mandatory=true
-    versionRange="[2.7.2, 2.11)"
+    versionRange="[3.1.3, 3.7)"
     ordering="BEFORE"
     side="BOTH"

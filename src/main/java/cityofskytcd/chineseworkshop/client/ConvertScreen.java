@@ -2,6 +2,7 @@ package cityofskytcd.chineseworkshop.client;
 
 import org.lwjgl.glfw.GLFW;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import cityofskytcd.chineseworkshop.library.Selection;
@@ -17,6 +18,8 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.GuiScreenEvent.BackgroundDrawnEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @OnlyIn(Dist.CLIENT)
 public class ConvertScreen extends Screen {
@@ -78,7 +81,7 @@ public class ConvertScreen extends Screen {
     }
 
     @Override
-    public void render(int mouseX, int mouseY, float pTicks) {
+    public void render(MatrixStack matrix, int mouseX, int mouseY, float pTicks) {
         alpha += closing ? -pTicks * .4f : pTicks * .2f;
         if (closing && alpha <= 0) {
             Minecraft.getInstance().displayGuiScreen(null);
@@ -86,13 +89,13 @@ public class ConvertScreen extends Screen {
         }
         alpha = MathHelper.clamp(alpha, 0, 1);
 
-        this.renderBackground();
+        this.renderBackground(matrix);
         if (alpha < 0.5f) {
             return;
         }
         for (int i = 0; i < this.buttons.size(); ++i) {
             Widget widget = this.buttons.get(i);
-            widget.render(mouseX, mouseY, pTicks);
+            widget.render(matrix, mouseX, mouseY, pTicks);
             if (widget.isHovered() && widget.getClass() == StackButton.class) {
                 selectedButton = (StackButton) widget;
             }
@@ -110,17 +113,17 @@ public class ConvertScreen extends Screen {
         RenderSystem.popMatrix();
         x += 42;
         y += 42 + 50;
-        drawCenteredString(font, stackMain.getDisplayName().getFormattedText(), x, y, 0xFFFFFFFF);
+        drawCenteredString(matrix, font, stackMain.getDisplayName().getString(), x, y, 0xFFFFFFFF);
     }
 
     @Override
-    public void renderBackground(int p_renderBackground_1_) {
+    public void renderBackground(MatrixStack matrix, int p_renderBackground_1_) {
         int textColor1 = (int) (alpha * 0xA0) << 24;
         int textColor2 = (int) (alpha * 0x70) << 24;
-        this.fillGradient(0, 0, width, (int) (height * 0.125), textColor1, textColor2);
-        this.fillGradient(0, (int) (height * 0.125), width, (int) (height * 0.875), textColor2, textColor2);
-        this.fillGradient(0, (int) (height * 0.875), width, height, textColor2, textColor1);
-        net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new net.minecraftforge.client.event.GuiScreenEvent.BackgroundDrawnEvent(this));
+        this.fillGradient(matrix, 0, 0, width, (int) (height * 0.125), textColor1, textColor2);
+        this.fillGradient(matrix, 0, (int) (height * 0.125), width, (int) (height * 0.875), textColor2, textColor2);
+        this.fillGradient(matrix, 0, (int) (height * 0.875), width, height, textColor2, textColor1);
+        MinecraftForge.EVENT_BUS.post(new BackgroundDrawnEvent(this, matrix));
     }
 
     @Override

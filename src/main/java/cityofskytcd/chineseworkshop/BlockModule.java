@@ -26,7 +26,7 @@ import snownee.kiwi.block.ModBlock;
 import snownee.kiwi.item.ModItem;
 import snownee.kiwi.network.NetworkChannel;
 
-@KiwiModule(modid = CW.MODID, name = "blocks")
+@KiwiModule("blocks")
 @KiwiModule.Group
 public class BlockModule extends AbstractModule {
     public static final ItemGroup GROUP = new ItemGroup(CW.MODID + ".blocks") {
@@ -47,25 +47,25 @@ public class BlockModule extends AbstractModule {
 
     public static final ModStairsBlock BLACK_BRICK_STAIRS = new ModStairsBlock(BLACK_BRICK_BLOCK.getDefaultState());
 
-    public static final SlabBlock BLACK_BRICK_SLAB = init(new SlabBlock(blockProp(BLACK_BRICK_BLOCK)));
+    public static final SlabBlock BLACK_BRICK_SLAB = new SlabBlock(blockProp(BLACK_BRICK_BLOCK));
 
     public static final ModBlock WHITE_ASH_BLOCK = new ModBlock(blockProp(Material.ROCK));
 
     public static final ModStairsBlock WHITE_ASH_STAIRS = new ModStairsBlock(WHITE_ASH_BLOCK.getDefaultState());
 
-    public static final SlabBlock WHITE_ASH_SLAB = init(new SlabBlock(blockProp(WHITE_ASH_BLOCK)));
+    public static final SlabBlock WHITE_ASH_SLAB = new SlabBlock(blockProp(WHITE_ASH_BLOCK));
 
     public static final ModBlock RAMMED_EARTH = new ModBlock(blockProp(Material.GOURD));
 
     public static final ModStairsBlock RAMMED_EARTH_STAIRS = new ModStairsBlock(RAMMED_EARTH.getDefaultState());
 
-    public static final SlabBlock RAMMED_EARTH_SLAB = init(new SlabBlock(blockProp(RAMMED_EARTH)));
+    public static final SlabBlock RAMMED_EARTH_SLAB = new SlabBlock(blockProp(RAMMED_EARTH));
 
     public static final ModBlock ANDESITE_PAVEMENT = new ModBlock(blockProp(Material.ROCK));
 
     public static final ModStairsBlock ANDESITE_PAVEMENT_STAIRS = new ModStairsBlock(ANDESITE_PAVEMENT.getDefaultState());
 
-    public static final SlabBlock ANDESITE_PAVEMENT_SLAB = init(new SlabBlock(blockProp(ANDESITE_PAVEMENT)));
+    public static final SlabBlock ANDESITE_PAVEMENT_SLAB = new SlabBlock(blockProp(ANDESITE_PAVEMENT));
 
     public static final RotatedPillarBlock RED_PILLAR = new RotatedPillarBlock(blockProp(Material.WOOD));
 

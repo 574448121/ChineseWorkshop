@@ -29,7 +29,7 @@ public class CandleBlock extends TorchBlock {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
     public CandleBlock(Block.Properties builder) {
-        super(builder);
+        super(builder, ParticleTypes.FLAME);
     }
 
     @Override
@@ -44,7 +44,7 @@ public class CandleBlock extends TorchBlock {
         double d1 = pos.getY() + 0.55D;
         double d2 = pos.getZ() + 0.5D;
         worldIn.addParticle(ParticleTypes.SMOKE, d0, d1, d2, 0.0D, 0.0D, 0.0D);
-        worldIn.addParticle(ParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D);
+        worldIn.addParticle(field_235607_e_, d0, d1, d2, 0.0D, 0.0D, 0.0D);
     }
 
 }

@@ -50,7 +50,7 @@ public class ClientHandler {
         }
         Item item = event.getItemStack().getItem();
         if (Selections.contains(item)) {
-            event.getToolTip().add(new StringTextComponent(TextFormatting.GRAY + I18n.format(CW.MODID + ".tip.selectable", kbSelect.getLocalizedName())));
+            event.getToolTip().add(new StringTextComponent(TextFormatting.GRAY + I18n.format(CW.MODID + ".tip.selectable", I18n.format(kbSelect.getTranslationKey()))));
         }
     }
 }

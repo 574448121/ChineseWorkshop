@@ -39,7 +39,7 @@ import snownee.kiwi.item.ModBlockItem;
 import snownee.kiwi.util.NBTHelper;
 import snownee.kiwi.util.Util;
 
-@KiwiModule(modid = CW.MODID, name = "retexture")
+@KiwiModule("retexture")
 @KiwiModule.Optional
 @KiwiModule.Subscriber({ Bus.MOD, Bus.FORGE })
 public class TextureModule extends AbstractModule {
@@ -154,7 +154,7 @@ public class TextureModule extends AbstractModule {
             Item item = ForgeRegistries.ITEMS.getValue(rl);
             if (item != null) {
                 String name = I18n.format(item.getTranslationKey());
-                tooltip.add(new TranslationTextComponent("chineseworkshop.tip." + langKey, name).applyTextStyle(TextFormatting.GRAY));
+                tooltip.add(new TranslationTextComponent("chineseworkshop.tip." + langKey, name)./*applyTextStyle*/func_240699_a_(TextFormatting.GRAY));
             }
         }
     }

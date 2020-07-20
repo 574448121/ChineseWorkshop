@@ -7,8 +7,8 @@ import cityofskytcd.chineseworkshop.TextureModule;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
@@ -55,7 +55,7 @@ public class RoofTileRidgeBlock extends Direction2Block {
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         BlockState state = super.getStateForPlacement(context).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
         return state.with(VARIANT, getVariantProperty(state, context.getWorld(), blockpos));
     }
@@ -129,7 +129,7 @@ public class RoofTileRidgeBlock extends Direction2Block {
         X;
 
         @Override
-        public String getName() {
+        public String getString() {
             return toString().toLowerCase(Locale.ENGLISH);
         }
     }

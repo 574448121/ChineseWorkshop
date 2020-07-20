@@ -11,8 +11,8 @@ package cityofskytcd.chineseworkshop.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FourWayBlock;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.StateContainer;
@@ -20,17 +20,14 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
-import snownee.kiwi.block.ModBlock;
 
 public class SmallFenceBlock extends FourWayBlock {
     public SmallFenceBlock(Block.Properties builder) {
         super(4, 4, 16, 16, 16, builder);
-        ModBlock.deduceSoundAndHardness(this);
     }
 
     public SmallFenceBlock(Block.Properties builder, float nodeWidth, float extensionWidth, float p_i48420_3_, float p_i48420_4_, float collisionY) {
         super(nodeWidth, extensionWidth, p_i48420_3_, p_i48420_4_, collisionY, builder);
-        ModBlock.deduceSoundAndHardness(this);
     }
 
     @Override
@@ -47,7 +44,7 @@ public class SmallFenceBlock extends FourWayBlock {
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         IBlockReader iblockreader = context.getWorld();
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        FluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
         BlockPos blockpos1 = blockpos.north();
         BlockPos blockpos2 = blockpos.east();
         BlockPos blockpos3 = blockpos.south();

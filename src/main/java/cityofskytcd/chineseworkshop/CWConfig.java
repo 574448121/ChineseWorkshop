@@ -4,60 +4,30 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.lang3.tuple.Pair;
+import snownee.kiwi.config.KiwiConfig;
+import snownee.kiwi.config.KiwiConfig.Path;
 
-import com.electronwill.nightconfig.core.file.CommentedFileConfig;
-import com.google.common.base.Predicates;
-
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
-import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.config.ModConfig;
-
+@KiwiConfig
 public class CWConfig {
+    /* off */
+    @Path("adjustmentStick.allowedClasses")
+    public static List<String> allowedClasses = Arrays.asList(
+            "net.minecraft.block.HugeMushroomBlock",
+            "net.minecraft.block.FenceBlock",
+            "net.minecraft.block.WallBlock",
+            "net.minecraft.block.PaneBlock",
+            "net.minecraft.block.StainedGlassPaneBlock",
+            "net.minecraft.block.StairsBlock"
+    );
+    /* on */
 
-    static final ForgeConfigSpec spec;
+    @Path("adjustmentStick.allowedMods")
+    public static List<String> allowedMods = Collections.singletonList(CW.MODID);
 
-    public static ConfigValue<List<? extends String>> allowedClasses;
-    public static ConfigValue<List<? extends String>> allowedMods;
-    public static BooleanValue showConversionJei;
-    public static BooleanValue showRetextureJei;
+    @Path("adjustmentStick.showConversionJei")
+    public static boolean showConversionJei = true;
 
-    static {
-        final Pair<CWConfig, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(CWConfig::new);
-        spec = specPair.getRight();
-    }
-
-    private CWConfig(ForgeConfigSpec.Builder builder) {
-        builder.push("adjustmentStick");
-
-        allowedMods = builder.defineList("allowedMods", () -> Collections.singletonList(CW.MODID), Predicates.alwaysTrue());
-        allowedClasses = builder.defineList("allowedClasses", () -> {
-            /* off */
-            return Arrays.asList(
-                    "net.minecraft.block.HugeMushroomBlock",
-                    "net.minecraft.block.FenceBlock",
-                    "net.minecraft.block.WallBlock",
-                    "net.minecraft.block.PaneBlock",
-                    "net.minecraft.block.StainedGlassPaneBlock",
-                    "net.minecraft.block.StairsBlock"
-            );
-            /* on */
-        }, Predicates.alwaysTrue());
-
-        builder.pop();
-        builder.push("gui");
-
-        showConversionJei = builder.define("showConversionJei", true);
-        showRetextureJei = builder.define("showRetextureJei", true);
-
-        builder.pop();
-    }
-
-    @SubscribeEvent
-    public static void onConfigReload(ModConfig.Reloading event) {
-        ((CommentedFileConfig) event.getConfig().getConfigData()).load();
-    }
+    @Path("adjustmentStick.showRetextureJei")
+    public static boolean showRetextureJei = true;
 
 }

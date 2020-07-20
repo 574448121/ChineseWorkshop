@@ -16,8 +16,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.StairsBlock;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathType;
@@ -36,7 +36,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import snownee.kiwi.block.ModBlock;
 
 public class RoofTileBlock extends ModHorizontalBlock {
     public static final EnumProperty<StairsShape> SHAPE = StairsBlock.SHAPE;
@@ -80,7 +79,6 @@ public class RoofTileBlock extends ModHorizontalBlock {
 
     public RoofTileBlock(Block.Properties builder, boolean retexture) {
         super(builder, VoxelShapes.fullCube(), retexture);
-        ModBlock.deduceSoundAndHardness(this);
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -95,7 +93,7 @@ public class RoofTileBlock extends ModHorizontalBlock {
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockPos blockpos = context.getPos();
-        IFluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
         BlockState blockstate = this.getDefaultState().with(HORIZONTAL_FACING, context.getPlacementHorizontalFacing()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
         return blockstate.with(SHAPE, getShapeProperty(blockstate, context.getWorld(), blockpos));
     }

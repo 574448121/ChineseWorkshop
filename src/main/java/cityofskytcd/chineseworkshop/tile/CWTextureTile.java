@@ -1,6 +1,7 @@
 package cityofskytcd.chineseworkshop.tile;
 
 import cityofskytcd.chineseworkshop.TextureModule;
+import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
 import snownee.kiwi.tile.TextureTile;
 
@@ -16,9 +17,9 @@ public class CWTextureTile extends TextureTile {
     }
 
     @Override
-    public void read(CompoundNBT compound) {
+    public void read(BlockState state, CompoundNBT compound) {
         readPacketData(compound);
-        super.read(compound);
+        super.read(state, compound);
     }
 
     @Override

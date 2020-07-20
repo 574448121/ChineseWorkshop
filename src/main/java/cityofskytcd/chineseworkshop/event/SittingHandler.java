@@ -18,7 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
 import net.minecraftforge.event.TickEvent.Phase;
@@ -49,7 +49,7 @@ public class SittingHandler {
         World world = event.getWorld();
         BlockPos pos = event.getPos();
 
-        Vec3d vec = new Vec3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+        Vector3d vec = new Vector3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
         double maxDist = 2;
         if ((vec.x - player.getPosX()) * (vec.x - player.getPosX()) + (vec.y - player.getPosY()) * (vec.y - player.getPosY()) + (vec.z - player.getPosZ()) * (vec.z - player.getPosZ()) > maxDist * maxDist)
@@ -65,7 +65,7 @@ public class SittingHandler {
             List<Seat> seats = world.getEntitiesWithinAABB(Seat.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)));
 
             if (seats.isEmpty()) {
-                Vec3d v = iseat.getSeat(state, world, pos);
+                Vector3d v = iseat.getSeat(state, world, pos);
                 Seat seat = new Seat(world, v.add(pos.getX(), pos.getY(), pos.getZ()));
                 world.addEntity(seat);
                 Scheduler.add(new SimpleGlobalTask(LogicalSide.SERVER, Phase.END, i -> {
