@@ -45,7 +45,7 @@ public interface ISeat {
                 this.outOfWorld();
             }
 
-            BlockPos pos = /*getPosition*/func_233580_cy_();
+            BlockPos pos = getPosition();
             if (pos == null || !(getEntityWorld().getBlockState(pos).getBlock() instanceof ISeat)) {
                 remove();
                 return;

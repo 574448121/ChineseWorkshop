@@ -28,6 +28,7 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ModelBakeEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -41,7 +42,7 @@ import snownee.kiwi.util.Util;
 
 @KiwiModule("retexture")
 @KiwiModule.Optional
-@KiwiModule.Subscriber({ Bus.MOD, Bus.FORGE })
+@KiwiModule.Subscriber(Bus.FORGE)
 public class TextureModule extends AbstractModule {
     public static final RoofTileBlock BLACK_TILE_ROOF_DYN = new RoofTileBlock(blockProp(BlockModule.BLACK_TILE_ROOF), true);
 
@@ -86,9 +87,10 @@ public class TextureModule extends AbstractModule {
         BLACK_TILE_ROOF_SLAB_TOP_DYN.translationKey = BlockModule.BLACK_TILE_ROOF_SLAB_TOP.getTranslationKey();
         BENCH_DYN.translationKey = DecorationModule.BENCH.getTranslationKey();
         CHAIR_DYN.translationKey = DecorationModule.CHAIR.getTranslationKey();
+
+        MinecraftForge.EVENT_BUS.addListener(this::onRetextureIngredient);
     }
 
-    @SubscribeEvent
     public void onRetextureIngredient(RetextureIngredientEvent event) {
         event.add(BlockModule.BLACK_TILE_ROOF);
         event.add(BlockModule.BLACK_TILE_ROOF_J);
@@ -154,7 +156,7 @@ public class TextureModule extends AbstractModule {
             Item item = ForgeRegistries.ITEMS.getValue(rl);
             if (item != null) {
                 String name = I18n.format(item.getTranslationKey());
-                tooltip.add(new TranslationTextComponent("chineseworkshop.tip." + langKey, name)./*applyTextStyle*/func_240699_a_(TextFormatting.GRAY));
+                tooltip.add(new TranslationTextComponent("chineseworkshop.tip." + langKey, name).mergeStyle(TextFormatting.GRAY));
             }
         }
     }

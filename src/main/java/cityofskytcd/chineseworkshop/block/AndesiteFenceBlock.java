@@ -18,7 +18,7 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 
-public class AndesiteFenceBlock extends FourWayBlock {
+public class AndesiteFenceBlock extends FourWayBlock { //TODO: new WallBlock behavior
     public static final BooleanProperty UP = BlockStateProperties.UP;
     private final VoxelShape[] wallShapes;
     private final VoxelShape[] wallCollisionShapes;
@@ -62,10 +62,10 @@ public class AndesiteFenceBlock extends FourWayBlock {
         BlockState blockstate1 = iworldreader.getBlockState(blockpos2);
         BlockState blockstate2 = iworldreader.getBlockState(blockpos3);
         BlockState blockstate3 = iworldreader.getBlockState(blockpos4);
-        boolean flag = this.func_220113_a(blockstate, Block.hasSolidSide(blockstate, iworldreader, blockpos1, Direction.SOUTH), Direction.SOUTH);
-        boolean flag1 = this.func_220113_a(blockstate1, Block.hasSolidSide(blockstate1, iworldreader, blockpos2, Direction.WEST), Direction.WEST);
-        boolean flag2 = this.func_220113_a(blockstate2, Block.hasSolidSide(blockstate2, iworldreader, blockpos3, Direction.NORTH), Direction.NORTH);
-        boolean flag3 = this.func_220113_a(blockstate3, Block.hasSolidSide(blockstate3, iworldreader, blockpos4, Direction.EAST), Direction.EAST);
+        boolean flag = this.func_220113_a(blockstate, blockstate.isSolidSide(iworldreader, blockpos1, Direction.SOUTH), Direction.SOUTH);
+        boolean flag1 = this.func_220113_a(blockstate1, blockstate1.isSolidSide(iworldreader, blockpos2, Direction.WEST), Direction.WEST);
+        boolean flag2 = this.func_220113_a(blockstate2, blockstate2.isSolidSide(iworldreader, blockpos3, Direction.NORTH), Direction.NORTH);
+        boolean flag3 = this.func_220113_a(blockstate3, blockstate3.isSolidSide(iworldreader, blockpos4, Direction.EAST), Direction.EAST);
         boolean flag4 = (!flag || flag1 || !flag2 || flag3) && (flag || !flag1 || flag2 || !flag3);
         return this.getDefaultState().with(UP, Boolean.valueOf(flag4 || !iworldreader.isAirBlock(blockpos.up()))).with(NORTH, Boolean.valueOf(flag)).with(EAST, Boolean.valueOf(flag1)).with(SOUTH, Boolean.valueOf(flag2)).with(WEST, Boolean.valueOf(flag3)).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
     }
@@ -86,10 +86,10 @@ public class AndesiteFenceBlock extends FourWayBlock {
             return stateIn;
         } else {
             Direction direction = facing.getOpposite();
-            boolean flag = facing == Direction.NORTH ? this.func_220113_a(facingState, Block.hasSolidSide(facingState, worldIn, facingPos, direction), direction) : stateIn.get(NORTH);
-            boolean flag1 = facing == Direction.EAST ? this.func_220113_a(facingState, Block.hasSolidSide(facingState, worldIn, facingPos, direction), direction) : stateIn.get(EAST);
-            boolean flag2 = facing == Direction.SOUTH ? this.func_220113_a(facingState, Block.hasSolidSide(facingState, worldIn, facingPos, direction), direction) : stateIn.get(SOUTH);
-            boolean flag3 = facing == Direction.WEST ? this.func_220113_a(facingState, Block.hasSolidSide(facingState, worldIn, facingPos, direction), direction) : stateIn.get(WEST);
+            boolean flag = facing == Direction.NORTH ? this.func_220113_a(facingState, facingState.isSolidSide(worldIn, facingPos, direction), direction) : stateIn.get(NORTH);
+            boolean flag1 = facing == Direction.EAST ? this.func_220113_a(facingState, facingState.isSolidSide(worldIn, facingPos, direction), direction) : stateIn.get(EAST);
+            boolean flag2 = facing == Direction.SOUTH ? this.func_220113_a(facingState, facingState.isSolidSide(worldIn, facingPos, direction), direction) : stateIn.get(SOUTH);
+            boolean flag3 = facing == Direction.WEST ? this.func_220113_a(facingState, facingState.isSolidSide(worldIn, facingPos, direction), direction) : stateIn.get(WEST);
             boolean flag4 = (!flag || flag1 || !flag2 || flag3) && (flag || !flag1 || flag2 || !flag3);
             return stateIn.with(UP, Boolean.valueOf(flag4 || !worldIn.isAirBlock(currentPos.up()))).with(NORTH, Boolean.valueOf(flag)).with(EAST, Boolean.valueOf(flag1)).with(SOUTH, Boolean.valueOf(flag2)).with(WEST, Boolean.valueOf(flag3));
         }
