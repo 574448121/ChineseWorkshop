@@ -1,6 +1,9 @@
 {
     "multipart": [
         {   "apply": { "model": "chineseworkshop:block/diorite_window" }},
+        {   "when": { "OR": [ { "north": "true" }, { "south": "true" }, { "east": "true" }, { "west": "true" } ] },
+            "apply": { "model": "chineseworkshop:block/diorite_window_alt", "uvlock": true }
+        },
         {   "when": { "north": "true" },
             "apply": { "model": "chineseworkshop:block/diorite_window_side", "uvlock": true }
         },

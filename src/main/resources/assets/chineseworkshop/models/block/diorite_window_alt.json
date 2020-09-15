@@ -5,8 +5,20 @@
 	},
 	"elements": [ 	 
 		{
-			"from": [ 7, 2, 7 ],
-			"to": [ 9, 14, 9 ],
+			"from": [ 6.5, 0, 6.5 ],
+			"to": [ 9.5, 2, 9.5 ],
+			"faces": {
+				"down": { "texture": "#particle" },
+				"up": { "texture": "#particle" },
+				"north": { "texture": "#particle" },
+				"south": { "texture": "#particle" },
+				"west": { "texture": "#particle" },
+				"east": { "texture": "#particle" }
+			}
+		},
+		{
+			"from": [ 6.5, 14, 6.5 ],
+			"to": [ 9.5, 16, 9.5 ],
 			"faces": {
 				"down": { "texture": "#particle" },
 				"up": { "texture": "#particle" },
