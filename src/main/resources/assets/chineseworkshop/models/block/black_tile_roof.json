@@ -1,5 +1,5 @@
 {
-"ambientocclusion": false,
+	"ambientocclusion": false,
 	"textures": {
 		"particle": "chineseworkshop:block/black_tile",
 		"texture": "chineseworkshop:block/black_tile",
@@ -111,7 +111,7 @@
 		},
 		{
 			"from": [14.5, -2.1875, -3],
-			"to": [16.098, 0.8125, 8],
+			"to": [16.01, 0.8125, 8],
 			"rotation": {"angle": -22.5, "axis": "x", "origin": [14.4375, 0.8125, -3]},
 			"faces": {
 				"north": {"uv": [1, 0, 2.5, 3], "texture": "#texture"},
