@@ -1,3 +1,97 @@
 {
-    "parent": "chineseworkshop:block/diorite_fence"
+	"parent": "minecraft:block/fence_inventory",
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "chineseworkshop:block/refined_diorite"
+	},
+	"elements": [
+		{
+			"from": [6, 14, 14],
+			"to": [10, 17.5, 18],
+			"faces": {
+				"north": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"east": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"south": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"west": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"up": {"uv": [5.5, 5, 9.5, 9], "texture": "#particle"},
+				"down": {"uv": [8, 6.5, 4, 2.5], "texture": "#particle"}
+			}
+		},
+		{
+			"from": [6.5, 13.5, 14.5],
+			"to": [9.5, 14, 17.5],
+			"faces": {
+				"north": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"},
+				"east": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"},
+				"south": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"},
+				"west": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"}
+			}
+		},
+		{
+			"from": [6, -1.5, 14],
+			"to": [10, 13.5, 18],
+			"faces": {
+				"north": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"east": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"south": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"west": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"up": {"uv": [6, 6, 10, 10], "texture": "#particle"},
+				"down": {"uv": [10, 10, 6, 6], "texture": "#particle"}
+			}
+		},
+		{
+			"from": [6, 14, -2],
+			"to": [10, 17.5, 2],
+			"faces": {
+				"north": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"east": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"south": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"west": {"uv": [0, 11, 4, 14], "texture": "#particle"},
+				"up": {"uv": [5.5, 5, 9.5, 9], "texture": "#particle"},
+				"down": {"uv": [8, 6.5, 4, 2.5], "texture": "#particle"}
+			}
+		},
+		{
+			"from": [6.5, 13.5, -1.5],
+			"to": [9.5, 14, 1.5],
+			"faces": {
+				"north": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"},
+				"east": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"},
+				"south": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"},
+				"west": {"uv": [6.5, 1, 9.5, 1.5], "texture": "#particle"}
+			}
+		},
+		{
+			"from": [6, -1.5, -2],
+			"to": [10, 13.5, 2],
+			"faces": {
+				"north": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"east": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"south": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"west": {"uv": [0, 1, 4, 14], "texture": "#particle"},
+				"up": {"uv": [6, 6, 10, 10], "texture": "#particle"},
+				"down": {"uv": [10, 10, 6, 6], "texture": "#particle"}
+			}
+		},
+		{
+			"from": [7, 10.5, 2],
+			"to": [9, 12.5, 14],
+			"faces": {
+				"east": {"uv": [2, 2, 14, 4], "texture": "#particle"},
+				"west": {"uv": [2, 2, 14, 4], "texture": "#particle"},
+				"up": {"uv": [7, 2, 9, 14], "texture": "#particle"},
+				"down": {"uv": [7, 2, 9, 14], "texture": "#particle"}
+			}
+		},
+		{
+			"from": [7, 1.5, 2],
+			"to": [9, 8.5, 14],
+			"faces": {
+				"east": {"uv": [2, 6, 14, 13], "texture": "#particle"},
+				"west": {"uv": [2, 6, 14, 13], "texture": "#particle"},
+				"up": {"uv": [7, 2, 9, 14], "texture": "#particle"},
+				"down": {"uv": [7, 2, 9, 14], "texture": "#particle"}
+			}
+		}
+	]
 }

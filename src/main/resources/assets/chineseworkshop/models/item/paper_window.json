@@ -1,5 +1,5 @@
 {
-    "parent": "minecraft:block/block",
+    "parent": "minecraft:block/fence_inventory",
     "textures": {
         "pane": "chineseworkshop:block/paper_window"
     },
