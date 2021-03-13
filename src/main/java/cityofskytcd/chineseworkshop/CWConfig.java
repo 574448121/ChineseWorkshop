@@ -17,7 +17,8 @@ public class CWConfig {
             "net.minecraft.block.WallBlock",
             "net.minecraft.block.PaneBlock",
             "net.minecraft.block.StainedGlassPaneBlock",
-            "net.minecraft.block.StairsBlock"
+            "net.minecraft.block.StairsBlock",
+            "net.minecraft.block.GlazedTerracottaBlock"
     );
     /* on */
 

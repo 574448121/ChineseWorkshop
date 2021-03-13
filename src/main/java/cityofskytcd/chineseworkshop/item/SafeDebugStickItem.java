@@ -22,7 +22,6 @@ import net.minecraft.state.Property;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
@@ -42,10 +41,6 @@ public class SafeDebugStickItem extends DebugStickItem {
 
     @Override
     public boolean canPlayerBreakBlockWhileHolding(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
-        if (!worldIn.isRemote) {
-            this.handleClick(player, state, worldIn, pos, false, player.getHeldItem(Hand.MAIN_HAND));
-        }
-
         return false;
     }
 
@@ -61,7 +56,7 @@ public class SafeDebugStickItem extends DebugStickItem {
         return ActionResultType.SUCCESS;
     }
 
-    private void handleClick(PlayerEntity player, BlockState state, IWorld worldIn, BlockPos pos, boolean rightClick, ItemStack stack) {
+    public void handleClick(PlayerEntity player, BlockState state, IWorld worldIn, BlockPos pos, boolean rightClick, ItemStack stack) {
         if (canApplyOn(state)) {
             Block block = state.getBlock();
             StateContainer<Block, BlockState> statecontainer = block.getStateContainer();
