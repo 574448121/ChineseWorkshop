@@ -15,9 +15,9 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod(CW.MODID)
 public class CW {
-    public static final String MODID = "chineseworkshop";
-    public static final String NAME = "ChineseWorkshop";
+	public static final String MODID = "chineseworkshop";
+	public static final String NAME = "ChineseWorkshop";
 
-    public static Logger logger = LogManager.getLogger(CW.NAME);
+	public static Logger logger = LogManager.getLogger(CW.NAME);
 
 }

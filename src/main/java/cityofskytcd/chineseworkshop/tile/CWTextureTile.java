@@ -7,25 +7,25 @@ import snownee.kiwi.tile.TextureTile;
 
 public class CWTextureTile extends TextureTile {
 
-    public CWTextureTile() {
-        super(TextureModule.RETEXTURE, "main");
-    }
+	public CWTextureTile() {
+		super(TextureModule.RETEXTURE, "main");
+	}
 
-    @Override
-    public boolean isMark(String key) {
-        return key.equals("main");
-    }
+	@Override
+	public boolean isMark(String key) {
+		return key.equals("main");
+	}
 
-    @Override
-    public void read(BlockState state, CompoundNBT compound) {
-        readPacketData(compound);
-        super.read(state, compound);
-    }
+	@Override
+	public void read(BlockState state, CompoundNBT compound) {
+		readPacketData(compound);
+		super.read(state, compound);
+	}
 
-    @Override
-    public CompoundNBT write(CompoundNBT compound) {
-        writePacketData(compound);
-        return super.write(compound);
-    }
+	@Override
+	public CompoundNBT write(CompoundNBT compound) {
+		writePacketData(compound);
+		return super.write(compound);
+	}
 
 }

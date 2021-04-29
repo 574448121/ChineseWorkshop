@@ -21,34 +21,34 @@ import snownee.kiwi.Kiwi;
 
 @JeiPlugin
 public class JEICompat implements IModPlugin {
-    public static final ResourceLocation UID = new ResourceLocation(CW.MODID, CW.MODID);
+	public static final ResourceLocation UID = new ResourceLocation(CW.MODID, CW.MODID);
 
-    @Override
-    public ResourceLocation getPluginUid() {
-        return UID;
-    }
+	@Override
+	public ResourceLocation getPluginUid() {
+		return UID;
+	}
 
-    @Override
-    public void registerCategories(IRecipeCategoryRegistration registration) {
-        if (CWConfig.showConversionJei) {
-            registration.addRecipeCategories(new SelectionCategory(registration.getJeiHelpers().getGuiHelper()));
-        }
-    }
+	@Override
+	public void registerCategories(IRecipeCategoryRegistration registration) {
+		if (CWConfig.showConversionJei) {
+			registration.addRecipeCategories(new SelectionCategory(registration.getJeiHelpers().getGuiHelper()));
+		}
+	}
 
-    @Override
-    public void registerRecipes(IRecipeRegistration registration) {
-        if (CWConfig.showConversionJei) {
-            List<Selection> recipes = Selections.SELECTIONS.stream().filter(Selection::show).collect(Collectors.toList());
-            registration.addRecipes(recipes, SelectionCategory.UID);
-        }
+	@Override
+	public void registerRecipes(IRecipeRegistration registration) {
+		if (CWConfig.showConversionJei) {
+			List<Selection> recipes = Selections.SELECTIONS.stream().filter(Selection::show).collect(Collectors.toList());
+			registration.addRecipes(recipes, SelectionCategory.UID);
+		}
 
-        if (CWConfig.showRetextureJei && Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"))) {
-            NonNullList<ItemStack> ingredients = NonNullList.create();
-            MinecraftForge.EVENT_BUS.post(new RetextureIngredientEvent(ingredients));
-            if (!ingredients.isEmpty()) {
-                registration.addIngredientInfo(ingredients, VanillaTypes.ITEM, "chineseworkshop.gui.jei.ingredient");
-            }
-        }
-    }
+		if (CWConfig.showRetextureJei && Kiwi.isLoaded(new ResourceLocation(CW.MODID, "retexture"))) {
+			NonNullList<ItemStack> ingredients = NonNullList.create();
+			MinecraftForge.EVENT_BUS.post(new RetextureIngredientEvent(ingredients));
+			if (!ingredients.isEmpty()) {
+				registration.addIngredientInfo(ingredients, VanillaTypes.ITEM, "chineseworkshop.gui.jei.ingredient");
+			}
+		}
+	}
 
 }

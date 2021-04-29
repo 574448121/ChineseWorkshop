@@ -9,7 +9,7 @@ import snownee.kiwi.config.KiwiConfig.Path;
 
 @KiwiConfig
 public class CWConfig {
-    /* off */
+	/* off */
     @Path("adjustmentStick.allowedClasses")
     public static List<String> allowedClasses = Arrays.asList(
             "net.minecraft.block.HugeMushroomBlock",
@@ -22,13 +22,13 @@ public class CWConfig {
     );
     /* on */
 
-    @Path("adjustmentStick.allowedMods")
-    public static List<String> allowedMods = Collections.singletonList(CW.MODID);
+	@Path("adjustmentStick.allowedMods")
+	public static List<String> allowedMods = Collections.singletonList(CW.MODID);
 
-    @Path("adjustmentStick.showConversionJei")
-    public static boolean showConversionJei = true;
+	@Path("adjustmentStick.showConversionJei")
+	public static boolean showConversionJei = true;
 
-    @Path("adjustmentStick.showRetextureJei")
-    public static boolean showRetextureJei = true;
+	@Path("adjustmentStick.showRetextureJei")
+	public static boolean showRetextureJei = true;
 
 }

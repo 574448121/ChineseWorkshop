@@ -30,39 +30,39 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class RoofTileJBlock extends ModHorizontalBlock {
-    public RoofTileJBlock(Block.Properties builder, boolean retexture) {
-        this(builder, VoxelShapes.fullCube(), retexture);
-    }
+	public RoofTileJBlock(Block.Properties builder, boolean retexture) {
+		this(builder, VoxelShapes.fullCube(), retexture);
+	}
 
-    public RoofTileJBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
-        super(builder, shape, retexture);
-    }
+	public RoofTileJBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
+		super(builder, shape, retexture);
+	}
 
-    @OnlyIn(Dist.CLIENT)
-    @Override
-    public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
-        if (isTextureable()) {
-            TextureModule.addTooltip(stack, tooltip, "frame");
-        }
-        super.addInformation(stack, worldIn, tooltip, flagIn);
-    }
+	@OnlyIn(Dist.CLIENT)
+	@Override
+	public void addInformation(ItemStack stack, IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+		if (isTextureable()) {
+			TextureModule.addTooltip(stack, tooltip, "frame");
+		}
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+	}
 
-    @Override
-    public BlockState getStateForPlacement(BlockItemUseContext context) {
-        BlockPos blockpos = context.getPos();
-        FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
-        Direction direction = Direction.fromAngle(context.getPlacementYaw() + 45);
-        BlockState blockstate = this.getDefaultState().with(HORIZONTAL_FACING, direction.getOpposite()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
-        return blockstate;
-    }
+	@Override
+	public BlockState getStateForPlacement(BlockItemUseContext context) {
+		BlockPos blockpos = context.getPos();
+		FluidState ifluidstate = context.getWorld().getFluidState(blockpos);
+		Direction direction = Direction.fromAngle(context.getPlacementYaw() + 45);
+		BlockState blockstate = this.getDefaultState().with(HORIZONTAL_FACING, direction.getOpposite()).with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+		return blockstate;
+	}
 
-    @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(HORIZONTAL_FACING, WATERLOGGED);
-    }
+	@Override
+	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+		builder.add(HORIZONTAL_FACING, WATERLOGGED);
+	}
 
-    @Override
-    public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
-        return false;
-    }
+	@Override
+	public boolean allowsMovement(BlockState state, IBlockReader worldIn, BlockPos pos, PathType type) {
+		return false;
+	}
 }

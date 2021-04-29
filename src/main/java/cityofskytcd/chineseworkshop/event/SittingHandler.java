@@ -31,56 +31,56 @@ import snownee.kiwi.schedule.impl.SimpleGlobalTask;
 
 @Mod.EventBusSubscriber
 public class SittingHandler {
-    @SubscribeEvent
-    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
-        if (event.getWorld().isRemote) {
-            return;
-        }
+	@SubscribeEvent
+	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+		if (event.getWorld().isRemote) {
+			return;
+		}
 
-        PlayerEntity player = event.getPlayer();
-        if (player instanceof FakePlayer || player.getRidingEntity() != null)
-            return;
+		PlayerEntity player = event.getPlayer();
+		if (player instanceof FakePlayer || player.getRidingEntity() != null)
+			return;
 
-        ItemStack stack1 = player.getHeldItemMainhand();
-        ItemStack stack2 = player.getHeldItemOffhand();
-        if (!stack1.isEmpty() || !stack2.isEmpty())
-            return;
+		ItemStack stack1 = player.getHeldItemMainhand();
+		ItemStack stack2 = player.getHeldItemOffhand();
+		if (!stack1.isEmpty() || !stack2.isEmpty())
+			return;
 
-        World world = event.getWorld();
-        BlockPos pos = event.getPos();
+		World world = event.getWorld();
+		BlockPos pos = event.getPos();
 
-        Vector3d vec = new Vector3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+		Vector3d vec = new Vector3d(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
 
-        double maxDist = 2;
-        if ((vec.x - player.getPosX()) * (vec.x - player.getPosX()) + (vec.y - player.getPosY()) * (vec.y - player.getPosY()) + (vec.z - player.getPosZ()) * (vec.z - player.getPosZ()) > maxDist * maxDist)
-            return;
+		double maxDist = 2;
+		if ((vec.x - player.getPosX()) * (vec.x - player.getPosX()) + (vec.y - player.getPosY()) * (vec.y - player.getPosY()) + (vec.z - player.getPosZ()) * (vec.z - player.getPosZ()) > maxDist * maxDist)
+			return;
 
-        BlockState state = world.getBlockState(pos);
+		BlockState state = world.getBlockState(pos);
 
-        if (state.getBlock() instanceof ISeat) {
-            ISeat iseat = (ISeat) state.getBlock();
-            if (!iseat.hasSeat(state, world, pos)) {
-                return;
-            }
-            List<Seat> seats = world.getEntitiesWithinAABB(Seat.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)));
+		if (state.getBlock() instanceof ISeat) {
+			ISeat iseat = (ISeat) state.getBlock();
+			if (!iseat.hasSeat(state, world, pos)) {
+				return;
+			}
+			List<Seat> seats = world.getEntitiesWithinAABB(Seat.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)));
 
-            if (seats.isEmpty()) {
-                Vector3d v = iseat.getSeat(state, world, pos);
-                Seat seat = new Seat(world, v.add(pos.getX(), pos.getY(), pos.getZ()));
-                world.addEntity(seat);
-                Scheduler.add(new SimpleGlobalTask(LogicalSide.SERVER, Phase.END, i -> {
-                    if (player.isPassenger()) {
-                        return true;
-                    }
-                    if (i > 3) {
-                        player.startRiding(seat);
-                        return true;
-                    }
-                    return false;
-                }));
-                event.setCanceled(true);
-                event.setCancellationResult(ActionResultType.SUCCESS);
-            }
-        }
-    }
+			if (seats.isEmpty()) {
+				Vector3d v = iseat.getSeat(state, world, pos);
+				Seat seat = new Seat(world, v.add(pos.getX(), pos.getY(), pos.getZ()));
+				world.addEntity(seat);
+				Scheduler.add(new SimpleGlobalTask(LogicalSide.SERVER, Phase.END, i -> {
+					if (player.isPassenger()) {
+						return true;
+					}
+					if (i > 3) {
+						player.startRiding(seat);
+						return true;
+					}
+					return false;
+				}));
+				event.setCanceled(true);
+				event.setCancellationResult(ActionResultType.SUCCESS);
+			}
+		}
+	}
 }

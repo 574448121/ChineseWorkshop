@@ -32,73 +32,73 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class WallCandleBlock extends CandleBlock {
-    protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(3.2, 3.2, 4.8, 12.8, 0.8, 16);
-    protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(3.2, 1.6, 0, 12.8, 12.8, 11.2);
-    protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(4.8, 3.2, 3.2, 16, 12.8, 12.8);
-    protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(0, 3.2, 3.2, 11.2, 12.8, 12.8);
+	protected static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(3.2, 3.2, 4.8, 12.8, 0.8, 16);
+	protected static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(3.2, 1.6, 0, 12.8, 12.8, 11.2);
+	protected static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(4.8, 3.2, 3.2, 16, 12.8, 12.8);
+	protected static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(0, 3.2, 3.2, 11.2, 12.8, 12.8);
 
-    public WallCandleBlock(Block.Properties builder) {
-        super(builder);
-    }
+	public WallCandleBlock(Block.Properties builder) {
+		super(builder);
+	}
 
-    @SuppressWarnings("deprecation")
-    @Override
-    public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
-        return Blocks.WALL_TORCH.isValidPosition(state, worldIn, pos);
-    }
+	@SuppressWarnings("deprecation")
+	@Override
+	public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
+		return Blocks.WALL_TORCH.isValidPosition(state, worldIn, pos);
+	}
 
-    @SuppressWarnings("deprecation")
-    @Override
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
-        return Blocks.WALL_TORCH.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
-    }
+	@SuppressWarnings("deprecation")
+	@Override
+	public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+		return Blocks.WALL_TORCH.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+	}
 
-    @Override
-    @Nullable
-    public BlockState getStateForPlacement(BlockItemUseContext context) {
-        BlockState blockstate = Blocks.WALL_TORCH.getStateForPlacement(context);
-        return blockstate == null ? null : this.getDefaultState().with(FACING, blockstate.get(FACING));
-    }
+	@Override
+	@Nullable
+	public BlockState getStateForPlacement(BlockItemUseContext context) {
+		BlockState blockstate = Blocks.WALL_TORCH.getStateForPlacement(context);
+		return blockstate == null ? null : this.getDefaultState().with(FACING, blockstate.get(FACING));
+	}
 
-    @SuppressWarnings("deprecation")
-    @Override
-    public BlockState rotate(BlockState state, Rotation rot) {
-        return Blocks.WALL_TORCH.rotate(state, rot);
-    }
+	@SuppressWarnings("deprecation")
+	@Override
+	public BlockState rotate(BlockState state, Rotation rot) {
+		return Blocks.WALL_TORCH.rotate(state, rot);
+	}
 
-    @SuppressWarnings("deprecation")
-    @Override
-    public BlockState mirror(BlockState state, Mirror mirrorIn) {
-        return Blocks.WALL_TORCH.mirror(state, mirrorIn);
-    }
+	@SuppressWarnings("deprecation")
+	@Override
+	public BlockState mirror(BlockState state, Mirror mirrorIn) {
+		return Blocks.WALL_TORCH.mirror(state, mirrorIn);
+	}
 
-    @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
-    }
+	@Override
+	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+		builder.add(FACING);
+	}
 
-    @Override
-    @OnlyIn(Dist.CLIENT)
-    public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-        double d0 = pos.getX() + 0.5D;
-        double d1 = pos.getY() + 0.85D;
-        double d2 = pos.getZ() + 0.5D;
-        worldIn.addParticle(ParticleTypes.SMOKE, d0, d1, d2, 0.0D, 0.0D, 0.0D);
-        worldIn.addParticle(ParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D);
-    }
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+		double d0 = pos.getX() + 0.5D;
+		double d1 = pos.getY() + 0.85D;
+		double d2 = pos.getZ() + 0.5D;
+		worldIn.addParticle(ParticleTypes.SMOKE, d0, d1, d2, 0.0D, 0.0D, 0.0D);
+		worldIn.addParticle(ParticleTypes.FLAME, d0, d1, d2, 0.0D, 0.0D, 0.0D);
+	}
 
-    @Override
-    public VoxelShape getShape(net.minecraft.block.BlockState state, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
-        switch (state.get(FACING)) {
-        default:
-            return EAST_SHAPE;
-        case WEST:
-            return WEST_SHAPE;
-        case SOUTH:
-            return SOUTH_SHAPE;
-        case NORTH:
-            return NORTH_SHAPE;
-        }
-    }
+	@Override
+	public VoxelShape getShape(net.minecraft.block.BlockState state, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
+		switch (state.get(FACING)) {
+		default:
+			return EAST_SHAPE;
+		case WEST:
+			return WEST_SHAPE;
+		case SOUTH:
+			return SOUTH_SHAPE;
+		case NORTH:
+			return NORTH_SHAPE;
+		}
+	}
 
 }

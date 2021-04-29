@@ -11,13 +11,13 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class EmptyEntityRenderer<T extends Entity> extends EntityRenderer<T> {
 
-    public EmptyEntityRenderer(EntityRendererManager renderManager) {
-        super(renderManager);
-    }
+	public EmptyEntityRenderer(EntityRendererManager renderManager) {
+		super(renderManager);
+	}
 
-    @Override
-    public ResourceLocation getEntityTexture(T entity) {
-        return PlayerContainer.LOCATION_BLOCKS_TEXTURE;
-    }
+	@Override
+	public ResourceLocation getEntityTexture(T entity) {
+		return PlayerContainer.LOCATION_BLOCKS_TEXTURE;
+	}
 
 }

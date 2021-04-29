@@ -16,15 +16,15 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 
 public class SlabRoofTileBlock extends RoofTileBlock {
-    private final VoxelShape shape;
+	private final VoxelShape shape;
 
-    public SlabRoofTileBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
-        super(builder, retexture);
-        this.shape = shape;
-    }
+	public SlabRoofTileBlock(Block.Properties builder, VoxelShape shape, boolean retexture) {
+		super(builder, retexture);
+		this.shape = shape;
+	}
 
-    @Override
-    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
-        return shape;
-    }
+	@Override
+	public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
+		return shape;
+	}
 }

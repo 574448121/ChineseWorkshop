@@ -6,17 +6,17 @@ import net.minecraft.util.NonNullList;
 import net.minecraftforge.eventbus.api.Event;
 
 public class RetextureIngredientEvent extends Event {
-    public NonNullList<ItemStack> stacks;
+	public NonNullList<ItemStack> stacks;
 
-    public RetextureIngredientEvent(NonNullList<ItemStack> stacks) {
-        this.stacks = stacks;
-    }
+	public RetextureIngredientEvent(NonNullList<ItemStack> stacks) {
+		this.stacks = stacks;
+	}
 
-    public NonNullList<ItemStack> getStacks() {
-        return stacks;
-    }
+	public NonNullList<ItemStack> getStacks() {
+		return stacks;
+	}
 
-    public void add(IItemProvider item) {
-        stacks.add(new ItemStack(item));
-    }
+	public void add(IItemProvider item) {
+		stacks.add(new ItemStack(item));
+	}
 }
