@@ -2,7 +2,9 @@
 
 [CurseForge](https://minecraft.curseforge.com/projects/chineseworkshop)
 
-Best friend of architecture dumb.
+ChinaWorkshop is an oriental-style decoration mod that can help you build landscapes more easily, including styles such as palaces, villages, and water towns.
+
+This mod is also playable in survival mode.
 
 ## License
 
